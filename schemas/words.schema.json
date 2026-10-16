@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://di0niz.github.io/wordtrail-content/schemas/words.schema.json",
+  "title": "WordTrail words.json (editor output, agent input)",
+  "description": "One file = one lesson. Only what the user knows: the word, its sentence and the date. File name: lessons/<id>.json.",
+  "type": "object",
+  "required": ["version", "id", "date", "source", "items"],
+  "additionalProperties": false,
+  "properties": {
+    "version": {"const": 1},
+    "id": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}-[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Lesson id: date + short slug. Also the file name of the lesson everywhere.",
+      "examples": ["2026-10-16-bbc-climate"]
+    },
+    "date": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+      "description": "Day the lesson is grouped under (YYYY-MM-DD)."
+    },
+    "source": {
+      "type": "object",
+      "required": ["title"],
+      "additionalProperties": false,
+      "properties": {
+        "title": {"type": "string", "minLength": 1},
+        "url": {"type": "string", "description": "Optional link to the source text."}
+      }
+    },
+    "items": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["text", "kind", "sentence"],
+        "additionalProperties": false,
+        "properties": {
+          "text": {"type": "string", "minLength": 1, "description": "Word or phrase exactly as in the text. Key of content.json items."},
+          "kind": {"enum": ["word", "phrase"], "description": "For phrases the agent looks for the normal form (turned it down -> turn down)."},
+          "sentence": {"type": "string", "minLength": 1, "description": "Context sentence as selected in the editor (may contain glued headings, typos)."},
+          "note": {"type": "string", "description": "Optional hint for the agent: which meaning the user means."}
+        }
+      }
+    }
+  }
+}

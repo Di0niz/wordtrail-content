@@ -1,0 +1,1199 @@
+<title>Редактор WordTrail</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap">
+<style>
+/* Layout: one-screen tool — header 48px, reader on the left, "future JSON" panel 360px on the right; bottom sheet on phones */
+:root {
+  --bg: #FAFAF7;
+  --surface: #FFFFFF;
+  --surface-2: #F2F2ED;
+  --text: #1C1C1E;
+  --text-muted: #6B6B70;
+  --line: #E6E5DE;
+  --line-strong: #D3D2CA;
+  --hover: rgba(28, 28, 30, .07);
+  --hover-soft: rgba(28, 28, 30, .035);
+  --simple: #93939A;
+  --accent: #2F6FEB;
+  --accent-soft: rgba(47, 111, 235, .16);
+  --accent-strong: rgba(47, 111, 235, .30);
+  --accent-wash: rgba(47, 111, 235, .07);
+  --on-accent: #FFFFFF;
+  --repeat: #C77700;
+  --repeat-soft: rgba(199, 119, 0, .17);
+  --repeat-ink: #8A5200;
+  --on-repeat: #241600;
+  --danger: #C93A3A;
+  --toast-bg: #1C1C1E;
+  --toast-fg: #F4F4F0;
+  --toast-action: #A9C4FF;
+  --font-read: "Literata", "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-ui: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #17181A; --surface: #1F2023; --surface-2: #26272B; --text: #ECECEC; --text-muted: #9A9AA0;
+    --line: #2E2F34; --line-strong: #3D3E44; --hover: rgba(255,255,255,.08); --hover-soft: rgba(255,255,255,.04); --simple: #7A7B82;
+    --accent: #6F9BFF; --accent-soft: rgba(111,155,255,.22); --accent-strong: rgba(111,155,255,.38); --accent-wash: rgba(111,155,255,.09);
+    --on-accent: #0E1320; --repeat: #F0A640; --repeat-soft: rgba(240,166,64,.20); --repeat-ink: #F0A640; --on-repeat: #241600;
+    --danger: #FF6B6B; --toast-bg: #ECECEC; --toast-fg: #17181A; --toast-action: #2F6FEB;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #17181A; --surface: #1F2023; --surface-2: #26272B; --text: #ECECEC; --text-muted: #9A9AA0;
+  --line: #2E2F34; --line-strong: #3D3E44; --hover: rgba(255,255,255,.08); --hover-soft: rgba(255,255,255,.04); --simple: #7A7B82;
+  --accent: #6F9BFF; --accent-soft: rgba(111,155,255,.22); --accent-strong: rgba(111,155,255,.38); --accent-wash: rgba(111,155,255,.09);
+  --on-accent: #0E1320; --repeat: #F0A640; --repeat-soft: rgba(240,166,64,.20); --repeat-ink: #F0A640; --on-repeat: #241600;
+  --danger: #FF6B6B; --toast-bg: #ECECEC; --toast-fg: #17181A; --toast-action: #2F6FEB;
+  color-scheme: dark;
+}
+
+html, body { height: 100%; }
+body { background: var(--bg); color: var(--text); font-family: var(--font-ui); font-size: 14px; -webkit-font-smoothing: antialiased; }
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+button, input, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+.app { height: 100%; display: flex; flex-direction: column; }
+.app > .markup, .app > .input-screen { flex: 1; }
+.bar, .ls-banner { flex-shrink: 0; }
+
+/* Header */
+.bar { display: flex; align-items: center; gap: 12px; height: 48px; border-bottom: 1px solid var(--line);
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); background: var(--bg); }
+.brand { display: flex; align-items: baseline; gap: 6px; white-space: nowrap; }
+.brand b { font-weight: 600; letter-spacing: -.01em; }
+.brand .sub { color: var(--text-muted); }
+.draft-title { flex: 1; min-width: 0; display: flex; justify-content: center; align-items: baseline; gap: 8px; background: none; border: 0; padding: 6px 10px; border-radius: 8px; }
+.draft-title:hover { background: var(--hover); }
+.draft-title .t { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 500; }
+.draft-title .d { color: var(--text-muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.draft-title .ex { font-size: 11px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--repeat-ink); background: var(--repeat-soft); border-radius: 4px; padding: 1px 6px; }
+.spacer { flex: 1; }
+.bar-right { display: flex; align-items: center; gap: 8px; white-space: nowrap; }
+.saved { color: var(--text-muted); font-size: 12.5px; font-variant-numeric: tabular-nums; }
+.saved.bad { color: var(--danger); }
+.icon-btn { width: 32px; height: 32px; border-radius: 8px; border: 1px solid transparent; background: none; display: inline-grid; place-items: center; color: var(--text-muted); font-weight: 600; }
+.icon-btn:hover { background: var(--hover); color: var(--text); }
+.btn { height: 34px; padding: 0 12px; border: 1px solid var(--line-strong); background: var(--surface); border-radius: 8px; font-weight: 500; font-size: 13px; display: inline-flex; align-items: center; justify-content: center; gap: 6px; }
+.btn:hover { background: var(--surface-2); }
+.btn.small { height: 30px; padding: 0 10px; }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); font-weight: 600; }
+.btn.primary:hover { filter: brightness(1.05); background: var(--accent); }
+.btn:disabled { opacity: .45; cursor: not-allowed; filter: none; }
+.btn.ghost { background: none; border-color: transparent; color: var(--text-muted); }
+.btn.ghost:hover { background: var(--hover); color: var(--text); }
+.link-btn { background: none; border: 0; padding: 2px 4px; color: var(--text-muted); font-size: 12.5px; border-radius: 4px; }
+.link-btn:hover { color: var(--text); text-decoration: underline; }
+
+/* Vocab menu */
+.vocab-menu { position: relative; }
+.vocab-menu summary { list-style: none; display: inline-flex; align-items: center; gap: 6px; height: 30px; padding: 0 10px; border-radius: 8px; color: var(--text-muted); font-size: 13px; font-weight: 500; cursor: pointer; }
+.vocab-menu summary::-webkit-details-marker { display: none; }
+.vocab-menu summary:hover { background: var(--hover); color: var(--text); }
+.dot { width: 7px; height: 7px; border-radius: 50%; background: var(--line-strong); }
+.dot.on { background: var(--repeat); }
+.menu { position: absolute; right: 0; top: 36px; z-index: 30; width: 280px; background: var(--surface); border: 1px solid var(--line-strong); border-radius: 10px; padding: 12px; display: grid; gap: 10px; box-shadow: 0 8px 28px rgba(0,0,0,.12); white-space: normal; }
+.menu p { margin: 0; font-size: 13px; color: var(--text-muted); line-height: 1.45; }
+.menu .menu-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.ls-banner { background: var(--repeat-soft); color: var(--repeat-ink); font-size: 13px; padding-block: 8px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+/* Markup screen */
+.markup { display: grid; grid-template-columns: minmax(0, 1fr) 360px; min-height: 0; }
+.reader-wrap { overflow: auto; min-width: 0; padding: 28px max(16px, env(safe-area-inset-left, 0px)) 72px; scroll-padding-block: 80px; }
+.reader-col { max-width: 68ch; margin: 0 auto; display: grid; gap: 20px; }
+.banner { display: flex; align-items: flex-start; gap: 12px; padding: 12px 14px; border-radius: 10px; background: var(--surface-2); color: var(--text-muted); font-size: 13px; line-height: 1.5; }
+.banner p { margin: 0; flex: 1; }
+.banner .btn { flex-shrink: 0; }
+.reader { font-family: var(--font-read); font-size: 19px; line-height: 1.7; color: var(--text); user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; -webkit-tap-highlight-color: transparent; outline: none; border-radius: 8px; }
+.reader p { margin: 0 0 1em; text-wrap: pretty; }
+.tok { position: relative; cursor: pointer; border-radius: 4px; transition: background-color .12s; }
+.tok:hover { background: var(--hover); }
+.tok.fn:hover { background: var(--hover-soft); }
+.tok.known { text-decoration: underline dotted var(--repeat); text-decoration-thickness: 1.5px; text-underline-offset: 5px; }
+.dim .tok.simple:not(.in-item) { color: var(--simple); }
+.dim .tok.simple:not(.in-item):hover { color: var(--text); }
+.tok.echo { text-decoration: underline dashed var(--accent); text-decoration-thickness: 2px; text-underline-offset: 5px; background: var(--accent-wash); }
+.tok.echo.flash-echo { background: var(--accent-soft); }
+.tools { display: flex; align-items: center; justify-content: space-between; gap: 8px 16px; flex-wrap: wrap; font-size: 13px; color: var(--text-muted); }
+.switch { display: inline-flex; align-items: center; gap: 8px; cursor: pointer; user-select: none; }
+.switch input { appearance: none; -webkit-appearance: none; width: 30px; height: 18px; border-radius: 9px; background: var(--line-strong); position: relative; margin: 0; cursor: pointer; transition: background .15s; flex-shrink: 0; }
+.switch input::after { content: ""; position: absolute; top: 2px; left: 2px; width: 14px; height: 14px; border-radius: 50%; background: var(--surface); transition: transform .15s; }
+.switch input:checked { background: var(--accent); }
+.switch input:checked::after { transform: translateX(12px); }
+.switch span { color: var(--text); }
+.remain { font-variant-numeric: tabular-nums; }
+.remain b { color: var(--text); font-weight: 600; }
+.in-item { background: var(--accent-soft); box-shadow: inset 0 -2px 0 var(--accent); border-radius: 0; }
+.in-item:hover { background: var(--accent-soft); }
+.in-item.rep { background: var(--repeat-soft); box-shadow: inset 0 -2px 0 var(--repeat); }
+.item-start { border-top-left-radius: 4px; border-bottom-left-radius: 4px; }
+.item-end { border-top-right-radius: 4px; border-bottom-right-radius: 4px; }
+.in-item.hl { background: var(--accent-strong); }
+.in-item.rep.hl { background: var(--repeat-soft); box-shadow: inset 0 -3px 0 var(--repeat), 0 0 0 1px var(--repeat); }
+.item-start[data-level]::before { content: "→ " attr(data-level); position: absolute; left: 0; top: -.95em; font: 600 10.5px/1.35 var(--font-ui); background: var(--repeat); color: var(--on-repeat); padding: 0 5px; border-radius: 4px; pointer-events: none; z-index: 1; white-space: nowrap; }
+.pv { background: var(--accent-soft); box-shadow: inset 0 -2px 0 var(--accent); }
+.anchor { outline: 2px dashed var(--accent); outline-offset: 1px; }
+.reader.kb:focus .cur { outline: 2px solid var(--accent); outline-offset: 2px; }
+.flash { animation: flash .9s ease-out; }
+@keyframes flash { 0% { box-shadow: 0 0 0 4px var(--accent); } 100% { box-shadow: 0 0 0 4px transparent; } }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; color: var(--text-muted); font-size: 12.5px; border-top: 1px solid var(--line); padding-top: 14px; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.sw { width: 14px; height: 14px; border-radius: 3px; display: inline-block; }
+.sw.sel { background: var(--accent-soft); box-shadow: inset 0 -2px 0 var(--accent); }
+.sw.rep { background: var(--repeat-soft); box-shadow: inset 0 -2px 0 var(--repeat); }
+.sw.known { width: 18px; height: 0; border-bottom: 1.5px dotted var(--repeat); border-radius: 0; }
+.sw.echo { width: 18px; height: 8px; border-bottom: 2px dashed var(--accent); background: var(--accent-wash); border-radius: 0; }
+.sw.simple { width: auto; height: auto; font: 600 12px/1 var(--font-read); color: var(--simple); }
+.legend .vstat { margin-left: auto; }
+
+/* Panel */
+.panel { border-left: 1px solid var(--line); background: var(--surface); display: flex; flex-direction: column; min-height: 0; padding-right: env(safe-area-inset-right, 0px); }
+.sheet-handle { display: none; }
+.panel-head { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; padding: 16px 16px 12px; border-bottom: 1px solid var(--line); }
+.panel-head h2 { margin: 0; font-size: 14px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.panel-head h2 .rp { color: var(--repeat-ink); font-weight: 500; }
+.list { flex: 1; overflow: auto; min-height: 0; }
+.row { padding: 12px 16px; border-bottom: 1px solid var(--line); display: grid; gap: 4px; cursor: pointer; }
+.row:hover, .row.hl { background: var(--accent-wash); }
+.row-top { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.row .w { font-weight: 600; font-size: 15px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pill { font-size: 11px; font-weight: 500; border-radius: 4px; padding: 1px 6px; white-space: nowrap; border: 1px solid var(--line-strong); color: var(--text-muted); }
+.pill.rep { border-color: var(--repeat); background: var(--repeat-soft); color: var(--repeat-ink); }
+.del { margin-left: auto; width: 28px; height: 28px; flex-shrink: 0; border: 0; border-radius: 6px; background: none; color: var(--text-muted); font-size: 18px; line-height: 1; opacity: 0; }
+.row:hover .del, .row:focus-within .del, .del:focus-visible { opacity: 1; }
+.del:hover { background: var(--hover); color: var(--danger); }
+@media (hover: none) { .del { opacity: 1; } }
+.ctx { color: var(--text-muted); font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ctx mark { background: none; color: var(--text); font-weight: 600; }
+.dupe { font-size: 12px; color: var(--repeat-ink); }
+.note-toggle { justify-self: start; background: none; border: 0; padding: 2px 0; color: var(--text-muted); font-size: 12.5px; }
+.note-toggle:hover { color: var(--accent); }
+.note { width: 100%; resize: vertical; min-height: 54px; font-size: 13px; line-height: 1.4; border: 1px solid var(--line-strong); border-radius: 6px; padding: 6px 8px; background: var(--bg); }
+.err { font-size: 12px; color: var(--danger); }
+.empty { flex: 1; padding: 28px 20px; color: var(--text-muted); line-height: 1.55; font-size: 13.5px; }
+.export { border-top: 1px solid var(--line); padding: 12px 16px 16px; display: grid; gap: 8px; background: var(--surface); padding-bottom: max(16px, env(safe-area-inset-bottom, 0px)); }
+.fname { justify-self: start; max-width: 100%; background: none; border: 0; padding: 2px 0; font-family: var(--font-mono); font-size: 12px; color: var(--text-muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.fname:hover { color: var(--text); text-decoration: underline dotted; }
+.fname-input { width: 100%; font-family: var(--font-mono); font-size: 12px; padding: 4px 6px; border: 1px solid var(--accent); border-radius: 6px; background: var(--bg); }
+.btn.wide { width: 100%; height: 40px; font-size: 14px; }
+.export .row2 { display: flex; gap: 8px; }
+.export .row2 .btn { flex: 1; }
+.json-pre { margin: 0; max-height: 220px; overflow: auto; font: 11.5px/1.5 var(--font-mono); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 10px; white-space: pre; user-select: text; }
+.dl-note { margin: 0; font-size: 12px; color: var(--text-muted); line-height: 1.45; }
+
+/* Input screen */
+.input-screen { overflow: auto; min-height: 0; padding-block: 32px 64px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.input-wrap { max-width: 760px; margin: 0 auto; display: grid; gap: 16px; }
+.input-wrap h1 { margin: 0; font-family: var(--font-read); font-weight: 600; font-size: 28px; letter-spacing: -.01em; text-wrap: balance; }
+.input-wrap .lead { margin: -8px 0 0; color: var(--text-muted); line-height: 1.5; }
+.text-in { width: 100%; min-height: 330px; resize: vertical; padding: 16px 18px; border: 1px solid var(--line-strong); border-radius: 10px; background: var(--surface); font-family: var(--font-read); font-size: 16px; line-height: 1.6; }
+.text-in.drop { border-color: var(--accent); background: var(--accent-wash); }
+.warns { display: grid; gap: 6px; }
+.warns p { margin: 0; font-size: 13px; color: var(--repeat-ink); }
+.meta-row { display: grid; grid-template-columns: 1.4fr 1.4fr 1fr; gap: 12px; }
+.field { display: grid; gap: 6px; min-width: 0; }
+.field span { font-size: 12.5px; color: var(--text-muted); }
+.field input { height: 38px; padding: 0 10px; border: 1px solid var(--line-strong); border-radius: 8px; background: var(--surface); min-width: 0; width: 100%; }
+.field small { font-size: 12px; color: var(--repeat-ink); }
+.actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.actions .btn.primary { height: 40px; padding: 0 18px; font-size: 14px; }
+kbd { font-family: var(--font-mono); font-size: 11.5px; border: 1px solid var(--line-strong); border-bottom-width: 2px; border-radius: 5px; padding: 1px 5px; background: var(--surface); color: var(--text); white-space: nowrap; }
+.hint { color: var(--text-muted); font-size: 12.5px; }
+.drafts h2 { margin: 16px 0 8px; font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--text-muted); }
+.drafts ul { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.drafts li { display: flex; align-items: center; gap: 8px; border-bottom: 1px solid var(--line); }
+.draft-open { flex: 1; min-width: 0; display: grid; gap: 2px; text-align: left; background: none; border: 0; padding: 10px 8px; border-radius: 6px; }
+.draft-open:hover { background: var(--hover); }
+.draft-open b { font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.draft-open span { color: var(--text-muted); font-size: 12.5px; font-variant-numeric: tabular-nums; }
+.drafts .empty-d { color: var(--text-muted); font-size: 13px; padding: 10px 0; border: 0; }
+
+/* Overlays */
+.tip { position: fixed; z-index: 50; max-width: 260px; background: var(--toast-bg); color: var(--toast-fg); font-size: 12px; line-height: 1.4; padding: 6px 9px; border-radius: 6px; pointer-events: none; }
+.toast { position: fixed; z-index: 60; left: 50%; transform: translateX(-50%); bottom: calc(24px + env(safe-area-inset-bottom, 0px)); max-width: min(520px, calc(100% - 32px)); display: flex; align-items: center; gap: 14px; background: var(--toast-bg); color: var(--toast-fg); padding: 10px 14px; border-radius: 10px; font-size: 13.5px; box-shadow: 0 10px 30px rgba(0,0,0,.2); }
+.toast button { background: none; border: 0; color: var(--toast-action); font-weight: 600; padding: 0; white-space: nowrap; }
+.overlay { position: fixed; inset: 0; z-index: 70; background: rgba(10, 10, 12, .45); display: grid; place-items: center; padding: 16px; }
+.dialog { width: min(460px, 100%); max-height: 100%; overflow: auto; background: var(--surface); border-radius: 12px; padding: 20px; display: grid; gap: 14px; }
+.dialog h2 { margin: 0; font-size: 16px; }
+.dialog table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.dialog td { padding: 6px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+.dialog td:first-child { width: 44%; padding-right: 12px; }
+.dialog .dhead { display: flex; justify-content: space-between; align-items: center; }
+
+/* Responsive */
+@media (max-width: 1099px) {
+  .markup { grid-template-columns: minmax(0, 1fr) 300px; }
+  .row .ctx { display: none; }
+  .row:hover .ctx, .row:focus-within .ctx, .row.hl .ctx { display: block; }
+}
+@media (min-width: 900px) { .reader-wrap { padding-left: 48px; padding-right: 48px; } }
+@media (max-width: 719px) {
+  .markup { grid-template-columns: minmax(0, 1fr); }
+  .reader-wrap { padding: 18px max(16px, env(safe-area-inset-right, 0px)) 120px max(16px, env(safe-area-inset-left, 0px)); }
+  .reader { font-size: 18px; }
+  .panel { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; height: min(78%, 640px); border-left: 0; border-top: 1px solid var(--line-strong); border-radius: 14px 14px 0 0; box-shadow: 0 -8px 30px rgba(0,0,0,.14); transform: translateY(calc(100% - 56px - env(safe-area-inset-bottom, 0px))); transition: transform .22s ease; padding-left: env(safe-area-inset-left, 0px); }
+  .panel.open { transform: none; }
+  .sheet-handle { display: flex; align-items: center; justify-content: center; gap: 8px; height: 56px; flex-shrink: 0; border: 0; background: none; font-weight: 600; font-size: 14px; border-bottom: 1px solid var(--line); font-variant-numeric: tabular-nums; }
+  .sheet-handle .arr { display: inline-block; transition: transform .2s; color: var(--text-muted); }
+  .panel.open .sheet-handle .arr { transform: rotate(180deg); }
+  .panel-head { padding-top: 10px; }
+  .toast { bottom: calc(72px + env(safe-area-inset-bottom, 0px)); }
+  .meta-row { grid-template-columns: 1fr; }
+  .brand .sub, .brand .sep, .saved, .draft-title .d { display: none; }
+  .legend .vstat { margin-left: 0; }
+}
+@media (max-width: 420px) { #new-text .lbl { display: none; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; } }
+</style>
+
+<div class="app" id="app">
+  <header class="bar">
+    <div class="brand"><b>WordTrail</b><span class="sep" aria-hidden="true">·</span><span class="sub">Редактор</span></div>
+    <button class="draft-title" id="draft-title" type="button" title="Изменить текст">
+      <span class="ex" id="dt-ex" hidden>пример</span><span class="t" id="dt-title"></span><span class="d" id="dt-date"></span>
+    </button>
+    <div class="spacer" id="bar-spacer" hidden></div>
+    <div class="bar-right">
+      <span class="saved" id="saved" aria-live="off"></span>
+      <button class="btn small" id="new-text" type="button"><span aria-hidden="true">＋</span><span class="lbl">Новый текст</span></button>
+      <details class="vocab-menu" id="vocab-menu">
+        <summary aria-label="Словарь повторов"><span class="dot" id="vocab-dot"></span><span>Словарь</span></summary>
+        <div class="menu">
+          <p id="vocab-status"></p>
+          <div class="menu-actions">
+            <button class="btn small" id="vocab-load" type="button">Загрузить vocab.json</button>
+            <button class="btn small ghost" id="vocab-clear" type="button">Убрать</button>
+          </div>
+          <input type="file" id="vocab-file" accept=".json,application/json" hidden>
+        </div>
+      </details>
+      <button class="icon-btn" id="theme-btn" type="button" aria-label="Переключить тему" title="Тема"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.75a6.25 6.25 0 0 1 0 12.5z" fill="currentColor"/></svg></button>
+      <button class="icon-btn" id="help-btn" type="button" aria-label="Горячие клавиши" title="Горячие клавиши (?)">?</button>
+    </div>
+  </header>
+  <div class="ls-banner" id="ls-banner" hidden>Черновики не сохраняются в этом браузере — не закрывайте вкладку, пока не скачаете JSON.</div>
+
+  <!-- Screen: paste text -->
+  <section class="input-screen" id="screen-input" hidden>
+    <div class="input-wrap">
+      <h1 id="input-h">Новый текст</h1>
+      <p class="lead">Вставьте статью, главу или субтитры. На следующем шаге отметите незнакомые слова.</p>
+      <label class="sr" for="f-text">Текст</label>
+      <textarea class="text-in" id="f-text" placeholder="Вставьте английский текст" spellcheck="false"></textarea>
+      <div class="warns" id="input-warns"></div>
+      <div class="meta-row">
+        <label class="field"><span>Название</span><input id="f-title" type="text" autocomplete="off"></label>
+        <label class="field"><span>Ссылка на источник</span><input id="f-url" type="url" placeholder="https://" autocomplete="off"><small id="url-warn" hidden>Похоже, это не ссылка — сохраним как есть.</small></label>
+        <label class="field"><span>Дата урока</span><input id="f-date" type="date"></label>
+      </div>
+      <div class="actions">
+        <button class="btn primary" id="go-markup" type="button" disabled>К разметке</button>
+        <span class="hint"><kbd id="mod-key">Ctrl</kbd> + <kbd>Enter</kbd></span>
+        <span class="spacer"></span>
+        <button class="btn ghost" id="cancel-input" type="button" hidden>Вернуться к разметке</button>
+      </div>
+      <section class="drafts" aria-labelledby="drafts-h">
+        <h2 id="drafts-h">Черновики</h2>
+        <ul id="drafts-list"></ul>
+      </section>
+    </div>
+  </section>
+
+  <!-- Screen: markup -->
+  <main class="markup" id="screen-markup">
+    <div class="reader-wrap" id="reader-wrap">
+      <div class="reader-col">
+        <div class="banner" id="example-banner" hidden>
+          <p>Это пример: текст, три выбранных элемента и учебный словарь, где stall и pressure уже встречались. Простые слова и имена — серым, их можно пропускать. Отметьте ещё слова или вставьте свой текст.</p>
+          <button class="btn small" id="banner-new" type="button">Свой текст</button>
+        </div>
+        <div class="tools">
+          <label class="switch" for="simple-toggle"><input type="checkbox" id="simple-toggle" checked><span>Простые слова — серым</span></label>
+          <span class="remain" id="remain"></span>
+        </div>
+        <article class="reader dim" id="reader" tabindex="0" role="application"
+          aria-label="Текст для разметки. Стрелки — по словам, пробел — выбрать, Shift со стрелками — фраза, вопросительный знак — подсказка."></article>
+        <div class="legend">
+          <span><i class="sw sel"></i>выбрано</span>
+          <span><i class="sw rep"></i>выбран повтор</span>
+          <span><i class="sw echo"></i>уже в списке</span>
+          <span><i class="sw known"></i>встречалось раньше</span>
+          <span><i class="sw simple">Aa</i>простое слово</span>
+          <span class="vstat" id="legend-vocab"></span>
+        </div>
+      </div>
+    </div>
+    <aside class="panel" id="panel" aria-label="Выбранные слова">
+      <button class="sheet-handle" id="sheet-handle" type="button" aria-expanded="false">Выбрано: <span id="sh-count">0</span> <span class="arr" aria-hidden="true">↑</span></button>
+      <div class="panel-head">
+        <h2 id="panel-count">Выбрано: 0</h2>
+        <button class="link-btn" id="sort-btn" type="button" aria-label="Порядок списка">по тексту</button>
+      </div>
+      <div class="list" id="list" role="list"></div>
+      <div class="empty" id="empty">Кликните по незнакомому слову в тексте. Протяните мышью через несколько слов, чтобы выбрать фразу. На телефоне — долгое нажатие на первом слове, затем касание последнего.</div>
+      <div class="export">
+        <button class="fname" id="fname" type="button" title="Изменить имя файла"></button>
+        <input class="fname-input" id="fname-input" type="text" hidden aria-label="Имя файла">
+        <button class="btn primary wide" id="dl-btn" type="button" disabled>Скачать JSON</button>
+        <div class="row2">
+          <button class="btn" id="copy-btn" type="button" disabled>Копировать JSON</button>
+          <button class="btn ghost" id="show-json" type="button" aria-expanded="false">Показать JSON</button>
+        </div>
+        <pre class="json-pre" id="json-pre" hidden tabindex="0"></pre>
+        <p class="dl-note" id="dl-note" hidden></p>
+      </div>
+    </aside>
+  </main>
+</div>
+
+<div class="tip" id="tip" role="tooltip" hidden></div>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden><span id="toast-msg"></span><button id="toast-act" type="button" hidden></button></div>
+<div class="sr" id="live" aria-live="polite"></div>
+<div class="overlay" id="help" hidden>
+  <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="help-h">
+    <div class="dhead"><h2 id="help-h">Горячие клавиши</h2><button class="icon-btn" id="help-close" type="button" aria-label="Закрыть">✕</button></div>
+    <table>
+      <tr><td><kbd>←</kbd> <kbd>→</kbd></td><td>Предыдущее / следующее слово</td></tr>
+      <tr><td><kbd>↑</kbd> <kbd>↓</kbd></td><td>Слово строкой выше / ниже</td></tr>
+      <tr><td><kbd>Пробел</kbd></td><td>Выбрать или снять слово</td></tr>
+      <tr><td><kbd>Shift</kbd> + <kbd>←</kbd> <kbd>→</kbd></td><td>Растянуть выбор во фразу</td></tr>
+      <tr><td><kbd>Shift</kbd> + клик</td><td>Дотянуть последний выбор до слова</td></tr>
+      <tr><td><kbd>N</kbd></td><td>Заметка к текущему элементу</td></tr>
+      <tr><td><kbd>Delete</kbd></td><td>Убрать текущий элемент</td></tr>
+      <tr><td><kbd class="mk">Ctrl</kbd> + <kbd>Z</kbd> / <kbd>Shift</kbd> + <kbd>Z</kbd></td><td>Отменить / повторить</td></tr>
+      <tr><td><kbd class="mk">Ctrl</kbd> + <kbd>S</kbd></td><td>Скачать JSON</td></tr>
+      <tr><td><kbd>?</kbd></td><td>Эта подсказка</td></tr>
+    </table>
+  </div>
+</div>
+
+<script>
+(() => {
+  "use strict";
+  const $ = id => document.getElementById(id);
+  const isMac = /Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent);
+  const MOD = isMac ? "⌘" : "Ctrl";
+  $("mod-key").textContent = MOD;
+  document.querySelectorAll(".mk").forEach(k => k.textContent = MOD);
+  const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---------- storage ---------- */
+  let lsOK = true;
+  try { localStorage.setItem("wt.probe", "1"); localStorage.removeItem("wt.probe"); } catch (e) { lsOK = false; }
+  const LS = {
+    get(k, d) { if (!lsOK) return d; try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; } },
+    set(k, v) { if (!lsOK) return false; try { localStorage.setItem(k, JSON.stringify(v)); return true; } catch (e) { lsOK = false; showLS(); return false; } }
+  };
+  function showLS() { $("ls-banner").hidden = lsOK; }
+
+  /* ---------- sample content (example, not the user's) ---------- */
+  const SAMPLE = {
+    title: "Climate talks stall",
+    url: "",
+    text: "Negotiators were reluctant to commit to new emission targets on Friday, and the committee turned it down without a vote. Observers now expect the talks to stall until spring, despite mounting pressure from coastal states.\n\nSeveral delegates argued that the proposal was too vague to enforce. Others warned that further delay would undermine public trust and leave poorer nations to bear the cost of rising seas. A compromise may still emerge, but few are willing to bet on it.",
+    picks: ["reluctant", "turned it down", "stall"]
+  };
+  const SAMPLE_VOCAB = {
+    stall: { level: 2, senses: [{ id: "s1", ru: "застопориться" }], encounters: [
+      { lesson: "2026-10-02-guardian-tech", date: "2026-10-02", sentence: "Sales began to stall after the launch." },
+      { lesson: "2026-10-09-ft-markets", date: "2026-10-09", sentence: "Reforms may stall without support." } ] },
+    pressure: { level: 1, senses: [{ id: "s1", ru: "давление" }], encounters: [
+      { lesson: "2026-10-09-ft-markets", date: "2026-10-09", sentence: "Investors are under pressure." } ] },
+    undermine: { level: 1, senses: [{ id: "s1", ru: "подрывать" }], encounters: [
+      { lesson: "2026-10-05-nyt-health", date: "2026-10-05", sentence: "Rumours undermine confidence." } ] }
+  };
+
+  /* ---------- language helpers ---------- */
+  const FN = new Set("a an the of to in on at by for and or but nor is are was were be been being am it its this that these those with as from into than then so if not no do does did has have had will would can could should may might must i you he she we they me him her us them my your his our their".split(" "));
+  const COMMON = new Set("able about above across act action actual actually add after again against age ago agree air all allow almost alone along already also although always among amount and animal another answer any anyone anything app appear apply area arm around arrive art as ask at away baby back bad bag ball bank base basic be beautiful because become bed before begin behind believe best better between big bill bit black blood blue board body book born both box boy break bring brother bug build building business busy but button buy by call camera can car card care carry case cat catch cause center certain chair chance change cheap check child choose city class clean clear clearly click close code coffee cold college color come common company computer cook cool cost could count country couple course cover create cup current cut dad daily dark data date daughter day dead deal dear decide deep deploy design detail dev develop developer die different difficult dinner direction do doctor dog done door down draw dream dress drink drive drop during each early easily easy eat egg eight either else email end engineer enjoy enough enter entire especially even evening event ever every everyone everything exact exactly example expect experience explain eye face fact fall family far farm fast father feature feel few field fight file fill film final finally find fine finish fire first fish five fix floor fly follow food foot for force forget form forward four free friend from front full fully fun future game garden general get girl give given glass go good great green ground group grow guess guide guy hair half hand handle happen happy hard hardly hat hate have he head health hear heart heavy hello help her here high him his history hit hold holiday home hope hospital hot hotel hour house how however huge human hundred husband idea ideal if important in include increase information inside instead interest interesting internet into issue it job join just keep key kid kill kind kitchen know land language large last late later laugh law lead learn least leave left leg less let letter level lie life light like likely line link list listen little live load local long look lose lot love low machine main major make man manage many map market matter maybe me mean meet meeting member message middle might mile milk million mind minute miss model moment money month more morning most mostly mother move movie much music must my name national near nearly need never new news next nice night nine no none nor normal north not note nothing notice now number obvious of off offer office often oh oil ok okay old on once one online only open or order other our out outside over own page pain paper parent park part party pass past pay people per perhaps person personal phone photo pick picture piece place plan plant play player please point police poor popular position possible power prepare present pretty price problem process produce product production program project provide public pull push put question quick quickly quite rain rather reach read ready real really reason receive recent recently red release remember report rest result return right river road rock role room rule run sad safe same save say school screen sea season seat second see seem sell send sense series serious serve server service set setting seven several shake share she ship shoe shop short should show side sign similar simple simply since sing single sister sit six size skill sleep slow small smile so social some someone something sometimes son song soon sorry sort sound south space speak special spend sport spring staff stage stand star start state stay step still stop store story street strong student study stuff style subject success such suddenly summer sun support sure switch system table take talk tall task tea teach teacher team tell ten term test than thank that the their them then there these they thing think third this those though thousand three through throw time tired to today together tomorrow tonight too tool top total touch tour toward town trade train travel tree trip true truly try turn tv two type under understand until up update us use user usual usually version very view visit voice wait walk wall want war warm wash watch water way we wear weather website week weekend well west what when where whether which while white who whole why wide wife will win window winter wish with within without woman wonder word work worker world worry would write wrong yeah year yes yesterday yet you young your".split(" "));
+  const PRON = new Set("it them him her me us you this that something someone".split(" "));
+  const IRR = { ran: "run", went: "go", gone: "go", was: "be", were: "be", is: "be", are: "be", been: "be", did: "do", done: "do", made: "make", took: "take", taken: "take", said: "say", found: "find", thought: "think", brought: "bring", bought: "buy", caught: "catch", taught: "teach", left: "leave", felt: "feel", kept: "keep", held: "hold", stood: "stand", understood: "understand", began: "begin", begun: "begin", came: "come", became: "become", got: "get", gotten: "get", gave: "give", given: "give", knew: "know", known: "know", saw: "see", seen: "see", told: "tell", wrote: "write", written: "write", spoke: "speak", spoken: "speak", broke: "break", broken: "break", chose: "choose", chosen: "choose", fell: "fall", fallen: "fall", grew: "grow", grown: "grow", meant: "mean", met: "meet", paid: "pay", sent: "send", spent: "spend", built: "build", lost: "lose", led: "lead", children: "child", people: "person", men: "man", women: "woman", worse: "bad", better: "good" };
+  function candidates(word) {
+    const w = word.toLowerCase().replace(/’/g, "'").replace(/'s$/, "");
+    const c = [w];
+    const add = x => { if (x.length >= 2 && !c.includes(x)) c.push(x); };
+    const undouble = s => { if (s.length > 2 && s.at(-1) === s.at(-2) && !"lsz".includes(s.at(-1))) add(s.slice(0, -1)); };
+    if (IRR[w]) add(IRR[w]);
+    if (w.endsWith("ies")) add(w.slice(0, -3) + "y");
+    if (w.endsWith("es")) add(w.slice(0, -2));
+    if (w.endsWith("s") && !w.endsWith("ss")) add(w.slice(0, -1));
+    if (w.endsWith("ied")) add(w.slice(0, -3) + "y");
+    if (w.endsWith("ed")) { const s = w.slice(0, -2); add(s); add(s + "e"); undouble(s); }
+    if (w.endsWith("ing")) { const s = w.slice(0, -3); add(s); add(s + "e"); undouble(s); }
+    return c;
+  }
+  const plural = (n, one, few, many) => { const m10 = n % 10, m100 = n % 100; if (m10 === 1 && m100 !== 11) return one; if (m10 >= 2 && m10 <= 4 && (m100 < 12 || m100 > 14)) return few; return many; };
+  const TR = { а:"a",б:"b",в:"v",г:"g",д:"d",е:"e",ё:"e",ж:"zh",з:"z",и:"i",й:"y",к:"k",л:"l",м:"m",н:"n",о:"o",п:"p",р:"r",с:"s",т:"t",у:"u",ф:"f",х:"h",ц:"ts",ч:"ch",ш:"sh",щ:"sch",ъ:"",ы:"y",ь:"",э:"e",ю:"yu",я:"ya" };
+  function slug(s) {
+    let out = (s || "").toLowerCase().split("").map(ch => TR[ch] ?? ch).join("")
+      .normalize("NFKD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+    if (out.length > 40) { out = out.slice(0, 40); const cut = out.lastIndexOf("-"); if (cut > 15) out = out.slice(0, cut); }
+    return out || "lesson";
+  }
+  const todayISO = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`; };
+  const ddmm = iso => iso ? `${iso.slice(8, 10)}.${iso.slice(5, 7)}` : "";
+  const hhmm = t => { const d = new Date(t); return `${String(d.getHours()).padStart(2, "0")}:${String(d.getMinutes()).padStart(2, "0")}`; };
+  const uid = () => Math.random().toString(36).slice(2, 10);
+  function normalizeText(raw) {
+    return raw.replace(/\r/g, "").replace(/(\w)-\n(\w)/g, "$1$2").split(/\n\s*\n/)
+      .map(p => p.replace(/\s*\n\s*/g, " ").replace(/[ \t ]+/g, " ").trim()).filter(Boolean).join("\n\n");
+  }
+  const firstWords = (text, n = 6) => (text.match(/[A-Za-zÀ-ɏ]+(?:['’\-][A-Za-zÀ-ɏ]+)*/g) || []).slice(0, n).join(" ");
+
+  /* ---------- state ---------- */
+  let drafts = LS.get("wt.drafts", []);
+  let userVocab = LS.get("wt.vocab", null);
+  let draft = null, full = "", tokens = [], sentences = [], els = [], items = [];
+  let itemAt = [], repeatCache = new Map(), known = [], echoOf = [];
+  let tokStartAt = new Map(), tokEndAt = new Map();
+  let past = [], future = [], lastId = null, orderSeq = 0;
+  let cursor = 0, kbAnchor = null, kbPushed = false, touchAnchor = null;
+  let sortMode = LS.get("wt.sort", "text");
+  let openNotes = new Set();
+  let screen = "markup", pending = null;
+  let downloads = null;
+  let saveTimer = null;
+
+  const activeVocab = () => userVocab || (draft && draft.example ? SAMPLE_VOCAB : null);
+
+  /* ---------- parsing ---------- */
+  function parse(text) {
+    const paras = text.split(/\n{2,}/);
+    full = paras.join("\n\n");
+    tokens = []; sentences = []; tokStartAt = new Map(); tokEndAt = new Map();
+    let off = 0, s = -1;
+    paras.forEach((p, pi) => {
+      const re = /([A-Za-zÀ-ɏ]+(?:['’\-][A-Za-zÀ-ɏ]+)*)|(\d+(?:[.,:]\d+)*%?)|(\s+)|([^\sA-Za-zÀ-ɏ\d])/g;
+      let m, pendingEnd = true;
+      while ((m = re.exec(p))) {
+        const type = m[1] ? "word" : m[2] ? "num" : m[3] ? "space" : "punct";
+        if (type !== "space" && pendingEnd) {
+          const closing = type === "punct" && /["'”’)\]»]/.test(m[0]) && s >= 0 && sentences[s].para === pi;
+          if (!closing) { s++; sentences[s] = { start: off + m.index, end: off + m.index, para: pi, fw: -1, lw: -1 }; pendingEnd = false; }
+        }
+        const t = { i: tokens.length, text: m[0], start: off + m.index, end: off + m.index + m[0].length, type, sent: s, para: pi };
+        tokens.push(t);
+        if (type !== "space") {
+          const S = sentences[s]; S.end = t.end;
+          if (type === "word") { if (S.fw < 0) S.fw = t.i; S.lw = t.i; tokStartAt.set(t.start, t.i); tokEndAt.set(t.end, t.i); }
+        }
+        if (type === "punct" && /[.!?…]/.test(m[0])) {
+          const rest = p.slice(re.lastIndex);
+          if (/^["'”’)\]»]*\s+["'“‘(«]?[A-Z0-9]/.test(rest) || /^["'”’)\]»]*\s*$/.test(rest)) pendingEnd = true;
+        }
+      }
+      off += p.length + 2;
+    });
+  }
+  const sentenceText = it => { const S = sentences[tokens[it.a].sent]; return full.slice(S.start, S.end); };
+  const itemText = it => full.slice(tokens[it.a].start, tokens[it.b].end);
+  const isWord = i => tokens[i] && tokens[i].type === "word";
+  const firstWordIdx = () => { const t = tokens.find(t => t.type === "word"); return t ? t.i : 0; };
+
+  function vocabFor(it) {
+    const V = activeVocab(); if (!V) return null;
+    const words = []; for (let k = it.a; k <= it.b; k++) if (tokens[k].type === "word") words.push(tokens[k].text);
+    if (words.length === 1) { for (const c of candidates(words[0])) if (V[c]) return [c, V[c]]; return null; }
+    const lower = words.map(w => w.toLowerCase());
+    const trials = [lower.join(" ")];
+    for (const c of candidates(words[0])) {
+      const rest = lower.slice(1);
+      trials.push([c, ...rest].join(" "));
+      trials.push([c, ...rest.filter(w => !PRON.has(w))].join(" "));
+    }
+    for (const k of trials) if (V[k]) return [k, V[k]];
+    return null;
+  }
+  function entryInfo(e) {
+    const enc = Array.isArray(e.encounters) ? e.encounters : [];
+    const level = Number(e.level) || enc.length || 1;
+    const count = enc.length || level;
+    const lastE = enc[enc.length - 1];
+    const last = lastE ? (lastE.date || (String(lastE.lesson || "").match(/^\d{4}-\d{2}-\d{2}/) || [""])[0]) : "";
+    return { level, count, last };
+  }
+
+  /* ---------- reader rendering ---------- */
+  function renderReader() {
+    const reader = $("reader");
+    reader.textContent = "";
+    const frag = document.createDocumentFragment();
+    let curP = -1, pEl = null;
+    els = new Array(tokens.length);
+    for (const t of tokens) {
+      if (t.para !== curP) { pEl = document.createElement("p"); frag.appendChild(pEl); curP = t.para; }
+      const sp = document.createElement("span");
+      sp.textContent = t.text; sp.dataset.i = t.i;
+      if (t.type === "word") {
+        sp.className = "tok" + (FN.has(t.text.toLowerCase()) ? " fn" : "") + (isSimple(t) ? " simple" : "");
+        sp.id = "t" + t.i; sp.setAttribute("role", "button");
+      }
+      pEl.appendChild(sp); els[t.i] = sp;
+    }
+    reader.appendChild(frag);
+    computeKnown(); paint(); setCursor(isWord(cursor) ? cursor : firstWordIdx(), false);
+  }
+  function isSimple(t) {
+    const w = t.text.toLowerCase();
+    if (FN.has(w)) return true;
+    if (candidates(t.text).some(c => COMMON.has(c))) return true;
+    // Capitalised inside a sentence → most likely a name or acronym (Uber, Morpheus, AI)
+    const S = sentences[t.sent];
+    return /^[A-Z]/.test(t.text) && S && S.fw !== t.i;
+  }
+  const baseKeys = w => candidates(w);
+  function computeKnown() {
+    const V = activeVocab(); known = new Array(tokens.length).fill(null);
+    if (!V) return;
+    for (const t of tokens) if (t.type === "word" && !FN.has(t.text.toLowerCase())) {
+      for (const c of candidates(t.text)) if (V[c]) { known[t.i] = [c, V[c]]; break; }
+    }
+  }
+  function paint() {
+    itemAt = new Array(tokens.length).fill(null);
+    repeatCache = new Map();
+    for (const it of items) { for (let k = it.a; k <= it.b; k++) itemAt[k] = it; repeatCache.set(it.id, vocabFor(it)); }
+    // Other occurrences of an already selected word (same base form) are marked as "echo"
+    const selKeys = new Map();
+    for (const it of items) if (it.a === it.b) for (const k of baseKeys(tokens[it.a].text)) if (!selKeys.has(k)) selKeys.set(k, it);
+    echoOf = new Array(tokens.length).fill(null);
+    if (selKeys.size) for (const t of tokens) if (t.type === "word" && !itemAt[t.i]) {
+      for (const k of baseKeys(t.text)) { const it = selKeys.get(k); if (it) { echoOf[t.i] = it; break; } }
+    }
+    for (let i = 0; i < els.length; i++) {
+      const el = els[i], it = itemAt[i], rep = it && repeatCache.get(it.id);
+      el.classList.toggle("in-item", !!it);
+      el.classList.toggle("rep", !!rep);
+      el.classList.toggle("item-start", !!it && it.a === i);
+      el.classList.toggle("item-end", !!it && it.b === i);
+      if (it && it.a === i && rep) el.dataset.level = entryInfo(rep[1]).level + 1; else delete el.dataset.level;
+      if (tokens[i].type === "word") {
+        el.setAttribute("aria-pressed", it ? "true" : "false");
+        el.classList.toggle("known", !it && !echoOf[i] && !!known[i]);
+        el.classList.toggle("echo", !!echoOf[i]);
+      }
+    }
+    renderRemain();
+  }
+  function renderRemain() {
+    const hard = new Set(), picked = new Set();
+    for (const t of tokens) if (t.type === "word" && !els[t.i].classList.contains("simple")) {
+      const k = t.text.toLowerCase();
+      if (itemAt[t.i] || echoOf[t.i]) picked.add(k); else hard.add(k);
+    }
+    for (const k of picked) hard.delete(k);
+    const n = hard.size;
+    $("remain").innerHTML = `Не серых и не выбранных: <b>${n}</b> ${plural(n, "слово", "слова", "слов")}`;
+  }
+
+  /* ---------- selection logic ---------- */
+  function pushHistory() { past.push(JSON.stringify(items)); if (past.length > 50) past.shift(); future = []; }
+  function createRange(a, b) {
+    if (a > b) [a, b] = [b, a];
+    const removed = items.filter(o => !(o.b < a || o.a > b));
+    items = items.filter(o => o.b < a || o.a > b);
+    const it = { id: uid(), a, b, note: (removed.find(r => r.note) || {}).note || "", order: ++orderSeq, off: tokens[a].start };
+    it.text = itemText(it);
+    items.push(it); lastId = it.id;
+    if (it.note) openNotes.add(it.id);
+    announce(`${it.text} — выбрано, всего ${items.length}`);
+    return it;
+  }
+  function removeItem(it) { items = items.filter(o => o.id !== it.id); openNotes.delete(it.id); announce(`${it.text} — убрано, всего ${items.length}`); }
+  function sentenceOf(i) { return sentences[tokens[i].sent]; }
+  function clampToSentence(a, j) {
+    if (tokens[j].sent === tokens[a].sent) return j;
+    const S = sentenceOf(a); return j > a ? S.lw : S.fw;
+  }
+  function clickToken(i, shift) {
+    const it = itemAt[i];
+    const last = items.find(o => o.id === lastId);
+    if (!it && !shift && echoOf[i]) { showEcho(i); return; }
+    pushHistory();
+    if (shift && last && tokens[last.a].sent === tokens[i].sent) createRange(Math.min(last.a, i), Math.max(last.b, i));
+    else if (it) removeItem(it);
+    else createRange(i, i);
+    changed();
+  }
+  function showEcho(i) {
+    const it = echoOf[i];
+    const row = $("list").querySelector(`[data-id="${it.id}"]`);
+    if (row) { row.scrollIntoView({ block: "nearest" }); row.classList.add("hl"); setTimeout(() => row.classList.remove("hl"), 900); }
+    toast(`«${it.text}» уже в списке`, { label: "Добавить ещё контекст", fn: () => { pushHistory(); createRange(i, i); changed(); } });
+  }
+  function changed() {
+    paint(); renderPanel();
+    if (draft) { draft.changedAt = Date.now(); draft.items = items; }
+    scheduleSave();
+  }
+  function undo() { if (!past.length) return; future.push(JSON.stringify(items)); items = JSON.parse(past.pop()); changed(); toast("Отменено"); }
+  function redo() { if (!future.length) return; past.push(JSON.stringify(items)); items = JSON.parse(future.pop()); changed(); toast("Повторено"); }
+
+  /* ---------- cursor & keyboard ---------- */
+  function setCursor(i, scroll = true) {
+    if (!isWord(i)) return;
+    if (els[cursor]) els[cursor].classList.remove("cur");
+    cursor = i; els[i].classList.add("cur");
+    $("reader").setAttribute("aria-activedescendant", "t" + i);
+    if (scroll) els[i].scrollIntoView({ block: "nearest", behavior: "auto" });
+  }
+  function stepWord(dir, within) {
+    let j = cursor + dir;
+    while (j >= 0 && j < tokens.length && !isWord(j)) j += dir;
+    if (!isWord(j)) return cursor;
+    if (within != null && tokens[j].sent !== within) return cursor;
+    return j;
+  }
+  function lineMove(dir) {
+    const cur = els[cursor].getBoundingClientRect(), cx = cur.left + cur.width / 2;
+    let best = null, bestTop = null, bestDx = Infinity;
+    for (const t of tokens) {
+      if (t.type !== "word") continue;
+      const r = els[t.i].getBoundingClientRect(), dy = r.top - cur.top;
+      if (dir < 0 ? dy < -6 : dy > 6) {
+        const dx = Math.abs(r.left + r.width / 2 - cx);
+        if (bestTop === null || (dir < 0 ? r.top > bestTop + 3 : r.top < bestTop - 3)) { bestTop = r.top; best = t.i; bestDx = dx; }
+        else if (Math.abs(r.top - bestTop) <= 3 && dx < bestDx) { best = t.i; bestDx = dx; }
+      }
+    }
+    if (best != null) setCursor(best);
+  }
+
+  document.addEventListener("keydown", e => {
+    if (e.target === $("reader") || document.activeElement === document.body) $("reader").classList.add("kb");
+    const mod = e.metaKey || e.ctrlKey;
+    if (!$("help").hidden) { if (e.key === "Escape" || e.key === "?") { e.preventDefault(); closeHelp(); } return; }
+    if (screen === "input") { if (mod && e.key === "Enter") { e.preventDefault(); goMarkup(); } return; }
+    const inField = e.target.closest && e.target.closest("input, textarea, select");
+    if (mod && e.code === "KeyS") { e.preventDefault(); doDownload(); return; }
+    if (inField) { if (e.key === "Escape") e.target.blur(); return; }
+    if (mod && e.code === "KeyZ") { e.preventDefault(); e.shiftKey ? redo() : undo(); return; }
+    if (mod && e.code === "KeyY") { e.preventDefault(); redo(); return; }
+    if (mod || e.altKey) return;
+    if (e.key === "?" || (e.code === "Slash" && e.shiftKey)) { e.preventDefault(); openHelp(); return; }
+    const reader = $("reader");
+    const nav = ["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown", " ", "Home", "End"].includes(e.key);
+    if (document.activeElement !== reader) {
+      if (nav && (document.activeElement === document.body || !document.activeElement)) reader.focus({ preventScroll: true });
+      else return;
+    }
+    if (e.key === "ArrowLeft" || e.key === "ArrowRight") {
+      e.preventDefault();
+      const dir = e.key === "ArrowLeft" ? -1 : 1;
+      if (e.shiftKey) {
+        if (kbAnchor == null) { kbAnchor = cursor; kbPushed = false; }
+        const j = stepWord(dir, tokens[kbAnchor].sent);
+        setCursor(j);
+        if (!kbPushed) { pushHistory(); kbPushed = true; }
+        createRange(kbAnchor, cursor); changed();
+      } else setCursor(stepWord(dir));
+    } else if (e.key === "ArrowUp" || e.key === "ArrowDown") { e.preventDefault(); lineMove(e.key === "ArrowUp" ? -1 : 1); }
+    else if (e.key === "Home") { e.preventDefault(); setCursor(firstWordIdx()); }
+    else if (e.key === "End") { e.preventDefault(); const w = [...tokens].reverse().find(t => t.type === "word"); if (w) setCursor(w.i); }
+    else if (e.key === " ") { e.preventDefault(); clickToken(cursor, false); }
+    else if (e.code === "KeyN") { const it = itemAt[cursor]; if (it) { e.preventDefault(); openNote(it.id); } }
+    else if (e.key === "Delete" || e.key === "Backspace") { const it = itemAt[cursor]; if (it) { e.preventDefault(); pushHistory(); removeItem(it); changed(); } }
+    else if (e.key === "Escape") { kbAnchor = null; cancelTouchAnchor(); }
+  });
+  document.addEventListener("keyup", e => { if (e.key === "Shift") kbAnchor = null; });
+
+  /* ---------- pointer: click, drag-to-phrase, touch long-press ---------- */
+  let drag = null, touch = null;
+  const reader = $("reader");
+  reader.addEventListener("contextmenu", e => { if (e.target.closest(".tok")) e.preventDefault(); });
+  reader.addEventListener("pointerdown", e => {
+    reader.classList.remove("kb");
+    const el = e.target.closest(".tok"); if (!el) return;
+    const i = +el.dataset.i;
+    if (e.pointerType === "mouse") {
+      if (e.button !== 0) return;
+      e.preventDefault();
+      reader.focus({ preventScroll: true });
+      drag = { anchor: i, cur: i, moved: false, shift: e.shiftKey };
+      setCursor(i, false);
+    } else {
+      touch = { i, x: e.clientX, y: e.clientY, long: false };
+      touch.timer = setTimeout(() => { if (touch) { touch.long = true; startTouchAnchor(i); } }, 450);
+    }
+  });
+  reader.addEventListener("pointermove", e => {
+    if (drag) {
+      const hit = document.elementFromPoint(e.clientX, e.clientY);
+      const el = hit && hit.closest && hit.closest(".tok");
+      if (!el || !reader.contains(el)) return;
+      const j = clampToSentence(drag.anchor, +el.dataset.i);
+      if (j !== drag.cur) { drag.cur = j; drag.moved = drag.moved || j !== drag.anchor; preview(drag.anchor, j); }
+    } else if (touch && !touch.long && Math.hypot(e.clientX - touch.x, e.clientY - touch.y) > 10) {
+      clearTimeout(touch.timer); touch = null;
+    }
+  });
+  window.addEventListener("pointerup", () => {
+    if (drag) {
+      const d = drag; drag = null; clearPreview();
+      if (d.moved) { pushHistory(); createRange(d.anchor, d.cur); setCursor(d.cur, false); changed(); }
+      else clickToken(d.anchor, d.shift);
+    } else if (touch) {
+      clearTimeout(touch.timer);
+      const t = touch; touch = null;
+      if (t.long) return;
+      if (touchAnchor != null) finishTouchAnchor(t.i);
+      else { setCursor(t.i, false); clickToken(t.i, false); }
+    }
+  });
+  window.addEventListener("pointercancel", () => { if (drag) { drag = null; clearPreview(); } if (touch) { clearTimeout(touch.timer); touch = null; } });
+  function preview(a, b) { clearPreview(); const [x, y] = a < b ? [a, b] : [b, a]; for (let k = x; k <= y; k++) els[k].classList.add("pv"); }
+  function clearPreview() { reader.querySelectorAll(".pv").forEach(el => el.classList.remove("pv")); }
+  function startTouchAnchor(i) {
+    cancelTouchAnchor(); touchAnchor = i; els[i].classList.add("anchor");
+    try { navigator.vibrate && navigator.vibrate(12); } catch (e) {}
+    toast("Фраза: коснитесь последнего слова");
+  }
+  function cancelTouchAnchor() { if (touchAnchor != null && els[touchAnchor]) els[touchAnchor].classList.remove("anchor"); touchAnchor = null; }
+  function finishTouchAnchor(j) {
+    const a = touchAnchor; cancelTouchAnchor();
+    if (tokens[a].sent !== tokens[j].sent) { toast("Фраза должна быть внутри одного предложения"); return; }
+    pushHistory(); createRange(a, j); setCursor(j, false); changed(); hideToast();
+  }
+
+  /* ---------- hover: sync + tooltip ---------- */
+  const tip = $("tip");
+  function hl(id, on) {
+    const it = items.find(o => o.id === id); if (!it) return;
+    for (let k = it.a; k <= it.b; k++) els[k].classList.toggle("hl", on);
+    const row = $("list").querySelector(`[data-id="${id}"]`); if (row) row.classList.toggle("hl", on);
+  }
+  let hoverId = null;
+  reader.addEventListener("mouseover", e => {
+    const el = e.target.closest(".tok"); if (!el) return;
+    const i = +el.dataset.i, it = itemAt[i];
+    if (hoverId && (!it || it.id !== hoverId)) { hl(hoverId, false); hoverId = null; }
+    if (it && it.id !== hoverId) { hoverId = it.id; hl(it.id, true); }
+    const k = it ? repeatCache.get(it.id) : known[i];
+    if (!it && echoOf[i]) {
+      tip.textContent = `Уже в списке: ${echoOf[i].text} · клик покажет строку`;
+      tip.hidden = false;
+      const r = el.getBoundingClientRect(), tr = tip.getBoundingClientRect();
+      tip.style.left = Math.max(8, Math.min(innerWidth - tr.width - 8, r.left)) + "px";
+      tip.style.top = (r.top - tr.height - 10 < 8 ? r.bottom + 8 : r.top - tr.height - 10) + "px";
+    } else if (k) {
+      const inf = entryInfo(k[1]);
+      tip.textContent = `${k[0]}: встречалось ${inf.count} ${plural(inf.count, "раз", "раза", "раз")} · уровень ${inf.level}` + (inf.last ? ` · последний раз ${ddmm(inf.last)}` : "") + (it ? ` → станет ${inf.level + 1}` : "");
+      tip.hidden = false;
+      const r = el.getBoundingClientRect(), tr = tip.getBoundingClientRect();
+      tip.style.left = Math.max(8, Math.min(innerWidth - tr.width - 8, r.left)) + "px";
+      tip.style.top = (r.top - tr.height - 10 < 8 ? r.bottom + 8 : r.top - tr.height - 10) + "px";
+    } else tip.hidden = true;
+  });
+  reader.addEventListener("mouseout", e => {
+    if (!e.relatedTarget || !reader.contains(e.relatedTarget) || !e.relatedTarget.closest(".tok")) {
+      tip.hidden = true; if (hoverId) { hl(hoverId, false); hoverId = null; }
+    }
+  });
+  $("reader-wrap").addEventListener("scroll", () => { tip.hidden = true; }, { passive: true });
+
+  /* ---------- panel ---------- */
+  function renderPanel() {
+    const list = $("list"); list.textContent = "";
+    const byText = [...items].sort((x, y) => x.a - y.a);
+    const dupes = new Set(), seen = new Set();
+    for (const it of byText) { const k = itemText(it).toLowerCase(); if (seen.has(k)) dupes.add(it.id); else seen.add(k); }
+    const arr = sortMode === "text" ? byText : [...items].sort((x, y) => x.order - y.order);
+    let reps = 0;
+    for (const it of arr) { if (repeatCache.get(it.id)) reps++; list.appendChild(rowEl(it, dupes.has(it.id))); }
+    const n = items.length;
+    const h = $("panel-count"); h.textContent = `Выбрано: ${n}`;
+    if (reps) { const s = document.createElement("span"); s.className = "rp"; s.textContent = ` · повторов: ${reps}`; h.appendChild(s); }
+    $("sh-count").textContent = n;
+    $("empty").hidden = n > 0; list.hidden = n === 0;
+    $("sort-btn").textContent = sortMode === "text" ? "по тексту" : "по порядку выбора";
+    updateExport();
+  }
+  function rowEl(it, dupe) {
+    const row = document.createElement("div");
+    row.className = "row"; row.dataset.id = it.id; row.setAttribute("role", "listitem");
+    const top = document.createElement("div"); top.className = "row-top";
+    const w = document.createElement("span"); w.className = "w"; w.textContent = itemText(it); top.appendChild(w);
+    if (it.b > it.a) { const p = document.createElement("span"); p.className = "pill"; p.textContent = "фраза"; top.appendChild(p); }
+    const rep = repeatCache.get(it.id);
+    if (rep) { const p = document.createElement("span"); p.className = "pill rep"; p.textContent = `повтор · ур. ${entryInfo(rep[1]).level + 1}`; top.appendChild(p); }
+    const del = document.createElement("button"); del.type = "button"; del.className = "del"; del.textContent = "×";
+    del.setAttribute("aria-label", `Убрать «${itemText(it)}»`);
+    del.addEventListener("click", ev => {
+      ev.stopPropagation(); pushHistory(); removeItem(it); changed();
+      toast(`«${it.text}» убрано`, { label: "Отменить", fn: undo });
+    });
+    top.appendChild(del);
+    row.appendChild(top);
+
+    const ctx = document.createElement("div"); ctx.className = "ctx";
+    const sent = sentenceText(it), S = sentenceOf(it.a);
+    const relA = tokens[it.a].start - S.start, relB = tokens[it.b].end - S.start;
+    let pre = sent.slice(0, relA);
+    if (pre.length > 34) { pre = pre.slice(-34); const sp = pre.indexOf(" "); pre = "…" + (sp >= 0 ? pre.slice(sp + 1) : pre); }
+    ctx.append(pre); const mk = document.createElement("mark"); mk.textContent = sent.slice(relA, relB); ctx.append(mk, sent.slice(relB));
+    ctx.title = sent; row.appendChild(ctx);
+
+    if (dupe) { const d = document.createElement("div"); d.className = "dupe"; d.textContent = "Это слово уже выбрано выше — оставьте, если нужен второй контекст"; row.appendChild(d); }
+    if (!sent.trim()) { const er = document.createElement("div"); er.className = "err"; er.textContent = "Нет предложения-контекста"; row.appendChild(er); }
+
+    if (it.note || openNotes.has(it.id)) {
+      const ta = document.createElement("textarea"); ta.className = "note"; ta.rows = 2; ta.value = it.note || "";
+      ta.placeholder = "Какое значение имею в виду"; ta.setAttribute("aria-label", `Заметка к «${itemText(it)}»`); ta.dataset.note = it.id;
+      let pushed = false;
+      ta.addEventListener("input", () => { if (!pushed) { pushHistory(); pushed = true; } it.note = ta.value; draft.changedAt = Date.now(); scheduleSave(); updateExport(); });
+      ta.addEventListener("blur", () => { pushed = false; if (!ta.value.trim()) { openNotes.delete(it.id); it.note = ""; renderPanel(); } });
+      ta.addEventListener("click", ev => ev.stopPropagation());
+      row.appendChild(ta);
+    } else {
+      const nb = document.createElement("button"); nb.type = "button"; nb.className = "note-toggle"; nb.textContent = "+ заметка о значении";
+      nb.addEventListener("click", ev => { ev.stopPropagation(); openNote(it.id); });
+      row.appendChild(nb);
+    }
+    row.addEventListener("mouseenter", () => hl(it.id, true));
+    row.addEventListener("mouseleave", () => hl(it.id, false));
+    row.addEventListener("click", () => scrollToItem(it));
+    return row;
+  }
+  function openNote(id) {
+    openNotes.add(id); renderPanel(); openSheet(true);
+    const ta = $("list").querySelector(`[data-note="${id}"]`);
+    if (ta) { ta.focus(); ta.scrollIntoView({ block: "nearest" }); }
+  }
+  function scrollToItem(it) {
+    els[it.a].scrollIntoView({ block: "center", behavior: reduced ? "auto" : "smooth" });
+    setCursor(it.a, false);
+    for (let k = it.a; k <= it.b; k++) { const el = els[k]; el.classList.remove("flash"); void el.offsetWidth; el.classList.add("flash"); }
+    setTimeout(() => { for (let k = it.a; k <= it.b && k < els.length; k++) els[k] && els[k].classList.remove("flash"); }, 950);
+    if (matchMedia("(max-width: 719px)").matches) openSheet(false);
+  }
+  $("sort-btn").addEventListener("click", () => { sortMode = sortMode === "text" ? "order" : "text"; LS.set("wt.sort", sortMode); renderPanel(); });
+  function openSheet(on) { $("panel").classList.toggle("open", on); $("sheet-handle").setAttribute("aria-expanded", on ? "true" : "false"); }
+  $("sheet-handle").addEventListener("click", () => openSheet(!$("panel").classList.contains("open")));
+
+  /* ---------- export ---------- */
+  const fileBase = () => (draft && draft.filename) || `${draft ? draft.date : todayISO()}-${slug(draft ? (draft.title || firstWords(draft.text)) : "")}`;
+  function buildJSON() {
+    const src = { title: draft.title || firstWords(draft.text) };
+    if (draft.url) src.url = draft.url;
+    return {
+      version: 1, id: fileBase(), date: draft.date, source: src,
+      items: [...items].sort((x, y) => x.a - y.a).map(it => ({ text: itemText(it), kind: it.b > it.a ? "phrase" : "word", sentence: sentenceText(it), note: it.note || "" }))
+    };
+  }
+  const errorsCount = () => items.filter(it => !sentenceText(it).trim()).length;
+  function updateExport() {
+    const n = items.length, errs = errorsCount();
+    $("fname").textContent = fileBase() + ".json";
+    const dl = $("dl-btn");
+    dl.disabled = n === 0 || errs > 0;
+    dl.textContent = errs ? `${errs} ${plural(errs, "ошибка", "ошибки", "ошибок")}` : "Скачать JSON";
+    $("copy-btn").disabled = n === 0;
+    if (!$("json-pre").hidden) $("json-pre").textContent = n ? JSON.stringify(buildJSON(), null, 2) : "";
+  }
+  function markExported() { draft.exportedAt = Date.now(); draft.example = draft.example && true; scheduleSave(true); }
+  async function doDownload() {
+    if (screen !== "markup" || !items.length || errorsCount()) return;
+    const json = JSON.stringify(buildJSON(), null, 2);
+    if (!downloads) { copyJSON(); return; }
+    try {
+      await downloads.save({ filename: fileBase() + ".json", data: json });
+      markExported();
+      toast("Файл сохранён · положите его в lessons/", { label: "Новый текст", fn: () => openInput(null) });
+    } catch (err) {
+      const code = err && err.code;
+      if (code === "declined") toast("Сохранение отменено");
+      else if (code === "rate_limited") toast("Окно сохранения уже открыто");
+      else { downloads = null; setDownloadUI(); toast("Скачивание здесь недоступно — скопируйте JSON"); }
+    }
+  }
+  function copyJSON() {
+    if (!items.length) return;
+    const json = JSON.stringify(buildJSON(), null, 2);
+    const fallback = () => { showJSON(true); const r = document.createRange(); r.selectNodeContents($("json-pre")); const s = getSelection(); s.removeAllRanges(); s.addRange(r); toast("Выделил JSON — нажмите " + MOD + " + C"); };
+    try {
+      navigator.clipboard.writeText(json).then(() => { markExported(); toast("JSON скопирован"); }, fallback);
+    } catch (e) { fallback(); }
+  }
+  function showJSON(on) { const pre = $("json-pre"); pre.hidden = !on; $("show-json").setAttribute("aria-expanded", on ? "true" : "false"); $("show-json").textContent = on ? "Скрыть JSON" : "Показать JSON"; updateExport(); }
+  $("dl-btn").addEventListener("click", doDownload);
+  $("copy-btn").addEventListener("click", copyJSON);
+  $("show-json").addEventListener("click", () => showJSON($("json-pre").hidden));
+  function setDownloadUI() {
+    const has = !!downloads;
+    $("dl-btn").hidden = !has;
+    $("copy-btn").classList.toggle("primary", !has);
+    $("dl-note").hidden = has;
+    $("dl-note").textContent = has ? "" : "Скачивание файла в этом окне недоступно. Скопируйте JSON и сохраните его в lessons/ как " + fileBase() + ".json.";
+  }
+  $("fname").addEventListener("click", () => {
+    const inp = $("fname-input"); inp.value = fileBase(); inp.hidden = false; $("fname").hidden = true; inp.focus(); inp.select();
+  });
+  function commitFname(save) {
+    const inp = $("fname-input"); if (inp.hidden) return;
+    if (save) { const v = slug(inp.value.replace(/\.json$/i, "")); draft.filename = v === slug(fileBase()) && !draft.filename ? "" : v; scheduleSave(); }
+    inp.hidden = true; $("fname").hidden = false; updateExport(); setDownloadUI();
+  }
+  $("fname-input").addEventListener("keydown", e => { if (e.key === "Enter") { e.preventDefault(); commitFname(true); } else if (e.key === "Escape") { e.preventDefault(); e.stopPropagation(); commitFname(false); } });
+  $("fname-input").addEventListener("blur", () => commitFname(true));
+
+  /* ---------- drafts & persistence ---------- */
+  function scheduleSave(now) {
+    clearTimeout(saveTimer);
+    saveTimer = setTimeout(persist, now ? 0 : 350);
+  }
+  function persist() {
+    if (!draft) return;
+    draft.items = items; draft.updatedAt = Date.now();
+    if (!drafts.includes(draft)) drafts.unshift(draft);
+    drafts.sort((x, y) => y.updatedAt - x.updatedAt);
+    drafts = drafts.slice(0, 20);
+    const ok = LS.set("wt.drafts", drafts) && LS.set("wt.current", draft.id);
+    const s = $("saved");
+    s.textContent = ok ? `Сохранено ${hhmm(draft.updatedAt)}` : "Не сохраняется";
+    s.classList.toggle("bad", !ok);
+    showLS();
+  }
+  function remap(old) {
+    const out = [], lost = [];
+    for (const it of old) {
+      const txt = it.text || ""; let best = null, bd = Infinity, from = 0, idx;
+      if (txt) while ((idx = full.indexOf(txt, from)) >= 0) {
+        const a = tokStartAt.get(idx), b = tokEndAt.get(idx + txt.length);
+        if (a != null && b != null && tokens[a].sent === tokens[b].sent) {
+          const d = Math.abs(idx - (it.off || 0)); if (d < bd) { bd = d; best = [a, b]; }
+        }
+        from = idx + 1;
+      }
+      if (best && !out.some(o => !(best[1] < o.a || best[0] > o.b))) out.push({ ...it, a: best[0], b: best[1], off: tokens[best[0]].start });
+      else lost.push(it);
+    }
+    return { out, lost };
+  }
+  function openDraft(d) {
+    draft = d; screen = "markup";
+    parse(d.text);
+    let its = Array.isArray(d.items) ? d.items : [];
+    const valid = its.every(it => isWord(it.a) && isWord(it.b) && itemText(it) === it.text);
+    if (!valid) its = remap(its).out;
+    items = its; orderSeq = items.reduce((m, it) => Math.max(m, it.order || 0), 0);
+    past = []; future = []; lastId = null; openNotes = new Set(items.filter(i => i.note).map(i => i.id));
+    cursor = firstWordIdx();
+    $("screen-input").hidden = true; $("screen-markup").hidden = false;
+    $("draft-title").hidden = false; $("bar-spacer").hidden = true;
+    $("dt-title").textContent = d.title || firstWords(d.text) || "Без названия";
+    $("dt-date").textContent = "· " + ddmm(d.date);
+    $("dt-ex").hidden = !d.example;
+    $("example-banner").hidden = !d.example;
+    renderReader(); renderPanel(); updateVocabUI(); setDownloadUI(); openSheet(false);
+    persist();
+  }
+
+  /* ---------- input screen ---------- */
+  function openInput(d) {
+    pending = d; screen = "input"; tip.hidden = true;
+    $("screen-markup").hidden = true; $("screen-input").hidden = false;
+    $("draft-title").hidden = true; $("bar-spacer").hidden = false;
+    $("input-h").textContent = d ? "Изменить текст" : "Новый текст";
+    $("f-text").value = d ? d.text : "";
+    $("f-title").value = d ? (d.title || "") : "";
+    $("f-url").value = d ? (d.url || "") : "";
+    $("f-date").value = d ? d.date : todayISO();
+    $("go-markup").textContent = d ? "Сохранить и к разметке" : "К разметке";
+    $("cancel-input").hidden = !draft;
+    inputChanged(); renderDrafts();
+    setTimeout(() => $("f-text").focus(), 0);
+  }
+  function inputChanged() {
+    const v = $("f-text").value;
+    const hasWord = /[A-Za-zÀ-ɏ]/.test(v);
+    $("go-markup").disabled = !hasWord;
+    $("f-title").placeholder = firstWords(normalizeText(v)) || "По первым словам текста";
+    const warns = $("input-warns"); warns.textContent = "";
+    const letters = (v.match(/\p{L}/gu) || []).length, latin = (v.match(/[A-Za-z]/g) || []).length;
+    if (letters > 20 && latin / letters < 0.6) { const p = document.createElement("p"); p.textContent = "Похоже, текст не на английском. Разметка всё равно доступна."; warns.appendChild(p); }
+    if (v.length > 20000) { const p = document.createElement("p"); p.textContent = `Длинный текст: ${v.length.toLocaleString("ru-RU")} знаков. Разметка может работать медленнее.`; warns.appendChild(p); }
+    const u = $("f-url").value.trim();
+    $("url-warn").hidden = !u || /^https?:\/\/[^\s.]+\.\S+/.test(u);
+  }
+  ["input"].forEach(ev => { $("f-text").addEventListener(ev, inputChanged); $("f-url").addEventListener(ev, inputChanged); });
+  const ta = $("f-text");
+  ta.addEventListener("dragover", e => { e.preventDefault(); ta.classList.add("drop"); });
+  ta.addEventListener("dragleave", () => ta.classList.remove("drop"));
+  ta.addEventListener("drop", e => {
+    ta.classList.remove("drop");
+    const f = e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0];
+    if (!f) return;
+    e.preventDefault();
+    if (!/\.(txt|md)$/i.test(f.name) && !/^text\//.test(f.type)) { toast("Нужен текстовый файл .txt"); return; }
+    const r = new FileReader(); r.onload = () => { ta.value = String(r.result || ""); inputChanged(); }; r.readAsText(f);
+  });
+  function goMarkup() {
+    if ($("go-markup").disabled) return;
+    const text = normalizeText($("f-text").value);
+    const title = $("f-title").value.trim(), url = $("f-url").value.trim(), date = $("f-date").value || todayISO();
+    if (pending) {
+      const d = pending, textChanged = d.text !== text;
+      Object.assign(d, { title, url, date });
+      if (textChanged) {
+        d.text = text; parse(text);
+        const { out, lost } = remap(d.items || []);
+        d.items = out; d.changedAt = Date.now();
+        d.example = false;
+        if (lost.length) setTimeout(() => toast(`${lost.length} ${plural(lost.length, "элемент", "элемента", "элементов")} не нашлось в новом тексте`), 50);
+      }
+      openDraft(d);
+    } else {
+      const d = { id: uid(), title, url, date, text, items: [], createdAt: Date.now(), updatedAt: Date.now(), changedAt: Date.now() };
+      drafts.unshift(d); openDraft(d);
+    }
+    reader.focus({ preventScroll: true });
+  }
+  $("go-markup").addEventListener("click", goMarkup);
+  $("cancel-input").addEventListener("click", () => { if (draft) openDraft(draft); });
+  $("new-text").addEventListener("click", () => openInput(null));
+  $("banner-new").addEventListener("click", () => openInput(null));
+  $("draft-title").addEventListener("click", () => openInput(draft));
+  function renderDrafts() {
+    const ul = $("drafts-list"); ul.textContent = "";
+    const list = drafts.slice(0, 5);
+    if (!list.length) { const li = document.createElement("li"); li.className = "empty-d"; li.textContent = "Пока пусто — первый черновик появится после перехода к разметке."; ul.appendChild(li); return; }
+    for (const d of list) {
+      const li = document.createElement("li");
+      const b = document.createElement("button"); b.type = "button"; b.className = "draft-open";
+      const t = document.createElement("b"); t.textContent = (d.example ? "Пример: " : "") + (d.title || firstWords(d.text) || "Без названия");
+      const n = (d.items || []).length;
+      const m = document.createElement("span");
+      m.textContent = `${ddmm(d.date)} · ${n} ${plural(n, "элемент", "элемента", "элементов")}` + (d.exportedAt ? (d.changedAt > d.exportedAt ? " · изменён после экспорта" : " · экспортирован") : "");
+      b.append(t, m);
+      b.addEventListener("click", () => openDraft(d));
+      const del = document.createElement("button"); del.type = "button"; del.className = "btn small ghost"; del.textContent = "Удалить";
+      del.setAttribute("aria-label", `Удалить черновик «${d.title || firstWords(d.text)}»`);
+      del.addEventListener("click", () => {
+        const idx = drafts.indexOf(d); drafts.splice(idx, 1); LS.set("wt.drafts", drafts);
+        if (draft === d) draft = null;
+        $("cancel-input").hidden = !draft;
+        renderDrafts();
+        toast("Черновик удалён", { label: "Вернуть", fn: () => { drafts.splice(idx, 0, d); LS.set("wt.drafts", drafts); renderDrafts(); } });
+      });
+      li.append(b, del); ul.appendChild(li);
+    }
+  }
+
+  /* ---------- vocab ---------- */
+  let siteVocab = false;
+  function normVocab(obj) {
+    if (obj && obj.words && typeof obj.words === "object") obj = obj.words;
+    if (!obj || typeof obj !== "object" || Array.isArray(obj)) throw new Error("ожидался объект «слово → запись»");
+    const V = {}; for (const [k, v] of Object.entries(obj)) V[k.toLowerCase()] = v && typeof v === "object" ? v : {};
+    return V;
+  }
+  function updateVocabUI() {
+    const V = activeVocab(), n = V ? Object.keys(V).length : 0;
+    $("vocab-dot").classList.toggle("on", !!V);
+    $("vocab-status").textContent = userVocab ? `Загружен vocab.json${siteVocab ? " с сайта" : ""}: ${n} ${plural(n, "слово", "слова", "слов")}. Повторы подсвечиваются.`
+      : (draft && draft.example) ? "Сейчас подключён учебный словарь примера (3 слова). Загрузите свой vocab.json с сайта, чтобы видеть настоящие повторы."
+      : "Словарь не загружен — повторы не подсвечены. Загрузите vocab.json, который собирает агент.";
+    $("vocab-clear").hidden = !userVocab;
+    $("legend-vocab").textContent = userVocab ? `словарь: ${n} ${plural(n, "слово", "слова", "слов")}` : (draft && draft.example) ? "словарь: пример" : "словарь не загружен — повторы не видны";
+  }
+  $("vocab-load").addEventListener("click", () => $("vocab-file").click());
+  $("vocab-file").addEventListener("change", e => {
+    const f = e.target.files && e.target.files[0]; if (!f) return;
+    const r = new FileReader();
+    r.onload = () => {
+      try {
+        const V = normVocab(JSON.parse(String(r.result)));
+        userVocab = V; siteVocab = false; LS.set("wt.vocab", V);
+        if (draft) { computeKnown(); paint(); renderPanel(); }
+        updateVocabUI(); $("vocab-menu").open = false;
+        const n = Object.keys(V).length; toast(`Словарь загружен: ${n} ${plural(n, "слово", "слова", "слов")}`);
+      } catch (err) { toast("Не удалось прочитать vocab.json: " + err.message); }
+      e.target.value = "";
+    };
+    r.readAsText(f);
+  });
+  $("vocab-clear").addEventListener("click", () => {
+    userVocab = null; siteVocab = false; try { localStorage.removeItem("wt.vocab"); } catch (e) {}
+    if (draft) { computeKnown(); paint(); renderPanel(); }
+    updateVocabUI(); $("vocab-menu").open = false; toast("Словарь убран");
+  });
+  document.addEventListener("click", e => { const m = $("vocab-menu"); if (m.open && !m.contains(e.target)) m.open = false; });
+
+  /* ---------- theme, help, toast, live ---------- */
+  const savedTheme = LS.get("wt.theme", null);
+  if (savedTheme) document.documentElement.dataset.theme = savedTheme;
+  $("theme-btn").addEventListener("click", () => {
+    const root = document.documentElement;
+    const eff = root.dataset.theme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    root.dataset.theme = eff === "dark" ? "light" : "dark"; LS.set("wt.theme", root.dataset.theme);
+  });
+  let helpReturn = null;
+  function openHelp() { helpReturn = document.activeElement; $("help").hidden = false; $("help-close").focus(); }
+  function closeHelp() { $("help").hidden = true; if (helpReturn && helpReturn.focus) helpReturn.focus(); }
+  $("help-btn").addEventListener("click", openHelp);
+  $("help-close").addEventListener("click", closeHelp);
+  $("help").addEventListener("click", e => { if (e.target === $("help")) closeHelp(); });
+  let toastTimer = null;
+  function toast(msg, act) {
+    $("toast-msg").textContent = msg;
+    const b = $("toast-act");
+    if (act) { b.hidden = false; b.textContent = act.label; b.onclick = () => { hideToast(); act.fn(); }; } else { b.hidden = true; b.onclick = null; }
+    $("toast").hidden = false;
+    clearTimeout(toastTimer); toastTimer = setTimeout(hideToast, act ? 6000 : 3200);
+  }
+  function hideToast() { $("toast").hidden = true; }
+  function announce(msg) { $("live").textContent = msg; }
+
+  window.addEventListener("beforeunload", e => {
+    if (draft && items.length && !draft.example && (!draft.exportedAt || draft.changedAt > draft.exportedAt)) { e.preventDefault(); e.returnValue = ""; }
+  });
+
+  /* ---------- simple-words toggle ---------- */
+  const simpleOn = LS.get("wt.simple", true);
+  $("simple-toggle").checked = simpleOn; $("reader").classList.toggle("dim", simpleOn);
+  $("simple-toggle").addEventListener("change", e => { $("reader").classList.toggle("dim", e.target.checked); LS.set("wt.simple", e.target.checked); });
+
+  /* ---------- boot ---------- */
+  function makeExample() {
+    const d = { id: "example", example: true, title: SAMPLE.title, url: SAMPLE.url, date: todayISO(), text: SAMPLE.text, items: [], createdAt: Date.now(), updatedAt: Date.now(), changedAt: Date.now() };
+    parse(d.text);
+    let ord = 0;
+    for (const p of SAMPLE.picks) {
+      const idx = full.indexOf(p); const a = tokStartAt.get(idx), b = tokEndAt.get(idx + p.length);
+      if (a != null && b != null) d.items.push({ id: uid(), a, b, note: p === "turned it down" ? "отклонить" : "", order: ++ord, off: tokens[a].start, text: p });
+    }
+    return d;
+  }
+  showLS();
+  const currentId = LS.get("wt.current", null);
+  let start = drafts.find(d => d.id === currentId) || drafts[0];
+  if (!start) { start = makeExample(); drafts.unshift(start); }
+  openDraft(start);
+
+  // Opened from the site (GitHub Pages): load the agent's vocab.json next to the editor.
+  // Offline / file:// / 404 — silently keep the current state ("словарь не загружен" or a manually loaded file).
+  if (/^https?:$/.test(location.protocol)) {
+    fetch("../data/vocab.json", { cache: "no-cache" }).then(r => r.ok ? r.json() : null).then(obj => {
+      if (!obj) return;
+      userVocab = normVocab(obj); siteVocab = true; LS.set("wt.vocab", userVocab);
+      if (draft) { computeKnown(); paint(); renderPanel(); }
+      updateVocabUI();
+    }).catch(() => {});
+  }
+
+  // Downloads capability arrives later; until then copy works.
+  setDownloadUI();
+  if (window.claude && typeof window.claude.use === "function") {
+    window.claude.use("downloads").then(ns => { downloads = ns || null; setDownloadUI(); }, () => { downloads = null; setDownloadUI(); });
+  }
+})();
+</script>

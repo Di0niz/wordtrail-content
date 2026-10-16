@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "id": "2026-10-16-today-s-episode-is-a-deepdive-into",
+  "date": "2026-10-16",
+  "source": {
+    "title": "Today’s episode is a deepdive into"
+  },
+  "items": [
+    {
+      "text": "longest-tenured",
+      "kind": "word",
+      "sentence": "Today’s episode is a deepdive into the day-to-day tools of devs at Uber, our tour guide being on of Uber’s longest-tenured engineers: Uday Kiran Medisetty.",
+      "note": ""
+    },
+    {
+      "text": "erratically",
+      "kind": "word",
+      "sentence": "Uber’s service count changed erratically: in 2015, when Uday joined, there were two services in total.",
+      "note": ""
+    },
+    {
+      "text": "emitting",
+      "kind": "word",
+      "sentence": "M3DB: Uber was emitting about 500 million metrics per second, with no vendor being able to handle this load, so they built it themselves.",
+      "note": ""
+    },
+    {
+      "text": "switchback",
+      "kind": "word",
+      "sentence": "Morpheus: a system combining feature flags and experimentation, including switchback tests, with support for two- and three-sided marketplaces that Uber operates.",
+      "note": ""
+    },
+    {
+      "text": "harnesses",
+      "kind": "word",
+      "sentence": "AIFX allows engineers to switch harnesses without losing settings.",
+      "note": ""
+    },
+    {
+      "text": "laser-focused",
+      "kind": "word",
+      "sentence": "Before, it would take so much time to create a PR, so you would be laser-focused on it.",
+      "note": ""
+    },
+    {
+      "text": "constantly",
+      "kind": "word",
+      "sentence": "But now you’re constantly switching between so many things.",
+      "note": ""
+    },
+    {
+      "text": "pick",
+      "kind": "word",
+      "sentence": "You need to be able to verify your work and pick any code smells from the agent [to avoid] shipping regressions into production.",
+      "note": ""
+    },
+    {
+      "text": "regressions",
+      "kind": "word",
+      "sentence": "You need to be able to verify your work and pick any code smells from the agent [to avoid] shipping regressions into production.",
+      "note": ""
+    },
+    {
+      "text": "seemingly",
+      "kind": "word",
+      "sentence": "Uber’s AI tooling was seemingly built in a year: in reality, it was built on top of a decade worth of dev tooling investment.",
+      "note": ""
+    },
+    {
+      "text": "Minion",
+      "kind": "word",
+      "sentence": "Minion – built in 2025 – is powered by DevPods, which Uber created in 2017.",
+      "note": ""
+    },
+    {
+      "text": "Mentions",
+      "kind": "word",
+      "sentence": "Mentions during the episode:",
+      "note": ""
+    }
+  ]
+}

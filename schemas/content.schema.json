@@ -1,0 +1,143 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://di0niz.github.io/wordtrail-content/schemas/content.schema.json",
+  "title": "WordTrail <id>.content.json (written by the content agent)",
+  "description": "Content the agent (Claude, via the wordtrail-lesson skill) prepares for one lesson. tools/build.py merges it with lessons/<id>.json into data/lessons/<id>.json. Every key of `items` is an items[].text from words.json. All item fields except `s`, `lemma` and `text_fixed` are copied as-is into data/lessons/<id>.json -> items[].content.",
+  "type": "object",
+  "required": ["source_title_ru", "items"],
+  "additionalProperties": false,
+  "properties": {
+    "source_title_ru": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Russian title of the source; becomes lesson.source.title_ru. A meaningful title, not a word-by-word translation of a truncated title."
+    },
+    "sentences": {
+      "type": "object",
+      "description": "Shared sentence translations, keyed by an arbitrary key (s1, s2, ...). Several items from one sentence point to the same key via `s`.",
+      "additionalProperties": {"$ref": "#/$defs/sentence"}
+    },
+    "items": {
+      "type": "object",
+      "description": "Key = items[].text from words.json, exactly (including typos).",
+      "additionalProperties": {"$ref": "#/$defs/item"}
+    }
+  },
+  "$defs": {
+    "sentence": {
+      "type": "object",
+      "required": ["ru"],
+      "additionalProperties": false,
+      "properties": {
+        "display": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Cleaned context shown instead of the editor sentence: split glued headings, removed captions/bylines/footnotes, shortened long paragraphs, fixed typos. Must still contain the item text (or text_fixed). The original goes to item.sentence_original."
+        },
+        "ru": {"type": "string", "minLength": 1, "description": "Russian translation of the (display) sentence; becomes item.content.sentence_ru."}
+      }
+    },
+    "example": {
+      "type": "object",
+      "required": ["en", "ru"],
+      "additionalProperties": false,
+      "properties": {
+        "en": {"type": "string", "minLength": 1, "description": "Must contain a form of the word/phrase (build.py checks)."},
+        "ru": {"type": "string", "minLength": 1}
+      }
+    },
+    "item": {
+      "type": "object",
+      "required": ["lemma", "pos", "ipa", "cefr", "ru", "ru_short", "definition_en", "note_ru", "examples"],
+      "anyOf": [
+        {"required": ["s"], "description": "sentence translation via `s` -> sentences[s]"},
+        {"required": ["sentence_ru"], "description": "inline sentence_ru (older format, lesson 1)"}
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "s": {"type": "string", "description": "Key in top-level `sentences`."},
+        "sentence_ru": {"type": "string", "minLength": 1, "description": "Inline sentence translation (alternative to `s`, used by the first lesson). Prefer `s`."},
+        "lemma": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Dictionary form, lowercase (except proper nouns used as words); for phrases the normal form (turned it down -> turn down, spinning -> spin up). Key in vocab.json: repeats are matched by lemma."
+        },
+        "pos": {"type": "string", "minLength": 1, "description": "noun, verb, adjective, adverb, preposition, phrasal verb, modal verb, idiom, ..."},
+        "ipa": {
+          "type": "string",
+          "pattern": "^/.+/$",
+          "description": "IPA in /slashes/, US accent, for the form as it appears in the text (awaited -> /əˈweɪtɪd/)."
+        },
+        "cefr": {"enum": ["A1", "A2", "B1", "B2", "C1", "C2"]},
+        "ru": {"type": "string", "minLength": 1, "description": "Translation in THIS context (may list 2 close variants; 'здесь: ...' when the context meaning differs from the usual one)."},
+        "ru_short": {"type": "string", "minLength": 1, "description": "Card/table translation, about 1-4 words. Goes to vocab senses."},
+        "definition_en": {"type": "string", "minLength": 1, "description": "Short learner-dictionary definition in English, for this meaning."},
+        "note_ru": {"type": "string", "description": "1-3 sentences in Russian: nuance, base meaning vs. context meaning, word family, collocations, what the agent changed in the context (typo, split, shortened)."},
+        "examples": {
+          "type": "array",
+          "minItems": 2,
+          "items": {"$ref": "#/$defs/example"},
+          "description": "2-3 natural examples, each with a form of the word/phrase."
+        },
+        "suggest_phrase": {"type": "string", "minLength": 1, "description": "The agent suggests learning a phrase instead of the single selected word (pick -> pick out, bleeding -> bleeding edge). Usually equals lemma."},
+        "text_fixed": {"type": "string", "minLength": 1, "description": "Corrected item text when the source has a typo (showsomeone -> shows). Becomes item.text; the original goes to item.text_original."},
+        "flags": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1},
+          "description": "Short Russian notes about agent interventions, shown as badges: 'контекст очищен агентом', 'контекст разделён агентом', 'контекст сокращён агентом', 'в тексте опечатка: …'."
+        },
+        "proper_noun": {"type": "boolean", "description": "true: in the text the word is a name (Minion = Uber's tool); content explains the ordinary meaning."},
+        "short_context": {"type": "boolean", "description": "true: the context is a heading/fragment, not a full sentence (exercises built on the sentence are less useful)."},
+        "phonemes": {
+          "type": "string",
+          "pattern": "^((AA|AE|AH|AO|AW|AY|EH|ER|EY|IH|IY|OW|OY|UH|UW)[012]|B|CH|D|DH|F|G|HH|JH|K|L|M|N|NG|P|R|S|SH|T|TH|V|W|Y|Z|ZH|\\|)( ((AA|AE|AH|AO|AW|AY|EH|ER|EY|IH|IY|OW|OY|UH|UW)[012]|B|CH|D|DH|F|G|HH|JH|K|L|M|N|NG|P|R|S|SH|T|TH|V|W|Y|Z|ZH|\\|))*$",
+          "description": "For the on-device pronunciation trainer. ARPAbet (CMUdict style, US), stress digit on every vowel (1 primary, 2 secondary, 0 none), space-separated, for the item text as shown (after text_fixed). Multi-word items: words separated by ' | '. Example: resilient -> 'R IH0 Z IH1 L Y AH0 N T'; spin up -> 'S P IH1 N | AH1 P'."
+        },
+        "collocations": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1},
+          "description": "Level 2+: typical collocations ('emit metrics', 'emit events'). Not shown by the app yet."
+        },
+        "family": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1},
+          "description": "Level 2+: word family ('resilience (n)', 'resiliently (adv)'). Not shown by the app yet."
+        },
+        "compare_ru": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Level 2+: Russian comment comparing this context with the previous encounters (same sense or a shade). Not shown by the app yet."
+        },
+        "synonyms": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["word", "note_ru"],
+            "additionalProperties": false,
+            "properties": {
+              "word": {"type": "string", "minLength": 1},
+              "note_ru": {"type": "string", "minLength": 1, "description": "How it differs (nuance, register)."}
+            }
+          },
+          "description": "Level 3+: synonyms with nuance. Not shown by the app yet."
+        },
+        "register_ru": {"type": "string", "minLength": 1, "description": "Level 3+: register (formal/neutral/informal/technical) in Russian. Not shown by the app yet."},
+        "mistakes_ru": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1},
+          "description": "Level 3+: typical mistakes of Russian speakers. Not shown by the app yet."
+        },
+        "story": {
+          "type": "object",
+          "required": ["en", "ru"],
+          "additionalProperties": false,
+          "properties": {
+            "en": {"type": "string", "minLength": 1},
+            "ru": {"type": "string", "minLength": 1}
+          },
+          "description": "Level 4+: mini-story (3-5 sentences) using this word and other words from vocab. Not shown by the app yet."
+        }
+      }
+    }
+  }
+}

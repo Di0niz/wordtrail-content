@@ -1,0 +1,2001 @@
+{
+  "version": 1,
+  "id": "2026-10-16-building-resilient-ai-powered-software",
+  "date": "2026-10-16",
+  "source": {
+    "title": "Building resilient AI-powered software and planning",
+    "title_ru": "Устойчивое ПО на базе AI и план на случай сбоев"
+  },
+  "day": {
+    "index": 2,
+    "total": 2
+  },
+  "build": {
+    "prompt_version": "level1-v1",
+    "model": "claude-opus-5-5",
+    "audio_status": "pending"
+  },
+  "items": [
+    {
+      "text": "resilient",
+      "kind": "word",
+      "sentence": "Building resilient AI-powered software, and planning for when things go wrong.",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-01",
+      "lemma": "resilient",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "adjective",
+        "ipa": "/rɪˈzɪliənt/",
+        "cefr": "B2",
+        "ru": "устойчивый, отказоустойчивый",
+        "ru_short": "устойчивый",
+        "definition_en": "able to recover quickly after problems",
+        "note_ru": "В IT — система, которая переживает сбои и восстанавливается. Существительное — resilience. Агент разделил заголовок и подзаголовок на два предложения.",
+        "flags": [
+          "контекст разделён агентом"
+        ],
+        "examples": [
+          {
+            "en": "We need a more resilient payment service.",
+            "ru": "Нам нужен более устойчивый платёжный сервис."
+          },
+          {
+            "en": "Children are often surprisingly resilient.",
+            "ru": "Дети часто удивительно быстро восстанавливаются."
+          }
+        ],
+        "sentence_ru": "Как строить устойчивое ПО на базе AI и планировать на случай, когда что-то идёт не так."
+      },
+      "audio": {
+        "word": "8eb1bd5dff14908d.mp3",
+        "sentence": "f87d47ae24955f31.mp3",
+        "sentence_slow": "0933c99568a35e38.mp3",
+        "examples": [
+          "11c98e4692d096b3.mp3",
+          "7661574fa605c0fa.mp3"
+        ]
+      },
+      "sentence_original": "Building resilient AI-powered software, and planning for when things go wrong How to handle uncertainty with AI vendors and disaster recovery (DR) approaches to consider."
+    },
+    {
+      "text": "uncertainty",
+      "kind": "word",
+      "sentence": "How to handle uncertainty with AI vendors and disaster recovery (DR) approaches to consider.",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-02",
+      "lemma": "uncertainty",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "noun",
+        "ipa": "/ʌnˈsɜːrtnti/",
+        "cefr": "B2",
+        "ru": "неопределённость",
+        "ru_short": "неопределённость",
+        "definition_en": "a situation in which something is not known or not sure",
+        "note_ru": "Прилагательное — uncertain. Частое сочетание: deal with / handle uncertainty.",
+        "examples": [
+          {
+            "en": "There is a lot of uncertainty about the release date.",
+            "ru": "С датой релиза много неопределённости."
+          },
+          {
+            "en": "Markets hate uncertainty.",
+            "ru": "Рынки не любят неопределённости."
+          }
+        ],
+        "sentence_ru": "Как справляться с неопределённостью, связанной с AI-поставщиками, и какие подходы к аварийному восстановлению (DR) стоит рассмотреть."
+      },
+      "audio": {
+        "word": "be0b46476bcfc800.mp3",
+        "sentence": "3e541adc89821d04.mp3",
+        "sentence_slow": "ceb372dd3e066a76.mp3",
+        "examples": [
+          "cdaf77c56a48605f.mp3",
+          "6f6ec3bdb224d9b6.mp3"
+        ]
+      },
+      "sentence_original": "Building resilient AI-powered software, and planning for when things go wrong How to handle uncertainty with AI vendors and disaster recovery (DR) approaches to consider."
+    },
+    {
+      "text": "disaster",
+      "kind": "word",
+      "sentence": "How to handle uncertainty with AI vendors and disaster recovery (DR) approaches to consider.",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-03",
+      "lemma": "disaster",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "noun",
+        "ipa": "/dɪˈzæstər/",
+        "cefr": "B1",
+        "ru": "авария, катастрофа",
+        "ru_short": "катастрофа, авария",
+        "definition_en": "a sudden event that causes great damage",
+        "note_ru": "disaster recovery (DR) — аварийное восстановление после крупного сбоя.",
+        "examples": [
+          {
+            "en": "The launch was a complete disaster.",
+            "ru": "Запуск обернулся полной катастрофой."
+          },
+          {
+            "en": "Every team needs a disaster recovery plan.",
+            "ru": "Каждой команде нужен план аварийного восстановления."
+          }
+        ],
+        "sentence_ru": "Как справляться с неопределённостью, связанной с AI-поставщиками, и какие подходы к аварийному восстановлению (DR) стоит рассмотреть."
+      },
+      "audio": {
+        "word": "99ca14cf2a30b1c7.mp3",
+        "sentence": "3e541adc89821d04.mp3",
+        "sentence_slow": "ceb372dd3e066a76.mp3",
+        "examples": [
+          "dcfbbb3c027e2999.mp3",
+          "2d9a2cc6fb2da3a7.mp3"
+        ]
+      },
+      "sentence_original": "Building resilient AI-powered software, and planning for when things go wrong How to handle uncertainty with AI vendors and disaster recovery (DR) approaches to consider."
+    },
+    {
+      "text": "excerpt",
+      "kind": "word",
+      "sentence": "An excerpt from the book Building Resilient Distributed Systems by Sam Newman.",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-04",
+      "lemma": "excerpt",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "noun",
+        "ipa": "/ˈeksɜːrpt/",
+        "cefr": "C1",
+        "ru": "отрывок, выдержка",
+        "ru_short": "отрывок",
+        "definition_en": "a short piece taken from a book, film or speech",
+        "note_ru": "Ударение на первый слог. Агент убрал из контекста подпись автора и дату.",
+        "flags": [
+          "контекст очищен агентом"
+        ],
+        "examples": [
+          {
+            "en": "She read an excerpt from her new novel.",
+            "ru": "Она прочитала отрывок из нового романа."
+          },
+          {
+            "en": "The article includes an excerpt from the report.",
+            "ru": "В статье приведена выдержка из отчёта."
+          }
+        ],
+        "sentence_ru": "Отрывок из книги Сэма Ньюмана «Building Resilient Distributed Systems»."
+      },
+      "audio": {
+        "word": "713dd92f8144446e.mp3",
+        "sentence": "940cc53a948b5903.mp3",
+        "sentence_slow": "7055341fd9aabd6e.mp3",
+        "examples": [
+          "982de7b72e4d1b16.mp3",
+          "ecd100261641cc5b.mp3"
+        ]
+      },
+      "sentence_original": "An excerpt from the book Building Resilient Distributed Systems by Sam Newman GERGELY OROSZ OCT 13, 2026"
+    },
+    {
+      "text": "awaited",
+      "kind": "word",
+      "sentence": "Last week’s guest on the podcast was Sam Newman, who had released a book I’ve personally long awaited titled Building Resilient Distributed Systems.",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-05",
+      "lemma": "await",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "verb",
+        "ipa": "/əˈweɪtɪd/",
+        "cefr": "C1",
+        "ru": "ожидаемый, долгожданный",
+        "ru_short": "долгожданный",
+        "definition_en": "waited for, especially for a long time",
+        "note_ru": "long-awaited — «долгожданный». Глагол await формальнее, чем wait for, и идёт без предлога.",
+        "examples": [
+          {
+            "en": "The long-awaited update finally shipped.",
+            "ru": "Долгожданное обновление наконец вышло."
+          },
+          {
+            "en": "We await your reply.",
+            "ru": "Ждём вашего ответа."
+          }
+        ],
+        "sentence_ru": "Гостем подкаста на прошлой неделе был Сэм Ньюман, который выпустил книгу «Building Resilient Distributed Systems» — я лично давно её ждал."
+      },
+      "audio": {
+        "word": "dc3db8b0f8b455bf.mp3",
+        "sentence": "c0a348ac656c8fa8.mp3",
+        "sentence_slow": "bebdf5e7eb9d1118.mp3",
+        "examples": [
+          "241d0d46f018e482.mp3",
+          "e66057b03f8770b9.mp3"
+        ]
+      }
+    },
+    {
+      "text": "ought",
+      "kind": "word",
+      "sentence": "I asked Sam if he would consider sharing an excerpt from the book, with sections especially relevant for anyone building systems that ought to be reliable.",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-06",
+      "lemma": "ought to",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "modal verb",
+        "ipa": "/ɔːt/",
+        "cefr": "B2",
+        "ru": "должен, следует",
+        "ru_short": "следует, должен",
+        "definition_en": "used to say what is right or expected",
+        "note_ru": "Всегда с to: ought to be. По смыслу близко к should.",
+        "suggest_phrase": "ought to",
+        "examples": [
+          {
+            "en": "You ought to back up your data.",
+            "ru": "Тебе следует делать резервные копии."
+          },
+          {
+            "en": "The build ought to pass now.",
+            "ru": "Теперь сборка должна пройти."
+          }
+        ],
+        "sentence_ru": "Я спросил Сэма, не поделится ли он отрывком из книги — разделами, особенно полезными для всех, кто строит системы, которые должны быть надёжными."
+      },
+      "audio": {
+        "word": "5cf448f05622a307.mp3",
+        "sentence": "d92807f97b617a50.mp3",
+        "sentence_slow": "5dfd201bd637db42.mp3",
+        "examples": [
+          "7cdfd6a19e3c1ba1.mp3",
+          "ff877d42b2b609e7.mp3"
+        ]
+      }
+    },
+    {
+      "text": "graciously",
+      "kind": "word",
+      "sentence": "Sam graciously agreed, and today’s issue covers a few important topics, spread across two chapters from his book.",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-07",
+      "lemma": "graciously",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "adverb",
+        "ipa": "/ˈɡreɪʃəsli/",
+        "cefr": "C1",
+        "ru": "любезно, великодушно",
+        "ru_short": "любезно",
+        "definition_en": "in a kind and polite way",
+        "note_ru": "От gracious — «любезный, учтивый».",
+        "examples": [
+          {
+            "en": "She graciously accepted the invitation.",
+            "ru": "Она любезно приняла приглашение."
+          },
+          {
+            "en": "He graciously admitted his mistake.",
+            "ru": "Он великодушно признал ошибку."
+          }
+        ],
+        "sentence_ru": "Сэм любезно согласился, и сегодняшний выпуск охватывает несколько важных тем из двух глав его книги."
+      },
+      "audio": {
+        "word": "201ff1b462c942a6.mp3",
+        "sentence": "8fcb79e91cbaa8e2.mp3",
+        "sentence_slow": "1d9cea4fb14edffe.mp3",
+        "examples": [
+          "3547a3be4bf3ba60.mp3",
+          "c24bfb4e25fd4db3.mp3"
+        ]
+      }
+    },
+    {
+      "text": "disclaimer",
+      "kind": "word",
+      "sentence": "My usual disclaimer: as with all my recommendations, I was not paid to recommend this book, and none of the links are affiliate ones.",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-08",
+      "lemma": "disclaimer",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "noun",
+        "ipa": "/dɪsˈkleɪmər/",
+        "cefr": "C1",
+        "ru": "оговорка, отказ от ответственности",
+        "ru_short": "оговорка",
+        "definition_en": "a statement that you are not responsible for something",
+        "note_ru": "Часто встречается в юридических текстах и подвалах сайтов.",
+        "examples": [
+          {
+            "en": "Add a disclaimer to the README.",
+            "ru": "Добавь в README оговорку."
+          },
+          {
+            "en": "The video starts with a legal disclaimer.",
+            "ru": "Видео начинается с юридической оговорки."
+          }
+        ],
+        "sentence_ru": "Моя обычная оговорка: как и за все мои рекомендации, мне не платили за рекомендацию этой книги, и ни одна из ссылок не партнёрская."
+      },
+      "audio": {
+        "word": "0e2502f4862bb119.mp3",
+        "sentence": "e0db1b57eb776fcc.mp3",
+        "sentence_slow": "42722ff56c966edf.mp3",
+        "examples": [
+          "4320291233b1100f.mp3",
+          "6233546ef30cf302.mp3"
+        ]
+      }
+    },
+    {
+      "text": "affiliate",
+      "kind": "word",
+      "sentence": "My usual disclaimer: as with all my recommendations, I was not paid to recommend this book, and none of the links are affiliate ones.",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-09",
+      "lemma": "affiliate",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "adjective",
+        "ipa": "/əˈfɪliət/",
+        "cefr": "C1",
+        "ru": "партнёрский (о ссылках)",
+        "ru_short": "партнёрский",
+        "definition_en": "connected to a company that pays you for the sales you bring",
+        "note_ru": "affiliate link — ссылка, за покупки по которой автор получает процент. Глагол произносится иначе: /əˈfɪlieɪt/.",
+        "examples": [
+          {
+            "en": "This post contains affiliate links.",
+            "ru": "В посте есть партнёрские ссылки."
+          },
+          {
+            "en": "The bank has affiliates in ten countries.",
+            "ru": "У банка есть дочерние компании в десяти странах."
+          }
+        ],
+        "sentence_ru": "Моя обычная оговорка: как и за все мои рекомендации, мне не платили за рекомендацию этой книги, и ни одна из ссылок не партнёрская."
+      },
+      "audio": {
+        "word": "adcd0341cb80c804.mp3",
+        "sentence": "e0db1b57eb776fcc.mp3",
+        "sentence_slow": "42722ff56c966edf.mp3",
+        "examples": [
+          "840ba50e4fcbab7c.mp3",
+          "871872f33347f1ff.mp3"
+        ]
+      }
+    },
+    {
+      "text": "widespread",
+      "kind": "word",
+      "sentence": "But what happens when a catastrophic failure causes widespread outage of large parts of your system?",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-10",
+      "lemma": "widespread",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "adjective",
+        "ipa": "/ˈwaɪdspred/",
+        "cefr": "B2",
+        "ru": "масштабный, повсеместный",
+        "ru_short": "масштабный",
+        "definition_en": "happening in many places or affecting many people",
+        "note_ru": "widespread outage — масштабный сбой.",
+        "examples": [
+          {
+            "en": "The bug caused widespread confusion.",
+            "ru": "Баг вызвал массовую путаницу."
+          },
+          {
+            "en": "Remote work is now widespread.",
+            "ru": "Удалённая работа теперь повсеместна."
+          }
+        ],
+        "sentence_ru": "Но что происходит, когда катастрофический сбой вызывает масштабный отказ больших частей вашей системы?"
+      },
+      "audio": {
+        "word": "bb47e662a7379c82.mp3",
+        "sentence": "7ebedafa46653cab.mp3",
+        "sentence_slow": "a469eccce1ae8387.mp3",
+        "examples": [
+          "2e08cdb0f1057e96.mp3",
+          "738378c8394bffd2.mp3"
+        ]
+      }
+    },
+    {
+      "text": "robust",
+      "kind": "word",
+      "sentence": "Fire, flood, electrical supply issues, and errors in the underlying cloud infrastructure are all outside of your control, and at one fell swoop, they can render your attempts to make your system more robust totally redundant.",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-11",
+      "lemma": "robust",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "adjective",
+        "ipa": "/roʊˈbʌst/",
+        "cefr": "B2",
+        "ru": "надёжный, устойчивый",
+        "ru_short": "надёжный",
+        "definition_en": "strong and unlikely to fail",
+        "note_ru": "robust system — система, которая выдерживает ошибки и нагрузку. Рядом в тексте идиома at one fell swoop — «одним махом».",
+        "examples": [
+          {
+            "en": "We need robust error handling.",
+            "ru": "Нужна надёжная обработка ошибок."
+          },
+          {
+            "en": "The economy remains robust.",
+            "ru": "Экономика остаётся крепкой."
+          }
+        ],
+        "sentence_ru": "Пожар, наводнение, проблемы с электроснабжением и ошибки в нижележащей облачной инфраструктуре — всё это вне вашего контроля, и одним махом они могут сделать все ваши попытки повысить устойчивость системы совершенно бесполезными."
+      },
+      "audio": {
+        "word": "5c3452a8af1efc2b.mp3",
+        "sentence": "71a9e1fa827b8f07.mp3",
+        "sentence_slow": "4cd1cf03413ea105.mp3",
+        "examples": [
+          "21292777ef39d26b.mp3",
+          "1108c0678ab99fdd.mp3"
+        ]
+      }
+    },
+    {
+      "text": "redundant",
+      "kind": "word",
+      "sentence": "Fire, flood, electrical supply issues, and errors in the underlying cloud infrastructure are all outside of your control, and at one fell swoop, they can render your attempts to make your system more robust totally redundant.",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-12",
+      "lemma": "redundant",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "adjective",
+        "ipa": "/rɪˈdʌndənt/",
+        "cefr": "C1",
+        "ru": "здесь: бесполезный, ненужный",
+        "ru_short": "лишний; резервный",
+        "definition_en": "not needed any more; in engineering, duplicated as a backup",
+        "note_ru": "Игра слов: в инфраструктуре redundant обычно значит «резервный, дублированный» (redundant servers), а render something redundant — «сделать ненужным». В Британии made redundant — «сокращён с работы».",
+        "examples": [
+          {
+            "en": "We run redundant servers in two regions.",
+            "ru": "Мы держим резервные серверы в двух регионах."
+          },
+          {
+            "en": "The new tool made the old script redundant.",
+            "ru": "Новый инструмент сделал старый скрипт ненужным."
+          }
+        ],
+        "sentence_ru": "Пожар, наводнение, проблемы с электроснабжением и ошибки в нижележащей облачной инфраструктуре — всё это вне вашего контроля, и одним махом они могут сделать все ваши попытки повысить устойчивость системы совершенно бесполезными."
+      },
+      "audio": {
+        "word": "4404f7736a0d17ac.mp3",
+        "sentence": "71a9e1fa827b8f07.mp3",
+        "sentence_slow": "4cd1cf03413ea105.mp3",
+        "examples": [
+          "a1f7183d3a78365d.mp3",
+          "18fe6c34e5122569.mp3"
+        ]
+      }
+    },
+    {
+      "text": "auspices",
+      "kind": "word",
+      "sentence": "Handling these situations falls under the auspices of disaster recovery (DR), a set of procedures that should kick in when something really bad happens.",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-13",
+      "lemma": "auspices",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "noun",
+        "ipa": "/ˈɔːspɪsɪz/",
+        "cefr": "C2",
+        "ru": "ведение, эгида",
+        "ru_short": "ведение, эгида",
+        "definition_en": "under the auspices of — with the support or control of",
+        "note_ru": "Почти всегда в выражении under the auspices of — «под эгидой, в ведении». Здесь: «относится к сфере DR».",
+        "suggest_phrase": "under the auspices of",
+        "examples": [
+          {
+            "en": "The project runs under the auspices of the UN.",
+            "ru": "Проект проходит под эгидой ООН."
+          },
+          {
+            "en": "Security falls under the auspices of the platform team.",
+            "ru": "Безопасность в ведении платформенной команды."
+          }
+        ],
+        "sentence_ru": "Работа с такими ситуациями относится к сфере аварийного восстановления (DR) — набора процедур, которые должны запускаться, когда случается что-то действительно плохое."
+      },
+      "audio": {
+        "word": "701fc19a3b598512.mp3",
+        "sentence": "d8b6971ee410d672.mp3",
+        "sentence_slow": "a6a8670272618b9b.mp3",
+        "examples": [
+          "dd0855b66ef50b4b.mp3",
+          "53b6f535b5f3d6fa.mp3"
+        ]
+      }
+    },
+    {
+      "text": "trade-offs",
+      "kind": "word",
+      "sentence": "As with much of what we’ve looked at in this book, trade-offs abound.",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-14",
+      "lemma": "trade-off",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "noun",
+        "ipa": "/ˈtreɪdɔːfs/",
+        "cefr": "B2",
+        "ru": "компромиссы",
+        "ru_short": "компромисс",
+        "definition_en": "a balance between two good things you cannot have at the same time",
+        "note_ru": "trade-offs abound — «компромиссов полно»; abound — «изобиловать».",
+        "examples": [
+          {
+            "en": "There's a trade-off between speed and accuracy.",
+            "ru": "Приходится выбирать между скоростью и точностью."
+          },
+          {
+            "en": "Every architecture has trade-offs.",
+            "ru": "У любой архитектуры есть компромиссы."
+          }
+        ],
+        "sentence_ru": "Как и почти во всём, что мы рассматривали в этой книге, компромиссов здесь хватает."
+      },
+      "audio": {
+        "word": "8524e01d3e322bfa.mp3",
+        "sentence": "b238e88f3fa20b44.mp3",
+        "sentence_slow": "b0ff96301ecfad31.mp3",
+        "examples": [
+          "e77feb6ed5aa39b9.mp3",
+          "773934bbde89e208.mp3"
+        ]
+      }
+    },
+    {
+      "text": "on-premises",
+      "kind": "word",
+      "sentence": "When running on a private cloud or in a more traditional on-premises setup, you’ll instead think in terms of data centers.",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-15",
+      "lemma": "on-premises",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "adjective",
+        "ipa": "/ˌɒn ˈpremɪsɪz/",
+        "cefr": "C1",
+        "ru": "локальный, на собственных серверах",
+        "ru_short": "на своих серверах",
+        "definition_en": "running on a company's own servers, not in a public cloud",
+        "note_ru": "Сокращают до on-prem. Не путать с premise (предпосылка): здесь premises — «помещение».",
+        "examples": [
+          {
+            "en": "The bank keeps its data on-premises.",
+            "ru": "Банк хранит данные на своих серверах."
+          },
+          {
+            "en": "We migrated from on-premises to the cloud.",
+            "ru": "Мы переехали с локальных серверов в облако."
+          }
+        ],
+        "sentence_ru": "Если вы работаете в частном облаке или в более традиционной локальной инфраструктуре, вы будете мыслить категориями дата-центров."
+      },
+      "audio": {
+        "word": "57a3cce69e05caf3.mp3",
+        "sentence": "b55321ff7d2e984e.mp3",
+        "sentence_slow": "689adfb0665ddd4a.mp3",
+        "examples": [
+          "fe5b13dccd1362a7.mp3",
+          "21f76e7eabac2eed.mp3"
+        ]
+      }
+    },
+    {
+      "text": "legislative",
+      "kind": "word",
+      "sentence": "So when deciding on the appropriate RPO and RTO, there needs to be a discussion with stakeholders regarding end-user needs and regulatory and legislative requirements, which are balanced against the cost and complexity of implementing the required solution.",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-16",
+      "lemma": "legislative",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "adjective",
+        "ipa": "/ˈledʒɪsleɪtɪv/",
+        "cefr": "C1",
+        "ru": "законодательный",
+        "ru_short": "законодательный",
+        "definition_en": "relating to making laws",
+        "note_ru": "Пара в тексте: regulatory — требования надзорных органов, legislative — требования законов.",
+        "examples": [
+          {
+            "en": "New legislative changes affect data storage.",
+            "ru": "Новые законодательные изменения касаются хранения данных."
+          },
+          {
+            "en": "Parliament is the legislative body.",
+            "ru": "Парламент — законодательный орган."
+          }
+        ],
+        "sentence_ru": "Поэтому при выборе подходящих RPO и RTO нужно обсудить со стейкхолдерами потребности конечных пользователей, а также регуляторные и законодательные требования — и соотнести их со стоимостью и сложностью нужного решения."
+      },
+      "audio": {
+        "word": "1a6438e21588227b.mp3",
+        "sentence": "699292768a9847f0.mp3",
+        "sentence_slow": "7a8623d32c2efdde.mp3",
+        "examples": [
+          "194147185b680c14.mp3",
+          "c104a42680c029b9.mp3"
+        ]
+      }
+    },
+    {
+      "text": "failover",
+      "kind": "word",
+      "sentence": "For example, a backup and restore approach requires rerouting, a pilot light setup will add the need for cross-site data replication and infrastructure automation, and a warm failover adds on the cost of having some infrastructure ready to go.",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-17",
+      "lemma": "failover",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "noun",
+        "ipa": "/ˈfeɪloʊvər/",
+        "cefr": "C1",
+        "ru": "переключение на резерв",
+        "ru_short": "переключение на резерв",
+        "definition_en": "switching automatically to a backup system when the main one fails",
+        "note_ru": "cold / warm / hot failover — чем «горячее», тем быстрее переключение и дороже резерв. Глагол пишется в два слова: fail over.",
+        "examples": [
+          {
+            "en": "Failover took less than a minute.",
+            "ru": "Переключение на резерв заняло меньше минуты."
+          },
+          {
+            "en": "We test failover every quarter.",
+            "ru": "Мы проверяем переключение на резерв каждый квартал."
+          }
+        ],
+        "sentence_ru": "Например, подход «резервная копия и восстановление» требует перенаправления трафика, схема pilot light добавляет репликацию данных между площадками и автоматизацию инфраструктуры, а тёплое переключение (warm failover) — ещё и стоимость частично готовой инфраструктуры."
+      },
+      "audio": {
+        "word": "8c8862cbaa5087a4.mp3",
+        "sentence": "7216cca19e52e56f.mp3",
+        "sentence_slow": "b0a6a66e13063eab.mp3",
+        "examples": [
+          "04456b5c5e74b546.mp3",
+          "e56d5d88ee8b6adc.mp3"
+        ]
+      }
+    },
+    {
+      "text": "rerouting",
+      "kind": "word",
+      "sentence": "Note that they all require some form of rerouting of traffic, and most require some form of cross-site data replication.",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-18",
+      "lemma": "reroute",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "verb",
+        "ipa": "/ˌriːˈruːtɪŋ/",
+        "cefr": "B2",
+        "ru": "перенаправление",
+        "ru_short": "перенаправление",
+        "definition_en": "sending something by a different route",
+        "note_ru": "re- + route. В американском варианте route часто звучит как /raʊt/.",
+        "examples": [
+          {
+            "en": "We are rerouting traffic to the EU region.",
+            "ru": "Мы перенаправляем трафик в европейский регион."
+          },
+          {
+            "en": "The flight was rerouted because of the storm.",
+            "ru": "Из-за шторма рейс отправили другим маршрутом."
+          }
+        ],
+        "sentence_ru": "Обратите внимание: все они требуют той или иной формы перенаправления трафика, а большинство — репликации данных между площадками."
+      },
+      "audio": {
+        "word": "af62954066b04c25.mp3",
+        "sentence": "37b38556ae5016d9.mp3",
+        "sentence_slow": "86d3460c763bb175.mp3",
+        "examples": [
+          "d7f3d18372ac5c2b.mp3",
+          "f79eafb47e3dd6d3.mp3"
+        ]
+      }
+    },
+    {
+      "text": "outlined",
+      "kind": "word",
+      "sentence": "As outlined in Figure 10-3, with this pattern, data is periodically backed up to a separate site.",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-19",
+      "lemma": "outline",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "verb",
+        "ipa": "/ˈaʊtlaɪnd/",
+        "cefr": "B2",
+        "ru": "показанный, изложенный",
+        "ru_short": "описанный, изложенный",
+        "definition_en": "described the main points of something",
+        "note_ru": "as outlined in — «как показано в». Существительное outline — «план, контур».",
+        "examples": [
+          {
+            "en": "As outlined above, the plan has three steps.",
+            "ru": "Как описано выше, в плане три шага."
+          },
+          {
+            "en": "She outlined her proposal in five minutes.",
+            "ru": "Она изложила своё предложение за пять минут."
+          }
+        ],
+        "sentence_ru": "Как показано на рисунке 10-3, в этом паттерне данные периодически копируются на отдельную площадку."
+      },
+      "audio": {
+        "word": "711285b50546d64b.mp3",
+        "sentence": "354ab38efe3a6cc3.mp3",
+        "sentence_slow": "42d2f26d32df634c.mp3",
+        "examples": [
+          "34c24403f65f950b.mp3",
+          "e89cb6469cc2cbd4.mp3"
+        ]
+      }
+    },
+    {
+      "text": "backed-up",
+      "kind": "word",
+      "sentence": "In the event that the primary site fails, infrastructure needs to be provided at a new site, and the backed-up data restored.",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-20",
+      "lemma": "back up",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "adjective",
+        "ipa": "/ˌbækt ˈʌp/",
+        "cefr": "B2",
+        "ru": "из резервной копии",
+        "ru_short": "из резервной копии",
+        "definition_en": "copied to a safe place in case the original is lost",
+        "note_ru": "Глагол back up — в два слова, существительное backup — в одно, прилагательное backed-up — через дефис.",
+        "examples": [
+          {
+            "en": "Restore the backed-up files.",
+            "ru": "Восстанови файлы из резервной копии."
+          },
+          {
+            "en": "Back up your laptop before the update.",
+            "ru": "Сделай резервную копию ноутбука перед обновлением."
+          }
+        ],
+        "sentence_ru": "Если основная площадка выходит из строя, нужно поднять инфраструктуру на новой площадке и восстановить данные из резервной копии."
+      },
+      "audio": {
+        "word": "e6e0d38dcbcd2159.mp3",
+        "sentence": "d00d4c2424c789c6.mp3",
+        "sentence_slow": "1b67ba53f6f66d5d.mp3",
+        "examples": [
+          "6ba47f909ecb173e.mp3",
+          "0792d8bb5ed42911.mp3"
+        ]
+      }
+    },
+    {
+      "text": "straightforward",
+      "kind": "word",
+      "sentence": "This pattern is very straightforward to implement, consisting of a few steps:",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-21",
+      "lemma": "straightforward",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "adjective",
+        "ipa": "/ˌstreɪtˈfɔːrwərd/",
+        "cefr": "B2",
+        "ru": "простой, понятный",
+        "ru_short": "простой, несложный",
+        "definition_en": "easy to understand or do",
+        "note_ru": "О человеке — «прямой, честный».",
+        "examples": [
+          {
+            "en": "The fix is fairly straightforward.",
+            "ru": "Исправление довольно простое."
+          },
+          {
+            "en": "She gave a straightforward answer.",
+            "ru": "Она ответила прямо."
+          }
+        ],
+        "sentence_ru": "Этот паттерн очень просто реализовать, он состоит из нескольких шагов:"
+      },
+      "audio": {
+        "word": "eb99f8c698b02ba7.mp3",
+        "sentence": "d0c5ff7bc7a46890.mp3",
+        "sentence_slow": "777fabb9d32e375b.mp3",
+        "examples": [
+          "69bd5a255d143845.mp3",
+          "a165ce564a1e437d.mp3"
+        ]
+      }
+    },
+    {
+      "text": "provisioning",
+      "kind": "word",
+      "sentence": "This would ideally be automated, as manual infrastructure provisioning would likely lead to longer RTO and an increased chance of errors.",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-22",
+      "lemma": "provision",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "noun",
+        "ipa": "/prəˈvɪʒənɪŋ/",
+        "cefr": "C1",
+        "ru": "развёртывание, выделение ресурсов",
+        "ru_short": "развёртывание ресурсов",
+        "definition_en": "preparing and supplying servers or other resources",
+        "note_ru": "provision a server — выделить и настроить сервер. В обычной речи provisions — «припасы».",
+        "examples": [
+          {
+            "en": "Provisioning a new cluster takes ten minutes.",
+            "ru": "Развёртывание нового кластера занимает десять минут."
+          },
+          {
+            "en": "Terraform handles infrastructure provisioning.",
+            "ru": "Terraform отвечает за развёртывание инфраструктуры."
+          }
+        ],
+        "sentence_ru": "В идеале это стоит автоматизировать: ручное развёртывание инфраструктуры, скорее всего, увеличит RTO и вероятность ошибок."
+      },
+      "audio": {
+        "word": "b5ff721169ab50f6.mp3",
+        "sentence": "29b329cd23904259.mp3",
+        "sentence_slow": "3ee54edf935a7cf2.mp3",
+        "examples": [
+          "ed7dd2207158a37a.mp3",
+          "f2403c57d6b835d6.mp3"
+        ]
+      }
+    },
+    {
+      "text": "reuse",
+      "kind": "word",
+      "sentence": "Ideally, your failover site runs the same core technology stack as the primary site, meaning that any investment in infrastructure automation on your primary can also be used on the failover (for example, being able to reuse Terraform scripts).",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-23",
+      "lemma": "reuse",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "verb",
+        "ipa": "/ˌriːˈjuːz/",
+        "cefr": "B1",
+        "ru": "переиспользовать",
+        "ru_short": "использовать повторно",
+        "definition_en": "to use something again",
+        "note_ru": "Существительное reuse произносится с глухим s: /ˌriːˈjuːs/.",
+        "examples": [
+          {
+            "en": "We can reuse this component across pages.",
+            "ru": "Этот компонент можно переиспользовать на разных страницах."
+          },
+          {
+            "en": "Please reuse your shopping bags.",
+            "ru": "Пожалуйста, используйте пакеты повторно."
+          }
+        ],
+        "sentence_ru": "В идеале резервная площадка работает на том же базовом стеке, что и основная, — тогда вложения в автоматизацию инфраструктуры основной площадки пригодятся и на резервной (например, можно переиспользовать скрипты Terraform)."
+      },
+      "audio": {
+        "word": "8e857a588c4e0b79.mp3",
+        "sentence": "6716a133ba32fec3.mp3",
+        "sentence_slow": "da96db2909cf37ec.mp3",
+        "examples": [
+          "08cc228445cafb47.mp3",
+          "18cc3d153fba09b4.mp3"
+        ]
+      }
+    },
+    {
+      "text": "spinning",
+      "kind": "word",
+      "sentence": "A caveat to spinning up infrastructure on demand here comes in terms of guaranteeing that infrastructure is actually available when you need it, something we’ll explore later in this chapter.",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-24",
+      "lemma": "spin up",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "phrasal verb",
+        "ipa": "/ˈspɪnɪŋ ʌp/",
+        "cefr": "B2",
+        "ru": "поднимать, запускать (серверы)",
+        "ru_short": "запускать, поднимать",
+        "definition_en": "spin up — to start a new server or service quickly",
+        "note_ru": "spin up / spin down — запустить / остановить инфраструктуру. Базовое значение spin — «крутить(ся)».",
+        "suggest_phrase": "spin up",
+        "examples": [
+          {
+            "en": "We spin up a test environment for every PR.",
+            "ru": "Для каждого PR мы поднимаем тестовое окружение."
+          },
+          {
+            "en": "The wheels kept spinning in the mud.",
+            "ru": "Колёса буксовали в грязи."
+          }
+        ],
+        "sentence_ru": "Оговорка насчёт подъёма инфраструктуры по требованию: нужно гарантировать, что она действительно будет доступна, когда понадобится, — это мы рассмотрим позже в этой главе."
+      },
+      "audio": {
+        "word": "a2a773a7d5a92716.mp3",
+        "sentence": "70ff2237ccb5f3da.mp3",
+        "sentence_slow": "a2926012977a2186.mp3",
+        "examples": [
+          "ba64d99be60bc37a.mp3",
+          "402a9fe4739483e0.mp3"
+        ]
+      }
+    },
+    {
+      "text": "fairly",
+      "kind": "word",
+      "sentence": "As such, the steps involved look fairly similar to the backup and restore pattern:",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-25",
+      "lemma": "fairly",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "adverb",
+        "ipa": "/ˈferli/",
+        "cefr": "B1",
+        "ru": "довольно",
+        "ru_short": "довольно",
+        "definition_en": "to some degree, but not very",
+        "note_ru": "Слабее, чем very или quite. Второе значение — «справедливо» (treat people fairly).",
+        "examples": [
+          {
+            "en": "The API is fairly stable.",
+            "ru": "API довольно стабилен."
+          },
+          {
+            "en": "Everyone was treated fairly.",
+            "ru": "Со всеми обошлись справедливо."
+          }
+        ],
+        "sentence_ru": "Поэтому шаги выглядят довольно похоже на паттерн «резервная копия и восстановление»:"
+      },
+      "audio": {
+        "word": "678bfc7138cf7e9d.mp3",
+        "sentence": "569a34237dee1081.mp3",
+        "sentence_slow": "4e1a130361fda9e2.mp3",
+        "examples": [
+          "ad759bf4c6926f6d.mp3",
+          "8f8f2375abf6ac0a.mp3"
+        ]
+      }
+    },
+    {
+      "text": "assumption",
+      "kind": "word",
+      "sentence": "The assumption is that databases and datastores are already present on the failover site, so only remaining resources like compute would need to be provisioned.",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-26",
+      "lemma": "assumption",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "noun",
+        "ipa": "/əˈsʌmpʃən/",
+        "cefr": "B2",
+        "ru": "предположение, допущение",
+        "ru_short": "предположение",
+        "definition_en": "something you believe is true without proof",
+        "note_ru": "Глагол — assume. The assumption is that… — «Предполагается, что…».",
+        "examples": [
+          {
+            "en": "That's a dangerous assumption.",
+            "ru": "Это опасное допущение."
+          },
+          {
+            "en": "We made the wrong assumption about the load.",
+            "ru": "Мы ошиблись в предположении о нагрузке."
+          }
+        ],
+        "sentence_ru": "Предполагается, что базы данных и хранилища уже есть на резервной площадке, поэтому развернуть нужно только оставшиеся ресурсы, например вычислительные."
+      },
+      "audio": {
+        "word": "1828a32b357e3046.mp3",
+        "sentence": "a909e55b6e96e417.mp3",
+        "sentence_slow": "afc6918c4c3e2e65.mp3",
+        "examples": [
+          "a4ab23804e1766ce.mp3",
+          "ee5bb02e8fed162c.mp3"
+        ]
+      }
+    },
+    {
+      "text": "regarding",
+      "kind": "word",
+      "sentence": "Cold, Warm, and Hot Failovers: A brief note is warranted here regarding the term warm.",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-27",
+      "lemma": "regarding",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "preposition",
+        "ipa": "/rɪˈɡɑːrdɪŋ/",
+        "cefr": "B2",
+        "ru": "относительно, насчёт",
+        "ru_short": "насчёт, относительно",
+        "definition_en": "about; concerning",
+        "note_ru": "Формальный синоним about. Частое начало письма: Regarding your question…",
+        "examples": [
+          {
+            "en": "I have a question regarding the deadline.",
+            "ru": "У меня вопрос насчёт дедлайна."
+          },
+          {
+            "en": "Regarding your request, we've fixed it.",
+            "ru": "По вашему запросу: мы всё исправили."
+          }
+        ],
+        "sentence_ru": "Холодное, тёплое и горячее переключение: здесь уместно короткое замечание о термине «тёплый»."
+      },
+      "audio": {
+        "word": "9da95d25780d1cdc.mp3",
+        "sentence": "837b666a18feba44.mp3",
+        "sentence_slow": "9472076e3e799ccf.mp3",
+        "examples": [
+          "a501c3fc21781724.mp3",
+          "c5d37d638a610ca3.mp3"
+        ]
+      }
+    },
+    {
+      "text": "distinguishing",
+      "kind": "word",
+      "sentence": "You’ll find various solutions and vendor products promising cold, warm, or hot failover, with the only real distinguishing factor between these terms often being that a hot failover would give you a lower RTO in comparison to a warm failover, and a warm failover would give you a lower RTO than a cold one.",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-28",
+      "lemma": "distinguish",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "adjective",
+        "ipa": "/dɪˈstɪŋɡwɪʃɪŋ/",
+        "cefr": "C1",
+        "ru": "отличительный",
+        "ru_short": "отличительный",
+        "definition_en": "making one thing different from others",
+        "note_ru": "distinguishing factor / feature — отличительная черта. Глагол distinguish — «различать».",
+        "examples": [
+          {
+            "en": "Speed is its main distinguishing feature.",
+            "ru": "Скорость — его главная отличительная черта."
+          },
+          {
+            "en": "It's hard to distinguish the twins.",
+            "ru": "Близнецов трудно различить."
+          }
+        ],
+        "sentence_ru": "Вы встретите разные решения и продукты поставщиков, обещающие холодное, тёплое или горячее переключение, и часто единственное реальное различие между ними в том, что горячее даёт меньший RTO, чем тёплое, а тёплое — меньший, чем холодное."
+      },
+      "audio": {
+        "word": "857ee603e2ed0329.mp3",
+        "sentence": "1b8f574a94411427.mp3",
+        "sentence_slow": "7e0e951fc818110b.mp3",
+        "examples": [
+          "7a5ad532bab2b216.mp3",
+          "6ea35108560a8ff8.mp3"
+        ]
+      }
+    },
+    {
+      "text": "multisite",
+      "kind": "word",
+      "sentence": "With a multisite active-active setup, data is replicated constantly between two or more sites, as you can see in Figure 10-6.",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-29",
+      "lemma": "multisite",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "adjective",
+        "ipa": "/ˈmʌltiˌsaɪt/",
+        "cefr": "C1",
+        "ru": "многоплощадочный",
+        "ru_short": "на нескольких площадках",
+        "definition_en": "running in several locations or data centers at once",
+        "note_ru": "active-active — все площадки обслуживают трафик одновременно, active-passive — одна в резерве. В этом предложении есть и слово из прошлого урока: constantly.",
+        "examples": [
+          {
+            "en": "A multisite setup costs more but survives a region outage.",
+            "ru": "Многоплощадочная схема дороже, но переживает отказ региона."
+          },
+          {
+            "en": "The company runs multisite operations across Europe.",
+            "ru": "Компания работает на нескольких площадках по всей Европе."
+          }
+        ],
+        "sentence_ru": "В схеме multisite active-active данные постоянно реплицируются между двумя или более площадками, как показано на рисунке 10-6."
+      },
+      "audio": {
+        "word": "fee98a7c2f95e292.mp3",
+        "sentence": "dad11122d55a63aa.mp3",
+        "sentence_slow": "1bbc02867bbdb908.mp3",
+        "examples": [
+          "bbad61381345c508.mp3",
+          "5b0a53ab99446d31.mp3"
+        ]
+      }
+    },
+    {
+      "text": "scraps",
+      "kind": "word",
+      "sentence": "In a scenario where a major cloud vendor’s region has failed, you may find yourself fighting over scraps with everyone else.",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-30",
+      "lemma": "scrap",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "noun",
+        "ipa": "/skræps/",
+        "cefr": "B2",
+        "ru": "остатки, объедки",
+        "ru_short": "остатки",
+        "definition_en": "small pieces left over",
+        "note_ru": "fight over scraps — «драться за остатки». Глагол scrap — «отказаться, выбросить» (scrap the plan).",
+        "examples": [
+          {
+            "en": "The dog ate the scraps from dinner.",
+            "ru": "Собака доела объедки после ужина."
+          },
+          {
+            "en": "We got only scraps of information.",
+            "ru": "Мы получили лишь обрывки информации."
+          }
+        ],
+        "sentence_ru": "Если у крупного облачного провайдера отказал целый регион, вам, возможно, придётся бороться за остатки ресурсов вместе со всеми остальными."
+      },
+      "audio": {
+        "word": "825c2a842df420e8.mp3",
+        "sentence": "0348a651d8b2d5b8.mp3",
+        "sentence_slow": "4f9cf492923b33f0.mp3",
+        "examples": [
+          "a5c06311c1dc511f.mp3",
+          "dba6d2534b515b48.mp3"
+        ]
+      }
+    },
+    {
+      "text": "operate",
+      "kind": "word",
+      "sentence": "A solution here is to consider ensuring that your software can still operate even if the model is unavailable.",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-31",
+      "lemma": "operate",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "verb",
+        "ipa": "/ˈɒpəreɪt/",
+        "cefr": "B1",
+        "ru": "работать, функционировать",
+        "ru_short": "работать",
+        "definition_en": "to work or function",
+        "note_ru": "Ещё значения: «управлять» (operate a machine) и «оперировать» у врачей.",
+        "examples": [
+          {
+            "en": "The app can operate offline.",
+            "ru": "Приложение может работать офлайн."
+          },
+          {
+            "en": "Who operates this service?",
+            "ru": "Кто эксплуатирует этот сервис?"
+          }
+        ],
+        "sentence_ru": "Одно из решений — сделать так, чтобы ваше ПО могло работать, даже если модель недоступна."
+      },
+      "audio": {
+        "word": "b54948f9305abc54.mp3",
+        "sentence": "e48b682bd618315e.mp3",
+        "sentence_slow": "669359fe2ebb2862.mp3",
+        "examples": [
+          "8a96ed88818d57d0.mp3",
+          "593a7c241b4b1bca.mp3"
+        ]
+      }
+    },
+    {
+      "text": "bleeding",
+      "kind": "word",
+      "sentence": "When using backup vendors like this, there may be a lag in terms of how quickly the latest models may be available, but given that you may not always want to be on the bleeding edge of the models you use to embed in your software (something we’ll discuss in just a moment), this is probably fine.",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-32",
+      "lemma": "bleeding edge",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "noun",
+        "ipa": "/ˈbliːdɪŋ edʒ/",
+        "cefr": "C1",
+        "ru": "самый передний край (технологий)",
+        "ru_short": "передний край, новейшее",
+        "definition_en": "bleeding edge — the very newest technology, often not fully tested",
+        "note_ru": "Сильнее, чем cutting edge: новейшее, но с риском. Глагол bleed — «кровоточить».",
+        "suggest_phrase": "bleeding edge",
+        "examples": [
+          {
+            "en": "We avoid the bleeding edge in production.",
+            "ru": "В проде мы не берём самые свежие нестабильные версии."
+          },
+          {
+            "en": "The cut was bleeding badly.",
+            "ru": "Порез сильно кровоточил."
+          }
+        ],
+        "sentence_ru": "При использовании таких резервных поставщиков новейшие модели могут появляться с задержкой, но поскольку вам не всегда нужно быть на самом переднем крае в выборе моделей для вашего ПО (об этом поговорим чуть позже), это, скорее всего, нормально."
+      },
+      "audio": {
+        "word": "b45cd47698e8df73.mp3",
+        "sentence": "7de17ee38af6856b.mp3",
+        "sentence_slow": "38b0c4b2b931037c.mp3",
+        "examples": [
+          "d7b81519d66cac28.mp3",
+          "c7fd869e5aa5b08b.mp3"
+        ]
+      }
+    },
+    {
+      "text": "behaving",
+      "kind": "word",
+      "sentence": "I’ve seen reports where a model has started behaving differently, without any major change in behavior being flagged by the vendor.",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-33",
+      "lemma": "behave",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "verb",
+        "ipa": "/bɪˈheɪvɪŋ/",
+        "cefr": "B1",
+        "ru": "вести себя, работать",
+        "ru_short": "вести себя",
+        "definition_en": "to act or function in a particular way",
+        "note_ru": "О программах тоже говорят behave: the service behaves differently. Существительное — behavior.",
+        "examples": [
+          {
+            "en": "The cache behaves strangely under load.",
+            "ru": "Под нагрузкой кэш ведёт себя странно."
+          },
+          {
+            "en": "Please behave yourself.",
+            "ru": "Веди себя прилично."
+          }
+        ],
+        "sentence_ru": "Я видел сообщения о том, что модель начинала вести себя иначе, хотя поставщик не объявлял о серьёзных изменениях в поведении."
+      },
+      "audio": {
+        "word": "bd1a365212f7e5ac.mp3",
+        "sentence": "816d41507329888a.mp3",
+        "sentence_slow": "cebd7e18fc0a2475.mp3",
+        "examples": [
+          "2ed66f8be96db4b3.mp3",
+          "1b4a16f737a45179.mp3"
+        ]
+      }
+    },
+    {
+      "text": "therefore",
+      "kind": "word",
+      "sentence": "It is therefore vital to have a good set of tests to validate that the AI portions of your code are behaving appropriately—and this should be a mix of traditional functional tests, together with the use of AI evaluation tools (evals).",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-34",
+      "lemma": "therefore",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "adverb",
+        "ipa": "/ˈðerfɔːr/",
+        "cefr": "B2",
+        "ru": "поэтому, следовательно",
+        "ru_short": "поэтому",
+        "definition_en": "for that reason",
+        "note_ru": "Формальнее, чем so. Часто стоит в середине фразы: It is therefore vital…",
+        "examples": [
+          {
+            "en": "The test failed; therefore, the release was delayed.",
+            "ru": "Тест упал, поэтому релиз отложили."
+          },
+          {
+            "en": "I think, therefore I am.",
+            "ru": "Мыслю, следовательно, существую."
+          }
+        ],
+        "sentence_ru": "Поэтому очень важно иметь хороший набор тестов, проверяющих, что AI-части вашего кода ведут себя как положено, — это должно быть сочетание классических функциональных тестов и инструментов оценки AI (evals)."
+      },
+      "audio": {
+        "word": "62542ade070f724a.mp3",
+        "sentence": "cedc7512b53b9a2f.mp3",
+        "sentence_slow": "f46f1166b13286d7.mp3",
+        "examples": [
+          "7c1bb07b098ac6ba.mp3",
+          "8e3686c46fdc144f.mp3"
+        ]
+      }
+    },
+    {
+      "text": "appropriately",
+      "kind": "word",
+      "sentence": "It is therefore vital to have a good set of tests to validate that the AI portions of your code are behaving appropriately—and this should be a mix of traditional functional tests, together with the use of AI evaluation tools (evals).",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-35",
+      "lemma": "appropriately",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "adverb",
+        "ipa": "/əˈproʊpriətli/",
+        "cefr": "B2",
+        "ru": "как положено, надлежащим образом",
+        "ru_short": "как положено",
+        "definition_en": "in a way that is suitable or right",
+        "note_ru": "От appropriate — «подходящий, уместный».",
+        "examples": [
+          {
+            "en": "Please dress appropriately for the meeting.",
+            "ru": "Оденьтесь на встречу соответствующе."
+          },
+          {
+            "en": "Errors should be handled appropriately.",
+            "ru": "Ошибки нужно обрабатывать как следует."
+          }
+        ],
+        "sentence_ru": "Поэтому очень важно иметь хороший набор тестов, проверяющих, что AI-части вашего кода ведут себя как положено, — это должно быть сочетание классических функциональных тестов и инструментов оценки AI (evals)."
+      },
+      "audio": {
+        "word": "0731e846654fe42f.mp3",
+        "sentence": "cedc7512b53b9a2f.mp3",
+        "sentence_slow": "f46f1166b13286d7.mp3",
+        "examples": [
+          "9964a44fa7adb504.mp3",
+          "00538d86247ddb4f.mp3"
+        ]
+      }
+    },
+    {
+      "text": "vulnerable",
+      "kind": "word",
+      "sentence": "If Cursor had been able to use AI models from another firm, it might have been less vulnerable to this issue.",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-36",
+      "lemma": "vulnerable",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "adjective",
+        "ipa": "/ˈvʌlnərəbəl/",
+        "cefr": "B2",
+        "ru": "уязвимый",
+        "ru_short": "уязвимый",
+        "definition_en": "easily hurt or attacked",
+        "note_ru": "vulnerable to something. В безопасности vulnerability — «уязвимость».",
+        "examples": [
+          {
+            "en": "Old versions are vulnerable to this attack.",
+            "ru": "Старые версии уязвимы к этой атаке."
+          },
+          {
+            "en": "She felt vulnerable and alone.",
+            "ru": "Она чувствовала себя беззащитной и одинокой."
+          }
+        ],
+        "sentence_ru": "Если бы Cursor мог использовать AI-модели другой компании, он, возможно, был бы менее уязвим к этой проблеме."
+      },
+      "audio": {
+        "word": "d5e5e75fe1e0f6fb.mp3",
+        "sentence": "c8f83a98f8305a3d.mp3",
+        "sentence_slow": "f60f8e17e4e8a43e.mp3",
+        "examples": [
+          "80081b6abf2fa75f.mp3",
+          "7727fd106db7b760.mp3"
+        ]
+      }
+    },
+    {
+      "text": "wholly",
+      "kind": "word",
+      "sentence": "Keep Your Options Open: Make sure you aren’t wholly dependent on a single model or AI platform.",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-37",
+      "lemma": "wholly",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "adverb",
+        "ipa": "/ˈhoʊlli/",
+        "cefr": "C1",
+        "ru": "полностью, целиком",
+        "ru_short": "полностью",
+        "definition_en": "completely",
+        "note_ru": "Звучит как holy, но значит «целиком». wholly owned subsidiary — дочерняя компания со 100% владением.",
+        "examples": [
+          {
+            "en": "I'm not wholly convinced.",
+            "ru": "Я не до конца убеждён."
+          },
+          {
+            "en": "The project is wholly funded by grants.",
+            "ru": "Проект полностью финансируется грантами."
+          }
+        ],
+        "sentence_ru": "Держите варианты открытыми: убедитесь, что вы не зависите целиком от одной модели или AI-платформы."
+      },
+      "audio": {
+        "word": "195634bdcaab4ea9.mp3",
+        "sentence": "c5667d895c9cd99e.mp3",
+        "sentence_slow": "f7b18aa91dc3ac1a.mp3",
+        "examples": [
+          "d3b62b1720e139e8.mp3",
+          "e48d78f393a28244.mp3"
+        ]
+      }
+    },
+    {
+      "text": "shaming",
+      "kind": "word",
+      "sentence": "Rather than this being about shaming people who spend too much money, he makes the case that this visibility drives better understanding of how the software is being used and helps drive the adoption of tools that are proving to be valuable.",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-38",
+      "lemma": "shame",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "verb",
+        "ipa": "/ˈʃeɪmɪŋ/",
+        "cefr": "B2",
+        "ru": "стыдить, публично осуждать",
+        "ru_short": "стыдить",
+        "definition_en": "making someone feel ashamed, often in public",
+        "note_ru": "Известные сочетания: body shaming; name and shame — публично назвать виновных.",
+        "examples": [
+          {
+            "en": "Shaming people rarely changes their behavior.",
+            "ru": "Стыжение редко меняет поведение людей."
+          },
+          {
+            "en": "It's a shame you couldn't come.",
+            "ru": "Жаль, что ты не смог прийти."
+          }
+        ],
+        "sentence_ru": "Речь не о том, чтобы стыдить тех, кто тратит слишком много денег: он доказывает, что такая прозрачность помогает лучше понять, как используется ПО, и способствует внедрению инструментов, которые доказывают свою ценность."
+      },
+      "audio": {
+        "word": "f0a30e6a66dbe7d8.mp3",
+        "sentence": "121aeb4cfd08b848.mp3",
+        "sentence_slow": "eb07e3e7c17f4297.mp3",
+        "examples": [
+          "7d460f385c8be7e3.mp3",
+          "fd9a296346f3cc1c.mp3"
+        ]
+      }
+    },
+    {
+      "text": "shows",
+      "kind": "word",
+      "sentence": "In his 2025 talk at LeadDev Berlin, “LLMs: An Operator’s View”, Stanier explains that if you see a person spending a lot of money, this shouldn’t be seen as a bad thing, as typically it shows someone trying to get more done.",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-39",
+      "lemma": "show",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "verb",
+        "ipa": "/ʃoʊz/",
+        "cefr": "B1",
+        "ru": "показывает, свидетельствует",
+        "ru_short": "показывает",
+        "definition_en": "to make something clear; to prove",
+        "note_ru": "В исходном тексте слились два слова: «showsomeone» вместо «shows someone». Агент разделил их и учит глагол show в значении «свидетельствовать».",
+        "flags": [
+          "в тексте опечатка: shows someone"
+        ],
+        "examples": [
+          {
+            "en": "The data shows someone is still using the old API.",
+            "ru": "Данные показывают, что кто-то всё ещё пользуется старым API."
+          },
+          {
+            "en": "It shows how much you care.",
+            "ru": "Это показывает, как тебе не всё равно."
+          }
+        ],
+        "sentence_ru": "В докладе 2025 года на LeadDev Berlin «LLMs: An Operator’s View» Станиер объясняет: если человек тратит много денег, это не стоит считать чем-то плохим — обычно это показывает, что он старается успеть больше."
+      },
+      "audio": {
+        "word": "d9cc6251f2406a11.mp3",
+        "sentence": "be4f55d0a8c6f61e.mp3",
+        "sentence_slow": "3624497b58864aa9.mp3",
+        "examples": [
+          "55ffdb84510761e1.mp3",
+          "bfa397a8b0711a52.mp3"
+        ]
+      },
+      "text_original": "showsomeone",
+      "sentence_original": "In his 2025 talk at LeadDev Berlin, “LLMs: An Operator’s View”, Stanier explains that if you see a person spending a lot of money, this shouldn’t be seen as a bad thing, as typically it showsomeone trying to get more done."
+    },
+    {
+      "text": "egregious",
+      "kind": "word",
+      "sentence": "It can also help you spot egregious overspend.",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-40",
+      "lemma": "egregious",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "adjective",
+        "ipa": "/ɪˈɡriːdʒəs/",
+        "cefr": "C2",
+        "ru": "вопиющий",
+        "ru_short": "вопиющий",
+        "definition_en": "extremely bad and obvious",
+        "note_ru": "Обычно о плохом: egregious error, egregious overspend.",
+        "examples": [
+          {
+            "en": "It was an egregious violation of privacy.",
+            "ru": "Это было вопиющее нарушение приватности."
+          },
+          {
+            "en": "The report contains egregious errors.",
+            "ru": "В отчёте вопиющие ошибки."
+          }
+        ],
+        "sentence_ru": "Это также помогает заметить вопиющий перерасход."
+      },
+      "audio": {
+        "word": "d3f68e82936070bd.mp3",
+        "sentence": "18b6be29bf1a827b.mp3",
+        "sentence_slow": "17d5b79e8e4cda6a.mp3",
+        "examples": [
+          "4dcd4c4bc5a0caa5.mp3",
+          "3bc204101cd17376.mp3"
+        ]
+      }
+    },
+    {
+      "text": "revealed",
+      "kind": "word",
+      "sentence": "Uber recently revealed that it had burned through its entire annual AI budget in just the first four months of the year.",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-41",
+      "lemma": "reveal",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "verb",
+        "ipa": "/rɪˈviːld/",
+        "cefr": "B2",
+        "ru": "сообщил, раскрыл",
+        "ru_short": "раскрыл, сообщил",
+        "definition_en": "made known something that was secret or unknown",
+        "note_ru": "Существительное — revelation. Агент сократил длинный абзац до нужного предложения.",
+        "flags": [
+          "контекст сокращён агентом"
+        ],
+        "examples": [
+          {
+            "en": "The survey revealed a surprising trend.",
+            "ru": "Опрос выявил неожиданную тенденцию."
+          },
+          {
+            "en": "He never revealed his password.",
+            "ru": "Он так и не раскрыл свой пароль."
+          }
+        ],
+        "sentence_ru": "Недавно Uber сообщил, что израсходовал весь годовой бюджет на AI всего за первые четыре месяца года."
+      },
+      "audio": {
+        "word": "0202416b4e22bce4.mp3",
+        "sentence": "ec2f7f59d2c13105.mp3",
+        "sentence_slow": "7a697b2547aca6be.mp3",
+        "examples": [
+          "6d42db47a4e390d3.mp3",
+          "e6fd1ad3ea5f0432.mp3"
+        ]
+      },
+      "sentence_original": "Uber recently revealed that it had burned through its entire annual AI budget in just the first four months of the year, and Microsoft announced it was pulling Claude licenses from its employees, due in part to cost, apparently.5 These stories might cause one or two raised eyebrows, but they pale in comparison to the recent (admittedly unsubstantiated) report from Axios that an unnamed enterprise company spent $500 million on Claude licenses after failing to put cost controls into place."
+    },
+    {
+      "text": "admittedly",
+      "kind": "word",
+      "sentence": "These stories might cause one or two raised eyebrows, but they pale in comparison to the recent (admittedly unsubstantiated) report from Axios that an unnamed enterprise company spent $500 million on Claude licenses after failing to put cost controls into place.",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-42",
+      "lemma": "admittedly",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "adverb",
+        "ipa": "/ədˈmɪtɪdli/",
+        "cefr": "C1",
+        "ru": "правда, надо признать",
+        "ru_short": "надо признать",
+        "definition_en": "used when you accept that something is true",
+        "note_ru": "Смягчает утверждение: «стоит признать, что…». От admit.",
+        "flags": [
+          "контекст сокращён агентом"
+        ],
+        "examples": [
+          {
+            "en": "Admittedly, the docs are outdated.",
+            "ru": "Надо признать, документация устарела."
+          },
+          {
+            "en": "It was, admittedly, a risky move.",
+            "ru": "Это был, правда, рискованный шаг."
+          }
+        ],
+        "sentence_ru": "Эти истории могут кого-то удивить, но они меркнут на фоне недавнего (правда, ничем не подтверждённого) сообщения Axios о том, что неназванная крупная компания потратила 500 миллионов долларов на лицензии Claude, не настроив контроль расходов."
+      },
+      "audio": {
+        "word": "ab76095d26f57cd9.mp3",
+        "sentence": "a1649e204f3d0da2.mp3",
+        "sentence_slow": "3156acdf5cd69066.mp3",
+        "examples": [
+          "88d10addb065db70.mp3",
+          "582500fb8bc2456f.mp3"
+        ]
+      },
+      "sentence_original": "Uber recently revealed that it had burned through its entire annual AI budget in just the first four months of the year, and Microsoft announced it was pulling Claude licenses from its employees, due in part to cost, apparently.5 These stories might cause one or two raised eyebrows, but they pale in comparison to the recent (admittedly unsubstantiated) report from Axios that an unnamed enterprise company spent $500 million on Claude licenses after failing to put cost controls into place."
+    },
+    {
+      "text": "unsubstantiated",
+      "kind": "word",
+      "sentence": "These stories might cause one or two raised eyebrows, but they pale in comparison to the recent (admittedly unsubstantiated) report from Axios that an unnamed enterprise company spent $500 million on Claude licenses after failing to put cost controls into place.",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-43",
+      "lemma": "unsubstantiated",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "adjective",
+        "ipa": "/ˌʌnsəbˈstænʃieɪtɪd/",
+        "cefr": "C2",
+        "ru": "ничем не подтверждённый",
+        "ru_short": "неподтверждённый",
+        "definition_en": "not supported by evidence",
+        "note_ru": "un- + substantiate — «подтверждать фактами». Частые пары: unsubstantiated claims, unsubstantiated rumours.",
+        "flags": [
+          "контекст сокращён агентом"
+        ],
+        "examples": [
+          {
+            "en": "These are unsubstantiated rumours.",
+            "ru": "Это ничем не подтверждённые слухи."
+          },
+          {
+            "en": "The claim remains unsubstantiated.",
+            "ru": "Утверждение по-прежнему не подтверждено."
+          }
+        ],
+        "sentence_ru": "Эти истории могут кого-то удивить, но они меркнут на фоне недавнего (правда, ничем не подтверждённого) сообщения Axios о том, что неназванная крупная компания потратила 500 миллионов долларов на лицензии Claude, не настроив контроль расходов."
+      },
+      "audio": {
+        "word": "d7b12096b8402115.mp3",
+        "sentence": "a1649e204f3d0da2.mp3",
+        "sentence_slow": "3156acdf5cd69066.mp3",
+        "examples": [
+          "e8800d67b1f746a7.mp3",
+          "dbaef7564fa29ce0.mp3"
+        ]
+      },
+      "sentence_original": "Uber recently revealed that it had burned through its entire annual AI budget in just the first four months of the year, and Microsoft announced it was pulling Claude licenses from its employees, due in part to cost, apparently.5 These stories might cause one or two raised eyebrows, but they pale in comparison to the recent (admittedly unsubstantiated) report from Axios that an unnamed enterprise company spent $500 million on Claude licenses after failing to put cost controls into place."
+    },
+    {
+      "text": "climbing",
+      "kind": "word",
+      "sentence": "It can help you understand how people are using it and also help you spot when the bills start climbing precipitously.",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-44",
+      "lemma": "climb",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "verb",
+        "ipa": "/ˈklaɪmɪŋ/",
+        "cefr": "B1",
+        "ru": "расти (о ценах, счетах)",
+        "ru_short": "расти, подниматься",
+        "definition_en": "to increase",
+        "note_ru": "b не читается: /klaɪm/. Базовое значение — «карабкаться».",
+        "examples": [
+          {
+            "en": "Cloud costs keep climbing.",
+            "ru": "Расходы на облако продолжают расти."
+          },
+          {
+            "en": "We climbed the mountain in six hours.",
+            "ru": "Мы поднялись на гору за шесть часов."
+          }
+        ],
+        "sentence_ru": "Это помогает понять, как люди этим пользуются, и вовремя заметить, когда счета начинают резко расти."
+      },
+      "audio": {
+        "word": "c5e11c27f55f704a.mp3",
+        "sentence": "b6f30d84819e626a.mp3",
+        "sentence_slow": "62d30916975e5ef9.mp3",
+        "examples": [
+          "02a91587ff9841b6.mp3",
+          "ffe3cffee9244af5.mp3"
+        ]
+      }
+    },
+    {
+      "text": "precipitously",
+      "kind": "word",
+      "sentence": "It can help you understand how people are using it and also help you spot when the bills start climbing precipitously.",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-45",
+      "lemma": "precipitously",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "adverb",
+        "ipa": "/prɪˈsɪpɪtəsli/",
+        "cefr": "C2",
+        "ru": "стремительно, резко",
+        "ru_short": "резко, стремительно",
+        "definition_en": "very suddenly and by a large amount",
+        "note_ru": "От precipice — «обрыв». Обычно о росте или падении цифр.",
+        "examples": [
+          {
+            "en": "Prices fell precipitously.",
+            "ru": "Цены стремительно упали."
+          },
+          {
+            "en": "Traffic grew precipitously after the launch.",
+            "ru": "После запуска трафик резко вырос."
+          }
+        ],
+        "sentence_ru": "Это помогает понять, как люди этим пользуются, и вовремя заметить, когда счета начинают резко расти."
+      },
+      "audio": {
+        "word": "172bf0a6362aa28c.mp3",
+        "sentence": "b6f30d84819e626a.mp3",
+        "sentence_slow": "62d30916975e5ef9.mp3",
+        "examples": [
+          "a82a51e9ffdadfab.mp3",
+          "7e4025b47b404b8d.mp3"
+        ]
+      }
+    },
+    {
+      "text": "nondeterminism",
+      "kind": "word",
+      "sentence": "At the micro level, LLM-powered AI requires us to be OK with nondeterminism, whereas there are many activities we perform in the context of building resilient systems that need to be fully repeatable and deterministic.",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-46",
+      "lemma": "nondeterminism",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "noun",
+        "ipa": "/ˌnɒndɪˈtɜːrmɪnɪzəm/",
+        "cefr": "C1",
+        "ru": "недетерминированность",
+        "ru_short": "недетерминированность",
+        "definition_en": "giving different results for the same input",
+        "note_ru": "LLM на один и тот же промпт может ответить по-разному. Противоположность — determinism, прилагательное — deterministic.",
+        "examples": [
+          {
+            "en": "Tests must cope with nondeterminism.",
+            "ru": "Тесты должны справляться с недетерминированностью."
+          },
+          {
+            "en": "Nondeterminism makes the bug hard to reproduce.",
+            "ru": "Из-за недетерминированности баг трудно воспроизвести."
+          }
+        ],
+        "sentence_ru": "На микроуровне AI на базе LLM требует от нас смириться с недетерминированностью, тогда как многое из того, что мы делаем при построении устойчивых систем, должно быть полностью воспроизводимым и детерминированным."
+      },
+      "audio": {
+        "word": "5617174b0bef2199.mp3",
+        "sentence": "d16c69fc7958cc43.mp3",
+        "sentence_slow": "cd45b2a86b6e6df1.mp3",
+        "examples": [
+          "ccb877f670859cd9.mp3",
+          "da0dca080240c007.mp3"
+        ]
+      }
+    },
+    {
+      "text": "ever-changing",
+      "kind": "word",
+      "sentence": "At the macro level, concerns about the AI sector as a whole mean we are dealing with an ever-changing (and hopefully) improving set of products built on very shaky financial foundations.",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-47",
+      "lemma": "ever-changing",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "adjective",
+        "ipa": "/ˌevərˈtʃeɪndʒɪŋ/",
+        "cefr": "B2",
+        "ru": "постоянно меняющийся",
+        "ru_short": "постоянно меняющийся",
+        "definition_en": "always changing",
+        "note_ru": "ever- + причастие: ever-growing, ever-increasing.",
+        "examples": [
+          {
+            "en": "We work in an ever-changing market.",
+            "ru": "Мы работаем на постоянно меняющемся рынке."
+          },
+          {
+            "en": "The ever-changing rules confuse users.",
+            "ru": "Пользователей путают постоянно меняющиеся правила."
+          }
+        ],
+        "sentence_ru": "На макроуровне опасения насчёт AI-отрасли в целом означают, что мы имеем дело с постоянно меняющимся (и, надеемся, улучшающимся) набором продуктов, построенных на очень шатком финансовом фундаменте."
+      },
+      "audio": {
+        "word": "e84473c6a9665928.mp3",
+        "sentence": "9775a7db085c7ca9.mp3",
+        "sentence_slow": "746697a7f3b6675b.mp3",
+        "examples": [
+          "8dac9e4f09ea2d3c.mp3",
+          "5c3589e1b9e32932.mp3"
+        ]
+      }
+    },
+    {
+      "text": "shaky",
+      "kind": "word",
+      "sentence": "At the macro level, concerns about the AI sector as a whole mean we are dealing with an ever-changing (and hopefully) improving set of products built on very shaky financial foundations.",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-48",
+      "lemma": "shaky",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "adjective",
+        "ipa": "/ˈʃeɪki/",
+        "cefr": "B2",
+        "ru": "шаткий, ненадёжный",
+        "ru_short": "шаткий",
+        "definition_en": "not firm or safe; likely to fail",
+        "note_ru": "От shake. on shaky ground — «на шаткой почве».",
+        "examples": [
+          {
+            "en": "The argument is on shaky ground.",
+            "ru": "Аргумент стоит на шаткой почве."
+          },
+          {
+            "en": "My hands were shaky before the talk.",
+            "ru": "Перед выступлением у меня дрожали руки."
+          }
+        ],
+        "sentence_ru": "На макроуровне опасения насчёт AI-отрасли в целом означают, что мы имеем дело с постоянно меняющимся (и, надеемся, улучшающимся) набором продуктов, построенных на очень шатком финансовом фундаменте."
+      },
+      "audio": {
+        "word": "05b56aca5bef0b68.mp3",
+        "sentence": "9775a7db085c7ca9.mp3",
+        "sentence_slow": "746697a7f3b6675b.mp3",
+        "examples": [
+          "454583e4b85776bb.mp3",
+          "d48871b699594ce0.mp3"
+        ]
+      }
+    },
+    {
+      "text": "beforehand",
+      "kind": "word",
+      "sentence": "And some of this could be because the team had not prepared for, or exercised, disaster recovery beforehand.",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-49",
+      "lemma": "beforehand",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "adverb",
+        "ipa": "/bɪˈfɔːrhænd/",
+        "cefr": "B2",
+        "ru": "заранее",
+        "ru_short": "заранее",
+        "definition_en": "before something else happens",
+        "note_ru": "Обычно в конце фразы: prepare beforehand. Синоним — in advance.",
+        "examples": [
+          {
+            "en": "Let me know beforehand if you can't come.",
+            "ru": "Предупреди заранее, если не сможешь прийти."
+          },
+          {
+            "en": "Read the docs beforehand.",
+            "ru": "Прочитай документацию заранее."
+          }
+        ],
+        "sentence_ru": "Отчасти это могло быть из-за того, что команда заранее не подготовилась к аварийному восстановлению и не отрабатывала его."
+      },
+      "audio": {
+        "word": "e39fb32104a4901f.mp3",
+        "sentence": "2572faeee1b631f5.mp3",
+        "sentence_slow": "410e9dc7b0091d37.mp3",
+        "examples": [
+          "3a97b7e0378c7113.mp3",
+          "953f5e79c6e3c78a.mp3"
+        ]
+      }
+    },
+    {
+      "text": "amateurish",
+      "kind": "word",
+      "sentence": "“Having no automated failovers is incredibly amateurish for an operation of Coinbase’s scale.",
+      "note": "",
+      "id": "2026-10-16-building-resilient-ai-powered-software-50",
+      "lemma": "amateurish",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "adjective",
+        "ipa": "/ˈæmətərɪʃ/",
+        "cefr": "C1",
+        "ru": "дилетантский, непрофессиональный",
+        "ru_short": "дилетантский",
+        "definition_en": "not skilful; done badly, as if by an amateur",
+        "note_ru": "С оттенком осуждения, в отличие от нейтрального amateur — «любитель».",
+        "examples": [
+          {
+            "en": "The site looks amateurish.",
+            "ru": "Сайт выглядит непрофессионально."
+          },
+          {
+            "en": "It was an amateurish mistake.",
+            "ru": "Это была дилетантская ошибка."
+          }
+        ],
+        "sentence_ru": "«Отсутствие автоматического переключения при сбоях — невероятный дилетантизм для компании масштаба Coinbase."
+      },
+      "audio": {
+        "word": "c0516a18b751ca24.mp3",
+        "sentence": "77495815ae1e0596.mp3",
+        "sentence_slow": "6c126288f9fe5af4.mp3",
+        "examples": [
+          "8b6fdb1826c5c90a.mp3",
+          "018b0906f5cce145.mp3"
+        ]
+      }
+    }
+  ]
+}

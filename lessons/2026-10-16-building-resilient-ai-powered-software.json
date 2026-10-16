@@ -1,0 +1,310 @@
+{
+  "version": 1,
+  "id": "2026-10-16-building-resilient-ai-powered-software",
+  "date": "2026-10-16",
+  "source": {
+    "title": "Building resilient AI-powered software and planning"
+  },
+  "items": [
+    {
+      "text": "resilient",
+      "kind": "word",
+      "sentence": "Building resilient AI-powered software, and planning for when things go wrong How to handle uncertainty with AI vendors and disaster recovery (DR) approaches to consider.",
+      "note": ""
+    },
+    {
+      "text": "uncertainty",
+      "kind": "word",
+      "sentence": "Building resilient AI-powered software, and planning for when things go wrong How to handle uncertainty with AI vendors and disaster recovery (DR) approaches to consider.",
+      "note": ""
+    },
+    {
+      "text": "disaster",
+      "kind": "word",
+      "sentence": "Building resilient AI-powered software, and planning for when things go wrong How to handle uncertainty with AI vendors and disaster recovery (DR) approaches to consider.",
+      "note": ""
+    },
+    {
+      "text": "excerpt",
+      "kind": "word",
+      "sentence": "An excerpt from the book Building Resilient Distributed Systems by Sam Newman GERGELY OROSZ OCT 13, 2026",
+      "note": ""
+    },
+    {
+      "text": "awaited",
+      "kind": "word",
+      "sentence": "Last week’s guest on the podcast was Sam Newman, who had released a book I’ve personally long awaited titled Building Resilient Distributed Systems.",
+      "note": ""
+    },
+    {
+      "text": "ought",
+      "kind": "word",
+      "sentence": "I asked Sam if he would consider sharing an excerpt from the book, with sections especially relevant for anyone building systems that ought to be reliable.",
+      "note": ""
+    },
+    {
+      "text": "graciously",
+      "kind": "word",
+      "sentence": "Sam graciously agreed, and today’s issue covers a few important topics, spread across two chapters from his book.",
+      "note": ""
+    },
+    {
+      "text": "disclaimer",
+      "kind": "word",
+      "sentence": "My usual disclaimer: as with all my recommendations, I was not paid to recommend this book, and none of the links are affiliate ones.",
+      "note": ""
+    },
+    {
+      "text": "affiliate",
+      "kind": "word",
+      "sentence": "My usual disclaimer: as with all my recommendations, I was not paid to recommend this book, and none of the links are affiliate ones.",
+      "note": ""
+    },
+    {
+      "text": "widespread",
+      "kind": "word",
+      "sentence": "But what happens when a catastrophic failure causes widespread outage of large parts of your system?",
+      "note": ""
+    },
+    {
+      "text": "robust",
+      "kind": "word",
+      "sentence": "Fire, flood, electrical supply issues, and errors in the underlying cloud infrastructure are all outside of your control, and at one fell swoop, they can render your attempts to make your system more robust totally redundant.",
+      "note": ""
+    },
+    {
+      "text": "redundant",
+      "kind": "word",
+      "sentence": "Fire, flood, electrical supply issues, and errors in the underlying cloud infrastructure are all outside of your control, and at one fell swoop, they can render your attempts to make your system more robust totally redundant.",
+      "note": ""
+    },
+    {
+      "text": "auspices",
+      "kind": "word",
+      "sentence": "Handling these situations falls under the auspices of disaster recovery (DR), a set of procedures that should kick in when something really bad happens.",
+      "note": ""
+    },
+    {
+      "text": "trade-offs",
+      "kind": "word",
+      "sentence": "As with much of what we’ve looked at in this book, trade-offs abound.",
+      "note": ""
+    },
+    {
+      "text": "on-premises",
+      "kind": "word",
+      "sentence": "When running on a private cloud or in a more traditional on-premises setup, you’ll instead think in terms of data centers.",
+      "note": ""
+    },
+    {
+      "text": "legislative",
+      "kind": "word",
+      "sentence": "So when deciding on the appropriate RPO and RTO, there needs to be a discussion with stakeholders regarding end-user needs and regulatory and legislative requirements, which are balanced against the cost and complexity of implementing the required solution.",
+      "note": ""
+    },
+    {
+      "text": "failover",
+      "kind": "word",
+      "sentence": "For example, a backup and restore approach requires rerouting, a pilot light setup will add the need for cross-site data replication and infrastructure automation, and a warm failover adds on the cost of having some infrastructure ready to go.",
+      "note": ""
+    },
+    {
+      "text": "rerouting",
+      "kind": "word",
+      "sentence": "Note that they all require some form of rerouting of traffic, and most require some form of cross-site data replication.",
+      "note": ""
+    },
+    {
+      "text": "outlined",
+      "kind": "word",
+      "sentence": "As outlined in Figure 10-3, with this pattern, data is periodically backed up to a separate site.",
+      "note": ""
+    },
+    {
+      "text": "backed-up",
+      "kind": "word",
+      "sentence": "In the event that the primary site fails, infrastructure needs to be provided at a new site, and the backed-up data restored.",
+      "note": ""
+    },
+    {
+      "text": "straightforward",
+      "kind": "word",
+      "sentence": "This pattern is very straightforward to implement, consisting of a few steps:",
+      "note": ""
+    },
+    {
+      "text": "provisioning",
+      "kind": "word",
+      "sentence": "This would ideally be automated, as manual infrastructure provisioning would likely lead to longer RTO and an increased chance of errors.",
+      "note": ""
+    },
+    {
+      "text": "reuse",
+      "kind": "word",
+      "sentence": "Ideally, your failover site runs the same core technology stack as the primary site, meaning that any investment in infrastructure automation on your primary can also be used on the failover (for example, being able to reuse Terraform scripts).",
+      "note": ""
+    },
+    {
+      "text": "spinning",
+      "kind": "word",
+      "sentence": "A caveat to spinning up infrastructure on demand here comes in terms of guaranteeing that infrastructure is actually available when you need it, something we’ll explore later in this chapter.",
+      "note": ""
+    },
+    {
+      "text": "fairly",
+      "kind": "word",
+      "sentence": "As such, the steps involved look fairly similar to the backup and restore pattern:",
+      "note": ""
+    },
+    {
+      "text": "assumption",
+      "kind": "word",
+      "sentence": "The assumption is that databases and datastores are already present on the failover site, so only remaining resources like compute would need to be provisioned.",
+      "note": ""
+    },
+    {
+      "text": "regarding",
+      "kind": "word",
+      "sentence": "Cold, Warm, and Hot Failovers: A brief note is warranted here regarding the term warm.",
+      "note": ""
+    },
+    {
+      "text": "distinguishing",
+      "kind": "word",
+      "sentence": "You’ll find various solutions and vendor products promising cold, warm, or hot failover, with the only real distinguishing factor between these terms often being that a hot failover would give you a lower RTO in comparison to a warm failover, and a warm failover would give you a lower RTO than a cold one.",
+      "note": ""
+    },
+    {
+      "text": "multisite",
+      "kind": "word",
+      "sentence": "With a multisite active-active setup, data is replicated constantly between two or more sites, as you can see in Figure 10-6.",
+      "note": ""
+    },
+    {
+      "text": "scraps",
+      "kind": "word",
+      "sentence": "In a scenario where a major cloud vendor’s region has failed, you may find yourself fighting over scraps with everyone else.",
+      "note": ""
+    },
+    {
+      "text": "operate",
+      "kind": "word",
+      "sentence": "A solution here is to consider ensuring that your software can still operate even if the model is unavailable.",
+      "note": ""
+    },
+    {
+      "text": "bleeding",
+      "kind": "word",
+      "sentence": "When using backup vendors like this, there may be a lag in terms of how quickly the latest models may be available, but given that you may not always want to be on the bleeding edge of the models you use to embed in your software (something we’ll discuss in just a moment), this is probably fine.",
+      "note": ""
+    },
+    {
+      "text": "behaving",
+      "kind": "word",
+      "sentence": "I’ve seen reports where a model has started behaving differently, without any major change in behavior being flagged by the vendor.",
+      "note": ""
+    },
+    {
+      "text": "therefore",
+      "kind": "word",
+      "sentence": "It is therefore vital to have a good set of tests to validate that the AI portions of your code are behaving appropriately—and this should be a mix of traditional functional tests, together with the use of AI evaluation tools (evals).",
+      "note": ""
+    },
+    {
+      "text": "appropriately",
+      "kind": "word",
+      "sentence": "It is therefore vital to have a good set of tests to validate that the AI portions of your code are behaving appropriately—and this should be a mix of traditional functional tests, together with the use of AI evaluation tools (evals).",
+      "note": ""
+    },
+    {
+      "text": "vulnerable",
+      "kind": "word",
+      "sentence": "If Cursor had been able to use AI models from another firm, it might have been less vulnerable to this issue.",
+      "note": ""
+    },
+    {
+      "text": "wholly",
+      "kind": "word",
+      "sentence": "Keep Your Options Open: Make sure you aren’t wholly dependent on a single model or AI platform.",
+      "note": ""
+    },
+    {
+      "text": "shaming",
+      "kind": "word",
+      "sentence": "Rather than this being about shaming people who spend too much money, he makes the case that this visibility drives better understanding of how the software is being used and helps drive the adoption of tools that are proving to be valuable.",
+      "note": ""
+    },
+    {
+      "text": "showsomeone",
+      "kind": "word",
+      "sentence": "In his 2025 talk at LeadDev Berlin, “LLMs: An Operator’s View”, Stanier explains that if you see a person spending a lot of money, this shouldn’t be seen as a bad thing, as typically it showsomeone trying to get more done.",
+      "note": ""
+    },
+    {
+      "text": "egregious",
+      "kind": "word",
+      "sentence": "It can also help you spot egregious overspend.",
+      "note": ""
+    },
+    {
+      "text": "revealed",
+      "kind": "word",
+      "sentence": "Uber recently revealed that it had burned through its entire annual AI budget in just the first four months of the year, and Microsoft announced it was pulling Claude licenses from its employees, due in part to cost, apparently.5 These stories might cause one or two raised eyebrows, but they pale in comparison to the recent (admittedly unsubstantiated) report from Axios that an unnamed enterprise company spent $500 million on Claude licenses after failing to put cost controls into place.",
+      "note": ""
+    },
+    {
+      "text": "admittedly",
+      "kind": "word",
+      "sentence": "Uber recently revealed that it had burned through its entire annual AI budget in just the first four months of the year, and Microsoft announced it was pulling Claude licenses from its employees, due in part to cost, apparently.5 These stories might cause one or two raised eyebrows, but they pale in comparison to the recent (admittedly unsubstantiated) report from Axios that an unnamed enterprise company spent $500 million on Claude licenses after failing to put cost controls into place.",
+      "note": ""
+    },
+    {
+      "text": "unsubstantiated",
+      "kind": "word",
+      "sentence": "Uber recently revealed that it had burned through its entire annual AI budget in just the first four months of the year, and Microsoft announced it was pulling Claude licenses from its employees, due in part to cost, apparently.5 These stories might cause one or two raised eyebrows, but they pale in comparison to the recent (admittedly unsubstantiated) report from Axios that an unnamed enterprise company spent $500 million on Claude licenses after failing to put cost controls into place.",
+      "note": ""
+    },
+    {
+      "text": "climbing",
+      "kind": "word",
+      "sentence": "It can help you understand how people are using it and also help you spot when the bills start climbing precipitously.",
+      "note": ""
+    },
+    {
+      "text": "precipitously",
+      "kind": "word",
+      "sentence": "It can help you understand how people are using it and also help you spot when the bills start climbing precipitously.",
+      "note": ""
+    },
+    {
+      "text": "nondeterminism",
+      "kind": "word",
+      "sentence": "At the micro level, LLM-powered AI requires us to be OK with nondeterminism, whereas there are many activities we perform in the context of building resilient systems that need to be fully repeatable and deterministic.",
+      "note": ""
+    },
+    {
+      "text": "ever-changing",
+      "kind": "word",
+      "sentence": "At the macro level, concerns about the AI sector as a whole mean we are dealing with an ever-changing (and hopefully) improving set of products built on very shaky financial foundations.",
+      "note": ""
+    },
+    {
+      "text": "shaky",
+      "kind": "word",
+      "sentence": "At the macro level, concerns about the AI sector as a whole mean we are dealing with an ever-changing (and hopefully) improving set of products built on very shaky financial foundations.",
+      "note": ""
+    },
+    {
+      "text": "beforehand",
+      "kind": "word",
+      "sentence": "And some of this could be because the team had not prepared for, or exercised, disaster recovery beforehand.",
+      "note": ""
+    },
+    {
+      "text": "amateurish",
+      "kind": "word",
+      "sentence": "“Having no automated failovers is incredibly amateurish for an operation of Coinbase’s scale.",
+      "note": ""
+    }
+  ]
+}

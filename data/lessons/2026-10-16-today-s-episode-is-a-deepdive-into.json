@@ -1,0 +1,491 @@
+{
+  "version": 1,
+  "id": "2026-10-16-today-s-episode-is-a-deepdive-into",
+  "date": "2026-10-16",
+  "source": {
+    "title": "Today’s episode is a deepdive into",
+    "title_ru": "Повседневные инструменты разработчиков Uber"
+  },
+  "day": {
+    "index": 1,
+    "total": 2
+  },
+  "build": {
+    "prompt_version": "level1-v1",
+    "model": "claude-opus-5-5",
+    "audio_status": "pending"
+  },
+  "items": [
+    {
+      "text": "longest-tenured",
+      "kind": "word",
+      "sentence": "Today’s episode is a deepdive into the day-to-day tools of devs at Uber, our tour guide being on of Uber’s longest-tenured engineers: Uday Kiran Medisetty.",
+      "note": "",
+      "id": "2026-10-16-today-s-episode-is-a-deepdive-into-01",
+      "lemma": "longest-tenured",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "adjective",
+        "ipa": "/ˈlɔːŋɡɪst ˈtɛnjərd/",
+        "cefr": "C1",
+        "ru": "проработавший дольше всех",
+        "ru_short": "самый давний (по стажу)",
+        "definition_en": "having been in a job or organization for the longest time",
+        "sentence_ru": "Сегодняшний выпуск — глубокое погружение в повседневные инструменты разработчиков Uber. Наш гид — один из старейших по стажу инженеров Uber, Удай Киран Медисетти.",
+        "note_ru": "tenure — срок пребывания в должности. long-tenured — «с большим стажем». В исходном тексте опечатка: «on of» вместо «one of».",
+        "examples": [
+          {
+            "en": "She is the company's longest-tenured employee.",
+            "ru": "Она проработала в компании дольше всех."
+          },
+          {
+            "en": "The longest-tenured member of the board is retiring.",
+            "ru": "Самый давний член совета директоров уходит на пенсию."
+          }
+        ]
+      },
+      "audio": {
+        "word": "21588403b707a4b1.mp3",
+        "sentence": "f277efdc7f571a37.mp3",
+        "sentence_slow": "7e4aa8b0c39b08e7.mp3",
+        "examples": [
+          "0868dd2722dfce8a.mp3",
+          "560e40f0e8a6cba3.mp3"
+        ]
+      }
+    },
+    {
+      "text": "erratically",
+      "kind": "word",
+      "sentence": "Uber’s service count changed erratically: in 2015, when Uday joined, there were two services in total.",
+      "note": "",
+      "id": "2026-10-16-today-s-episode-is-a-deepdive-into-02",
+      "lemma": "erratically",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "adverb",
+        "ipa": "/ɪˈrætɪkli/",
+        "cefr": "C1",
+        "ru": "скачкообразно, непредсказуемо",
+        "ru_short": "непредсказуемо, скачками",
+        "definition_en": "in an irregular and unpredictable way",
+        "sentence_ru": "Число сервисов в Uber менялось скачкообразно: в 2015 году, когда Удай пришёл в компанию, их было всего два.",
+        "note_ru": "От erratic — «непредсказуемый, неустойчивый». С error не связано по смыслу, хотя похоже.",
+        "examples": [
+          {
+            "en": "The car was moving erratically across the lanes.",
+            "ru": "Машину бросало из полосы в полосу."
+          },
+          {
+            "en": "Prices fluctuated erratically all week.",
+            "ru": "Всю неделю цены непредсказуемо скакали."
+          }
+        ]
+      },
+      "audio": {
+        "word": "360a68b449fa87ef.mp3",
+        "sentence": "838cdd33906332af.mp3",
+        "sentence_slow": "582cd58e9558d2db.mp3",
+        "examples": [
+          "f6c598ca4dc2e31b.mp3",
+          "ed9247841331dd31.mp3"
+        ]
+      }
+    },
+    {
+      "text": "emitting",
+      "kind": "word",
+      "sentence": "M3DB: Uber was emitting about 500 million metrics per second, with no vendor being able to handle this load, so they built it themselves.",
+      "note": "",
+      "id": "2026-10-16-today-s-episode-is-a-deepdive-into-03",
+      "lemma": "emit",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "verb",
+        "ipa": "/ɪˈmɪtɪŋ/",
+        "cefr": "B2",
+        "ru": "отправлять, генерировать (метрики)",
+        "ru_short": "отправлять, выдавать",
+        "definition_en": "to send out or produce something, such as signals, data or gas",
+        "sentence_ru": "M3DB: Uber отправлял около 500 миллионов метрик в секунду, и ни один поставщик не справлялся с такой нагрузкой, поэтому систему сделали сами.",
+        "note_ru": "Базовое значение — «испускать, выделять» (свет, газ). В IT: emit events / metrics / logs — «публиковать, отправлять».",
+        "examples": [
+          {
+            "en": "The service emits an event after each payment.",
+            "ru": "Сервис публикует событие после каждого платежа."
+          },
+          {
+            "en": "Cars emit carbon dioxide.",
+            "ru": "Автомобили выделяют углекислый газ."
+          }
+        ]
+      },
+      "audio": {
+        "word": "e81ce45c41c36173.mp3",
+        "sentence": "a12ea96efa436d06.mp3",
+        "sentence_slow": "1c1484a92788df37.mp3",
+        "examples": [
+          "96e2cd9d8882aa80.mp3",
+          "ca2d992790727702.mp3"
+        ]
+      }
+    },
+    {
+      "text": "switchback",
+      "kind": "word",
+      "sentence": "Morpheus: a system combining feature flags and experimentation, including switchback tests, with support for two- and three-sided marketplaces that Uber operates.",
+      "note": "",
+      "id": "2026-10-16-today-s-episode-is-a-deepdive-into-04",
+      "lemma": "switchback",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "noun",
+        "ipa": "/ˈswɪtʃbæk/",
+        "cefr": "C1",
+        "ru": "switchback-тест: эксперимент, где режимы чередуются по времени",
+        "ru_short": "чередование по времени; серпантин",
+        "definition_en": "an experiment that alternates the test and control versions over time slots",
+        "sentence_ru": "Morpheus — система, которая объединяет фича-флаги и эксперименты, включая switchback-тесты, и поддерживает двух- и трёхсторонние маркетплейсы Uber.",
+        "note_ru": "Базовое значение — «серпантин, дорога зигзагом». В маркетплейсе группы пользователей влияют друг на друга, поэтому режим включают для всего рынка и меняют по интервалам времени.",
+        "examples": [
+          {
+            "en": "The trail climbs the hill in a series of switchbacks.",
+            "ru": "Тропа поднимается на холм серпантином."
+          },
+          {
+            "en": "We ran a switchback test, changing the pricing logic every hour.",
+            "ru": "Мы провели switchback-тест, меняя логику цен каждый час."
+          }
+        ]
+      },
+      "audio": {
+        "word": "c446692effd12655.mp3",
+        "sentence": "9297396c434667ba.mp3",
+        "sentence_slow": "dac4ce803fa18ab2.mp3",
+        "examples": [
+          "9a82393ebbb9a04a.mp3",
+          "9580c38534512cb1.mp3"
+        ]
+      }
+    },
+    {
+      "text": "harnesses",
+      "kind": "word",
+      "sentence": "AIFX allows engineers to switch harnesses without losing settings.",
+      "note": "",
+      "id": "2026-10-16-today-s-episode-is-a-deepdive-into-05",
+      "lemma": "harness",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "noun",
+        "ipa": "/ˈhɑːrnɪsɪz/",
+        "cefr": "C1",
+        "ru": "среда запуска AI-агента",
+        "ru_short": "обвязка, среда запуска",
+        "definition_en": "the software around an AI model that gives it tools, context and a run loop; generally, a set of straps",
+        "sentence_ru": "AIFX позволяет инженерам переключаться между агентными средами, не теряя настроек.",
+        "note_ru": "Базовое значение — «упряжь, страховочная обвязка». В разработке: test harness — тестовая обвязка, agent harness — программа вокруг модели. Глагол harness — «обуздать, использовать» (harness the power).",
+        "examples": [
+          {
+            "en": "A climbing harness must fit snugly.",
+            "ru": "Страховочная обвязка должна плотно сидеть."
+          },
+          {
+            "en": "The test harness runs every scenario overnight.",
+            "ru": "Тестовая обвязка прогоняет все сценарии за ночь."
+          }
+        ]
+      },
+      "audio": {
+        "word": "cb97cd4f0669dac9.mp3",
+        "sentence": "3e5effded45051cd.mp3",
+        "sentence_slow": "ac788668c641fae6.mp3",
+        "examples": [
+          "dea474becf3d8a7c.mp3",
+          "53f3321bc1faa507.mp3"
+        ]
+      }
+    },
+    {
+      "text": "laser-focused",
+      "kind": "word",
+      "sentence": "Before, it would take so much time to create a PR, so you would be laser-focused on it.",
+      "note": "",
+      "id": "2026-10-16-today-s-episode-is-a-deepdive-into-06",
+      "lemma": "laser-focused",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "adjective",
+        "ipa": "/ˈleɪzər ˈfoʊkəst/",
+        "cefr": "B2",
+        "ru": "предельно сосредоточенный",
+        "ru_short": "полностью сосредоточенный",
+        "definition_en": "giving all your attention to one thing",
+        "sentence_ru": "Раньше на создание PR уходило столько времени, что ты был полностью сосредоточен на нём.",
+        "note_ru": "Конструкция: be laser-focused on something.",
+        "examples": [
+          {
+            "en": "The team stayed laser-focused on the launch.",
+            "ru": "Команда была полностью сосредоточена на запуске."
+          },
+          {
+            "en": "She is laser-focused on her goals.",
+            "ru": "Она предельно сосредоточена на своих целях."
+          }
+        ]
+      },
+      "audio": {
+        "word": "128a185e9a223265.mp3",
+        "sentence": "75d73957fe952fc9.mp3",
+        "sentence_slow": "0c592a321905e350.mp3",
+        "examples": [
+          "0be8ab92aa63d1ae.mp3",
+          "ee2ea9f74f8e4a45.mp3"
+        ]
+      }
+    },
+    {
+      "text": "constantly",
+      "kind": "word",
+      "sentence": "But now you’re constantly switching between so many things.",
+      "note": "",
+      "id": "2026-10-16-today-s-episode-is-a-deepdive-into-07",
+      "lemma": "constantly",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "adverb",
+        "ipa": "/ˈkɑːnstəntli/",
+        "cefr": "B1",
+        "ru": "постоянно, всё время",
+        "ru_short": "постоянно",
+        "definition_en": "all the time, or very often",
+        "sentence_ru": "А теперь ты постоянно переключаешься между множеством задач.",
+        "note_ru": "С -ing формой часто звучит с оттенком раздражения: he's constantly interrupting.",
+        "examples": [
+          {
+            "en": "The requirements change constantly.",
+            "ru": "Требования постоянно меняются."
+          },
+          {
+            "en": "He's constantly checking his phone.",
+            "ru": "Он всё время проверяет телефон."
+          }
+        ]
+      },
+      "audio": {
+        "word": "200bfec51b5802f6.mp3",
+        "sentence": "dc8006ad6b5b342e.mp3",
+        "sentence_slow": "cc697dff28e30b8f.mp3",
+        "examples": [
+          "fed14b4f936efab5.mp3",
+          "eeb4986c8e405df8.mp3"
+        ]
+      }
+    },
+    {
+      "text": "pick",
+      "kind": "word",
+      "sentence": "You need to be able to verify your work and pick any code smells from the agent [to avoid] shipping regressions into production.",
+      "note": "",
+      "id": "2026-10-16-today-s-episode-is-a-deepdive-into-08",
+      "lemma": "pick out",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "phrasal verb",
+        "ipa": "/pɪk/",
+        "cefr": "B1",
+        "ru": "замечать, вылавливать",
+        "ru_short": "вылавливать, замечать",
+        "definition_en": "to notice or identify something among other things",
+        "sentence_ru": "Нужно уметь проверять свою работу и вылавливать за агентом «запахи кода», чтобы не выкатить регрессии в прод.",
+        "note_ru": "В устной речи предлог часто опускают: обычно говорят pick out или pick up on. code smell — признак плохого кода.",
+        "suggest_phrase": "pick out",
+        "examples": [
+          {
+            "en": "Reviewers picked out several bugs.",
+            "ru": "Ревьюеры выловили несколько багов."
+          },
+          {
+            "en": "She picked up on his nervousness.",
+            "ru": "Она уловила его нервозность."
+          }
+        ]
+      },
+      "audio": {
+        "word": "e439127e228a3b0a.mp3",
+        "sentence": "21af7e421a56f751.mp3",
+        "sentence_slow": "1ebbcb2238bd7b93.mp3",
+        "examples": [
+          "c4bfd3ee15ab250a.mp3",
+          "5a7931160ad31e43.mp3"
+        ]
+      }
+    },
+    {
+      "text": "regressions",
+      "kind": "word",
+      "sentence": "You need to be able to verify your work and pick any code smells from the agent [to avoid] shipping regressions into production.",
+      "note": "",
+      "id": "2026-10-16-today-s-episode-is-a-deepdive-into-09",
+      "lemma": "regression",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "noun",
+        "ipa": "/rɪˈɡrɛʃənz/",
+        "cefr": "B2",
+        "ru": "регрессия: поломка того, что раньше работало",
+        "ru_short": "регрессия, новая поломка",
+        "definition_en": "a bug where something that used to work stops working after a change",
+        "sentence_ru": "Нужно уметь проверять свою работу и вылавливать за агентом «запахи кода», чтобы не выкатить регрессии в прод.",
+        "note_ru": "ship a regression — выкатить регрессию; regression tests — регрессионные тесты.",
+        "examples": [
+          {
+            "en": "The update introduced a regression in checkout.",
+            "ru": "Обновление сломало оформление заказа."
+          },
+          {
+            "en": "Run the regression tests before the release.",
+            "ru": "Прогоните регрессионные тесты перед релизом."
+          }
+        ]
+      },
+      "audio": {
+        "word": "63a09cfd48bfee21.mp3",
+        "sentence": "21af7e421a56f751.mp3",
+        "sentence_slow": "1ebbcb2238bd7b93.mp3",
+        "examples": [
+          "d847c7c86e1158e4.mp3",
+          "85932be9776440b8.mp3"
+        ]
+      }
+    },
+    {
+      "text": "seemingly",
+      "kind": "word",
+      "sentence": "Uber’s AI tooling was seemingly built in a year: in reality, it was built on top of a decade worth of dev tooling investment.",
+      "note": "",
+      "id": "2026-10-16-today-s-episode-is-a-deepdive-into-10",
+      "lemma": "seemingly",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "adverb",
+        "ipa": "/ˈsiːmɪŋli/",
+        "cefr": "B2",
+        "ru": "казалось бы, на первый взгляд",
+        "ru_short": "на первый взгляд",
+        "definition_en": "appearing to be true, often when it is not",
+        "sentence_ru": "Казалось бы, AI-инструменты Uber построили за год. На деле они стоят на десятилетии вложений в инструменты разработки.",
+        "note_ru": "Часто идёт в паре с противопоставлением, как здесь: seemingly … in reality.",
+        "examples": [
+          {
+            "en": "It was a seemingly simple task.",
+            "ru": "Задача была простой только на первый взгляд."
+          },
+          {
+            "en": "He was seemingly unaware of the problem.",
+            "ru": "Он, по-видимому, не знал о проблеме."
+          }
+        ]
+      },
+      "audio": {
+        "word": "b937677eb3a71d09.mp3",
+        "sentence": "74f1a7b764c9a8f4.mp3",
+        "sentence_slow": "41904bb277f41848.mp3",
+        "examples": [
+          "5fc0c8a45d736e5c.mp3",
+          "f9bf828be9cced98.mp3"
+        ]
+      }
+    },
+    {
+      "text": "Minion",
+      "kind": "word",
+      "sentence": "Minion – built in 2025 – is powered by DevPods, which Uber created in 2017.",
+      "note": "",
+      "id": "2026-10-16-today-s-episode-is-a-deepdive-into-11",
+      "lemma": "minion",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "noun",
+        "ipa": "/ˈmɪnjən/",
+        "cefr": "C1",
+        "ru": "здесь: название внутреннего инструмента Uber",
+        "ru_short": "приспешник, подручный",
+        "definition_en": "an unimportant person who does what someone powerful tells them; here, the name of a tool",
+        "sentence_ru": "Minion, созданный в 2025 году, работает на DevPods, которые Uber сделал в 2017-м.",
+        "note_ru": "В тексте это имя собственное. Обычное значение — «приспешник, мелкая сошка», часто с иронией.",
+        "proper_noun": true,
+        "examples": [
+          {
+            "en": "The villain sent his minions after the hero.",
+            "ru": "Злодей послал за героем своих приспешников."
+          },
+          {
+            "en": "I'm just a minion here — ask the boss.",
+            "ru": "Я здесь мелкая сошка, спроси начальника."
+          }
+        ]
+      },
+      "audio": {
+        "word": "d655cd389332e97e.mp3",
+        "sentence": "62c7be2b3fdc3e46.mp3",
+        "sentence_slow": "8e62505b42696157.mp3",
+        "examples": [
+          "53e009604556e7d3.mp3",
+          "b00f8de4ec159504.mp3"
+        ]
+      }
+    },
+    {
+      "text": "Mentions",
+      "kind": "word",
+      "sentence": "Mentions during the episode:",
+      "note": "",
+      "id": "2026-10-16-today-s-episode-is-a-deepdive-into-12",
+      "lemma": "mention",
+      "level": 1,
+      "encounter_no": 1,
+      "content": {
+        "pos": "noun",
+        "ipa": "/ˈmɛnʃənz/",
+        "cefr": "B1",
+        "ru": "упоминания",
+        "ru_short": "упоминания",
+        "definition_en": "short references to someone or something",
+        "sentence_ru": "Упомянуто в выпуске:",
+        "note_ru": "Тот же корень у глагола mention — «упоминать». Don't mention it — «не за что».",
+        "short_context": true,
+        "examples": [
+          {
+            "en": "The report makes no mention of costs.",
+            "ru": "В отчёте ни слова о затратах."
+          },
+          {
+            "en": "Thanks for the mention in your post!",
+            "ru": "Спасибо, что упомянул меня в посте!"
+          }
+        ]
+      },
+      "audio": {
+        "word": "32a1c0bb36e267d8.mp3",
+        "sentence": "6d43b8f4c7ae4cac.mp3",
+        "sentence_slow": "733a210b2a9387a4.mp3",
+        "examples": [
+          "afd618de3bf9b4c3.mp3",
+          "97f7435df6a781eb.mp3"
+        ]
+      }
+    }
+  ]
+}

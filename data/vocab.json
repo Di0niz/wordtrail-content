@@ -1,0 +1,1056 @@
+{
+  "longest-tenured": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "самый давний (по стажу)"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-today-s-episode-is-a-deepdive-into",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "Today’s episode is a deepdive into the day-to-day tools of devs at Uber, our tour guide being on of Uber’s longest-tenured engineers: Uday Kiran Medisetty."
+      }
+    ]
+  },
+  "erratically": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "непредсказуемо, скачками"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-today-s-episode-is-a-deepdive-into",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "Uber’s service count changed erratically: in 2015, when Uday joined, there were two services in total."
+      }
+    ]
+  },
+  "emit": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "отправлять, выдавать"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-today-s-episode-is-a-deepdive-into",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "M3DB: Uber was emitting about 500 million metrics per second, with no vendor being able to handle this load, so they built it themselves."
+      }
+    ]
+  },
+  "switchback": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "чередование по времени; серпантин"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-today-s-episode-is-a-deepdive-into",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "Morpheus: a system combining feature flags and experimentation, including switchback tests, with support for two- and three-sided marketplaces that Uber operates."
+      }
+    ]
+  },
+  "harness": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "обвязка, среда запуска"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-today-s-episode-is-a-deepdive-into",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "AIFX allows engineers to switch harnesses without losing settings."
+      }
+    ]
+  },
+  "laser-focused": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "полностью сосредоточенный"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-today-s-episode-is-a-deepdive-into",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "Before, it would take so much time to create a PR, so you would be laser-focused on it."
+      }
+    ]
+  },
+  "constantly": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "постоянно"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-today-s-episode-is-a-deepdive-into",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "But now you’re constantly switching between so many things."
+      }
+    ]
+  },
+  "pick out": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "вылавливать, замечать"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-today-s-episode-is-a-deepdive-into",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "You need to be able to verify your work and pick any code smells from the agent [to avoid] shipping regressions into production."
+      }
+    ]
+  },
+  "regression": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "регрессия, новая поломка"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-today-s-episode-is-a-deepdive-into",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "You need to be able to verify your work and pick any code smells from the agent [to avoid] shipping regressions into production."
+      }
+    ]
+  },
+  "seemingly": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "на первый взгляд"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-today-s-episode-is-a-deepdive-into",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "Uber’s AI tooling was seemingly built in a year: in reality, it was built on top of a decade worth of dev tooling investment."
+      }
+    ]
+  },
+  "minion": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "приспешник, подручный"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-today-s-episode-is-a-deepdive-into",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "Minion – built in 2025 – is powered by DevPods, which Uber created in 2017."
+      }
+    ]
+  },
+  "mention": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "упоминания"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-today-s-episode-is-a-deepdive-into",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "Mentions during the episode:"
+      }
+    ]
+  },
+  "resilient": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "устойчивый"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "Building resilient AI-powered software, and planning for when things go wrong."
+      }
+    ]
+  },
+  "uncertainty": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "неопределённость"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "How to handle uncertainty with AI vendors and disaster recovery (DR) approaches to consider."
+      }
+    ]
+  },
+  "disaster": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "катастрофа, авария"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "How to handle uncertainty with AI vendors and disaster recovery (DR) approaches to consider."
+      }
+    ]
+  },
+  "excerpt": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "отрывок"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "An excerpt from the book Building Resilient Distributed Systems by Sam Newman."
+      }
+    ]
+  },
+  "await": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "долгожданный"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "Last week’s guest on the podcast was Sam Newman, who had released a book I’ve personally long awaited titled Building Resilient Distributed Systems."
+      }
+    ]
+  },
+  "ought to": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "следует, должен"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "I asked Sam if he would consider sharing an excerpt from the book, with sections especially relevant for anyone building systems that ought to be reliable."
+      }
+    ]
+  },
+  "graciously": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "любезно"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "Sam graciously agreed, and today’s issue covers a few important topics, spread across two chapters from his book."
+      }
+    ]
+  },
+  "disclaimer": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "оговорка"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "My usual disclaimer: as with all my recommendations, I was not paid to recommend this book, and none of the links are affiliate ones."
+      }
+    ]
+  },
+  "affiliate": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "партнёрский"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "My usual disclaimer: as with all my recommendations, I was not paid to recommend this book, and none of the links are affiliate ones."
+      }
+    ]
+  },
+  "widespread": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "масштабный"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "But what happens when a catastrophic failure causes widespread outage of large parts of your system?"
+      }
+    ]
+  },
+  "robust": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "надёжный"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "Fire, flood, electrical supply issues, and errors in the underlying cloud infrastructure are all outside of your control, and at one fell swoop, they can render your attempts to make your system more robust totally redundant."
+      }
+    ]
+  },
+  "redundant": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "лишний; резервный"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "Fire, flood, electrical supply issues, and errors in the underlying cloud infrastructure are all outside of your control, and at one fell swoop, they can render your attempts to make your system more robust totally redundant."
+      }
+    ]
+  },
+  "auspices": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "ведение, эгида"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "Handling these situations falls under the auspices of disaster recovery (DR), a set of procedures that should kick in when something really bad happens."
+      }
+    ]
+  },
+  "trade-off": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "компромисс"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "As with much of what we’ve looked at in this book, trade-offs abound."
+      }
+    ]
+  },
+  "on-premises": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "на своих серверах"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "When running on a private cloud or in a more traditional on-premises setup, you’ll instead think in terms of data centers."
+      }
+    ]
+  },
+  "legislative": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "законодательный"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "So when deciding on the appropriate RPO and RTO, there needs to be a discussion with stakeholders regarding end-user needs and regulatory and legislative requirements, which are balanced against the cost and complexity of implementing the required solution."
+      }
+    ]
+  },
+  "failover": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "переключение на резерв"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "For example, a backup and restore approach requires rerouting, a pilot light setup will add the need for cross-site data replication and infrastructure automation, and a warm failover adds on the cost of having some infrastructure ready to go."
+      }
+    ]
+  },
+  "reroute": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "перенаправление"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "Note that they all require some form of rerouting of traffic, and most require some form of cross-site data replication."
+      }
+    ]
+  },
+  "outline": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "описанный, изложенный"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "As outlined in Figure 10-3, with this pattern, data is periodically backed up to a separate site."
+      }
+    ]
+  },
+  "back up": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "из резервной копии"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "In the event that the primary site fails, infrastructure needs to be provided at a new site, and the backed-up data restored."
+      }
+    ]
+  },
+  "straightforward": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "простой, несложный"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "This pattern is very straightforward to implement, consisting of a few steps:"
+      }
+    ]
+  },
+  "provision": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "развёртывание ресурсов"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "This would ideally be automated, as manual infrastructure provisioning would likely lead to longer RTO and an increased chance of errors."
+      }
+    ]
+  },
+  "reuse": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "использовать повторно"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "Ideally, your failover site runs the same core technology stack as the primary site, meaning that any investment in infrastructure automation on your primary can also be used on the failover (for example, being able to reuse Terraform scripts)."
+      }
+    ]
+  },
+  "spin up": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "запускать, поднимать"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "A caveat to spinning up infrastructure on demand here comes in terms of guaranteeing that infrastructure is actually available when you need it, something we’ll explore later in this chapter."
+      }
+    ]
+  },
+  "fairly": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "довольно"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "As such, the steps involved look fairly similar to the backup and restore pattern:"
+      }
+    ]
+  },
+  "assumption": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "предположение"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "The assumption is that databases and datastores are already present on the failover site, so only remaining resources like compute would need to be provisioned."
+      }
+    ]
+  },
+  "regarding": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "насчёт, относительно"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "Cold, Warm, and Hot Failovers: A brief note is warranted here regarding the term warm."
+      }
+    ]
+  },
+  "distinguish": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "отличительный"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "You’ll find various solutions and vendor products promising cold, warm, or hot failover, with the only real distinguishing factor between these terms often being that a hot failover would give you a lower RTO in comparison to a warm failover, and a warm failover would give you a lower RTO than a cold one."
+      }
+    ]
+  },
+  "multisite": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "на нескольких площадках"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "With a multisite active-active setup, data is replicated constantly between two or more sites, as you can see in Figure 10-6."
+      }
+    ]
+  },
+  "scrap": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "остатки"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "In a scenario where a major cloud vendor’s region has failed, you may find yourself fighting over scraps with everyone else."
+      }
+    ]
+  },
+  "operate": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "работать"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "A solution here is to consider ensuring that your software can still operate even if the model is unavailable."
+      }
+    ]
+  },
+  "bleeding edge": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "передний край, новейшее"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "When using backup vendors like this, there may be a lag in terms of how quickly the latest models may be available, but given that you may not always want to be on the bleeding edge of the models you use to embed in your software (something we’ll discuss in just a moment), this is probably fine."
+      }
+    ]
+  },
+  "behave": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "вести себя"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "I’ve seen reports where a model has started behaving differently, without any major change in behavior being flagged by the vendor."
+      }
+    ]
+  },
+  "therefore": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "поэтому"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "It is therefore vital to have a good set of tests to validate that the AI portions of your code are behaving appropriately—and this should be a mix of traditional functional tests, together with the use of AI evaluation tools (evals)."
+      }
+    ]
+  },
+  "appropriately": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "как положено"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "It is therefore vital to have a good set of tests to validate that the AI portions of your code are behaving appropriately—and this should be a mix of traditional functional tests, together with the use of AI evaluation tools (evals)."
+      }
+    ]
+  },
+  "vulnerable": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "уязвимый"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "If Cursor had been able to use AI models from another firm, it might have been less vulnerable to this issue."
+      }
+    ]
+  },
+  "wholly": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "полностью"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "Keep Your Options Open: Make sure you aren’t wholly dependent on a single model or AI platform."
+      }
+    ]
+  },
+  "shame": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "стыдить"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "Rather than this being about shaming people who spend too much money, he makes the case that this visibility drives better understanding of how the software is being used and helps drive the adoption of tools that are proving to be valuable."
+      }
+    ]
+  },
+  "show": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "показывает"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "In his 2025 talk at LeadDev Berlin, “LLMs: An Operator’s View”, Stanier explains that if you see a person spending a lot of money, this shouldn’t be seen as a bad thing, as typically it shows someone trying to get more done."
+      }
+    ]
+  },
+  "egregious": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "вопиющий"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "It can also help you spot egregious overspend."
+      }
+    ]
+  },
+  "reveal": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "раскрыл, сообщил"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "Uber recently revealed that it had burned through its entire annual AI budget in just the first four months of the year."
+      }
+    ]
+  },
+  "admittedly": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "надо признать"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "These stories might cause one or two raised eyebrows, but they pale in comparison to the recent (admittedly unsubstantiated) report from Axios that an unnamed enterprise company spent $500 million on Claude licenses after failing to put cost controls into place."
+      }
+    ]
+  },
+  "unsubstantiated": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "неподтверждённый"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "These stories might cause one or two raised eyebrows, but they pale in comparison to the recent (admittedly unsubstantiated) report from Axios that an unnamed enterprise company spent $500 million on Claude licenses after failing to put cost controls into place."
+      }
+    ]
+  },
+  "climb": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "расти, подниматься"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "It can help you understand how people are using it and also help you spot when the bills start climbing precipitously."
+      }
+    ]
+  },
+  "precipitously": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "резко, стремительно"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "It can help you understand how people are using it and also help you spot when the bills start climbing precipitously."
+      }
+    ]
+  },
+  "nondeterminism": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "недетерминированность"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "At the micro level, LLM-powered AI requires us to be OK with nondeterminism, whereas there are many activities we perform in the context of building resilient systems that need to be fully repeatable and deterministic."
+      }
+    ]
+  },
+  "ever-changing": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "постоянно меняющийся"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "At the macro level, concerns about the AI sector as a whole mean we are dealing with an ever-changing (and hopefully) improving set of products built on very shaky financial foundations."
+      }
+    ]
+  },
+  "shaky": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "шаткий"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "At the macro level, concerns about the AI sector as a whole mean we are dealing with an ever-changing (and hopefully) improving set of products built on very shaky financial foundations."
+      }
+    ]
+  },
+  "beforehand": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "заранее"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "And some of this could be because the team had not prepared for, or exercised, disaster recovery beforehand."
+      }
+    ]
+  },
+  "amateurish": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "дилетантский"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-16-building-resilient-ai-powered-software",
+        "date": "2026-10-16",
+        "sense": "s1",
+        "sentence": "“Having no automated failovers is incredibly amateurish for an operation of Coinbase’s scale."
+      }
+    ]
+  }
+}
