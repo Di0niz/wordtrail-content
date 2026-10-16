@@ -4,7 +4,8 @@
     "longest-tenured": {
       "lemma": "longest-tenured",
       "pos": "adjective",
-      "ipa": "/ˈlɔːŋɡɪst ˈtɛnjərd/",
+      "ipa": "/ˈlɔːŋɡɪst ˈtenjərd/",
+      "phonemes": "L AO1 NG G IH0 S T | T EH1 N Y ER0 D",
       "cefr": "C1",
       "ru": "проработавший дольше всех",
       "ru_short": "самый давний (по стажу)",
@@ -12,14 +13,21 @@
       "sentence_ru": "Сегодняшний выпуск — глубокое погружение в повседневные инструменты разработчиков Uber. Наш гид — один из старейших по стажу инженеров Uber, Удай Киран Медисетти.",
       "note_ru": "tenure — срок пребывания в должности. long-tenured — «с большим стажем». В исходном тексте опечатка: «on of» вместо «one of».",
       "examples": [
-        {"en": "She is the company's longest-tenured employee.", "ru": "Она проработала в компании дольше всех."},
-        {"en": "The longest-tenured member of the board is retiring.", "ru": "Самый давний член совета директоров уходит на пенсию."}
+        {
+          "en": "She is the company's longest-tenured employee.",
+          "ru": "Она проработала в компании дольше всех."
+        },
+        {
+          "en": "The longest-tenured member of the board is retiring.",
+          "ru": "Самый давний член совета директоров уходит на пенсию."
+        }
       ]
     },
     "erratically": {
       "lemma": "erratically",
       "pos": "adverb",
       "ipa": "/ɪˈrætɪkli/",
+      "phonemes": "IH0 R AE1 T IH0 K L IY0",
       "cefr": "C1",
       "ru": "скачкообразно, непредсказуемо",
       "ru_short": "непредсказуемо, скачками",
@@ -27,14 +35,21 @@
       "sentence_ru": "Число сервисов в Uber менялось скачкообразно: в 2015 году, когда Удай пришёл в компанию, их было всего два.",
       "note_ru": "От erratic — «непредсказуемый, неустойчивый». С error не связано по смыслу, хотя похоже.",
       "examples": [
-        {"en": "The car was moving erratically across the lanes.", "ru": "Машину бросало из полосы в полосу."},
-        {"en": "Prices fluctuated erratically all week.", "ru": "Всю неделю цены непредсказуемо скакали."}
+        {
+          "en": "The car was moving erratically across the lanes.",
+          "ru": "Машину бросало из полосы в полосу."
+        },
+        {
+          "en": "Prices fluctuated erratically all week.",
+          "ru": "Всю неделю цены непредсказуемо скакали."
+        }
       ]
     },
     "emitting": {
       "lemma": "emit",
       "pos": "verb",
       "ipa": "/ɪˈmɪtɪŋ/",
+      "phonemes": "IH0 M IH1 T IH0 NG",
       "cefr": "B2",
       "ru": "отправлять, генерировать (метрики)",
       "ru_short": "отправлять, выдавать",
@@ -42,14 +57,21 @@
       "sentence_ru": "M3DB: Uber отправлял около 500 миллионов метрик в секунду, и ни один поставщик не справлялся с такой нагрузкой, поэтому систему сделали сами.",
       "note_ru": "Базовое значение — «испускать, выделять» (свет, газ). В IT: emit events / metrics / logs — «публиковать, отправлять».",
       "examples": [
-        {"en": "The service emits an event after each payment.", "ru": "Сервис публикует событие после каждого платежа."},
-        {"en": "Cars emit carbon dioxide.", "ru": "Автомобили выделяют углекислый газ."}
+        {
+          "en": "The service emits an event after each payment.",
+          "ru": "Сервис публикует событие после каждого платежа."
+        },
+        {
+          "en": "Cars emit carbon dioxide.",
+          "ru": "Автомобили выделяют углекислый газ."
+        }
       ]
     },
     "switchback": {
       "lemma": "switchback",
       "pos": "noun",
       "ipa": "/ˈswɪtʃbæk/",
+      "phonemes": "S W IH1 CH B AE2 K",
       "cefr": "C1",
       "ru": "switchback-тест: эксперимент, где режимы чередуются по времени",
       "ru_short": "чередование по времени; серпантин",
@@ -57,14 +79,21 @@
       "sentence_ru": "Morpheus — система, которая объединяет фича-флаги и эксперименты, включая switchback-тесты, и поддерживает двух- и трёхсторонние маркетплейсы Uber.",
       "note_ru": "Базовое значение — «серпантин, дорога зигзагом». В маркетплейсе группы пользователей влияют друг на друга, поэтому режим включают для всего рынка и меняют по интервалам времени.",
       "examples": [
-        {"en": "The trail climbs the hill in a series of switchbacks.", "ru": "Тропа поднимается на холм серпантином."},
-        {"en": "We ran a switchback test, changing the pricing logic every hour.", "ru": "Мы провели switchback-тест, меняя логику цен каждый час."}
+        {
+          "en": "The trail climbs the hill in a series of switchbacks.",
+          "ru": "Тропа поднимается на холм серпантином."
+        },
+        {
+          "en": "We ran a switchback test, changing the pricing logic every hour.",
+          "ru": "Мы провели switchback-тест, меняя логику цен каждый час."
+        }
       ]
     },
     "harnesses": {
       "lemma": "harness",
       "pos": "noun",
       "ipa": "/ˈhɑːrnɪsɪz/",
+      "phonemes": "HH AA1 R N IH0 S IH0 Z",
       "cefr": "C1",
       "ru": "среда запуска AI-агента",
       "ru_short": "обвязка, среда запуска",
@@ -72,14 +101,21 @@
       "sentence_ru": "AIFX позволяет инженерам переключаться между агентными средами, не теряя настроек.",
       "note_ru": "Базовое значение — «упряжь, страховочная обвязка». В разработке: test harness — тестовая обвязка, agent harness — программа вокруг модели. Глагол harness — «обуздать, использовать» (harness the power).",
       "examples": [
-        {"en": "A climbing harness must fit snugly.", "ru": "Страховочная обвязка должна плотно сидеть."},
-        {"en": "The test harness runs every scenario overnight.", "ru": "Тестовая обвязка прогоняет все сценарии за ночь."}
+        {
+          "en": "A climbing harness must fit snugly.",
+          "ru": "Страховочная обвязка должна плотно сидеть."
+        },
+        {
+          "en": "The test harness runs every scenario overnight.",
+          "ru": "Тестовая обвязка прогоняет все сценарии за ночь."
+        }
       ]
     },
     "laser-focused": {
       "lemma": "laser-focused",
       "pos": "adjective",
       "ipa": "/ˈleɪzər ˈfoʊkəst/",
+      "phonemes": "L EY1 Z ER0 | F OW1 K AH0 S T",
       "cefr": "B2",
       "ru": "предельно сосредоточенный",
       "ru_short": "полностью сосредоточенный",
@@ -87,14 +123,21 @@
       "sentence_ru": "Раньше на создание PR уходило столько времени, что ты был полностью сосредоточен на нём.",
       "note_ru": "Конструкция: be laser-focused on something.",
       "examples": [
-        {"en": "The team stayed laser-focused on the launch.", "ru": "Команда была полностью сосредоточена на запуске."},
-        {"en": "She is laser-focused on her goals.", "ru": "Она предельно сосредоточена на своих целях."}
+        {
+          "en": "The team stayed laser-focused on the launch.",
+          "ru": "Команда была полностью сосредоточена на запуске."
+        },
+        {
+          "en": "She is laser-focused on her goals.",
+          "ru": "Она предельно сосредоточена на своих целях."
+        }
       ]
     },
     "constantly": {
       "lemma": "constantly",
       "pos": "adverb",
       "ipa": "/ˈkɑːnstəntli/",
+      "phonemes": "K AA1 N S T AH0 N T L IY0",
       "cefr": "B1",
       "ru": "постоянно, всё время",
       "ru_short": "постоянно",
@@ -102,14 +145,21 @@
       "sentence_ru": "А теперь ты постоянно переключаешься между множеством задач.",
       "note_ru": "С -ing формой часто звучит с оттенком раздражения: he's constantly interrupting.",
       "examples": [
-        {"en": "The requirements change constantly.", "ru": "Требования постоянно меняются."},
-        {"en": "He's constantly checking his phone.", "ru": "Он всё время проверяет телефон."}
+        {
+          "en": "The requirements change constantly.",
+          "ru": "Требования постоянно меняются."
+        },
+        {
+          "en": "He's constantly checking his phone.",
+          "ru": "Он всё время проверяет телефон."
+        }
       ]
     },
     "pick": {
       "lemma": "pick out",
       "pos": "phrasal verb",
       "ipa": "/pɪk/",
+      "phonemes": "P IH1 K",
       "cefr": "B1",
       "ru": "замечать, вылавливать",
       "ru_short": "вылавливать, замечать",
@@ -118,14 +168,21 @@
       "note_ru": "В устной речи предлог часто опускают: обычно говорят pick out или pick up on. code smell — признак плохого кода.",
       "suggest_phrase": "pick out",
       "examples": [
-        {"en": "Reviewers picked out several bugs.", "ru": "Ревьюеры выловили несколько багов."},
-        {"en": "She picked up on his nervousness.", "ru": "Она уловила его нервозность."}
+        {
+          "en": "Reviewers picked out several bugs.",
+          "ru": "Ревьюеры выловили несколько багов."
+        },
+        {
+          "en": "She picked up on his nervousness.",
+          "ru": "Она уловила его нервозность."
+        }
       ]
     },
     "regressions": {
       "lemma": "regression",
       "pos": "noun",
-      "ipa": "/rɪˈɡrɛʃənz/",
+      "ipa": "/rɪˈɡreʃənz/",
+      "phonemes": "R IH0 G R EH1 SH AH0 N Z",
       "cefr": "B2",
       "ru": "регрессия: поломка того, что раньше работало",
       "ru_short": "регрессия, новая поломка",
@@ -133,14 +190,21 @@
       "sentence_ru": "Нужно уметь проверять свою работу и вылавливать за агентом «запахи кода», чтобы не выкатить регрессии в прод.",
       "note_ru": "ship a regression — выкатить регрессию; regression tests — регрессионные тесты.",
       "examples": [
-        {"en": "The update introduced a regression in checkout.", "ru": "Обновление сломало оформление заказа."},
-        {"en": "Run the regression tests before the release.", "ru": "Прогоните регрессионные тесты перед релизом."}
+        {
+          "en": "The update introduced a regression in checkout.",
+          "ru": "Обновление сломало оформление заказа."
+        },
+        {
+          "en": "Run the regression tests before the release.",
+          "ru": "Прогоните регрессионные тесты перед релизом."
+        }
       ]
     },
     "seemingly": {
       "lemma": "seemingly",
       "pos": "adverb",
       "ipa": "/ˈsiːmɪŋli/",
+      "phonemes": "S IY1 M IH0 NG L IY0",
       "cefr": "B2",
       "ru": "казалось бы, на первый взгляд",
       "ru_short": "на первый взгляд",
@@ -148,14 +212,21 @@
       "sentence_ru": "Казалось бы, AI-инструменты Uber построили за год. На деле они стоят на десятилетии вложений в инструменты разработки.",
       "note_ru": "Часто идёт в паре с противопоставлением, как здесь: seemingly … in reality.",
       "examples": [
-        {"en": "It was a seemingly simple task.", "ru": "Задача была простой только на первый взгляд."},
-        {"en": "He was seemingly unaware of the problem.", "ru": "Он, по-видимому, не знал о проблеме."}
+        {
+          "en": "It was a seemingly simple task.",
+          "ru": "Задача была простой только на первый взгляд."
+        },
+        {
+          "en": "He was seemingly unaware of the problem.",
+          "ru": "Он, по-видимому, не знал о проблеме."
+        }
       ]
     },
     "Minion": {
       "lemma": "minion",
       "pos": "noun",
       "ipa": "/ˈmɪnjən/",
+      "phonemes": "M IH1 N Y AH0 N",
       "cefr": "C1",
       "ru": "здесь: название внутреннего инструмента Uber",
       "ru_short": "приспешник, подручный",
@@ -164,14 +235,21 @@
       "note_ru": "В тексте это имя собственное. Обычное значение — «приспешник, мелкая сошка», часто с иронией.",
       "proper_noun": true,
       "examples": [
-        {"en": "The villain sent his minions after the hero.", "ru": "Злодей послал за героем своих приспешников."},
-        {"en": "I'm just a minion here — ask the boss.", "ru": "Я здесь мелкая сошка, спроси начальника."}
+        {
+          "en": "The villain sent his minions after the hero.",
+          "ru": "Злодей послал за героем своих приспешников."
+        },
+        {
+          "en": "I'm just a minion here — ask the boss.",
+          "ru": "Я здесь мелкая сошка, спроси начальника."
+        }
       ]
     },
     "Mentions": {
       "lemma": "mention",
       "pos": "noun",
-      "ipa": "/ˈmɛnʃənz/",
+      "ipa": "/ˈmenʃənz/",
+      "phonemes": "M EH1 N SH AH0 N Z",
       "cefr": "B1",
       "ru": "упоминания",
       "ru_short": "упоминания",
@@ -180,8 +258,14 @@
       "note_ru": "Тот же корень у глагола mention — «упоминать». Don't mention it — «не за что».",
       "short_context": true,
       "examples": [
-        {"en": "The report makes no mention of costs.", "ru": "В отчёте ни слова о затратах."},
-        {"en": "Thanks for the mention in your post!", "ru": "Спасибо, что упомянул меня в посте!"}
+        {
+          "en": "The report makes no mention of costs.",
+          "ru": "В отчёте ни слова о затратах."
+        },
+        {
+          "en": "Thanks for the mention in your post!",
+          "ru": "Спасибо, что упомянул меня в посте!"
+        }
       ]
     }
   }

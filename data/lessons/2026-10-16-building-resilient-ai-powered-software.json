@@ -13,7 +13,7 @@
   "build": {
     "prompt_version": "level1-v1",
     "model": "claude-opus-5-5",
-    "audio_status": "pending"
+    "audio_status": "ready"
   },
   "items": [
     {
@@ -28,6 +28,7 @@
       "content": {
         "pos": "adjective",
         "ipa": "/rɪˈzɪliənt/",
+        "phonemes": "R IH0 Z IH1 L Y AH0 N T",
         "cefr": "B2",
         "ru": "устойчивый, отказоустойчивый",
         "ru_short": "устойчивый",
@@ -49,12 +50,12 @@
         "sentence_ru": "Как строить устойчивое ПО на базе AI и планировать на случай, когда что-то идёт не так."
       },
       "audio": {
-        "word": "8eb1bd5dff14908d.mp3",
-        "sentence": "f87d47ae24955f31.mp3",
-        "sentence_slow": "0933c99568a35e38.mp3",
+        "word": "7947b0f5e3be12b4.m4a",
+        "sentence": "6e225d6f01cfda14.m4a",
+        "sentence_slow": "d9778658a5d13f06.m4a",
         "examples": [
-          "11c98e4692d096b3.mp3",
-          "7661574fa605c0fa.mp3"
+          "ef6190588dc336d4.m4a",
+          "06e11ee3c3b764de.m4a"
         ]
       },
       "sentence_original": "Building resilient AI-powered software, and planning for when things go wrong How to handle uncertainty with AI vendors and disaster recovery (DR) approaches to consider."
@@ -71,6 +72,7 @@
       "content": {
         "pos": "noun",
         "ipa": "/ʌnˈsɜːrtnti/",
+        "phonemes": "AH0 N S ER1 T N T IY0",
         "cefr": "B2",
         "ru": "неопределённость",
         "ru_short": "неопределённость",
@@ -89,12 +91,12 @@
         "sentence_ru": "Как справляться с неопределённостью, связанной с AI-поставщиками, и какие подходы к аварийному восстановлению (DR) стоит рассмотреть."
       },
       "audio": {
-        "word": "be0b46476bcfc800.mp3",
-        "sentence": "3e541adc89821d04.mp3",
-        "sentence_slow": "ceb372dd3e066a76.mp3",
+        "word": "8cb11235cc1684d7.m4a",
+        "sentence": "2b035ee02ca8c788.m4a",
+        "sentence_slow": "611cb44c3fd9989b.m4a",
         "examples": [
-          "cdaf77c56a48605f.mp3",
-          "6f6ec3bdb224d9b6.mp3"
+          "7e11ac6f0efb3be2.m4a",
+          "6ca048e7fe4a31d4.m4a"
         ]
       },
       "sentence_original": "Building resilient AI-powered software, and planning for when things go wrong How to handle uncertainty with AI vendors and disaster recovery (DR) approaches to consider."
@@ -111,6 +113,7 @@
       "content": {
         "pos": "noun",
         "ipa": "/dɪˈzæstər/",
+        "phonemes": "D IH0 Z AE1 S T ER0",
         "cefr": "B1",
         "ru": "авария, катастрофа",
         "ru_short": "катастрофа, авария",
@@ -129,12 +132,12 @@
         "sentence_ru": "Как справляться с неопределённостью, связанной с AI-поставщиками, и какие подходы к аварийному восстановлению (DR) стоит рассмотреть."
       },
       "audio": {
-        "word": "99ca14cf2a30b1c7.mp3",
-        "sentence": "3e541adc89821d04.mp3",
-        "sentence_slow": "ceb372dd3e066a76.mp3",
+        "word": "4d0e3a2ef8475901.m4a",
+        "sentence": "2b035ee02ca8c788.m4a",
+        "sentence_slow": "611cb44c3fd9989b.m4a",
         "examples": [
-          "dcfbbb3c027e2999.mp3",
-          "2d9a2cc6fb2da3a7.mp3"
+          "1d73f37cb04f02f1.m4a",
+          "5f4588eb16860500.m4a"
         ]
       },
       "sentence_original": "Building resilient AI-powered software, and planning for when things go wrong How to handle uncertainty with AI vendors and disaster recovery (DR) approaches to consider."
@@ -151,6 +154,7 @@
       "content": {
         "pos": "noun",
         "ipa": "/ˈeksɜːrpt/",
+        "phonemes": "EH1 K S ER0 P T",
         "cefr": "C1",
         "ru": "отрывок, выдержка",
         "ru_short": "отрывок",
@@ -172,12 +176,12 @@
         "sentence_ru": "Отрывок из книги Сэма Ньюмана «Building Resilient Distributed Systems»."
       },
       "audio": {
-        "word": "713dd92f8144446e.mp3",
-        "sentence": "940cc53a948b5903.mp3",
-        "sentence_slow": "7055341fd9aabd6e.mp3",
+        "word": "81f4e4e639a0d30e.m4a",
+        "sentence": "c2b863c96213301e.m4a",
+        "sentence_slow": "1216a624617ad8c8.m4a",
         "examples": [
-          "982de7b72e4d1b16.mp3",
-          "ecd100261641cc5b.mp3"
+          "cd3768a29d0715a0.m4a",
+          "f4eacb51d5c3d5dc.m4a"
         ]
       },
       "sentence_original": "An excerpt from the book Building Resilient Distributed Systems by Sam Newman GERGELY OROSZ OCT 13, 2026"
@@ -194,6 +198,7 @@
       "content": {
         "pos": "verb",
         "ipa": "/əˈweɪtɪd/",
+        "phonemes": "AH0 W EY1 T IH0 D",
         "cefr": "C1",
         "ru": "ожидаемый, долгожданный",
         "ru_short": "долгожданный",
@@ -212,12 +217,12 @@
         "sentence_ru": "Гостем подкаста на прошлой неделе был Сэм Ньюман, который выпустил книгу «Building Resilient Distributed Systems» — я лично давно её ждал."
       },
       "audio": {
-        "word": "dc3db8b0f8b455bf.mp3",
-        "sentence": "c0a348ac656c8fa8.mp3",
-        "sentence_slow": "bebdf5e7eb9d1118.mp3",
+        "word": "224d48e8943afbfa.m4a",
+        "sentence": "ca45b036162e75f6.m4a",
+        "sentence_slow": "8fc2109c7d5f4f98.m4a",
         "examples": [
-          "241d0d46f018e482.mp3",
-          "e66057b03f8770b9.mp3"
+          "faf9afdeb09ac3a6.m4a",
+          "5c1a75bc70678fb8.m4a"
         ]
       }
     },
@@ -233,6 +238,7 @@
       "content": {
         "pos": "modal verb",
         "ipa": "/ɔːt/",
+        "phonemes": "AO1 T",
         "cefr": "B2",
         "ru": "должен, следует",
         "ru_short": "следует, должен",
@@ -252,12 +258,12 @@
         "sentence_ru": "Я спросил Сэма, не поделится ли он отрывком из книги — разделами, особенно полезными для всех, кто строит системы, которые должны быть надёжными."
       },
       "audio": {
-        "word": "5cf448f05622a307.mp3",
-        "sentence": "d92807f97b617a50.mp3",
-        "sentence_slow": "5dfd201bd637db42.mp3",
+        "word": "c66f4ab0f56c3792.m4a",
+        "sentence": "4f4956e3ef4dffcf.m4a",
+        "sentence_slow": "d49e4b4e6bc03d57.m4a",
         "examples": [
-          "7cdfd6a19e3c1ba1.mp3",
-          "ff877d42b2b609e7.mp3"
+          "bdfe1e15dbedd324.m4a",
+          "d729c16f652f88ff.m4a"
         ]
       }
     },
@@ -273,6 +279,7 @@
       "content": {
         "pos": "adverb",
         "ipa": "/ˈɡreɪʃəsli/",
+        "phonemes": "G R EY1 SH AH0 S L IY0",
         "cefr": "C1",
         "ru": "любезно, великодушно",
         "ru_short": "любезно",
@@ -291,12 +298,12 @@
         "sentence_ru": "Сэм любезно согласился, и сегодняшний выпуск охватывает несколько важных тем из двух глав его книги."
       },
       "audio": {
-        "word": "201ff1b462c942a6.mp3",
-        "sentence": "8fcb79e91cbaa8e2.mp3",
-        "sentence_slow": "1d9cea4fb14edffe.mp3",
+        "word": "6e805e29984a849d.m4a",
+        "sentence": "ff92f59e1c82793e.m4a",
+        "sentence_slow": "28a3b7c05cfa7146.m4a",
         "examples": [
-          "3547a3be4bf3ba60.mp3",
-          "c24bfb4e25fd4db3.mp3"
+          "9eca7913e4d07ac3.m4a",
+          "6ba790e9370dc749.m4a"
         ]
       }
     },
@@ -312,6 +319,7 @@
       "content": {
         "pos": "noun",
         "ipa": "/dɪsˈkleɪmər/",
+        "phonemes": "D IH0 S K L EY1 M ER0",
         "cefr": "C1",
         "ru": "оговорка, отказ от ответственности",
         "ru_short": "оговорка",
@@ -330,12 +338,12 @@
         "sentence_ru": "Моя обычная оговорка: как и за все мои рекомендации, мне не платили за рекомендацию этой книги, и ни одна из ссылок не партнёрская."
       },
       "audio": {
-        "word": "0e2502f4862bb119.mp3",
-        "sentence": "e0db1b57eb776fcc.mp3",
-        "sentence_slow": "42722ff56c966edf.mp3",
+        "word": "a697cbbdab2219fe.m4a",
+        "sentence": "42c4daf32009205f.m4a",
+        "sentence_slow": "0251198eb4aef655.m4a",
         "examples": [
-          "4320291233b1100f.mp3",
-          "6233546ef30cf302.mp3"
+          "605954e0f5178ad2.m4a",
+          "8f988f675851b2e0.m4a"
         ]
       }
     },
@@ -351,6 +359,7 @@
       "content": {
         "pos": "adjective",
         "ipa": "/əˈfɪliət/",
+        "phonemes": "AH0 F IH1 L IY0 AH0 T",
         "cefr": "C1",
         "ru": "партнёрский (о ссылках)",
         "ru_short": "партнёрский",
@@ -369,12 +378,12 @@
         "sentence_ru": "Моя обычная оговорка: как и за все мои рекомендации, мне не платили за рекомендацию этой книги, и ни одна из ссылок не партнёрская."
       },
       "audio": {
-        "word": "adcd0341cb80c804.mp3",
-        "sentence": "e0db1b57eb776fcc.mp3",
-        "sentence_slow": "42722ff56c966edf.mp3",
+        "word": "1f4ea50f45221453.m4a",
+        "sentence": "42c4daf32009205f.m4a",
+        "sentence_slow": "0251198eb4aef655.m4a",
         "examples": [
-          "840ba50e4fcbab7c.mp3",
-          "871872f33347f1ff.mp3"
+          "373a35d1588a2d2c.m4a",
+          "973a7a973d702b1f.m4a"
         ]
       }
     },
@@ -390,6 +399,7 @@
       "content": {
         "pos": "adjective",
         "ipa": "/ˈwaɪdspred/",
+        "phonemes": "W AY1 D S P R EH2 D",
         "cefr": "B2",
         "ru": "масштабный, повсеместный",
         "ru_short": "масштабный",
@@ -408,12 +418,12 @@
         "sentence_ru": "Но что происходит, когда катастрофический сбой вызывает масштабный отказ больших частей вашей системы?"
       },
       "audio": {
-        "word": "bb47e662a7379c82.mp3",
-        "sentence": "7ebedafa46653cab.mp3",
-        "sentence_slow": "a469eccce1ae8387.mp3",
+        "word": "a7fbe04c0b907afe.m4a",
+        "sentence": "8ec427b38fe95e00.m4a",
+        "sentence_slow": "e9390b1eaab005ee.m4a",
         "examples": [
-          "2e08cdb0f1057e96.mp3",
-          "738378c8394bffd2.mp3"
+          "629972dc519e882b.m4a",
+          "ebb20dc6ce5a410b.m4a"
         ]
       }
     },
@@ -429,6 +439,7 @@
       "content": {
         "pos": "adjective",
         "ipa": "/roʊˈbʌst/",
+        "phonemes": "R OW0 B AH1 S T",
         "cefr": "B2",
         "ru": "надёжный, устойчивый",
         "ru_short": "надёжный",
@@ -447,12 +458,12 @@
         "sentence_ru": "Пожар, наводнение, проблемы с электроснабжением и ошибки в нижележащей облачной инфраструктуре — всё это вне вашего контроля, и одним махом они могут сделать все ваши попытки повысить устойчивость системы совершенно бесполезными."
       },
       "audio": {
-        "word": "5c3452a8af1efc2b.mp3",
-        "sentence": "71a9e1fa827b8f07.mp3",
-        "sentence_slow": "4cd1cf03413ea105.mp3",
+        "word": "7c9080d0d32825b1.m4a",
+        "sentence": "818f59880e3d8b0b.m4a",
+        "sentence_slow": "defc1df44946253b.m4a",
         "examples": [
-          "21292777ef39d26b.mp3",
-          "1108c0678ab99fdd.mp3"
+          "9f3597d9659a9093.m4a",
+          "f3908ec7f67d8d67.m4a"
         ]
       }
     },
@@ -468,6 +479,7 @@
       "content": {
         "pos": "adjective",
         "ipa": "/rɪˈdʌndənt/",
+        "phonemes": "R IH0 D AH1 N D AH0 N T",
         "cefr": "C1",
         "ru": "здесь: бесполезный, ненужный",
         "ru_short": "лишний; резервный",
@@ -486,12 +498,12 @@
         "sentence_ru": "Пожар, наводнение, проблемы с электроснабжением и ошибки в нижележащей облачной инфраструктуре — всё это вне вашего контроля, и одним махом они могут сделать все ваши попытки повысить устойчивость системы совершенно бесполезными."
       },
       "audio": {
-        "word": "4404f7736a0d17ac.mp3",
-        "sentence": "71a9e1fa827b8f07.mp3",
-        "sentence_slow": "4cd1cf03413ea105.mp3",
+        "word": "ff001ec2e47bc661.m4a",
+        "sentence": "818f59880e3d8b0b.m4a",
+        "sentence_slow": "defc1df44946253b.m4a",
         "examples": [
-          "a1f7183d3a78365d.mp3",
-          "18fe6c34e5122569.mp3"
+          "05c3d64b6a139cc7.m4a",
+          "9b746f69a652db26.m4a"
         ]
       }
     },
@@ -507,6 +519,7 @@
       "content": {
         "pos": "noun",
         "ipa": "/ˈɔːspɪsɪz/",
+        "phonemes": "AO1 S P IH0 S IH0 Z",
         "cefr": "C2",
         "ru": "ведение, эгида",
         "ru_short": "ведение, эгида",
@@ -526,12 +539,12 @@
         "sentence_ru": "Работа с такими ситуациями относится к сфере аварийного восстановления (DR) — набора процедур, которые должны запускаться, когда случается что-то действительно плохое."
       },
       "audio": {
-        "word": "701fc19a3b598512.mp3",
-        "sentence": "d8b6971ee410d672.mp3",
-        "sentence_slow": "a6a8670272618b9b.mp3",
+        "word": "beb760bcbcda687f.m4a",
+        "sentence": "f8bba6ec83c3cd63.m4a",
+        "sentence_slow": "cdc6b8846c684f3d.m4a",
         "examples": [
-          "dd0855b66ef50b4b.mp3",
-          "53b6f535b5f3d6fa.mp3"
+          "c02c23445a213788.m4a",
+          "efa3fc51d3dd578a.m4a"
         ]
       }
     },
@@ -547,6 +560,7 @@
       "content": {
         "pos": "noun",
         "ipa": "/ˈtreɪdɔːfs/",
+        "phonemes": "T R EY1 D | AO2 F S",
         "cefr": "B2",
         "ru": "компромиссы",
         "ru_short": "компромисс",
@@ -565,12 +579,12 @@
         "sentence_ru": "Как и почти во всём, что мы рассматривали в этой книге, компромиссов здесь хватает."
       },
       "audio": {
-        "word": "8524e01d3e322bfa.mp3",
-        "sentence": "b238e88f3fa20b44.mp3",
-        "sentence_slow": "b0ff96301ecfad31.mp3",
+        "word": "3e1ff0cdcef4bfe7.m4a",
+        "sentence": "e24e6b2d08c845fa.m4a",
+        "sentence_slow": "3a9f409ea006dc7e.m4a",
         "examples": [
-          "e77feb6ed5aa39b9.mp3",
-          "773934bbde89e208.mp3"
+          "862d5bc7c4e6efaf.m4a",
+          "24f62951b8e08b5c.m4a"
         ]
       }
     },
@@ -585,7 +599,8 @@
       "encounter_no": 1,
       "content": {
         "pos": "adjective",
-        "ipa": "/ˌɒn ˈpremɪsɪz/",
+        "ipa": "/ˌɑːn ˈpremɪsɪz/",
+        "phonemes": "AA2 N | P R EH1 M IH0 S IH0 Z",
         "cefr": "C1",
         "ru": "локальный, на собственных серверах",
         "ru_short": "на своих серверах",
@@ -604,12 +619,12 @@
         "sentence_ru": "Если вы работаете в частном облаке или в более традиционной локальной инфраструктуре, вы будете мыслить категориями дата-центров."
       },
       "audio": {
-        "word": "57a3cce69e05caf3.mp3",
-        "sentence": "b55321ff7d2e984e.mp3",
-        "sentence_slow": "689adfb0665ddd4a.mp3",
+        "word": "e30dcac0487dce3d.m4a",
+        "sentence": "810d04c6aeea85c1.m4a",
+        "sentence_slow": "9612cd5e2fa4550a.m4a",
         "examples": [
-          "fe5b13dccd1362a7.mp3",
-          "21f76e7eabac2eed.mp3"
+          "c791816f0a1e9168.m4a",
+          "fea2f446fbce558a.m4a"
         ]
       }
     },
@@ -625,6 +640,7 @@
       "content": {
         "pos": "adjective",
         "ipa": "/ˈledʒɪsleɪtɪv/",
+        "phonemes": "L EH1 JH IH0 S L EY2 T IH0 V",
         "cefr": "C1",
         "ru": "законодательный",
         "ru_short": "законодательный",
@@ -643,12 +659,12 @@
         "sentence_ru": "Поэтому при выборе подходящих RPO и RTO нужно обсудить со стейкхолдерами потребности конечных пользователей, а также регуляторные и законодательные требования — и соотнести их со стоимостью и сложностью нужного решения."
       },
       "audio": {
-        "word": "1a6438e21588227b.mp3",
-        "sentence": "699292768a9847f0.mp3",
-        "sentence_slow": "7a8623d32c2efdde.mp3",
+        "word": "9fc9379ea5a0cdfe.m4a",
+        "sentence": "7c83f3522b80f661.m4a",
+        "sentence_slow": "d235da1c5634514b.m4a",
         "examples": [
-          "194147185b680c14.mp3",
-          "c104a42680c029b9.mp3"
+          "1729aa9dada42114.m4a",
+          "bd268d170f0676ec.m4a"
         ]
       }
     },
@@ -664,6 +680,7 @@
       "content": {
         "pos": "noun",
         "ipa": "/ˈfeɪloʊvər/",
+        "phonemes": "F EY1 L OW2 V ER0",
         "cefr": "C1",
         "ru": "переключение на резерв",
         "ru_short": "переключение на резерв",
@@ -682,12 +699,12 @@
         "sentence_ru": "Например, подход «резервная копия и восстановление» требует перенаправления трафика, схема pilot light добавляет репликацию данных между площадками и автоматизацию инфраструктуры, а тёплое переключение (warm failover) — ещё и стоимость частично готовой инфраструктуры."
       },
       "audio": {
-        "word": "8c8862cbaa5087a4.mp3",
-        "sentence": "7216cca19e52e56f.mp3",
-        "sentence_slow": "b0a6a66e13063eab.mp3",
+        "word": "791e5414a6a4f6c7.m4a",
+        "sentence": "b87b528596f84d76.m4a",
+        "sentence_slow": "af8def6dd3537400.m4a",
         "examples": [
-          "04456b5c5e74b546.mp3",
-          "e56d5d88ee8b6adc.mp3"
+          "43b3657a25f99359.m4a",
+          "b853b8f15a7e9405.m4a"
         ]
       }
     },
@@ -703,6 +720,7 @@
       "content": {
         "pos": "verb",
         "ipa": "/ˌriːˈruːtɪŋ/",
+        "phonemes": "R IY2 R UW1 T IH0 NG",
         "cefr": "B2",
         "ru": "перенаправление",
         "ru_short": "перенаправление",
@@ -721,12 +739,12 @@
         "sentence_ru": "Обратите внимание: все они требуют той или иной формы перенаправления трафика, а большинство — репликации данных между площадками."
       },
       "audio": {
-        "word": "af62954066b04c25.mp3",
-        "sentence": "37b38556ae5016d9.mp3",
-        "sentence_slow": "86d3460c763bb175.mp3",
+        "word": "4430ec0ef288e124.m4a",
+        "sentence": "eea1a741313dcb92.m4a",
+        "sentence_slow": "1237b5b1ce64b8e7.m4a",
         "examples": [
-          "d7f3d18372ac5c2b.mp3",
-          "f79eafb47e3dd6d3.mp3"
+          "50b1a3dea17c29b5.m4a",
+          "92c98e7e538e159f.m4a"
         ]
       }
     },
@@ -742,6 +760,7 @@
       "content": {
         "pos": "verb",
         "ipa": "/ˈaʊtlaɪnd/",
+        "phonemes": "AW1 T L AY2 N D",
         "cefr": "B2",
         "ru": "показанный, изложенный",
         "ru_short": "описанный, изложенный",
@@ -760,12 +779,12 @@
         "sentence_ru": "Как показано на рисунке 10-3, в этом паттерне данные периодически копируются на отдельную площадку."
       },
       "audio": {
-        "word": "711285b50546d64b.mp3",
-        "sentence": "354ab38efe3a6cc3.mp3",
-        "sentence_slow": "42d2f26d32df634c.mp3",
+        "word": "30635411ccaf13eb.m4a",
+        "sentence": "361b422e2b7988f4.m4a",
+        "sentence_slow": "773f352b5521d2b8.m4a",
         "examples": [
-          "34c24403f65f950b.mp3",
-          "e89cb6469cc2cbd4.mp3"
+          "339153cf5ebe7943.m4a",
+          "83e8d67e50ddb27f.m4a"
         ]
       }
     },
@@ -781,6 +800,7 @@
       "content": {
         "pos": "adjective",
         "ipa": "/ˌbækt ˈʌp/",
+        "phonemes": "B AE2 K T | AH1 P",
         "cefr": "B2",
         "ru": "из резервной копии",
         "ru_short": "из резервной копии",
@@ -799,12 +819,12 @@
         "sentence_ru": "Если основная площадка выходит из строя, нужно поднять инфраструктуру на новой площадке и восстановить данные из резервной копии."
       },
       "audio": {
-        "word": "e6e0d38dcbcd2159.mp3",
-        "sentence": "d00d4c2424c789c6.mp3",
-        "sentence_slow": "1b67ba53f6f66d5d.mp3",
+        "word": "db480902fbf2160e.m4a",
+        "sentence": "e25fb57595ba4054.m4a",
+        "sentence_slow": "e3d6370694eb9354.m4a",
         "examples": [
-          "6ba47f909ecb173e.mp3",
-          "0792d8bb5ed42911.mp3"
+          "507f8c803a240b51.m4a",
+          "9f2db3fc1eda7882.m4a"
         ]
       }
     },
@@ -820,6 +840,7 @@
       "content": {
         "pos": "adjective",
         "ipa": "/ˌstreɪtˈfɔːrwərd/",
+        "phonemes": "S T R EY2 T F AO1 R W ER0 D",
         "cefr": "B2",
         "ru": "простой, понятный",
         "ru_short": "простой, несложный",
@@ -838,12 +859,12 @@
         "sentence_ru": "Этот паттерн очень просто реализовать, он состоит из нескольких шагов:"
       },
       "audio": {
-        "word": "eb99f8c698b02ba7.mp3",
-        "sentence": "d0c5ff7bc7a46890.mp3",
-        "sentence_slow": "777fabb9d32e375b.mp3",
+        "word": "50e6e4cbbabb359e.m4a",
+        "sentence": "84861bc6726cddc3.m4a",
+        "sentence_slow": "c21f4ae3ffd5074d.m4a",
         "examples": [
-          "69bd5a255d143845.mp3",
-          "a165ce564a1e437d.mp3"
+          "1f0565a9ced5d00b.m4a",
+          "6d17fa4124c6fd12.m4a"
         ]
       }
     },
@@ -859,6 +880,7 @@
       "content": {
         "pos": "noun",
         "ipa": "/prəˈvɪʒənɪŋ/",
+        "phonemes": "P R AH0 V IH1 ZH AH0 N IH0 NG",
         "cefr": "C1",
         "ru": "развёртывание, выделение ресурсов",
         "ru_short": "развёртывание ресурсов",
@@ -877,12 +899,12 @@
         "sentence_ru": "В идеале это стоит автоматизировать: ручное развёртывание инфраструктуры, скорее всего, увеличит RTO и вероятность ошибок."
       },
       "audio": {
-        "word": "b5ff721169ab50f6.mp3",
-        "sentence": "29b329cd23904259.mp3",
-        "sentence_slow": "3ee54edf935a7cf2.mp3",
+        "word": "e97e2c94e77574e3.m4a",
+        "sentence": "963ba8e701d87ebc.m4a",
+        "sentence_slow": "0aa3168c2ea46f01.m4a",
         "examples": [
-          "ed7dd2207158a37a.mp3",
-          "f2403c57d6b835d6.mp3"
+          "c1cd2ab3d0912815.m4a",
+          "40c7db9e85ffbfd6.m4a"
         ]
       }
     },
@@ -898,6 +920,7 @@
       "content": {
         "pos": "verb",
         "ipa": "/ˌriːˈjuːz/",
+        "phonemes": "R IY2 Y UW1 Z",
         "cefr": "B1",
         "ru": "переиспользовать",
         "ru_short": "использовать повторно",
@@ -916,12 +939,12 @@
         "sentence_ru": "В идеале резервная площадка работает на том же базовом стеке, что и основная, — тогда вложения в автоматизацию инфраструктуры основной площадки пригодятся и на резервной (например, можно переиспользовать скрипты Terraform)."
       },
       "audio": {
-        "word": "8e857a588c4e0b79.mp3",
-        "sentence": "6716a133ba32fec3.mp3",
-        "sentence_slow": "da96db2909cf37ec.mp3",
+        "word": "3482718aeeb40885.m4a",
+        "sentence": "d378ac18fd69c477.m4a",
+        "sentence_slow": "1f64f29c426bb108.m4a",
         "examples": [
-          "08cc228445cafb47.mp3",
-          "18cc3d153fba09b4.mp3"
+          "43f8b071f606ff20.m4a",
+          "73438980d3234ae4.m4a"
         ]
       }
     },
@@ -937,6 +960,7 @@
       "content": {
         "pos": "phrasal verb",
         "ipa": "/ˈspɪnɪŋ ʌp/",
+        "phonemes": "S P IH1 N IH0 NG",
         "cefr": "B2",
         "ru": "поднимать, запускать (серверы)",
         "ru_short": "запускать, поднимать",
@@ -956,12 +980,12 @@
         "sentence_ru": "Оговорка насчёт подъёма инфраструктуры по требованию: нужно гарантировать, что она действительно будет доступна, когда понадобится, — это мы рассмотрим позже в этой главе."
       },
       "audio": {
-        "word": "a2a773a7d5a92716.mp3",
-        "sentence": "70ff2237ccb5f3da.mp3",
-        "sentence_slow": "a2926012977a2186.mp3",
+        "word": "20eb0d178fe2f9b2.m4a",
+        "sentence": "ae28eaafd9e87dc8.m4a",
+        "sentence_slow": "5ea19d98e9f6aeb7.m4a",
         "examples": [
-          "ba64d99be60bc37a.mp3",
-          "402a9fe4739483e0.mp3"
+          "ea41d6831cefa6b7.m4a",
+          "2ce3a8048c08ba31.m4a"
         ]
       }
     },
@@ -977,6 +1001,7 @@
       "content": {
         "pos": "adverb",
         "ipa": "/ˈferli/",
+        "phonemes": "F EH1 R L IY0",
         "cefr": "B1",
         "ru": "довольно",
         "ru_short": "довольно",
@@ -995,12 +1020,12 @@
         "sentence_ru": "Поэтому шаги выглядят довольно похоже на паттерн «резервная копия и восстановление»:"
       },
       "audio": {
-        "word": "678bfc7138cf7e9d.mp3",
-        "sentence": "569a34237dee1081.mp3",
-        "sentence_slow": "4e1a130361fda9e2.mp3",
+        "word": "b076f784ce5347e6.m4a",
+        "sentence": "9fe15ef9ec9c40f4.m4a",
+        "sentence_slow": "997d342df5a7c5f0.m4a",
         "examples": [
-          "ad759bf4c6926f6d.mp3",
-          "8f8f2375abf6ac0a.mp3"
+          "6140f6e3b78d3867.m4a",
+          "995ac41a4b14c588.m4a"
         ]
       }
     },
@@ -1016,6 +1041,7 @@
       "content": {
         "pos": "noun",
         "ipa": "/əˈsʌmpʃən/",
+        "phonemes": "AH0 S AH1 M P SH AH0 N",
         "cefr": "B2",
         "ru": "предположение, допущение",
         "ru_short": "предположение",
@@ -1034,12 +1060,12 @@
         "sentence_ru": "Предполагается, что базы данных и хранилища уже есть на резервной площадке, поэтому развернуть нужно только оставшиеся ресурсы, например вычислительные."
       },
       "audio": {
-        "word": "1828a32b357e3046.mp3",
-        "sentence": "a909e55b6e96e417.mp3",
-        "sentence_slow": "afc6918c4c3e2e65.mp3",
+        "word": "6225cdceb1b0bc94.m4a",
+        "sentence": "c9fa031b85171604.m4a",
+        "sentence_slow": "427d055dadc45729.m4a",
         "examples": [
-          "a4ab23804e1766ce.mp3",
-          "ee5bb02e8fed162c.mp3"
+          "41f82e8d5492abb7.m4a",
+          "7359823b12a11f3e.m4a"
         ]
       }
     },
@@ -1055,6 +1081,7 @@
       "content": {
         "pos": "preposition",
         "ipa": "/rɪˈɡɑːrdɪŋ/",
+        "phonemes": "R IH0 G AA1 R D IH0 NG",
         "cefr": "B2",
         "ru": "относительно, насчёт",
         "ru_short": "насчёт, относительно",
@@ -1073,12 +1100,12 @@
         "sentence_ru": "Холодное, тёплое и горячее переключение: здесь уместно короткое замечание о термине «тёплый»."
       },
       "audio": {
-        "word": "9da95d25780d1cdc.mp3",
-        "sentence": "837b666a18feba44.mp3",
-        "sentence_slow": "9472076e3e799ccf.mp3",
+        "word": "55d74b37af6a94dd.m4a",
+        "sentence": "f531525c4070533d.m4a",
+        "sentence_slow": "f3ab2225787a1fc2.m4a",
         "examples": [
-          "a501c3fc21781724.mp3",
-          "c5d37d638a610ca3.mp3"
+          "1cdfd84ad7bbe00a.m4a",
+          "a6a6627b22d6cb2e.m4a"
         ]
       }
     },
@@ -1094,6 +1121,7 @@
       "content": {
         "pos": "adjective",
         "ipa": "/dɪˈstɪŋɡwɪʃɪŋ/",
+        "phonemes": "D IH0 S T IH1 NG G W IH0 SH IH0 NG",
         "cefr": "C1",
         "ru": "отличительный",
         "ru_short": "отличительный",
@@ -1112,12 +1140,12 @@
         "sentence_ru": "Вы встретите разные решения и продукты поставщиков, обещающие холодное, тёплое или горячее переключение, и часто единственное реальное различие между ними в том, что горячее даёт меньший RTO, чем тёплое, а тёплое — меньший, чем холодное."
       },
       "audio": {
-        "word": "857ee603e2ed0329.mp3",
-        "sentence": "1b8f574a94411427.mp3",
-        "sentence_slow": "7e0e951fc818110b.mp3",
+        "word": "76a6a1fa2114b877.m4a",
+        "sentence": "dcaf519eccb70c2a.m4a",
+        "sentence_slow": "4dcb3686c9cb2aa6.m4a",
         "examples": [
-          "7a5ad532bab2b216.mp3",
-          "6ea35108560a8ff8.mp3"
+          "4c213ea02fdd743f.m4a",
+          "1576ff39b9547df8.m4a"
         ]
       }
     },
@@ -1133,6 +1161,7 @@
       "content": {
         "pos": "adjective",
         "ipa": "/ˈmʌltiˌsaɪt/",
+        "phonemes": "M AH1 L T IY0 S AY2 T",
         "cefr": "C1",
         "ru": "многоплощадочный",
         "ru_short": "на нескольких площадках",
@@ -1151,12 +1180,12 @@
         "sentence_ru": "В схеме multisite active-active данные постоянно реплицируются между двумя или более площадками, как показано на рисунке 10-6."
       },
       "audio": {
-        "word": "fee98a7c2f95e292.mp3",
-        "sentence": "dad11122d55a63aa.mp3",
-        "sentence_slow": "1bbc02867bbdb908.mp3",
+        "word": "92580ad66341b9e4.m4a",
+        "sentence": "3d9eb5b4c2e1bd47.m4a",
+        "sentence_slow": "9c4d8dbe1f4dcc1c.m4a",
         "examples": [
-          "bbad61381345c508.mp3",
-          "5b0a53ab99446d31.mp3"
+          "2fffb8d7535bd021.m4a",
+          "0ad58dbe00d4e8b2.m4a"
         ]
       }
     },
@@ -1172,6 +1201,7 @@
       "content": {
         "pos": "noun",
         "ipa": "/skræps/",
+        "phonemes": "S K R AE1 P S",
         "cefr": "B2",
         "ru": "остатки, объедки",
         "ru_short": "остатки",
@@ -1190,12 +1220,12 @@
         "sentence_ru": "Если у крупного облачного провайдера отказал целый регион, вам, возможно, придётся бороться за остатки ресурсов вместе со всеми остальными."
       },
       "audio": {
-        "word": "825c2a842df420e8.mp3",
-        "sentence": "0348a651d8b2d5b8.mp3",
-        "sentence_slow": "4f9cf492923b33f0.mp3",
+        "word": "4fd7f8dcb2a78d36.m4a",
+        "sentence": "8f2ccc619193b970.m4a",
+        "sentence_slow": "6c0d0df508c65438.m4a",
         "examples": [
-          "a5c06311c1dc511f.mp3",
-          "dba6d2534b515b48.mp3"
+          "1ef461d290bbe5c5.m4a",
+          "dcee4775d32cd236.m4a"
         ]
       }
     },
@@ -1210,7 +1240,8 @@
       "encounter_no": 1,
       "content": {
         "pos": "verb",
-        "ipa": "/ˈɒpəreɪt/",
+        "ipa": "/ˈɑːpəreɪt/",
+        "phonemes": "AA1 P ER0 EY2 T",
         "cefr": "B1",
         "ru": "работать, функционировать",
         "ru_short": "работать",
@@ -1229,12 +1260,12 @@
         "sentence_ru": "Одно из решений — сделать так, чтобы ваше ПО могло работать, даже если модель недоступна."
       },
       "audio": {
-        "word": "b54948f9305abc54.mp3",
-        "sentence": "e48b682bd618315e.mp3",
-        "sentence_slow": "669359fe2ebb2862.mp3",
+        "word": "23d4f71e30cee54c.m4a",
+        "sentence": "6d43f7c1d446a89f.m4a",
+        "sentence_slow": "fcd2d048daba900a.m4a",
         "examples": [
-          "8a96ed88818d57d0.mp3",
-          "593a7c241b4b1bca.mp3"
+          "5754b639f7ac6940.m4a",
+          "ef3c996a2f2547ef.m4a"
         ]
       }
     },
@@ -1250,6 +1281,7 @@
       "content": {
         "pos": "noun",
         "ipa": "/ˈbliːdɪŋ edʒ/",
+        "phonemes": "B L IY1 D IH0 NG",
         "cefr": "C1",
         "ru": "самый передний край (технологий)",
         "ru_short": "передний край, новейшее",
@@ -1269,12 +1301,12 @@
         "sentence_ru": "При использовании таких резервных поставщиков новейшие модели могут появляться с задержкой, но поскольку вам не всегда нужно быть на самом переднем крае в выборе моделей для вашего ПО (об этом поговорим чуть позже), это, скорее всего, нормально."
       },
       "audio": {
-        "word": "b45cd47698e8df73.mp3",
-        "sentence": "7de17ee38af6856b.mp3",
-        "sentence_slow": "38b0c4b2b931037c.mp3",
+        "word": "1a47f29bdc7f8b6b.m4a",
+        "sentence": "080a7ef770928e8c.m4a",
+        "sentence_slow": "1e9a351af206a858.m4a",
         "examples": [
-          "d7b81519d66cac28.mp3",
-          "c7fd869e5aa5b08b.mp3"
+          "a17820729f59ff02.m4a",
+          "70f04f62a884a7ff.m4a"
         ]
       }
     },
@@ -1290,6 +1322,7 @@
       "content": {
         "pos": "verb",
         "ipa": "/bɪˈheɪvɪŋ/",
+        "phonemes": "B IH0 HH EY1 V IH0 NG",
         "cefr": "B1",
         "ru": "вести себя, работать",
         "ru_short": "вести себя",
@@ -1308,12 +1341,12 @@
         "sentence_ru": "Я видел сообщения о том, что модель начинала вести себя иначе, хотя поставщик не объявлял о серьёзных изменениях в поведении."
       },
       "audio": {
-        "word": "bd1a365212f7e5ac.mp3",
-        "sentence": "816d41507329888a.mp3",
-        "sentence_slow": "cebd7e18fc0a2475.mp3",
+        "word": "ea2bb84634bc0323.m4a",
+        "sentence": "eb43264f44076ff6.m4a",
+        "sentence_slow": "855c8fccd664d85d.m4a",
         "examples": [
-          "2ed66f8be96db4b3.mp3",
-          "1b4a16f737a45179.mp3"
+          "6f7ab289b8ee02f4.m4a",
+          "479a9a77f8ec416d.m4a"
         ]
       }
     },
@@ -1329,6 +1362,7 @@
       "content": {
         "pos": "adverb",
         "ipa": "/ˈðerfɔːr/",
+        "phonemes": "DH EH1 R F AO2 R",
         "cefr": "B2",
         "ru": "поэтому, следовательно",
         "ru_short": "поэтому",
@@ -1347,12 +1381,12 @@
         "sentence_ru": "Поэтому очень важно иметь хороший набор тестов, проверяющих, что AI-части вашего кода ведут себя как положено, — это должно быть сочетание классических функциональных тестов и инструментов оценки AI (evals)."
       },
       "audio": {
-        "word": "62542ade070f724a.mp3",
-        "sentence": "cedc7512b53b9a2f.mp3",
-        "sentence_slow": "f46f1166b13286d7.mp3",
+        "word": "e71c6d129bd4354a.m4a",
+        "sentence": "c8ca0abbbc127a2c.m4a",
+        "sentence_slow": "b557ba618db809f3.m4a",
         "examples": [
-          "7c1bb07b098ac6ba.mp3",
-          "8e3686c46fdc144f.mp3"
+          "75a7fe4885050c30.m4a",
+          "60f770f9f6562c3f.m4a"
         ]
       }
     },
@@ -1368,6 +1402,7 @@
       "content": {
         "pos": "adverb",
         "ipa": "/əˈproʊpriətli/",
+        "phonemes": "AH0 P R OW1 P R IY0 AH0 T L IY0",
         "cefr": "B2",
         "ru": "как положено, надлежащим образом",
         "ru_short": "как положено",
@@ -1386,12 +1421,12 @@
         "sentence_ru": "Поэтому очень важно иметь хороший набор тестов, проверяющих, что AI-части вашего кода ведут себя как положено, — это должно быть сочетание классических функциональных тестов и инструментов оценки AI (evals)."
       },
       "audio": {
-        "word": "0731e846654fe42f.mp3",
-        "sentence": "cedc7512b53b9a2f.mp3",
-        "sentence_slow": "f46f1166b13286d7.mp3",
+        "word": "ee7fe18959f379e7.m4a",
+        "sentence": "c8ca0abbbc127a2c.m4a",
+        "sentence_slow": "b557ba618db809f3.m4a",
         "examples": [
-          "9964a44fa7adb504.mp3",
-          "00538d86247ddb4f.mp3"
+          "5abb0783766d0b5e.m4a",
+          "a89f849b4ec5267b.m4a"
         ]
       }
     },
@@ -1407,6 +1442,7 @@
       "content": {
         "pos": "adjective",
         "ipa": "/ˈvʌlnərəbəl/",
+        "phonemes": "V AH1 L N ER0 AH0 B AH0 L",
         "cefr": "B2",
         "ru": "уязвимый",
         "ru_short": "уязвимый",
@@ -1425,12 +1461,12 @@
         "sentence_ru": "Если бы Cursor мог использовать AI-модели другой компании, он, возможно, был бы менее уязвим к этой проблеме."
       },
       "audio": {
-        "word": "d5e5e75fe1e0f6fb.mp3",
-        "sentence": "c8f83a98f8305a3d.mp3",
-        "sentence_slow": "f60f8e17e4e8a43e.mp3",
+        "word": "8fe1e4025c073cf1.m4a",
+        "sentence": "86777fb885ab881e.m4a",
+        "sentence_slow": "ab7d2e8eea76ccbc.m4a",
         "examples": [
-          "80081b6abf2fa75f.mp3",
-          "7727fd106db7b760.mp3"
+          "ce322ab2234ba639.m4a",
+          "d29222867b4ab919.m4a"
         ]
       }
     },
@@ -1446,6 +1482,7 @@
       "content": {
         "pos": "adverb",
         "ipa": "/ˈhoʊlli/",
+        "phonemes": "HH OW1 L L IY0",
         "cefr": "C1",
         "ru": "полностью, целиком",
         "ru_short": "полностью",
@@ -1464,12 +1501,12 @@
         "sentence_ru": "Держите варианты открытыми: убедитесь, что вы не зависите целиком от одной модели или AI-платформы."
       },
       "audio": {
-        "word": "195634bdcaab4ea9.mp3",
-        "sentence": "c5667d895c9cd99e.mp3",
-        "sentence_slow": "f7b18aa91dc3ac1a.mp3",
+        "word": "34fe781c62ce7c68.m4a",
+        "sentence": "13a742ff283633ca.m4a",
+        "sentence_slow": "aaa6c74d75fda891.m4a",
         "examples": [
-          "d3b62b1720e139e8.mp3",
-          "e48d78f393a28244.mp3"
+          "5c3754cd1b162f7b.m4a",
+          "f20e3f56d5216126.m4a"
         ]
       }
     },
@@ -1485,6 +1522,7 @@
       "content": {
         "pos": "verb",
         "ipa": "/ˈʃeɪmɪŋ/",
+        "phonemes": "SH EY1 M IH0 NG",
         "cefr": "B2",
         "ru": "стыдить, публично осуждать",
         "ru_short": "стыдить",
@@ -1503,12 +1541,12 @@
         "sentence_ru": "Речь не о том, чтобы стыдить тех, кто тратит слишком много денег: он доказывает, что такая прозрачность помогает лучше понять, как используется ПО, и способствует внедрению инструментов, которые доказывают свою ценность."
       },
       "audio": {
-        "word": "f0a30e6a66dbe7d8.mp3",
-        "sentence": "121aeb4cfd08b848.mp3",
-        "sentence_slow": "eb07e3e7c17f4297.mp3",
+        "word": "93d1cd3b0829a272.m4a",
+        "sentence": "206b4edef5a31887.m4a",
+        "sentence_slow": "1dd9eb585455f8f5.m4a",
         "examples": [
-          "7d460f385c8be7e3.mp3",
-          "fd9a296346f3cc1c.mp3"
+          "477b3cff1729969d.m4a",
+          "58b7f3dceb9e3b56.m4a"
         ]
       }
     },
@@ -1524,6 +1562,7 @@
       "content": {
         "pos": "verb",
         "ipa": "/ʃoʊz/",
+        "phonemes": "SH OW1 Z",
         "cefr": "B1",
         "ru": "показывает, свидетельствует",
         "ru_short": "показывает",
@@ -1545,12 +1584,12 @@
         "sentence_ru": "В докладе 2025 года на LeadDev Berlin «LLMs: An Operator’s View» Станиер объясняет: если человек тратит много денег, это не стоит считать чем-то плохим — обычно это показывает, что он старается успеть больше."
       },
       "audio": {
-        "word": "d9cc6251f2406a11.mp3",
-        "sentence": "be4f55d0a8c6f61e.mp3",
-        "sentence_slow": "3624497b58864aa9.mp3",
+        "word": "e13473f50036594c.m4a",
+        "sentence": "f0dfc11b5142eec3.m4a",
+        "sentence_slow": "05bdeceed952ae3d.m4a",
         "examples": [
-          "55ffdb84510761e1.mp3",
-          "bfa397a8b0711a52.mp3"
+          "b9088e8455d7abf9.m4a",
+          "6da2e5a7713eeccb.m4a"
         ]
       },
       "text_original": "showsomeone",
@@ -1568,6 +1607,7 @@
       "content": {
         "pos": "adjective",
         "ipa": "/ɪˈɡriːdʒəs/",
+        "phonemes": "IH0 G R IY1 JH AH0 S",
         "cefr": "C2",
         "ru": "вопиющий",
         "ru_short": "вопиющий",
@@ -1586,12 +1626,12 @@
         "sentence_ru": "Это также помогает заметить вопиющий перерасход."
       },
       "audio": {
-        "word": "d3f68e82936070bd.mp3",
-        "sentence": "18b6be29bf1a827b.mp3",
-        "sentence_slow": "17d5b79e8e4cda6a.mp3",
+        "word": "5de943950c135b47.m4a",
+        "sentence": "acf7aced7a1c850b.m4a",
+        "sentence_slow": "6b9577ed6cbaf31f.m4a",
         "examples": [
-          "4dcd4c4bc5a0caa5.mp3",
-          "3bc204101cd17376.mp3"
+          "f52ce4d343c2a829.m4a",
+          "2d93b9364971c1fa.m4a"
         ]
       }
     },
@@ -1607,6 +1647,7 @@
       "content": {
         "pos": "verb",
         "ipa": "/rɪˈviːld/",
+        "phonemes": "R IH0 V IY1 L D",
         "cefr": "B2",
         "ru": "сообщил, раскрыл",
         "ru_short": "раскрыл, сообщил",
@@ -1628,12 +1669,12 @@
         "sentence_ru": "Недавно Uber сообщил, что израсходовал весь годовой бюджет на AI всего за первые четыре месяца года."
       },
       "audio": {
-        "word": "0202416b4e22bce4.mp3",
-        "sentence": "ec2f7f59d2c13105.mp3",
-        "sentence_slow": "7a697b2547aca6be.mp3",
+        "word": "abfdc714363eeb05.m4a",
+        "sentence": "3d00217a35e615d8.m4a",
+        "sentence_slow": "fe132580f12f1166.m4a",
         "examples": [
-          "6d42db47a4e390d3.mp3",
-          "e6fd1ad3ea5f0432.mp3"
+          "27475479b57a63ae.m4a",
+          "dbd6c0ae0e194fbd.m4a"
         ]
       },
       "sentence_original": "Uber recently revealed that it had burned through its entire annual AI budget in just the first four months of the year, and Microsoft announced it was pulling Claude licenses from its employees, due in part to cost, apparently.5 These stories might cause one or two raised eyebrows, but they pale in comparison to the recent (admittedly unsubstantiated) report from Axios that an unnamed enterprise company spent $500 million on Claude licenses after failing to put cost controls into place."
@@ -1650,6 +1691,7 @@
       "content": {
         "pos": "adverb",
         "ipa": "/ədˈmɪtɪdli/",
+        "phonemes": "AH0 D M IH1 T IH0 D L IY0",
         "cefr": "C1",
         "ru": "правда, надо признать",
         "ru_short": "надо признать",
@@ -1671,12 +1713,12 @@
         "sentence_ru": "Эти истории могут кого-то удивить, но они меркнут на фоне недавнего (правда, ничем не подтверждённого) сообщения Axios о том, что неназванная крупная компания потратила 500 миллионов долларов на лицензии Claude, не настроив контроль расходов."
       },
       "audio": {
-        "word": "ab76095d26f57cd9.mp3",
-        "sentence": "a1649e204f3d0da2.mp3",
-        "sentence_slow": "3156acdf5cd69066.mp3",
+        "word": "0465981d12844f2c.m4a",
+        "sentence": "4ec7b307b877b476.m4a",
+        "sentence_slow": "89f662f327e030f3.m4a",
         "examples": [
-          "88d10addb065db70.mp3",
-          "582500fb8bc2456f.mp3"
+          "7d95de014ff9862b.m4a",
+          "a332a07f497a46ae.m4a"
         ]
       },
       "sentence_original": "Uber recently revealed that it had burned through its entire annual AI budget in just the first four months of the year, and Microsoft announced it was pulling Claude licenses from its employees, due in part to cost, apparently.5 These stories might cause one or two raised eyebrows, but they pale in comparison to the recent (admittedly unsubstantiated) report from Axios that an unnamed enterprise company spent $500 million on Claude licenses after failing to put cost controls into place."
@@ -1693,6 +1735,7 @@
       "content": {
         "pos": "adjective",
         "ipa": "/ˌʌnsəbˈstænʃieɪtɪd/",
+        "phonemes": "AH2 N S AH0 B S T AE1 N SH IY0 EY2 T IH0 D",
         "cefr": "C2",
         "ru": "ничем не подтверждённый",
         "ru_short": "неподтверждённый",
@@ -1714,12 +1757,12 @@
         "sentence_ru": "Эти истории могут кого-то удивить, но они меркнут на фоне недавнего (правда, ничем не подтверждённого) сообщения Axios о том, что неназванная крупная компания потратила 500 миллионов долларов на лицензии Claude, не настроив контроль расходов."
       },
       "audio": {
-        "word": "d7b12096b8402115.mp3",
-        "sentence": "a1649e204f3d0da2.mp3",
-        "sentence_slow": "3156acdf5cd69066.mp3",
+        "word": "3224e84987f156d2.m4a",
+        "sentence": "4ec7b307b877b476.m4a",
+        "sentence_slow": "89f662f327e030f3.m4a",
         "examples": [
-          "e8800d67b1f746a7.mp3",
-          "dbaef7564fa29ce0.mp3"
+          "37564bd622ab4f88.m4a",
+          "ac837453befdc759.m4a"
         ]
       },
       "sentence_original": "Uber recently revealed that it had burned through its entire annual AI budget in just the first four months of the year, and Microsoft announced it was pulling Claude licenses from its employees, due in part to cost, apparently.5 These stories might cause one or two raised eyebrows, but they pale in comparison to the recent (admittedly unsubstantiated) report from Axios that an unnamed enterprise company spent $500 million on Claude licenses after failing to put cost controls into place."
@@ -1736,6 +1779,7 @@
       "content": {
         "pos": "verb",
         "ipa": "/ˈklaɪmɪŋ/",
+        "phonemes": "K L AY1 M IH0 NG",
         "cefr": "B1",
         "ru": "расти (о ценах, счетах)",
         "ru_short": "расти, подниматься",
@@ -1754,12 +1798,12 @@
         "sentence_ru": "Это помогает понять, как люди этим пользуются, и вовремя заметить, когда счета начинают резко расти."
       },
       "audio": {
-        "word": "c5e11c27f55f704a.mp3",
-        "sentence": "b6f30d84819e626a.mp3",
-        "sentence_slow": "62d30916975e5ef9.mp3",
+        "word": "bde03a81789e8a22.m4a",
+        "sentence": "75478d35515a0238.m4a",
+        "sentence_slow": "4417413f91241c74.m4a",
         "examples": [
-          "02a91587ff9841b6.mp3",
-          "ffe3cffee9244af5.mp3"
+          "615ef04129a37144.m4a",
+          "afd9e5c41d9b6c61.m4a"
         ]
       }
     },
@@ -1775,6 +1819,7 @@
       "content": {
         "pos": "adverb",
         "ipa": "/prɪˈsɪpɪtəsli/",
+        "phonemes": "P R IH0 S IH1 P IH0 T AH0 S L IY0",
         "cefr": "C2",
         "ru": "стремительно, резко",
         "ru_short": "резко, стремительно",
@@ -1793,12 +1838,12 @@
         "sentence_ru": "Это помогает понять, как люди этим пользуются, и вовремя заметить, когда счета начинают резко расти."
       },
       "audio": {
-        "word": "172bf0a6362aa28c.mp3",
-        "sentence": "b6f30d84819e626a.mp3",
-        "sentence_slow": "62d30916975e5ef9.mp3",
+        "word": "25e3e579a3abafcc.m4a",
+        "sentence": "75478d35515a0238.m4a",
+        "sentence_slow": "4417413f91241c74.m4a",
         "examples": [
-          "a82a51e9ffdadfab.mp3",
-          "7e4025b47b404b8d.mp3"
+          "bd90e64a201b3f6a.m4a",
+          "9cff93105f4b009e.m4a"
         ]
       }
     },
@@ -1813,7 +1858,8 @@
       "encounter_no": 1,
       "content": {
         "pos": "noun",
-        "ipa": "/ˌnɒndɪˈtɜːrmɪnɪzəm/",
+        "ipa": "/ˌnɑːndɪˈtɜːrmɪnɪzəm/",
+        "phonemes": "N AA2 N D IH0 T ER1 M IH0 N IH2 Z AH0 M",
         "cefr": "C1",
         "ru": "недетерминированность",
         "ru_short": "недетерминированность",
@@ -1832,12 +1878,12 @@
         "sentence_ru": "На микроуровне AI на базе LLM требует от нас смириться с недетерминированностью, тогда как многое из того, что мы делаем при построении устойчивых систем, должно быть полностью воспроизводимым и детерминированным."
       },
       "audio": {
-        "word": "5617174b0bef2199.mp3",
-        "sentence": "d16c69fc7958cc43.mp3",
-        "sentence_slow": "cd45b2a86b6e6df1.mp3",
+        "word": "deb9eab8265ccbcf.m4a",
+        "sentence": "062582d25b81f0e6.m4a",
+        "sentence_slow": "25c4d65a79bdce9f.m4a",
         "examples": [
-          "ccb877f670859cd9.mp3",
-          "da0dca080240c007.mp3"
+          "56f16318a41b5717.m4a",
+          "a10d69b3e7bf1a31.m4a"
         ]
       }
     },
@@ -1853,6 +1899,7 @@
       "content": {
         "pos": "adjective",
         "ipa": "/ˌevərˈtʃeɪndʒɪŋ/",
+        "phonemes": "EH2 V ER0 | CH EY1 N JH IH0 NG",
         "cefr": "B2",
         "ru": "постоянно меняющийся",
         "ru_short": "постоянно меняющийся",
@@ -1871,12 +1918,12 @@
         "sentence_ru": "На макроуровне опасения насчёт AI-отрасли в целом означают, что мы имеем дело с постоянно меняющимся (и, надеемся, улучшающимся) набором продуктов, построенных на очень шатком финансовом фундаменте."
       },
       "audio": {
-        "word": "e84473c6a9665928.mp3",
-        "sentence": "9775a7db085c7ca9.mp3",
-        "sentence_slow": "746697a7f3b6675b.mp3",
+        "word": "ac413e8fbab4b8ab.m4a",
+        "sentence": "e56f73b7bd82bafb.m4a",
+        "sentence_slow": "fe0d72dd94d2d0ac.m4a",
         "examples": [
-          "8dac9e4f09ea2d3c.mp3",
-          "5c3589e1b9e32932.mp3"
+          "93caf9f8aa29aeb2.m4a",
+          "7dd69dcb4ae581be.m4a"
         ]
       }
     },
@@ -1892,6 +1939,7 @@
       "content": {
         "pos": "adjective",
         "ipa": "/ˈʃeɪki/",
+        "phonemes": "SH EY1 K IY0",
         "cefr": "B2",
         "ru": "шаткий, ненадёжный",
         "ru_short": "шаткий",
@@ -1910,12 +1958,12 @@
         "sentence_ru": "На макроуровне опасения насчёт AI-отрасли в целом означают, что мы имеем дело с постоянно меняющимся (и, надеемся, улучшающимся) набором продуктов, построенных на очень шатком финансовом фундаменте."
       },
       "audio": {
-        "word": "05b56aca5bef0b68.mp3",
-        "sentence": "9775a7db085c7ca9.mp3",
-        "sentence_slow": "746697a7f3b6675b.mp3",
+        "word": "e32720018b55f3a9.m4a",
+        "sentence": "e56f73b7bd82bafb.m4a",
+        "sentence_slow": "fe0d72dd94d2d0ac.m4a",
         "examples": [
-          "454583e4b85776bb.mp3",
-          "d48871b699594ce0.mp3"
+          "b01eef79be362357.m4a",
+          "946eeaaa48bdfd45.m4a"
         ]
       }
     },
@@ -1931,6 +1979,7 @@
       "content": {
         "pos": "adverb",
         "ipa": "/bɪˈfɔːrhænd/",
+        "phonemes": "B IH0 F AO1 R HH AE2 N D",
         "cefr": "B2",
         "ru": "заранее",
         "ru_short": "заранее",
@@ -1949,12 +1998,12 @@
         "sentence_ru": "Отчасти это могло быть из-за того, что команда заранее не подготовилась к аварийному восстановлению и не отрабатывала его."
       },
       "audio": {
-        "word": "e39fb32104a4901f.mp3",
-        "sentence": "2572faeee1b631f5.mp3",
-        "sentence_slow": "410e9dc7b0091d37.mp3",
+        "word": "6d1765ae84222b97.m4a",
+        "sentence": "0e97607dae9fbe72.m4a",
+        "sentence_slow": "8fc8574305803c17.m4a",
         "examples": [
-          "3a97b7e0378c7113.mp3",
-          "953f5e79c6e3c78a.mp3"
+          "92475db43ba7f2e3.m4a",
+          "feb6d9b9e10c73e3.m4a"
         ]
       }
     },
@@ -1970,6 +2019,7 @@
       "content": {
         "pos": "adjective",
         "ipa": "/ˈæmətərɪʃ/",
+        "phonemes": "AE1 M AH0 T ER0 IH0 SH",
         "cefr": "C1",
         "ru": "дилетантский, непрофессиональный",
         "ru_short": "дилетантский",
@@ -1988,12 +2038,12 @@
         "sentence_ru": "«Отсутствие автоматического переключения при сбоях — невероятный дилетантизм для компании масштаба Coinbase."
       },
       "audio": {
-        "word": "c0516a18b751ca24.mp3",
-        "sentence": "77495815ae1e0596.mp3",
-        "sentence_slow": "6c126288f9fe5af4.mp3",
+        "word": "7f67116b819f0108.m4a",
+        "sentence": "3cd75f137a551625.m4a",
+        "sentence_slow": "0c4da82397170b25.m4a",
         "examples": [
-          "8b6fdb1826c5c90a.mp3",
-          "018b0906f5cce145.mp3"
+          "22c27c993b52ba8e.m4a",
+          "56f80556890988fa.m4a"
         ]
       }
     }

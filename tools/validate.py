@@ -12,13 +12,14 @@ import hashlib, json, pathlib, re, sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
 from schema_check import check  # noqa: E402
+import build  # noqa: E402
 
 DATE = "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
 STR = {"type": "string"}
 NESTR = {"type": "string", "minLength": 1}
 STR_LIST = {"type": "array", "items": NESTR}
 SHA = {"type": "string", "pattern": "^[0-9a-f]{16}$"}
-MP3 = {"type": "string", "pattern": "^[0-9a-f]{16}\\.mp3$"}
+AUDIO = {"type": "string", "pattern": "^[0-9a-f]{16}\\" + build.AUDIO_EXT + "$"}
 ENCOUNTER = {"type": "object", "required": ["lesson", "date", "sense", "sentence"],
              "properties": {"lesson": NESTR, "date": {"type": "string", "pattern": DATE}, "sense": NESTR, "sentence": NESTR}}
 
@@ -54,8 +55,8 @@ LESSON = {
                 "level": {"type": "integer", "minimum": 1}, "encounter_no": {"type": "integer", "minimum": 1},
                 "content": {"$ref": "#/$defs/content"},
                 "audio": {"type": "object", "required": ["word", "sentence", "sentence_slow", "examples"],
-                          "properties": {"word": MP3, "sentence": MP3, "sentence_slow": MP3,
-                                         "examples": {"type": "array", "items": MP3}}},
+                          "properties": {"word": AUDIO, "sentence": AUDIO, "sentence_slow": AUDIO,
+                                         "examples": {"type": "array", "items": AUDIO}}},
                 "text_original": NESTR, "sentence_original": NESTR,
                 "history": {"type": "array", "minItems": 1, "items": ENCOUNTER},
             },
@@ -219,6 +220,29 @@ def validate(data):
             err("manifest: sha vocab.json не совпадает — запустите tools/manifest.py")
     if not (data / "audio").is_dir():
         err("нет папки data/audio/")
+    else:
+        referenced = set()
+        for lid, L in lessons.items():
+            try:
+                jobs = list(build.audio_jobs(L))
+            except (KeyError, TypeError):
+                continue  # structure errors are reported above
+            for f, text, rate in jobs:
+                referenced.add(f)
+                if build.audio_key(text, rate) != f:
+                    err(f"lessons/{lid}.json: аудио {f} не соответствует тексту/голосу {build.VOICE} — запустите tools/rebuild.py")
+            status = L.get("build", {}).get("audio_status")
+            actual = build.audio_status(L, data / "audio")
+            if status != actual:
+                err(f"lessons/{lid}.json: audio_status {status!r}, по файлам {actual!r} — запустите tools/tts.py")
+            missing = [f for f, _, _ in jobs if not (data / "audio" / f).is_file()]
+            if status == "ready" and missing:
+                err(f"lessons/{lid}.json: audio_status ready, но нет файлов: {missing[:3]}…")
+            elif missing:
+                warnings.append(f"lessons/{lid}.json: нет {len(missing)} аудиофайлов — запустите tools/tts.py")
+        orphans = [f.name for f in (data / "audio").iterdir() if f.name != ".gitkeep" and f.name not in referenced]
+        if orphans:
+            warnings.append(f"data/audio: {len(orphans)} файлов без ссылок (tools/tts.py удалит их)")
 
     # inputs not built yet
     if data.resolve() == (ROOT / "data").resolve():

@@ -3,7 +3,7 @@ name: wordtrail-lesson
 description: >-
   Агент контента WordTrail: превращает words.json из редактора в урок — Claude сам пишет
   agent/content/<id>.content.json (переводы в контексте, IPA, CEFR, примеры, заметки, ARPAbet для
-  тренажёра произношения, углубление для повторов), затем tools/build.py, manifest.py, validate.py.
+  тренажёра произношения, углубление для повторов), затем tools/phonemes.py, build.py, tts.py, manifest.py, validate.py.
   WordTrail content agent: turns an editor words.json into a lesson by hand-writing content.json, then
   builds, validates and proposes a commit. Триггеры / triggers: "новый урок", "собери урок",
   "обработай words.json", "добавь урок", "подготовь контент", "add lesson", "build lesson",
@@ -90,12 +90,16 @@ python3 -c "import json,sys; v=json.load(open('data/vocab.json')); [print(l, v[l
 
 Для каждого нового элемента добавь `phonemes` — ARPAbet в стиле CMUdict (американский), для `text` в том виде, как он показывается (после `text_fixed`):
 - фонемы через пробел, у каждой гласной цифра ударения: 1 — основное, 2 — побочное, 0 — без ударения (`resilient` → `R IH0 Z IH1 L Y AH0 N T`);
-- несколько слов (фраза, слово через дефис) — слова разделяются ` | ` (`spin up` → `S P IH1 N | AH1 P`, `longest-tenured` → `L AO1 NG G AH0 S T | T EH1 N Y ER0 D`);
+- несколько слов (фраза, слово через дефис) — слова разделяются ` | ` (`spin up` → `S P IH1 N | AH1 P`, `longest-tenured` → `L AO1 NG G IH0 S T | T EH1 N Y ER0 D`);
 - бери произношение из CMUdict, для словоформ достраивай окончания: -s → S/Z/IH0 Z, -ed → T/D/IH0 D, -ing → IH0 NG;
 - должно соответствовать `ipa` (то же ударение, тот же вариант произношения);
 - допустимые символы: AA AE AH AO AW AY EH ER EY IH IY OW OY UH UW (+0/1/2), B CH D DH F G HH JH K L M N NG P R S SH T TH V W Y Z ZH и `|`. Схема проверяет формат.
 
-Старые уроки не дополняй, если пользователь не попросил. build.py передаёт `phonemes` в `items[].content` как есть.
+Заполнять вручную не нужно: после записи content.json запусти `python3 tools/phonemes.py agent/content/<id>.content.json` — он берёт CMUdict (скачивается в `tools/cache/`) и `tools/phonemes_manual.json` и вписывает `phonemes` после `ipa`, сохраняя форматирование файла. Затем:
+- слова, которых нет в CMUdict (`missing: …`, код выхода 1), допиши сам — в `tools/phonemes_manual.json` (ключ — текст элемента в нижнем регистре), если слово может встретиться снова, или прямо в content.json;
+- сверь каждое значение с `ipa`: CMUdict даёт одно (первое) произношение и часто полные гласные вместо редуцированных (`AH0` вместо `IH0`), ударение существительного вместо глагола (`reuse`). Если расходится — исправь (`phonemes.py` не перезаписывает существующие значения без `--force`).
+
+build.py передаёт `phonemes` в `items[].content` как есть. Все уже собранные уроки содержат phonemes.
 
 ### Углубление для повторов (уровень = номер встречи)
 
@@ -104,9 +108,10 @@ build.py сейчас использует только поля уровня 1;
 - **уровень 3**: всё из уровня 2 + `synonyms` (`[{"word": "robust", "note_ru": "чем отличается"}]`, 2–4 шт.), `register_ru` (нейтральное/книжное/разговорное/техническое), `mistakes_ru` (типичные ошибки русскоговорящих: предлог, ложный друг, произношение). 3 примера.
 - **уровень 4+**: всё из уровня 3 + `story` (`{"en": "…", "ru": "…"}`, 3–5 предложений с этим словом и 2–4 другими словами из vocab.json, лучше тоже повторами).
 
-## 4. Сборка и проверка
+## 4. Сборка, озвучка и проверка
 
 ```bash
+python3 tools/phonemes.py agent/content/<id>.content.json   # см. «Произношение» выше
 python3 tools/build.py lessons/<id>.json     # content: agent/content/<id>.content.json, data: data/
 ```
 - Выход 0 и `problems: нет` — дальше. Выход 1 — ничего не записано: исправь content.json и запусти снова (не используй `--force`, если пользователь не попросил). Типичные проблемы: ключ `items` не совпадает с `text` (апострофы!), слова нет в `display`, пример без формы слова, пустой `sentence_ru` (нет `s` или `ru`), ошибка схемы.
@@ -115,10 +120,12 @@ python3 tools/build.py lessons/<id>.json     # content: agent/content/<id>.conte
 
 Затем:
 ```bash
+python3 tools/tts.py         # озвучка macOS `say` (голос Samantha) → data/audio/<hash>.m4a; уже готовые файлы не трогает
 python3 tools/manifest.py
 python3 tools/validate.py
 ```
-validate должен закончиться `OK`. Если правил контент — снова build → manifest → validate.
+- `tts.py` синтезирует слово, предложение (1× и медленно) и примеры, удаляет файлы, на которые больше нет ссылок, и пересчитывает `build.audio_status` (`ready` — все файлы есть). Около 1 с на файл; нужен macOS. Не на маке — пропусти шаг, урок соберётся со статусом `pending`, приложение прочитает его системным голосом.
+- validate должен закончиться `OK`. Если правил контент — снова build → tts → manifest → validate.
 
 ## 5. Итог и коммит
 
@@ -130,7 +137,7 @@ validate должен закончиться `OK`. Если правил кон�
 
 Предложи команды, но **не пушь без явного подтверждения пользователя**:
 ```bash
-git add lessons/<id>.json agent/content/<id>.content.json data/
+git add lessons/<id>.json agent/content/<id>.content.json tools/phonemes_manual.json data/
 git commit -m "Lesson <id>"
 git push
 ```

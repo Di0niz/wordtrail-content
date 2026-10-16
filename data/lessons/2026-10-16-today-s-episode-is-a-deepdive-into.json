@@ -13,7 +13,7 @@
   "build": {
     "prompt_version": "level1-v1",
     "model": "claude-opus-5-5",
-    "audio_status": "pending"
+    "audio_status": "ready"
   },
   "items": [
     {
@@ -27,7 +27,8 @@
       "encounter_no": 1,
       "content": {
         "pos": "adjective",
-        "ipa": "/ˈlɔːŋɡɪst ˈtɛnjərd/",
+        "ipa": "/ˈlɔːŋɡɪst ˈtenjərd/",
+        "phonemes": "L AO1 NG G IH0 S T | T EH1 N Y ER0 D",
         "cefr": "C1",
         "ru": "проработавший дольше всех",
         "ru_short": "самый давний (по стажу)",
@@ -46,12 +47,12 @@
         ]
       },
       "audio": {
-        "word": "21588403b707a4b1.mp3",
-        "sentence": "f277efdc7f571a37.mp3",
-        "sentence_slow": "7e4aa8b0c39b08e7.mp3",
+        "word": "3c793ff0dd926977.m4a",
+        "sentence": "2b098c891384a0a3.m4a",
+        "sentence_slow": "a22172e098a44a70.m4a",
         "examples": [
-          "0868dd2722dfce8a.mp3",
-          "560e40f0e8a6cba3.mp3"
+          "78d1beb86cccf470.m4a",
+          "090602e5042af8de.m4a"
         ]
       }
     },
@@ -67,6 +68,7 @@
       "content": {
         "pos": "adverb",
         "ipa": "/ɪˈrætɪkli/",
+        "phonemes": "IH0 R AE1 T IH0 K L IY0",
         "cefr": "C1",
         "ru": "скачкообразно, непредсказуемо",
         "ru_short": "непредсказуемо, скачками",
@@ -85,12 +87,12 @@
         ]
       },
       "audio": {
-        "word": "360a68b449fa87ef.mp3",
-        "sentence": "838cdd33906332af.mp3",
-        "sentence_slow": "582cd58e9558d2db.mp3",
+        "word": "45d3edf3642deacd.m4a",
+        "sentence": "ce809d9e7e442da5.m4a",
+        "sentence_slow": "aa7f1c5e41bcb9e5.m4a",
         "examples": [
-          "f6c598ca4dc2e31b.mp3",
-          "ed9247841331dd31.mp3"
+          "98a6ad1a0e2a104c.m4a",
+          "bb8e1cce992b7090.m4a"
         ]
       }
     },
@@ -106,6 +108,7 @@
       "content": {
         "pos": "verb",
         "ipa": "/ɪˈmɪtɪŋ/",
+        "phonemes": "IH0 M IH1 T IH0 NG",
         "cefr": "B2",
         "ru": "отправлять, генерировать (метрики)",
         "ru_short": "отправлять, выдавать",
@@ -124,12 +127,12 @@
         ]
       },
       "audio": {
-        "word": "e81ce45c41c36173.mp3",
-        "sentence": "a12ea96efa436d06.mp3",
-        "sentence_slow": "1c1484a92788df37.mp3",
+        "word": "b8c99f6aa862c947.m4a",
+        "sentence": "1412c3cdb8e708a6.m4a",
+        "sentence_slow": "14dfcb2755dd1202.m4a",
         "examples": [
-          "96e2cd9d8882aa80.mp3",
-          "ca2d992790727702.mp3"
+          "f3cb22431fe24209.m4a",
+          "9ad9c73dfb773ca2.m4a"
         ]
       }
     },
@@ -145,6 +148,7 @@
       "content": {
         "pos": "noun",
         "ipa": "/ˈswɪtʃbæk/",
+        "phonemes": "S W IH1 CH B AE2 K",
         "cefr": "C1",
         "ru": "switchback-тест: эксперимент, где режимы чередуются по времени",
         "ru_short": "чередование по времени; серпантин",
@@ -163,12 +167,12 @@
         ]
       },
       "audio": {
-        "word": "c446692effd12655.mp3",
-        "sentence": "9297396c434667ba.mp3",
-        "sentence_slow": "dac4ce803fa18ab2.mp3",
+        "word": "681a5368aa395af7.m4a",
+        "sentence": "2f207f086162a525.m4a",
+        "sentence_slow": "bf332c852e702c73.m4a",
         "examples": [
-          "9a82393ebbb9a04a.mp3",
-          "9580c38534512cb1.mp3"
+          "7e2802979ec96c46.m4a",
+          "fc95292567b6a18f.m4a"
         ]
       }
     },
@@ -184,6 +188,7 @@
       "content": {
         "pos": "noun",
         "ipa": "/ˈhɑːrnɪsɪz/",
+        "phonemes": "HH AA1 R N IH0 S IH0 Z",
         "cefr": "C1",
         "ru": "среда запуска AI-агента",
         "ru_short": "обвязка, среда запуска",
@@ -202,12 +207,12 @@
         ]
       },
       "audio": {
-        "word": "cb97cd4f0669dac9.mp3",
-        "sentence": "3e5effded45051cd.mp3",
-        "sentence_slow": "ac788668c641fae6.mp3",
+        "word": "954adbd1ee3dcc8b.m4a",
+        "sentence": "3a9df690e1cee737.m4a",
+        "sentence_slow": "7055f7c2d030649e.m4a",
         "examples": [
-          "dea474becf3d8a7c.mp3",
-          "53f3321bc1faa507.mp3"
+          "71325eaa465a2528.m4a",
+          "64e8197579d56499.m4a"
         ]
       }
     },
@@ -223,6 +228,7 @@
       "content": {
         "pos": "adjective",
         "ipa": "/ˈleɪzər ˈfoʊkəst/",
+        "phonemes": "L EY1 Z ER0 | F OW1 K AH0 S T",
         "cefr": "B2",
         "ru": "предельно сосредоточенный",
         "ru_short": "полностью сосредоточенный",
@@ -241,12 +247,12 @@
         ]
       },
       "audio": {
-        "word": "128a185e9a223265.mp3",
-        "sentence": "75d73957fe952fc9.mp3",
-        "sentence_slow": "0c592a321905e350.mp3",
+        "word": "d24db9b12b088a67.m4a",
+        "sentence": "535b7f4a8473bbbb.m4a",
+        "sentence_slow": "2a2c49bd3f99e063.m4a",
         "examples": [
-          "0be8ab92aa63d1ae.mp3",
-          "ee2ea9f74f8e4a45.mp3"
+          "4983888c4cec9f8f.m4a",
+          "e264435b2fec6291.m4a"
         ]
       }
     },
@@ -262,6 +268,7 @@
       "content": {
         "pos": "adverb",
         "ipa": "/ˈkɑːnstəntli/",
+        "phonemes": "K AA1 N S T AH0 N T L IY0",
         "cefr": "B1",
         "ru": "постоянно, всё время",
         "ru_short": "постоянно",
@@ -280,12 +287,12 @@
         ]
       },
       "audio": {
-        "word": "200bfec51b5802f6.mp3",
-        "sentence": "dc8006ad6b5b342e.mp3",
-        "sentence_slow": "cc697dff28e30b8f.mp3",
+        "word": "17c222c9c8bbb206.m4a",
+        "sentence": "4e0235775570c210.m4a",
+        "sentence_slow": "1b1b2990f60aa7aa.m4a",
         "examples": [
-          "fed14b4f936efab5.mp3",
-          "eeb4986c8e405df8.mp3"
+          "2de991b38655c56e.m4a",
+          "b254d539309ac898.m4a"
         ]
       }
     },
@@ -301,6 +308,7 @@
       "content": {
         "pos": "phrasal verb",
         "ipa": "/pɪk/",
+        "phonemes": "P IH1 K",
         "cefr": "B1",
         "ru": "замечать, вылавливать",
         "ru_short": "вылавливать, замечать",
@@ -320,12 +328,12 @@
         ]
       },
       "audio": {
-        "word": "e439127e228a3b0a.mp3",
-        "sentence": "21af7e421a56f751.mp3",
-        "sentence_slow": "1ebbcb2238bd7b93.mp3",
+        "word": "c6b4b16ec3832957.m4a",
+        "sentence": "9045782f25307ca8.m4a",
+        "sentence_slow": "fec2501f3764dbf4.m4a",
         "examples": [
-          "c4bfd3ee15ab250a.mp3",
-          "5a7931160ad31e43.mp3"
+          "cfa4a6a21c784a74.m4a",
+          "3bbd638fd15b5f0b.m4a"
         ]
       }
     },
@@ -340,7 +348,8 @@
       "encounter_no": 1,
       "content": {
         "pos": "noun",
-        "ipa": "/rɪˈɡrɛʃənz/",
+        "ipa": "/rɪˈɡreʃənz/",
+        "phonemes": "R IH0 G R EH1 SH AH0 N Z",
         "cefr": "B2",
         "ru": "регрессия: поломка того, что раньше работало",
         "ru_short": "регрессия, новая поломка",
@@ -359,12 +368,12 @@
         ]
       },
       "audio": {
-        "word": "63a09cfd48bfee21.mp3",
-        "sentence": "21af7e421a56f751.mp3",
-        "sentence_slow": "1ebbcb2238bd7b93.mp3",
+        "word": "6098587af5d0cfd7.m4a",
+        "sentence": "9045782f25307ca8.m4a",
+        "sentence_slow": "fec2501f3764dbf4.m4a",
         "examples": [
-          "d847c7c86e1158e4.mp3",
-          "85932be9776440b8.mp3"
+          "558515f7ad92b6cd.m4a",
+          "d322871d794fd25f.m4a"
         ]
       }
     },
@@ -380,6 +389,7 @@
       "content": {
         "pos": "adverb",
         "ipa": "/ˈsiːmɪŋli/",
+        "phonemes": "S IY1 M IH0 NG L IY0",
         "cefr": "B2",
         "ru": "казалось бы, на первый взгляд",
         "ru_short": "на первый взгляд",
@@ -398,12 +408,12 @@
         ]
       },
       "audio": {
-        "word": "b937677eb3a71d09.mp3",
-        "sentence": "74f1a7b764c9a8f4.mp3",
-        "sentence_slow": "41904bb277f41848.mp3",
+        "word": "f1d078dd6bb945fb.m4a",
+        "sentence": "6552906c413006cf.m4a",
+        "sentence_slow": "f0d76615430d482c.m4a",
         "examples": [
-          "5fc0c8a45d736e5c.mp3",
-          "f9bf828be9cced98.mp3"
+          "329ed96988f80056.m4a",
+          "3a1c9bead9f1eacb.m4a"
         ]
       }
     },
@@ -419,6 +429,7 @@
       "content": {
         "pos": "noun",
         "ipa": "/ˈmɪnjən/",
+        "phonemes": "M IH1 N Y AH0 N",
         "cefr": "C1",
         "ru": "здесь: название внутреннего инструмента Uber",
         "ru_short": "приспешник, подручный",
@@ -438,12 +449,12 @@
         ]
       },
       "audio": {
-        "word": "d655cd389332e97e.mp3",
-        "sentence": "62c7be2b3fdc3e46.mp3",
-        "sentence_slow": "8e62505b42696157.mp3",
+        "word": "a5969ad0ec4572f0.m4a",
+        "sentence": "6015e7c8565bd8eb.m4a",
+        "sentence_slow": "9b8012dcd066713f.m4a",
         "examples": [
-          "53e009604556e7d3.mp3",
-          "b00f8de4ec159504.mp3"
+          "08cb793f69a768cf.m4a",
+          "57736e2a2655e65f.m4a"
         ]
       }
     },
@@ -458,7 +469,8 @@
       "encounter_no": 1,
       "content": {
         "pos": "noun",
-        "ipa": "/ˈmɛnʃənz/",
+        "ipa": "/ˈmenʃənz/",
+        "phonemes": "M EH1 N SH AH0 N Z",
         "cefr": "B1",
         "ru": "упоминания",
         "ru_short": "упоминания",
@@ -478,12 +490,12 @@
         ]
       },
       "audio": {
-        "word": "32a1c0bb36e267d8.mp3",
-        "sentence": "6d43b8f4c7ae4cac.mp3",
-        "sentence_slow": "733a210b2a9387a4.mp3",
+        "word": "47a477f4c51b96ad.m4a",
+        "sentence": "c406bafdf374717c.m4a",
+        "sentence_slow": "e47824ee13664fee.m4a",
         "examples": [
-          "afd618de3bf9b4c3.mp3",
-          "97f7435df6a781eb.mp3"
+          "3a66149beb25dcc6.m4a",
+          "cae5162f0a29c43d.m4a"
         ]
       }
     }

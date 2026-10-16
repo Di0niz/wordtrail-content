@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-10-16T21:09:19Z",
+  "generated_at": "2026-10-16T21:32:58Z",
   "lessons": [
     {
       "id": "2026-10-16-today-s-episode-is-a-deepdive-into",
@@ -12,8 +12,8 @@
       "new": 12,
       "repeats": 0,
       "path": "lessons/2026-10-16-today-s-episode-is-a-deepdive-into.json",
-      "sha": "27af7a9d2c2a849a",
-      "audio_status": "pending"
+      "sha": "5fd11210ff5baacf",
+      "audio_status": "ready"
     },
     {
       "id": "2026-10-16-building-resilient-ai-powered-software",
@@ -25,8 +25,8 @@
       "new": 50,
       "repeats": 0,
       "path": "lessons/2026-10-16-building-resilient-ai-powered-software.json",
-      "sha": "64f79e8e3fd6ad47",
-      "audio_status": "pending"
+      "sha": "0c3b26e9f122abb5",
+      "audio_status": "ready"
     }
   ],
   "vocab": {

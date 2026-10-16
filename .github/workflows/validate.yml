@@ -1,0 +1,23 @@
+name: validate
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate data/
+        run: python3 tools/validate.py
+      - name: Every item has phonemes
+        run: python3 tools/phonemes.py --check
+      - name: data/ is reproducible from lessons/ + agent/content/
+        run: |
+          python3 tools/rebuild.py --no-tts
+          git status --short
+          git diff --exit-code -- data ':!data/audio'

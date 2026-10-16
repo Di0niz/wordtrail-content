@@ -18,7 +18,10 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
 from schema_check import check  # noqa: E402
 
-VOICE = "en-US-neural-1"
+# Audio is synthesized by tools/tts.py (macOS `say` → AAC .m4a). The voice id is part of
+# the file-name hash, so changing the voice yields new files instead of stale ones.
+VOICE = "say:Samantha"
+AUDIO_EXT = ".m4a"
 PROMPT_VERSION = "level1-v1"
 MODEL = "claude-opus-5-5"
 
@@ -29,7 +32,40 @@ def dump(obj):
 
 
 def audio_key(text, rate):
-    return hashlib.sha1(f"{text}|{VOICE}|{rate}".encode()).hexdigest()[:16] + ".mp3"
+    return hashlib.sha1(f"{text}|{VOICE}|{rate}".encode()).hexdigest()[:16] + AUDIO_EXT
+
+
+def audio_jobs(lesson):
+    """(file, text, rate) for every audio file a lesson references."""
+    for x in lesson["items"]:
+        a = x["audio"]
+        yield a["word"], x["text"], 1.0
+        yield a["sentence"], x["sentence"], 1.0
+        yield a["sentence_slow"], x["sentence"], 0.75
+        for f, ex in zip(a["examples"], x["content"]["examples"]):
+            yield f, ex["en"], 1.0
+
+
+def audio_status(lesson, audio_dir):
+    """ready = every referenced file exists, partial = some, pending = none."""
+    files = {f for f, _, _ in audio_jobs(lesson)}
+    have = sum(1 for f in files if (pathlib.Path(audio_dir) / f).is_file())
+    return "ready" if files and have == len(files) else "partial" if have else "pending"
+
+
+def refresh_audio_status(data_dir=None, audio_dir=None):
+    """Recompute build.audio_status of every lesson in data_dir from files on disk."""
+    data_dir = pathlib.Path(data_dir) if data_dir else ROOT / "data"
+    audio_dir = pathlib.Path(audio_dir) if audio_dir else data_dir / "audio"
+    out = {}
+    for p in sorted((data_dir / "lessons").glob("*.json")):
+        L = json.loads(p.read_text())
+        st = audio_status(L, audio_dir)
+        if L["build"].get("audio_status") != st:
+            L["build"]["audio_status"] = st
+            p.write_text(dump(L))
+        out[L["id"]] = st
+    return out
 
 
 def forms(word, lemma):
@@ -40,12 +76,14 @@ def forms(word, lemma):
     return out
 
 
-def build(src_path, content_path=None, out_dir=None, force=False, quiet=False):
+def build(src_path, content_path=None, out_dir=None, force=False, quiet=False, audio_dir=None):
     """Build one lesson. Returns the list of problems (empty = ok)."""
     src_path = pathlib.Path(src_path)
     src = json.loads(src_path.read_text())
     content_path = pathlib.Path(content_path) if content_path else ROOT / "agent" / "content" / f"{src['id']}.content.json"
     out_dir = pathlib.Path(out_dir) if out_dir else ROOT / "data"
+    if audio_dir is None:  # rebuild.py builds into a temp dir; audio always lives in data/audio
+        audio_dir = out_dir / "audio" if (out_dir / "audio").is_dir() else ROOT / "data" / "audio"
     if not content_path.exists():
         raise FileNotFoundError(f"нет контента {content_path} — сначала его должен написать агент")
     content = json.loads(content_path.read_text())
@@ -152,6 +190,7 @@ def build(src_path, content_path=None, out_dir=None, force=False, quiet=False):
               "day": {"index": day["lessons"].index(src["id"]) + 1, "total": len(day["lessons"])},
               "build": {"prompt_version": PROMPT_VERSION, "model": MODEL, "audio_status": "pending"},
               "items": items}
+    lesson["build"]["audio_status"] = audio_status(lesson, audio_dir)
 
     lessons_dir = out_dir / "lessons"
     lessons_dir.mkdir(parents=True, exist_ok=True)
