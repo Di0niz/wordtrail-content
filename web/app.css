@@ -2,7 +2,7 @@
 :root {
   --bg: #F7F7F4; --surface: #FFFFFF; --surface-2: #F1F1EC; --text: #17181B; --text-muted: #6A6F77;
   --line: #E7E8E4; --line-strong: #D3D4CE; --hover: rgba(28,28,30,.06);
-  --accent: #326BE6; --accent-soft: rgba(50,107,230,.14); --accent-wash: #EBF1FF; --on-accent: #FFFFFF;
+  --accent: #326BE6; --accent-soft: rgba(50,107,230,.14); --accent-wash: #EBF1FF; --on-accent: #FFFFFF; --accent-fill: #326BE6;
   --repeat: #A66A1C; --repeat-soft: rgba(166,106,28,.14); --repeat-ink: #8A5200;
   --good: #21865B; --good-soft: rgba(33,134,91,.12); --bad: #C23B3B; --bad-soft: rgba(194,59,59,.09);
   --toast-bg: #1C1C1E; --toast-fg: #F4F4F0;
@@ -17,7 +17,7 @@
   :root:not([data-theme="light"]) {
     --bg: #111316; --surface: #1C2025; --surface-2: #262B32; --text: #F4F4F2; --text-muted: #A8ADB4;
     --line: #2B3037; --line-strong: #3A4049; --hover: rgba(255,255,255,.07);
-    --accent: #84AAFF; --accent-soft: rgba(132,170,255,.20); --accent-wash: #1D2940; --on-accent: #0E1320;
+    --accent: #84AAFF; --accent-soft: rgba(132,170,255,.20); --accent-wash: #1D2940; --on-accent: #FFFFFF; --accent-fill: #3B5FB5;
     --repeat: #E8AE5A; --repeat-soft: rgba(232,174,90,.18); --repeat-ink: #E8AE5A;
     --good: #5CC48C; --good-soft: rgba(92,196,140,.14); --bad: #FF7A7A; --bad-soft: rgba(255,122,122,.12);
     --toast-bg: #F4F4F2; --toast-fg: #111316; --heat-0: #262B32; color-scheme: dark;
@@ -26,7 +26,7 @@
 :root[data-theme="dark"] {
   --bg: #111316; --surface: #1C2025; --surface-2: #262B32; --text: #F4F4F2; --text-muted: #A8ADB4;
   --line: #2B3037; --line-strong: #3A4049; --hover: rgba(255,255,255,.07);
-  --accent: #84AAFF; --accent-soft: rgba(132,170,255,.20); --accent-wash: #1D2940; --on-accent: #0E1320;
+  --accent: #84AAFF; --accent-soft: rgba(132,170,255,.20); --accent-wash: #1D2940; --on-accent: #FFFFFF; --accent-fill: #3B5FB5;
   --repeat: #E8AE5A; --repeat-soft: rgba(232,174,90,.18); --repeat-ink: #E8AE5A;
   --good: #5CC48C; --good-soft: rgba(92,196,140,.14); --bad: #FF7A7A; --bad-soft: rgba(255,122,122,.12);
   --toast-bg: #F4F4F2; --toast-fg: #111316; --heat-0: #262B32; color-scheme: dark;
@@ -66,8 +66,8 @@ a { color: inherit; }
 /* Common */
 .btn { min-height: 38px; padding: 0 16px; border-radius: 9px; border: 1px solid var(--line-strong); background: var(--surface); font-weight: 500; display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; white-space: nowrap; }
 .btn:hover { background: var(--surface-2); }
-.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); font-weight: 600; }
-.btn.primary:hover { filter: brightness(1.05); background: var(--accent); }
+.btn.primary { background: var(--accent-fill); border-color: var(--accent-fill); color: var(--on-accent); font-weight: 600; }
+.btn.primary:hover { filter: brightness(1.05); background: var(--accent-fill); }
 .btn.danger { color: var(--bad); border-color: color-mix(in srgb, var(--bad) 40%, var(--line-strong)); }
 .btn:disabled { opacity: .45; cursor: not-allowed; }
 .btn.ghost { border-color: transparent; background: none; color: var(--text-muted); }
@@ -302,7 +302,7 @@ kbd.k { font-family: var(--font-mono); font-size: 11.5px; border: 1px solid var(
 .search { width: 100%; height: 44px; padding: 0 14px; border-radius: 10px; border: 1px solid var(--line-strong); background: var(--surface); font-size: 15px; }
 .filters { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
 .filters button { border: 1px solid var(--line-strong); background: var(--surface); border-radius: 16px; padding: 5px 12px; font-size: 13px; font-weight: 500; color: var(--text-muted); }
-.filters button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.filters button[aria-pressed="true"] { background: var(--accent-fill); border-color: var(--accent-fill); color: var(--on-accent); }
 .filters select { margin-left: auto; height: 32px; border-radius: 8px; border: 1px solid var(--line-strong); background: var(--surface); padding: 0 8px; }
 .dict { list-style: none; margin: 0; padding: 0; }
 .dict li a { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 14px; padding: 12px 16px; border-top: 1px solid var(--line); text-decoration: none; }

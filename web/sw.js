@@ -1,6 +1,6 @@
 // WordTrail web service worker: offline shell, lesson data by sha, audio on demand.
 // Bump VERSION whenever a shell file changes — the page then offers «Обновить».
-const VERSION = "web-1.1.0";
+const VERSION = "web-1.1.1";
 const SHELL_CACHE = `wt-shell-${VERSION}`;
 const DATA_CACHE = "wt-data";
 const AUDIO_CACHE = "wt-audio";
