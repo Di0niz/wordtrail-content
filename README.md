@@ -10,7 +10,7 @@
 README.md
 .nojekyll                       GitHub Pages отдаёт файлы как есть
 lessons/<id>.json               words.json из редактора — вход агента
-agent/content/<id>.content.json контент агента: переводы, IPA, CEFR, примеры, заметки, phonemes
+agent/content/<id>.content.json контент агента: переводы, IPA, CEFR, примеры, заметки, phonemes, sentence_pron
 schemas/
   words.schema.json             формат words.json (JSON Schema 2020-12)
   content.schema.json           формат content.json, включая необязательные поля и поля уровней 2–4+
@@ -18,6 +18,11 @@ schemas/
 tools/
   phonemes.py                   phonemes (ARPAbet) в content.json из CMUdict + phonemes_manual.json
   phonemes_manual.json          произношения, написанные агентом (нет в CMUdict или сверены с IPA)
+  sentence_pron.py              sentence_pron предложения: фонемы с вариантами, отрезки, интонация (свой venv, не в CI)
+  sentence_pron/                requirements.txt (закреплённые версии), overrides.json (решения агента), .venv/ (не коммитится)
+  sentence_pron_check.py        проверка sentence_pron без зависимостей (её зовёт validate.py)
+  weak_forms.json, arpabet_zipa.json  слабые формы служебных слов со штрафами и соответствие ARPAbet ↔ фонемы ZIPA —
+                                копии из tools/pronunciation-model/g2p_eval/ репозитория приложения (там источник и замер)
   build.py                      words.json + content.json → data/lessons/<id>.json, vocab.json, days.json
   tts.py                        озвучка macOS `say` → data/audio/<hash>.m4a, audio_status
   manifest.py                   data/manifest.json (точка входа приложения)
@@ -25,7 +30,7 @@ tools/
   validate.py                   проверить data/ так, как его ожидает приложение (+ эталон токенизатора)
   tokenizer.py                  общий токенизатор слов (смещения в кодовых точках); --check — прогнать эталон
   schema_check.py, content_io.py  мини-валидатор JSON Schema; чтение/запись content.json без переформатирования
-  cache/                        CMUdict (скачивается, не коммитится)
+  cache/                        CMUdict, словарь MFA (скачиваются, не коммитятся)
 data/                           генерируется скриптами, коммитится
   manifest.json                 список уроков с sha, ссылка на vocab
   days.json                     дата → id уроков, число слов
@@ -37,7 +42,7 @@ editor/index.html               редактор: разметка текста 
 .github/workflows/validate.yml  CI: validate + rebuild --no-tts не даёт диффа
 ```
 
-Всё на Python 3 без зависимостей, запускать из корня репозитория.
+Всё на Python 3 без зависимостей, кроме `tools/sentence_pron.py` (свой venv, см. ниже); запускать из корня репозитория.
 
 ## Как добавить урок
 
@@ -46,6 +51,7 @@ editor/index.html               редактор: разметка текста 
 3. В Claude Code в этом репозитории: «новый урок» / «собери урок» (скилл `wordtrail-lesson`). Claude напишет `agent/content/<id>.content.json` и запустит:
    ```bash
    python3 tools/phonemes.py agent/content/<id>.content.json
+   tools/sentence_pron/.venv/bin/python tools/sentence_pron.py agent/content/<id>.content.json
    python3 tools/build.py lessons/<id>.json   # проблемы → код выхода 1, ничего не пишется (--force — записать всё равно)
    python3 tools/tts.py                       # только macOS; без него audio_status: pending
    python3 tools/manifest.py
@@ -99,6 +105,27 @@ editor/index.html               редактор: разметка текста 
 ## Произношение: phonemes
 
 Для тренажёра произношения у каждого элемента есть `content.phonemes` — ARPAbet в стиле CMUdict (американский, цифры ударения, слова фразы через ` | `). Источник — [CMUdict](https://github.com/cmusphinx/cmudict) (© Carnegie Mellon University, лицензия BSD-2-Clause) и `tools/phonemes_manual.json` (написано агентом: слова вне словаря и значения, сверенные с IPA урока).
+
+## Произношение предложения: sentence_pron
+
+`content.sentence_pron` — ожидаемое произношение и интонация предложения элемента для тренажёра (формат — `docs/stage3-contracts.md` §3, §6 в репозитории приложения; решения — `tools/pronunciation-model/G2P-EVAL.md` там же). Пишет `tools/sentence_pron.py`, проверяет `tools/sentence_pron_check.py` (в составе `validate.py` и CI).
+
+- Слова — `tools/tokenizer.py`; `ph` — первый вариант CMUdict; вне словаря — составное из словарных частей или g2p_en; аббревиатуры — по буквам; числа — как `NumberFormatter.spellOut` (en_US) в приложении («21» → twenty-one), годы 1100–2099 — естественно («2025» → twenty twenty-five, кардинальное чтение — вариант со штрафом 0.3).
+- `alt` — до трёх `{ph, p}`: слабые формы (`tools/weak_forms.json`), другие варианты CMUdict (p 0.5), словарь MFA с вероятностью ≥ 0.1 (p 0.7), espeak-ng en-us (p 0.7). `joins` пустой, DX/Q не используются.
+- Служебные слова по части речи spaCy (`en_core_web_sm`) — вес 0.3; целевое — 1.5. Омографы (read, live, use, close, record, appropriate…) — по части речи; spaCy и NLTK не согласны → `hom: "ambiguous"` и флаг агенту.
+- Отрезки: 1–4 по 4–12 слов (для предложений длиннее 48 слов — до ⌈n/4⌉+3), граница по пунктуации и синтаксису (меньше пересечённых зависимостей), не внутри целевого слова.
+- Интонация: тип по пунктуации и первому слову (wh / общий / tag / альтернативный вопрос, побуждение, утверждение), финальный тон (утверждение, wh, побуждение — понижение; общий вопрос — повышение; tag, двоеточие, нет точки — `tune_ambiguous`), ядро — последнее знаменательное слово, паузы по пунктуации.
+- Ручные решения — `tools/sentence_pron/overrides.json`.
+
+Окружение (один раз, на Mac):
+```bash
+uv venv --python 3.11 tools/sentence_pron/.venv
+uv pip install --python tools/sentence_pron/.venv/bin/python -r tools/sentence_pron/requirements.txt
+brew install espeak-ng                          # GPL, используется только офлайн; в контент попадают данные
+curl -fsSL -o tools/cache/english_us_arpa.dict \
+  https://github.com/MontrealCorpusTools/mfa-models/releases/download/dictionary-english_us_arpa-v3.0.0/english_us_arpa.dict
+```
+Источники: CMUdict (BSD-2-Clause), словарь MFA english_us_arpa v3.0.0 (CC BY 4.0, Montreal Forced Aligner), g2p_en (Apache-2.0), spaCy + en_core_web_sm (MIT), espeak-ng (GPL-3, только офлайн).
 
 ## Ещё не сделано
 

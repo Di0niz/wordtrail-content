@@ -4,7 +4,8 @@ usage: python3 tools/validate.py [data_dir]
 
 Checks manifest.json (format, order, sha of every file, counts), every lesson file
 (required fields and types), vocab.json and days.json, and their mutual consistency.
-Also reports lessons/*.json that are not built yet (warning only) and runs the tokenizer golden file.
+Also checks content.sentence_pron (tools/sentence_pron_check.py: tokenizer offsets, extended ARPAbet,
+chunks, prosody indices), reports lessons/*.json that are not built yet (warning only) and runs the tokenizer golden file.
 Exit code 0 = ok, 1 = errors.
 """
 import hashlib, json, pathlib, re, sys
@@ -14,6 +15,7 @@ sys.path.insert(0, str(ROOT / "tools"))
 from schema_check import check  # noqa: E402
 import build  # noqa: E402
 import tokenizer  # noqa: E402
+import sentence_pron_check  # noqa: E402
 
 DATE = "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
 STR = {"type": "string"}
@@ -149,6 +151,10 @@ def validate(data):
                 err(f"{where}: audio.examples не совпадает с content.examples по числу")
             if str(x.get("text", "")).lower() not in str(x.get("sentence", "")).lower():
                 err(f"{where}: текста '{x.get('text')}' нет в предложении")
+            sp = c.get("sentence_pron")
+            if isinstance(sp, dict) and isinstance(x.get("sentence"), str):
+                for e in sentence_pron_check.check(sp, x["sentence"], tokenizer.words(x["sentence"])):
+                    err(f"{where}: sentence_pron: {e}")
             e = vocab.get(x.get("lemma"))
             if not e:
                 err(f"{where}: лемма '{x.get('lemma')}' отсутствует в vocab.json")

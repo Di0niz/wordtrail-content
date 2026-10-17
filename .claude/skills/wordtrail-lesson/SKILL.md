@@ -3,7 +3,7 @@ name: wordtrail-lesson
 description: >-
   Агент контента WordTrail: превращает words.json из редактора в урок — Claude сам пишет
   agent/content/<id>.content.json (переводы в контексте, IPA, CEFR, примеры, заметки, ARPAbet для
-  тренажёра произношения, углубление для повторов), затем tools/phonemes.py, build.py, tts.py, manifest.py, validate.py.
+  тренажёра произношения, углубление для повторов), затем tools/phonemes.py, sentence_pron.py, build.py, tts.py, manifest.py, validate.py.
   WordTrail content agent: turns an editor words.json into a lesson by hand-writing content.json, then
   builds, validates and proposes a commit. Триггеры / triggers: "новый урок", "собери урок",
   "обработай words.json", "добавь урок", "подготовь контент", "add lesson", "build lesson",
@@ -101,6 +101,23 @@ python3 -c "import json,sys; v=json.load(open('data/vocab.json')); [print(l, v[l
 
 build.py передаёт `phonemes` в `items[].content` как есть. Все уже собранные уроки содержат phonemes.
 
+### Произношение предложения: sentence_pron (фонемы с вариантами, отрезки, интонация)
+
+После `phonemes.py` запусти генератор (свой venv, один раз: `uv venv --python 3.11 tools/sentence_pron/.venv && uv pip install --python tools/sentence_pron/.venv/bin/python -r tools/sentence_pron/requirements.txt`, плюс `brew install espeak-ng`; словарь MFA — см. README):
+```bash
+tools/sentence_pron/.venv/bin/python tools/sentence_pron.py agent/content/<id>.content.json
+```
+Он пишет `sentence_pron` после `phonemes`: слова предложения (`tools/tokenizer.py`), `ph` — первый вариант CMUdict (ZIPA ждёт словарные формы), `alt` — до 3 вариантов со штрафом (слабые формы служебных слов, другие варианты CMUdict/MFA/espeak-ng), `fn`/`wt`/`target`, омографы по части речи, отрезки для чтения (1–4 по 4–12 слов, целевое слово целиком в одном), интонацию (тип предложения, финальный тон, ядерное слово, паузы по пунктуации). Подробности — шапка `tools/sentence_pron.py` и `docs/stage3-contracts.md` в репозитории приложения.
+
+Затем разбери строки `unreviewed:` — это то, в чём генератор не уверен:
+- `OOV:` (g2p_en угадал), `COMPOUND:`, `CAMEL:` — проверь произношение; неверное — исправь в `tools/sentence_pron/overrides.json` → `_words` (`"evals": {"ph": "IH0 V AE1 L Z", "alt": [{"ph": "…", "p": 0.5}]}`), это действует во всех уроках;
+- `ACR:` (аббревиатура по буквам), `NUM:` (числа: годы читаются «twenty twenty-five», кардинальное чтение — вариант) — проверь, что так и читают;
+- `HOM:` — омограф, части речи spaCy и NLTK разошлись: реши по смыслу и запиши `set: {"words[i].ph": "…", "words[i].hom": "checked"}`;
+- `TUNE:` / `Q:declarative` — интонация неоднозначна (tag-вопрос, двоеточие, нет точки): проверь `prosody`;
+- `CHUNK:long` и любые неудачные отрезки («in terms ‖ of», «its entire ‖ annual») — задай `set: {"chunks": [{"from": 0, "to": 7}, …]}`.
+
+Решения записываются в `overrides.json` по ключу `<lesson id>/<текст элемента>`; просмотренные флаги — в `reviewed` того же ключа (тогда они больше не всплывают). Повтор с `--check` должен дать `would change 0`, без `unreviewed:` и `error:`.
+
 ### Углубление для повторов (уровень = номер встречи)
 
 build.py сейчас использует только поля уровня 1; дополнительные поля проходят в `items[].content` без изменений, приложение научится их показывать позже. Поля уровня 1 пиши всегда, плюс:
@@ -112,6 +129,7 @@ build.py сейчас использует только поля уровня 1;
 
 ```bash
 python3 tools/phonemes.py agent/content/<id>.content.json   # см. «Произношение» выше
+tools/sentence_pron/.venv/bin/python tools/sentence_pron.py agent/content/<id>.content.json   # см. «sentence_pron» выше
 python3 tools/build.py lessons/<id>.json     # content: agent/content/<id>.content.json, data: data/
 ```
 - Выход 0 и `problems: нет` — дальше. Выход 1 — ничего не записано: исправь content.json и запусти снова (не используй `--force`, если пользователь не попросил). Типичные проблемы: ключ `items` не совпадает с `text` (апострофы!), слова нет в `display`, пример без формы слова, пустой `sentence_ru` (нет `s` или `ru`), ошибка схемы.

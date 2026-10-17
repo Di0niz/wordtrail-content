@@ -1,0 +1,485 @@
+{
+  "_comment": "Decisions of the content agent after reviewing sentence_pron.py flags. _words: reviewed pronunciations (normalized token → ph/alt), applied everywhere. '<lesson id>/<item text>': set = dotted paths into sentence_pron (e.g. chunks, words[3].ph, prosody.tune), reviewed = flags already checked (hidden on reruns).",
+  "_words": {
+    "evals": {
+      "ph": "IH0 V AE1 L Z",
+      "alt": [
+        {
+          "ph": "IY1 V AE2 L Z",
+          "p": 0.5
+        }
+      ]
+    },
+    "axios": {
+      "ph": "AE1 K S IY0 OW2 S",
+      "alt": [
+        {
+          "ph": "AE1 K S IY0 OW2 Z",
+          "p": 0.5
+        }
+      ]
+    },
+    "kiran": {
+      "ph": "K IH1 R AH0 N",
+      "alt": [
+        {
+          "ph": "K IY1 R AH0 N",
+          "p": 0.5
+        }
+      ]
+    },
+    "stanier": {
+      "ph": "S T AE1 N Y ER0",
+      "alt": [
+        {
+          "ph": "S T AE1 N IY0 ER0",
+          "p": 0.5
+        }
+      ]
+    },
+    "medisetty": {
+      "ph": "M EH2 D IH0 S EH1 T IY0",
+      "alt": [
+        {
+          "ph": "M EH2 D AH0 S EH1 T IY0",
+          "p": 0.5
+        }
+      ]
+    },
+    "leaddev": {
+      "ph": "L IY1 D | D EH1 V"
+    },
+    "terraform": {
+      "ph": "T EH1 R AH0 F AO2 R M"
+    }
+  },
+  "2026-10-16-building-resilient-ai-powered-software/trade-offs": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 7
+        },
+        {
+          "from": 8,
+          "to": 12
+        }
+      ]
+    }
+  },
+  "2026-10-16-building-resilient-ai-powered-software/legislative": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 8
+        },
+        {
+          "from": 9,
+          "to": 16
+        },
+        {
+          "from": 17,
+          "to": 27
+        },
+        {
+          "from": 28,
+          "to": 37
+        }
+      ]
+    },
+    "reviewed": [
+      "ACR:RPO",
+      "ACR:RTO"
+    ]
+  },
+  "2026-10-16-building-resilient-ai-powered-software/failover": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 8
+        },
+        {
+          "from": 9,
+          "to": 20
+        },
+        {
+          "from": 21,
+          "to": 31
+        },
+        {
+          "from": 32,
+          "to": 38
+        }
+      ]
+    }
+  },
+  "2026-10-16-building-resilient-ai-powered-software/reuse": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 9
+        },
+        {
+          "from": 10,
+          "to": 17
+        },
+        {
+          "from": 18,
+          "to": 27
+        },
+        {
+          "from": 28,
+          "to": 38
+        }
+      ]
+    }
+  },
+  "2026-10-16-building-resilient-ai-powered-software/fairly": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 7
+        },
+        {
+          "from": 8,
+          "to": 13
+        }
+      ]
+    },
+    "reviewed": [
+      "TUNE:end':'"
+    ]
+  },
+  "2026-10-16-building-resilient-ai-powered-software/distinguishing": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 12
+        },
+        {
+          "from": 13,
+          "to": 23
+        },
+        {
+          "from": 24,
+          "to": 39
+        },
+        {
+          "from": 40,
+          "to": 53
+        }
+      ]
+    },
+    "reviewed": [
+      "ACR:RTO",
+      "CHUNK:long"
+    ]
+  },
+  "2026-10-16-building-resilient-ai-powered-software/bleeding": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 10
+        },
+        {
+          "from": 11,
+          "to": 21
+        },
+        {
+          "from": 22,
+          "to": 38
+        },
+        {
+          "from": 39,
+          "to": 56
+        }
+      ]
+    },
+    "reviewed": [
+      "CHUNK:long"
+    ]
+  },
+  "2026-10-16-building-resilient-ai-powered-software/wholly": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 3
+        },
+        {
+          "from": 4,
+          "to": 9
+        },
+        {
+          "from": 10,
+          "to": 16
+        }
+      ]
+    },
+    "reviewed": [
+      "ACR:AI"
+    ]
+  },
+  "2026-10-16-building-resilient-ai-powered-software/shaming": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 11
+        },
+        {
+          "from": 12,
+          "to": 21
+        },
+        {
+          "from": 22,
+          "to": 31
+        },
+        {
+          "from": 32,
+          "to": 41
+        }
+      ]
+    }
+  },
+  "2026-10-16-building-resilient-ai-powered-software/climbing": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 9
+        },
+        {
+          "from": 10,
+          "to": 20
+        }
+      ]
+    }
+  },
+  "2026-10-16-building-resilient-ai-powered-software/precipitously": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 9
+        },
+        {
+          "from": 10,
+          "to": 20
+        }
+      ]
+    }
+  },
+  "2026-10-16-building-resilient-ai-powered-software/nondeterminism": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 3
+        },
+        {
+          "from": 4,
+          "to": 12
+        },
+        {
+          "from": 13,
+          "to": 22
+        },
+        {
+          "from": 23,
+          "to": 34
+        }
+      ]
+    },
+    "reviewed": [
+      "ACR:LLM",
+      "ACR:AI"
+    ]
+  },
+  "2026-10-16-today-s-episode-is-a-deepdive-into/pick": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 8
+        },
+        {
+          "from": 9,
+          "to": 16
+        },
+        {
+          "from": 17,
+          "to": 22
+        }
+      ]
+    }
+  },
+  "2026-10-16-today-s-episode-is-a-deepdive-into/regressions": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 8
+        },
+        {
+          "from": 9,
+          "to": 16
+        },
+        {
+          "from": 17,
+          "to": 22
+        }
+      ]
+    }
+  },
+  "2026-10-16-building-resilient-ai-powered-software/resilient": {
+    "reviewed": [
+      "ACR:AI"
+    ]
+  },
+  "2026-10-16-building-resilient-ai-powered-software/uncertainty": {
+    "reviewed": [
+      "ACR:AI",
+      "ACR:DR"
+    ]
+  },
+  "2026-10-16-building-resilient-ai-powered-software/disaster": {
+    "reviewed": [
+      "ACR:AI",
+      "ACR:DR"
+    ]
+  },
+  "2026-10-16-building-resilient-ai-powered-software/auspices": {
+    "reviewed": [
+      "ACR:DR"
+    ]
+  },
+  "2026-10-16-building-resilient-ai-powered-software/outlined": {
+    "reviewed": [
+      "NUM:10",
+      "NUM:3"
+    ]
+  },
+  "2026-10-16-building-resilient-ai-powered-software/straightforward": {
+    "reviewed": [
+      "TUNE:end':'"
+    ]
+  },
+  "2026-10-16-building-resilient-ai-powered-software/provisioning": {
+    "reviewed": [
+      "ACR:RTO"
+    ]
+  },
+  "2026-10-16-building-resilient-ai-powered-software/assumption": {
+    "reviewed": [
+      "COMPOUND:datastores",
+      "OOV:provisioned"
+    ]
+  },
+  "2026-10-16-building-resilient-ai-powered-software/multisite": {
+    "reviewed": [
+      "NUM:10",
+      "NUM:6"
+    ]
+  },
+  "2026-10-16-building-resilient-ai-powered-software/therefore": {
+    "reviewed": [
+      "ACR:AI"
+    ]
+  },
+  "2026-10-16-building-resilient-ai-powered-software/appropriately": {
+    "reviewed": [
+      "ACR:AI"
+    ]
+  },
+  "2026-10-16-building-resilient-ai-powered-software/vulnerable": {
+    "reviewed": [
+      "ACR:AI"
+    ]
+  },
+  "2026-10-16-building-resilient-ai-powered-software/showsomeone": {
+    "reviewed": [
+      "NUM:2025",
+      "ACR:LLMs"
+    ]
+  },
+  "2026-10-16-building-resilient-ai-powered-software/revealed": {
+    "reviewed": [
+      "ACR:AI"
+    ]
+  },
+  "2026-10-16-building-resilient-ai-powered-software/admittedly": {
+    "reviewed": [
+      "NUM:500"
+    ]
+  },
+  "2026-10-16-building-resilient-ai-powered-software/unsubstantiated": {
+    "reviewed": [
+      "NUM:500"
+    ]
+  },
+  "2026-10-16-building-resilient-ai-powered-software/ever-changing": {
+    "reviewed": [
+      "ACR:AI"
+    ]
+  },
+  "2026-10-16-building-resilient-ai-powered-software/shaky": {
+    "reviewed": [
+      "ACR:AI"
+    ]
+  },
+  "2026-10-16-building-resilient-ai-powered-software/amateurish": {
+    "reviewed": [
+      "COMPOUND:Coinbase's"
+    ]
+  },
+  "2026-10-16-today-s-episode-is-a-deepdive-into/longest-tenured": {
+    "reviewed": [
+      "COMPOUND:deepdive"
+    ]
+  },
+  "2026-10-16-today-s-episode-is-a-deepdive-into/erratically": {
+    "reviewed": [
+      "NUM:2015"
+    ]
+  },
+  "2026-10-16-today-s-episode-is-a-deepdive-into/emitting": {
+    "reviewed": [
+      "ACR:M3DB",
+      "NUM:500"
+    ]
+  },
+  "2026-10-16-today-s-episode-is-a-deepdive-into/harnesses": {
+    "reviewed": [
+      "ACR:AIFX"
+    ]
+  },
+  "2026-10-16-today-s-episode-is-a-deepdive-into/laser-focused": {
+    "reviewed": [
+      "ACR:PR"
+    ]
+  },
+  "2026-10-16-today-s-episode-is-a-deepdive-into/seemingly": {
+    "reviewed": [
+      "ACR:AI"
+    ]
+  },
+  "2026-10-16-today-s-episode-is-a-deepdive-into/Minion": {
+    "reviewed": [
+      "NUM:2025",
+      "COMPOUND:DevPods",
+      "NUM:2017"
+    ]
+  },
+  "2026-10-16-today-s-episode-is-a-deepdive-into/Mentions": {
+    "reviewed": [
+      "TUNE:end':'"
+    ]
+  }
+}
