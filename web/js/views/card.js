@@ -1,5 +1,5 @@
 // One word card (iOS WordCardView / prototype card).
-import { audioURL } from "../data.js";
+import { audioURL, shownSentence } from "../data.js";
 import { store } from "../store.js";
 import { esc, playBtn, miniPlay, highlight, boldForms, POS } from "../ui.js";
 import * as RU from "../domain/ru.js";
@@ -30,7 +30,7 @@ export function cardHTML(it, lesson, index, total, progress) {
     <div class="meaning"><p class="ru">${esc(c.ru)}</p>${c.definition_en ? `<p class="def">${esc(c.definition_en)}</p>` : ""}</div>
     <div class="sect">
       <div class="sect-h"><h3>Ваш контекст</h3><span class="spacer"></span>${playBtn("Предложение", it.sentence, sentenceURL, slowURL)}</div>
-      <p class="context">${highlight(it.sentence, it.text)}</p>
+      <p class="context">${highlight(shownSentence(it), it.text)}</p>
       ${c.sentence_ru ? (showRu ? `<p class="context-ru">${esc(c.sentence_ru)}</p><button class="reveal" type="button" data-act="ru">Скрыть перевод</button>` : '<button class="reveal" type="button" data-act="ru">Показать перевод предложения</button>') : ""}
     </div>
     ${c.note_ru ? `<p class="note">${esc(c.note_ru)}</p>` : ""}

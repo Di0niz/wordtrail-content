@@ -1,6 +1,6 @@
 // Training run (iOS TrainingView / prototype training): listen, cloze, recall, dictation;
 // Leitner progress is written when the session ends — or when the user leaves mid-session.
-import { audioURL, lessonOf } from "../data.js";
+import { audioURL, lessonOf, shownSentence } from "../data.js";
 import { store } from "../store.js";
 import { speaker } from "../audio.js";
 import { esc, playBtn, bigPlay, highlight, $, $$, reduceMotion, toast } from "../ui.js";
@@ -84,7 +84,9 @@ export class Trainer {
         <div class="options" role="group" aria-label="Варианты">${q.options.map((o, i) => `<button class="opt" type="button" data-opt="${esc(o)}"><kbd>${i + 1}</kbd><span>${esc(o)}</span><span class="mk" aria-hidden="true"></span></button>`).join("")}</div>
         <div id="fb"></div><div class="t-actions" id="t-act"><span class="hint keys">Клавиши <kbd class="k">1</kbd>–<kbd class="k">4</kbd></span></div>`;
     } else if (q.kind === "cloze") {
-      const p = clozeParts(it);
+      const p = clozeParts(it), shown = shownSentence(it);
+      // Same split on the displayed text (verse lines): it has the same length.
+      p.before = shown.slice(0, p.before.length); p.after = shown.slice(shown.length - p.after.length);
       body = `<p class="q">${esc(p.before)}<span class="gap" id="gap" style="min-width:${Math.max(5, p.word.length)}ch"></span>${esc(p.after)}</p>
         ${c.sentence_ru ? `<p class="q-sub">${esc(c.sentence_ru)}</p>` : ""}
         ${this.#typed("Впишите слово")}
@@ -160,7 +162,7 @@ export class Trainer {
       const g = Dictation.grade(given, it.sentence, it.text);
       detail = `<div class="diff">${g.tokens.map((t) => t.type === "match" ? `<span>${esc(t.text)}</span>` : t.type === "missing" ? `<span class="miss" title="пропущено или с ошибкой">${esc(t.text)}</span>` : `<span class="x" title="лишнее">${esc(t.text)}</span>`).join(" ")}</div>
         <span class="muted">Совпало ${g.matched} из ${g.total} слов${g.containsTarget ? "" : ` · нет слова «${esc(it.text)}»`}</span>`;
-    } else detail = `<span>${highlight(it.sentence, it.text, "b")}</span>`;
+    } else detail = `<span class="verse">${highlight(shownSentence(it), it.text, "b")}</span>`;
     $("#fb", this.root).innerHTML = `<div class="feedback ${ok ? "ok" : "no"}" role="status"><strong>${ok ? "Верно." : given ? "Не совсем." : "Ответ:"}</strong>
       <span><span class="fw">${esc(it.text)}</span> — ${esc(c.ru_short)}</span>${detail}</div>`;
     $("#t-act", this.root).innerHTML = `<button class="btn primary" type="button" data-act="next" id="t-next">Дальше</button>${playBtn("Слово", it.text, u.word)}${playBtn("Фраза", it.sentence, u.sentence, u.slow)}<span class="hint keys"><kbd class="k">Enter</kbd> — дальше</span>`;

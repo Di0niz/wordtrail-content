@@ -1,5 +1,5 @@
 // Word page: every encounter of a lemma across lessons + its Leitner state (iOS WordDetailView).
-import { catalog, audioURL } from "../data.js";
+import { catalog, audioURL, shownSentence } from "../data.js";
 import { store } from "../store.js";
 import { esc, playBtn, highlight, boxDots, POS } from "../ui.js";
 import * as RU from "../domain/ru.js";
@@ -24,7 +24,7 @@ export function mountWord(root, lemma) {
         <div class="history">${e.encounters.map((x) => {
           const l = catalog.byId.get(x.lessonID), r = records[x.item.id], i = l.items.indexOf(x.item);
           const state = r ? `${boxDots(r.box)} коробка ${r.box} · ${r.due <= new Date() ? "повторить сейчас" : `повтор ${RU.shortDate(r.due)}`} · попыток ${r.attempts}, ошибок ${r.mistakes}` : "ещё не тренировалось";
-          return `<div class="h"><div class="hs">${highlight(x.item.sentence, x.item.text)}</div>
+          return `<div class="h"><div class="hs">${highlight(shownSentence(x.item), x.item.text)}</div>
             <span>${playBtn("Предложение", x.item.sentence, audioURL(x.item.audio?.sentence, l), audioURL(x.item.audio?.sentence_slow, l))}</span>
             <span><a class="link" href="#/lesson/${encodeURIComponent(x.lessonID)}?mode=cards&i=${i}">${esc(x.lessonTitle)}</a> · ${RU.day(x.date)}</span>
             <span>${state}</span></div>`;

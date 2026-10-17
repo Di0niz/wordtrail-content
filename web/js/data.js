@@ -1,5 +1,6 @@
 // Content catalog from the content repo's data/ (GitHub Pages): manifest → lessons (by sha) → vocab.
 // Lesson URLs carry ?v=<sha>, so a changed lesson is a new URL and unchanged ones come from cache.
+import { isVerse, displayVerse } from "./domain/verse.js";
 
 export const DATA = new URL("../../data/", import.meta.url); // web/js/data.js → /data/
 
@@ -26,7 +27,8 @@ export async function loadCatalog() {
     if (manifest.vocab) {
       try { vocabSize = Object.keys(await getJSON(new URL(`${manifest.vocab.path}?v=${manifest.vocab.sha}`, DATA))).length; } catch {}
     }
-    Object.assign(catalog, { manifest, lessons, byId: new Map(lessons.map((l) => [l.id, l])), vocabSize, loadedAt: new Date(), error: null });
+    const verseItems = new Set(lessons.filter((l) => isVerse(l.items.map((i) => i.sentence))).flatMap((l) => l.items.map((i) => i.id)));
+    Object.assign(catalog, { manifest, lessons, byId: new Map(lessons.map((l) => [l.id, l])), vocabSize, verseItems, loadedAt: new Date(), error: null });
     pruneDataCache(manifest);
   } catch (e) {
     catalog.error = e.message || String(e);
@@ -49,6 +51,8 @@ async function pruneDataCache(manifest) {
   } catch {}
 }
 
+/** The item's sentence as shown: a poem's lines on separate lines (same length as `sentence`). */
+export const shownSentence = (it) => (catalog.verseItems?.has(it.id) ? displayVerse(it.sentence) : it.sentence);
 export const allItems = () => catalog.lessons.flatMap((l) => l.items);
 export const lessonOf = (itemId) => catalog.lessons.find((l) => l.items.some((i) => i.id === itemId));
 export const hasRecordedAudio = (lesson) => lesson?.build?.audio_status === "ready";

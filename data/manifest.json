@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-10-17T19:06:08Z",
+  "generated_at": "2026-10-17T20:24:15Z",
   "lessons": [
     {
       "id": "2026-10-17-she-walks-in-beauty-by-lord",
@@ -18,14 +18,14 @@
     {
       "id": "2026-10-16-today-s-episode-is-a-deepdive-into",
       "date": "2026-10-16",
-      "title": "Today’s episode is a deepdive into",
+      "title": "Inside Uber’s everyday developer tools",
       "title_ru": "Повседневные инструменты разработчиков Uber",
       "day_index": 1,
       "words": 12,
       "new": 12,
       "repeats": 0,
       "path": "lessons/2026-10-16-today-s-episode-is-a-deepdive-into.json",
-      "sha": "9be70ad4f68febcc",
+      "sha": "be087ba6e878c08e",
       "audio_status": "ready"
     },
     {
