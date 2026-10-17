@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>WordTrail</title>
+<meta name="description" content="WordTrail — карточки и тренировки слов из прочитанных текстов, повторение по Лейтнеру. Работает офлайн.">
+<meta name="theme-color" content="#FAFAF7">
+<meta name="color-scheme" content="light dark">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="WordTrail">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Literata:opsz,wght@7..72,400;7..72,500;7..72,600&display=swap">
+<link rel="stylesheet" href="app.css">
+<script type="module" src="js/app.js"></script>
+</head>
+<body>
+<a class="sr" href="#app">К содержимому</a>
+<header class="bar">
+  <div class="bar-in">
+    <a class="brand" href="#/">WordTrail</a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="#/">Лента</a>
+      <a href="#/review"><span class="lbl">Повторение</span><span class="lbl-s" aria-hidden="true">Повтор</span></a>
+      <a href="#/dictionary">Словарь</a>
+      <a href="#/settings" aria-label="Настройки"><span class="lbl">Настройки</span><svg class="ico" width="17" height="17" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm7.4-2.1.1-1.4-.1-1.4 2-1.6-2-3.4-2.4.9a8 8 0 0 0-2.4-1.4L14.2 2h-4l-.4 2.6a8 8 0 0 0-2.4 1.4l-2.4-.9-2 3.4 2 1.6-.1 1.4.1 1.4-2 1.6 2 3.4 2.4-.9a8 8 0 0 0 2.4 1.4l.4 2.6h4l.4-2.6a8 8 0 0 0 2.4-1.4l2.4.9 2-3.4z"/></svg></a>
+    </nav>
+    <span class="spacer"></span>
+    <span class="sync" id="sync" role="status"></span>
+    <button class="icon-btn" id="theme-btn" type="button" aria-label="Переключить тему" title="Тема"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.75a6.25 6.25 0 0 1 0 12.5z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<main class="page" id="app" tabindex="-1"><div class="wrap"><p class="muted">Загружаю уроки…</p></div></main>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+<noscript><p style="padding:24px">Для WordTrail нужен JavaScript.</p></noscript>
+</body>
+</html>

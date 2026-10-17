@@ -16,6 +16,12 @@ jobs:
       # The generator tools/sentence_pron.py needs its own venv and runs only on the agent's Mac.
       - name: Validate data/
         run: python3 tools/validate.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      # Web app (web/): domain parity with the iOS app, shared tokenizer golden file, SW shell list, real lessons.
+      - name: Web tests
+        run: node --test web/tests/*.test.mjs
       - name: Every item has phonemes
         run: python3 tools/phonemes.py --check
       - name: Every item has sentence_pron
