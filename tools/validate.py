@@ -4,7 +4,7 @@ usage: python3 tools/validate.py [data_dir]
 
 Checks manifest.json (format, order, sha of every file, counts), every lesson file
 (required fields and types), vocab.json and days.json, and their mutual consistency.
-Also reports lessons/*.json that are not built yet (warning only).
+Also reports lessons/*.json that are not built yet (warning only) and runs the tokenizer golden file.
 Exit code 0 = ok, 1 = errors.
 """
 import hashlib, json, pathlib, re, sys
@@ -13,6 +13,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
 from schema_check import check  # noqa: E402
 import build  # noqa: E402
+import tokenizer  # noqa: E402
 
 DATE = "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
 STR = {"type": "string"}
@@ -261,7 +262,9 @@ def main(argv):
         print("error:", e)
     items = sum(len(L.get("items", [])) for L in lessons.values())
     print(f"validate: {len(lessons)} lessons, {items} items, vocab {len(vocab)} — " + ("OK" if not errors else f"{len(errors)} errors"))
-    return 1 if errors else 0
+    # The shared tokenizer must keep matching its golden file (the Swift twin runs the same cases).
+    tokenizer_ok = tokenizer.check()
+    return 1 if errors or not tokenizer_ok else 0
 
 
 if __name__ == "__main__":

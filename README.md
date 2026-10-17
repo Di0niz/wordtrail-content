@@ -14,6 +14,7 @@ agent/content/<id>.content.json контент агента: переводы, I
 schemas/
   words.schema.json             формат words.json (JSON Schema 2020-12)
   content.schema.json           формат content.json, включая необязательные поля и поля уровней 2–4+
+  tokenizer-golden.json         эталон токенизатора слов: те же случаи проходит Swift-двойник в приложении
 tools/
   phonemes.py                   phonemes (ARPAbet) в content.json из CMUdict + phonemes_manual.json
   phonemes_manual.json          произношения, написанные агентом (нет в CMUdict или сверены с IPA)
@@ -21,7 +22,8 @@ tools/
   tts.py                        озвучка macOS `say` → data/audio/<hash>.m4a, audio_status
   manifest.py                   data/manifest.json (точка входа приложения)
   rebuild.py                    пересобрать всё data/ с нуля в порядке дат (+ tts; --no-tts для CI)
-  validate.py                   проверить data/ так, как его ожидает приложение
+  validate.py                   проверить data/ так, как его ожидает приложение (+ эталон токенизатора)
+  tokenizer.py                  общий токенизатор слов (смещения в кодовых точках); --check — прогнать эталон
   schema_check.py, content_io.py  мини-валидатор JSON Schema; чтение/запись content.json без переформатирования
   cache/                        CMUdict (скачивается, не коммитится)
 data/                           генерируется скриптами, коммитится
