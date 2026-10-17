@@ -19,7 +19,14 @@ jobs:
       - name: Every item has phonemes
         run: python3 tools/phonemes.py --check
       - name: Every item has sentence_pron
-        run: python3 -c "import json,glob,sys; m=[f'{f}: {k}' for f in glob.glob('agent/content/*.content.json') for k,c in json.load(open(f))['items'].items() if 'sentence_pron' not in c]; print(*m, sep='\n'); sys.exit(1 if m else 0)"
+        run: |
+          python3 - <<'PY'
+          import glob, json, sys
+          missing = [f"{f} {k}" for f in glob.glob("agent/content/*.content.json")
+                     for k, c in json.load(open(f))["items"].items() if "sentence_pron" not in c]
+          print("\n".join(missing) or "all items have sentence_pron")
+          sys.exit(1 if missing else 0)
+          PY
       - name: data/ is reproducible from lessons/ + agent/content/
         run: |
           python3 tools/rebuild.py --no-tts
