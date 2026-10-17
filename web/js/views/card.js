@@ -9,7 +9,7 @@ export function cardHTML(it, lesson, index, total, progress) {
   const a = it.audio ?? {};
   const flags = [];
   if (c.proper_noun) flags.push('<span class="badge flag">в тексте имя собственное</span>');
-  if (c.suggest_phrase) flags.push(`<span class="badge flag">агент предлагает фразу: ${esc(c.suggest_phrase)}</span>`);
+  if (c.suggest_phrase) flags.push(`<span class="badge flag">фраза: ${esc(c.suggest_phrase)}</span>`);
   if (c.short_context) flags.push('<span class="badge flag">короткий контекст: заголовок</span>');
   for (const f of c.flags ?? []) flags.push(`<span class="badge flag">${esc(f)}</span>`);
   const level = it.level ?? 1;

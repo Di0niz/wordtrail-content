@@ -1101,7 +1101,7 @@ kbd { font-family: var(--font-mono); font-size: 11.5px; border: 1px solid var(--
     $("vocab-dot").classList.toggle("on", !!V);
     $("vocab-status").textContent = userVocab ? `Загружен vocab.json${siteVocab ? " с сайта" : ""}: ${n} ${plural(n, "слово", "слова", "слов")}. Повторы подсвечиваются.`
       : (draft && draft.example) ? "Сейчас подключён учебный словарь примера (3 слова). Загрузите свой vocab.json с сайта, чтобы видеть настоящие повторы."
-      : "Словарь не загружен — повторы не подсвечены. Загрузите vocab.json, который собирает агент.";
+      : "Словарь не загружен — повторы не подсвечены. Загрузите vocab.json из data/.";
     $("vocab-clear").hidden = !userVocab;
     $("legend-vocab").textContent = userVocab ? `словарь: ${n} ${plural(n, "слово", "слова", "слов")}` : (draft && draft.example) ? "словарь: пример" : "словарь не загружен — повторы не видны";
   }

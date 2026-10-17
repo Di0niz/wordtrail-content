@@ -22,7 +22,7 @@ export function renderFeed() {
   const archive = days.filter((d) => d.date < weekStart);
 
   if (!lessons.length) {
-    return `<div class="wrap"><div class="empty"><h2>Уроков пока нет</h2>Добавьте words.json в репозиторий контента и соберите урок агентом.</div></div>`;
+    return `<div class="wrap"><div class="empty"><h2>Уроков пока нет</h2>Новые уроки появятся здесь, как только будут опубликованы.</div></div>`;
   }
 
   const banners = [];

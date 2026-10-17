@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-10-17T18:27:56Z",
+  "generated_at": "2026-10-17T19:06:08Z",
   "lessons": [
     {
       "id": "2026-10-17-she-walks-in-beauty-by-lord",
@@ -12,7 +12,7 @@
       "new": 25,
       "repeats": 0,
       "path": "lessons/2026-10-17-she-walks-in-beauty-by-lord.json",
-      "sha": "c307e9b098a89d76",
+      "sha": "85088f1c1a0fec80",
       "audio_status": "ready"
     },
     {
@@ -38,7 +38,7 @@
       "new": 50,
       "repeats": 0,
       "path": "lessons/2026-10-16-building-resilient-ai-powered-software.json",
-      "sha": "d3751c9badc965e6",
+      "sha": "870dd065aaadc1b6",
       "audio_status": "ready"
     }
   ],

@@ -320,10 +320,7 @@
       "ru": "края, земли (поэт.)",
       "ru_short": "края; климат (поэт.)",
       "definition_en": "a region considered in terms of its weather (literary)",
-      "note_ru": "Поэтическое слово, родственно climate: «cloudless climes» — края, где не бывает облаков. Сегодня почти только в выражении sunnier/warmer climes — «тёплые края». Агент сократил строфу до нужных строк и убрал подпись автора.",
-      "flags": [
-        "контекст сокращён агентом"
-      ],
+      "note_ru": "Поэтическое слово, родственно climate: «cloudless climes» — края, где не бывает облаков. Сегодня почти только в выражении sunnier/warmer climes — «тёплые края».",
       "examples": [
         {
           "en": "Many retirees move to sunnier climes.",
@@ -670,10 +667,7 @@
       "ru": "здесь: облик, выражение лица",
       "ru_short": "облик; аспект",
       "definition_en": "the appearance of a person's face (literary); also a part or feature of something",
-      "note_ru": "Обычное значение — «аспект, сторона» (one aspect of the problem). У Байрона — старое значение «облик, наружность»: всё лучшее соединяется в её облике. Ударение на первый слог. Агент сократил строфу до нужных строк.",
-      "flags": [
-        "контекст сокращён агентом"
-      ],
+      "note_ru": "Обычное значение — «аспект, сторона» (one aspect of the problem). У Байрона — старое значение «облик, наружность»: всё лучшее соединяется в её облике. Ударение на первый слог.",
       "examples": [
         {
           "en": "We tested every aspect of the new release.",
@@ -962,10 +956,7 @@
       "ru": "смягчённый, приглушённый",
       "ru_short": "смягчённый",
       "definition_en": "made softer, gentler or less intense",
-      "note_ru": "mellow — «мягкий, спелый, приглушённый» о свете, звуке, вкусе, характере. Как глагол — смягчаться: he has mellowed with age. Здесь красота смягчена до нежного света. Агент сократил строфу до нужных строк.",
-      "flags": [
-        "контекст сокращён агентом"
-      ],
+      "note_ru": "mellow — «мягкий, спелый, приглушённый» о свете, звуке, вкусе, характере. Как глагол — смягчаться: he has mellowed with age. Здесь красота смягчена до нежного света.",
       "examples": [
         {
           "en": "The light mellowed as the sun went down.",
@@ -1254,10 +1245,7 @@
       "ru": "нежный, мягкий",
       "ru_short": "нежный; мягкий",
       "definition_en": "gentle and soft; showing care and kindness",
-      "note_ru": "О свете — мягкий, неяркий. Другие значения: tender meat — мягкое мясо, a tender spot — больное место; в бизнесе tender (n) — тендер. Агент сократил строфу до нужных строк.",
-      "flags": [
-        "контекст сокращён агентом"
-      ],
+      "note_ru": "О свете — мягкий, неяркий. Другие значения: tender meat — мягкое мясо, a tender spot — больное место; в бизнесе tender (n) — тендер.",
       "examples": [
         {
           "en": "She gave him a tender smile.",
@@ -1546,10 +1534,7 @@
       "ru": "кричаще-яркий, слишком броский",
       "ru_short": "кричащий, аляповатый",
       "definition_en": "too bright and showy, in a way that lacks taste",
-      "note_ru": "Обычно с неодобрением: gaudy jewelry, gaudy colors. У Байрона «gaudy day» — слишком яркий, кричащий день, которому противопоставлен мягкий свет ночи. Агент сократил строфу до нужных строк.",
-      "flags": [
-        "контекст сокращён агентом"
-      ],
+      "note_ru": "Обычно с неодобрением: gaudy jewelry, gaudy colors. У Байрона «gaudy day» — слишком яркий, кричащий день, которому противопоставлен мягкий свет ночи.",
       "examples": [
         {
           "en": "The lobby was full of gaudy decorations.",
@@ -2141,10 +2126,7 @@
       "ru": "здесь: тень, чуть больше темноты",
       "ru_short": "тень; оттенок",
       "definition_en": "an area of darkness; a slightly different degree of a colour",
-      "note_ru": "«One shade the more, one ray the less» — «одной тенью больше, одним лучом меньше»: малейшее изменение нарушило бы гармонию. Shade — и «тень» (sit in the shade), и «оттенок» (a darker shade of blue); shadow — тень от предмета. Агент сократил строфу до нужных строк.",
-      "flags": [
-        "контекст сокращён агентом"
-      ],
+      "note_ru": "«One shade the more, one ray the less» — «одной тенью больше, одним лучом меньше»: малейшее изменение нарушило бы гармонию. Shade — и «тень» (sit in the shade), и «оттенок» (a darker shade of blue); shadow — тень от предмета.",
       "examples": [
         {
           "en": "Let's sit in the shade.",
@@ -2736,10 +2718,7 @@
       "ru": "луч",
       "ru_short": "луч",
       "definition_en": "a narrow line of light",
-      "note_ru": "Также: a ray of hope — проблеск надежды; X-rays — рентген. Агент сократил строфу до нужных строк.",
-      "flags": [
-        "контекст сокращён агентом"
-      ],
+      "note_ru": "Также: a ray of hope — проблеск надежды; X-rays — рентген.",
       "examples": [
         {
           "en": "A ray of sunlight came through the window.",
@@ -3326,10 +3305,7 @@
       "ru": "здесь: нарушило бы, умалило",
       "ru_short": "ослаблять; повреждать",
       "definition_en": "to damage something or make it weaker or less good",
-      "note_ru": "«Had half impaired» — «наполовину нарушило бы» (условное наклонение в поэтической инверсии). Сегодня часто: impaired vision — ослабленное зрение, hearing-impaired — слабослышащий. Агент сократил строфу до нужных строк.",
-      "flags": [
-        "контекст сокращён агентом"
-      ],
+      "note_ru": "«Had half impaired» — «наполовину нарушило бы» (условное наклонение в поэтической инверсии). Сегодня часто: impaired vision — ослабленное зрение, hearing-impaired — слабослышащий.",
       "examples": [
         {
           "en": "Lack of sleep impaired his judgment.",
@@ -3921,10 +3897,7 @@
       "ru": "прелесть, изящество",
       "ru_short": "грация; изящество",
       "definition_en": "an attractive quality of moving or behaving in a smooth, elegant way",
-      "note_ru": "«nameless grace» — неуловимая, «безымянная» прелесть. Также: grace period — льготный период; with good grace — достойно, без возражений. Агент сократил строфу до нужных строк.",
-      "flags": [
-        "контекст сокращён агентом"
-      ],
+      "note_ru": "«nameless grace» — неуловимая, «безымянная» прелесть. Также: grace period — льготный период; with good grace — достойно, без возражений.",
       "examples": [
         {
           "en": "She moved with natural grace.",
@@ -4516,10 +4489,7 @@
       "ru": "здесь: чёрный как смоль, иссиня-чёрный",
       "ru_short": "иссиня-чёрный; ворон",
       "definition_en": "(of hair) shiny and black",
-      "note_ru": "Здесь прилагательное: raven tress — чёрный блестящий локон. Как существительное raven — ворон (крупнее, чем crow — ворона); raven-haired — черноволосая. Агент сократил строфу до нужных строк.",
-      "flags": [
-        "контекст сокращён агентом"
-      ],
+      "note_ru": "Здесь прилагательное: raven tress — чёрный блестящий локон. Как существительное raven — ворон (крупнее, чем crow — ворона); raven-haired — черноволосая.",
       "examples": [
         {
           "en": "She had long raven hair.",
@@ -5111,10 +5081,7 @@
       "ru": "локон, прядь",
       "ru_short": "локон",
       "definition_en": "a long piece of hair (literary)",
-      "note_ru": "Книжное слово, чаще во множественном числе: golden tresses. В обычной речи — a lock of hair, a strand of hair. Агент сократил строфу до нужных строк.",
-      "flags": [
-        "контекст сокращён агентом"
-      ],
+      "note_ru": "Книжное слово, чаще во множественном числе: golden tresses. В обычной речи — a lock of hair, a strand of hair.",
       "examples": [
         {
           "en": "She brushed a tress of hair from her face.",
@@ -5706,10 +5673,7 @@
       "ru": "мягко, нежно",
       "ru_short": "мягко, тихо",
       "definition_en": "in a quiet or gentle way",
-      "note_ru": "От soft. Speak softly — говорить тихо; softly lit — мягко освещённый. Агент сократил строфу до нужных строк.",
-      "flags": [
-        "контекст сокращён агентом"
-      ],
+      "note_ru": "От soft. Speak softly — говорить тихо; softly lit — мягко освещённый.",
       "examples": [
         {
           "en": "She spoke softly so the baby wouldn't wake.",
@@ -6301,10 +6265,7 @@
       "ru": "здесь: озаряет, светится",
       "ru_short": "озарять; светлеть",
       "definition_en": "to become brighter or to make something brighter",
-      "note_ru": "lighten — и «светлеть, озарять» (от light — свет), и «облегчать» (от light — лёгкий): lighten the load. «o’er her face» — «по её лицу», поэтическое over. Агент сократил строфу до нужных строк.",
-      "flags": [
-        "контекст сокращён агентом"
-      ],
+      "note_ru": "lighten — и «светлеть, озарять» (от light — свет), и «облегчать» (от light — лёгкий): lighten the load. «o’er her face» — «по её лицу», поэтическое over.",
       "examples": [
         {
           "en": "The sky lightens just before dawn.",
@@ -6581,10 +6542,7 @@
       "ru": "безмятежно, спокойно",
       "ru_short": "безмятежно",
       "definition_en": "in a calm and peaceful way",
-      "note_ru": "От serene — спокойный, безмятежный; serenity — безмятежность. Ударение на второй слог. Агент сократил строфу до нужных строк.",
-      "flags": [
-        "контекст сокращён агентом"
-      ],
+      "note_ru": "От serene — спокойный, безмятежный; serenity — безмятежность. Ударение на второй слог.",
       "examples": [
         {
           "en": "She smiled serenely at the crowd.",
@@ -6857,10 +6815,7 @@
       "ru": "чистый, непорочный",
       "ru_short": "чистый",
       "definition_en": "clean and not mixed with anything; morally good",
-      "note_ru": "Здесь — нравственно чистый. Также: pure water; pure function — в программировании функция без побочных эффектов; pure luck — чистое везение. Агент сократил строфу до нужных строк.",
-      "flags": [
-        "контекст сокращён агентом"
-      ],
+      "note_ru": "Здесь — нравственно чистый. Также: pure water; pure function — в программировании функция без побочных эффектов; pure luck — чистое везение.",
       "examples": [
         {
           "en": "Write it as a pure function with no side effects.",
@@ -7133,10 +7088,7 @@
       "ru": "обитель, жилище",
       "ru_short": "обитель",
       "definition_en": "a place where someone lives (literary)",
-      "note_ru": "Книжное: dwelling — жилище (от dwell — обитать). У Байрона обитель мыслей — сама героиня. Сегодня говорят home, a place to live. Агент сократил строфу до нужных строк.",
-      "flags": [
-        "контекст сокращён агентом"
-      ],
+      "note_ru": "Книжное: dwelling — жилище (от dwell — обитать). У Байрона обитель мыслей — сама героиня. Сегодня говорят home, a place to live.",
       "examples": [
         {
           "en": "The cave was once a dwelling-place for early humans.",
@@ -7796,10 +7748,7 @@
       "ru": "над, по (= over, поэт.)",
       "ru_short": "над (поэт. over)",
       "definition_en": "over (poetic)",
-      "note_ru": "Поэтическое сокращение over: v выпадает, чтобы слово стало односложным и легло в ритм стиха. Читается /ɔːr/. В прозе всегда over. Агент сократил строфу до нужных строк.",
-      "flags": [
-        "контекст сокращён агентом"
-      ],
+      "note_ru": "Поэтическое сокращение over: v выпадает, чтобы слово стало односложным и легло в ритм стиха. Читается /ɔːr/. В прозе всегда over.",
       "examples": [
         {
           "en": "In prose, write “over”, not “o’er”.",
@@ -8459,10 +8408,7 @@
       "ru": "лоб, чело",
       "ru_short": "лоб; бровь",
       "definition_en": "the forehead (literary); also an eyebrow",
-      "note_ru": "В поэзии brow — «чело», лоб. В обычной речи — forehead; brows (eyebrows) — брови: knit one's brows — нахмуриться. Highbrow/lowbrow — «интеллектуальный/простецкий». Агент сократил строфу до нужных строк.",
-      "flags": [
-        "контекст сокращён агентом"
-      ],
+      "note_ru": "В поэзии brow — «чело», лоб. В обычной речи — forehead; brows (eyebrows) — брови: knit one's brows — нахмуриться. Highbrow/lowbrow — «интеллектуальный/простецкий».",
       "examples": [
         {
           "en": "He wiped the sweat from his brow.",
@@ -9122,10 +9068,7 @@
       "ru": "спокойный",
       "ru_short": "спокойный",
       "definition_en": "relaxed and not worried, angry or excited",
-      "note_ru": "l не произносится: /kɑːm/. Stay calm — сохраняй спокойствие; calm down — успокоиться. Агент сократил строфу до нужных строк.",
-      "flags": [
-        "контекст сокращён агентом"
-      ],
+      "note_ru": "l не произносится: /kɑːm/. Stay calm — сохраняй спокойствие; calm down — успокоиться.",
       "examples": [
         {
           "en": "Stay calm during the incident and follow the runbook.",
@@ -9785,10 +9728,7 @@
       "ru": "красноречивый, выразительный",
       "ru_short": "красноречивый",
       "definition_en": "able to express ideas or feelings clearly and beautifully",
-      "note_ru": "Здесь лицо «красноречиво» без слов — оно выражает чувства. Существительное — eloquence. Ударение на первый слог. Агент сократил строфу до нужных строк.",
-      "flags": [
-        "контекст сокращён агентом"
-      ],
+      "note_ru": "Здесь лицо «красноречиво» без слов — оно выражает чувства. Существительное — eloquence. Ударение на первый слог.",
       "examples": [
         {
           "en": "She gave an eloquent talk at the conference.",
@@ -10448,10 +10388,7 @@
       "ru": "оттенки, краски (здесь: румянец)",
       "ru_short": "оттенок; тон",
       "definition_en": "a shade or small amount of a colour",
-      "note_ru": "«the tints that glow» — светящиеся краски лица, румянец. Глагол tint — подкрашивать: tinted windows — тонированные стёкла. Агент сократил строфу до нужных строк.",
-      "flags": [
-        "контекст сокращён агентом"
-      ],
+      "note_ru": "«the tints that glow» — светящиеся краски лица, румянец. Глагол tint — подкрашивать: tinted windows — тонированные стёкла.",
       "examples": [
         {
           "en": "The sky had pink tints at sunset.",
@@ -11111,10 +11048,7 @@
       "ru": "светиться, сиять",
       "ru_short": "светиться; сияние",
       "definition_en": "to give out a soft, steady light; to look warm and healthy",
-      "note_ru": "glow — ровное мягкое свечение без пламени (ср. shine — блестеть, blaze — пылать). Her face glowed with happiness — её лицо светилось от счастья. Агент сократил строфу до нужных строк.",
-      "flags": [
-        "контекст сокращён агентом"
-      ],
+      "note_ru": "glow — ровное мягкое свечение без пламени (ср. shine — блестеть, blaze — пылать). Her face glowed with happiness — её лицо светилось от счастья.",
       "examples": [
         {
           "en": "The screen glowed in the dark room.",
@@ -11431,10 +11365,7 @@
       "ru": "мир, покой",
       "ru_short": "мир; покой",
       "definition_en": "a state of calm and quiet; freedom from war or conflict",
-      "note_ru": "be at peace with — быть в ладу с: «a mind at peace with all below» — душа в ладу со всем земным. Не путать с piece (кусок) — звучат одинаково. Агент сократил строфу до нужных строк.",
-      "flags": [
-        "контекст сокращён агентом"
-      ],
+      "note_ru": "be at peace with — быть в ладу с: «a mind at peace with all below» — душа в ладу со всем земным. Не путать с piece (кусок) — звучат одинаково.",
       "examples": [
         {
           "en": "I'm at peace with the decision.",
@@ -11751,10 +11682,7 @@
       "ru": "здесь: на земле, в этом мире",
       "ru_short": "внизу; ниже",
       "definition_en": "on earth, in this world (literary: all below); in a lower place",
-      "note_ru": "Обычно below — «ниже, внизу» (see below — см. ниже). У Байрона «all below» — всё земное, «всё, что ниже небес». Агент сократил строфу до нужных строк.",
-      "flags": [
-        "контекст сокращён агентом"
-      ],
+      "note_ru": "Обычно below — «ниже, внизу» (see below — см. ниже). У Байрона «all below» — всё земное, «всё, что ниже небес».",
       "examples": [
         {
           "en": "See the details below.",
@@ -12071,10 +11999,7 @@
       "ru": "невинный, чистый",
       "ru_short": "невинный",
       "definition_en": "having no knowledge of evil; not guilty of a crime",
-      "note_ru": "Также юридическое «невиновный»: innocent until proven guilty. Существительное — innocence. Агент сократил строфу до нужных строк.",
-      "flags": [
-        "контекст сокращён агентом"
-      ],
+      "note_ru": "Также юридическое «невиновный»: innocent until proven guilty. Существительное — innocence.",
       "examples": [
         {
           "en": "He is innocent until proven guilty.",

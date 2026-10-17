@@ -110,6 +110,11 @@ def sha16(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()[:16]
 
 
+# Learner-facing text must not describe what the content agent did ("Агент сократил…", "контекст сокращён агентом").
+AGENT_NOTE = re.compile(r"агент\w*\s+(сократил|убрал|разделил|очистил|исправил|заменил|выбрал|добавил|объединил|предлагает)"
+                        r"|(сокращ|очищ|раздел|исправл|измен)\w*\s+агентом", re.IGNORECASE)
+
+
 def validate(data):
     errors, warnings = [], []
     err = errors.append
@@ -151,6 +156,9 @@ def validate(data):
                 err(f"{where}: audio.examples не совпадает с content.examples по числу")
             if str(x.get("text", "")).lower() not in str(x.get("sentence", "")).lower():
                 err(f"{where}: текста '{x.get('text')}' нет в предложении")
+            for text in [c.get("note_ru") or ""] + list(c.get("flags") or []):
+                if AGENT_NOTE.search(str(text)):
+                    err(f"{where}: служебная пометка об агенте в note_ru/flags: «{text}»")
             sp = c.get("sentence_pron")
             if isinstance(sp, dict) and isinstance(x.get("sentence"), str):
                 for e in sentence_pron_check.check(sp, x["sentence"], tokenizer.words(x["sentence"])):
