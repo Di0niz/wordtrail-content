@@ -2,3 +2,7 @@ __pycache__/
 *.pyc
 .DS_Store
 tools/cache/
+
+# Symlinked venvs/caches (patterns with a trailing slash only match real directories)
+.venv
+tools/cache
