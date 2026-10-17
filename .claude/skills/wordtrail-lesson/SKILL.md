@@ -138,11 +138,12 @@ python3 tools/build.py lessons/<id>.json     # content: agent/content/<id>.conte
 
 Затем:
 ```bash
-python3 tools/tts.py         # озвучка macOS `say` (голос Samantha) → data/audio/<hash>.m4a; уже готовые файлы не трогает
+python3 tools/tts.py         # озвучка Kokoro-82M (af_heart; примеры — am_michael) → data/audio/<hash>.m4a; готовые файлы не трогает
 python3 tools/manifest.py
 python3 tools/validate.py
 ```
-- `tts.py` синтезирует слово, предложение (1× и медленно) и примеры, удаляет файлы, на которые больше нет ссылок, и пересчитывает `build.audio_status` (`ready` — все файлы есть). Около 1 с на файл; нужен macOS. Не на маке — пропусти шаг, урок соберётся со статусом `pending`, приложение прочитает его системным голосом.
+- `tts.py` синтезирует слово, предложение (1× и 0.75×) и примеры моделью Kokoro-82M в venv `tools/tts/.venv` (создание — README, раздел «Озвучка»), удаляет файлы без ссылок и пересчитывает `build.audio_status`. Нужен macOS (afconvert). Без venv — пропусти шаг, урок соберётся со статусом `pending`, приложение прочитает его системным голосом.
+- **Произношение имён и редких слов.** После `tts.py` запусти `tools/tts/.venv/bin/python tools/tts/check_pron.py --zipa <app>/tools/pronunciation-model --suggest`: он добавит в `tools/tts/lexicon.json` слова, которых Kokoro не знает (имена, бренды), и исправит слова, где ZIPA слышит не то. Проверь новые записи на здравый смысл (фонемы Misaki: A=eɪ, I=aɪ, O=oʊ, W=aʊ, Y=ɔɪ), при сомнении впиши своё произношение и добавь слово в `_manual`; затем снова `tts.py` → manifest → validate. Слова, оставшиеся с PER > 20 %, перечисли в сводке.
 - validate должен закончиться `OK`. Если правил контент — снова build → tts → manifest → validate.
 
 ## 5. Итог и коммит

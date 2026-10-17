@@ -12,15 +12,25 @@ its old encounters are replaced, not added. Lessons are ordered by (date, positi
 days.json); only encounters from earlier lessons count for level/history.
 Exit code: 0 = ok, 1 = problems found (nothing written unless --force), 2 = usage/input error.
 """
-import hashlib, json, pathlib, re, sys
+import hashlib, json, os, pathlib, re, sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
 from schema_check import check  # noqa: E402
 
-# Audio is synthesized by tools/tts.py (macOS `say` → AAC .m4a). The voice id is part of
-# the file-name hash, so changing the voice yields new files instead of stale ones.
-VOICE = "say:Samantha"
+# Audio is synthesized by tools/tts.py → AAC .m4a. Engine: Kokoro-82M (default) or macOS `say`
+# (WORDTRAIL_TTS_ENGINE=say). The voice of each role and the *spoken* text (after the
+# pronunciation lexicon tools/tts/lexicon.json) are part of the file-name hash, so changing a
+# voice or a lexicon entry yields new files instead of stale ones.
+
+TTS_ENGINE = os.environ.get("WORDTRAIL_TTS_ENGINE", "kokoro")
+VOICES = {
+    # word + sentence (+ slow sentence): US female; examples: US male — two timbres for the learner.
+    "kokoro": {"word": "kokoro:af_heart", "sentence": "kokoro:af_heart", "example": "kokoro:am_michael"},
+    "say": {"word": "say:Samantha", "sentence": "say:Samantha", "example": "say:Samantha"},
+}
+VOICE = VOICES[TTS_ENGINE]
+LEXICON_PATH = ROOT / "tools" / "tts" / "lexicon.json"
 AUDIO_EXT = ".m4a"
 PROMPT_VERSION = "level1-v1"
 MODEL = "claude-opus-5-5"
@@ -37,24 +47,48 @@ def dump_lesson(obj):
     return json.dumps(obj, ensure_ascii=False, separators=(",", ":"))
 
 
-def audio_key(text, rate):
-    return hashlib.sha1(f"{text}|{VOICE}|{rate}".encode()).hexdigest()[:16] + AUDIO_EXT
+_lexicon = None
+
+
+def lexicon():
+    """word (case-insensitive) → Kokoro/Misaki phonemes, for words Kokoro gets wrong."""
+    global _lexicon
+    if _lexicon is None:
+        raw = json.loads(LEXICON_PATH.read_text()) if LEXICON_PATH.exists() else {}
+        _lexicon = {k.lower(): v for k, v in raw.items() if not k.startswith("_")}
+    return _lexicon
+
+
+def spoken(text):
+    """Text as sent to the TTS engine: lexicon words become Misaki phoneme markup `[w](/ph/)`."""
+    if TTS_ENGINE != "kokoro" or not lexicon():
+        return text
+    words = sorted(lexicon(), key=len, reverse=True)
+    rx = re.compile(r"(?<![\w’'-])(" + "|".join(re.escape(w) for w in words) + r")(?![\w-])", re.IGNORECASE)
+    return rx.sub(lambda m: f"[{m.group(1)}](/{lexicon()[m.group(1).lower()]}/)", text)
+
+
+def audio_key(text, rate, role):
+    voice = VOICE[role]
+    # `say` keys keep the original scheme (text|voice|rate) so existing say files stay valid.
+    body = text if voice.startswith("say:") else spoken(text)
+    return hashlib.sha1(f"{body}|{voice}|{rate}".encode()).hexdigest()[:16] + AUDIO_EXT
 
 
 def audio_jobs(lesson):
-    """(file, text, rate) for every audio file a lesson references."""
+    """(file, text, rate, role) for every audio file a lesson references."""
     for x in lesson["items"]:
         a = x["audio"]
-        yield a["word"], x["text"], 1.0
-        yield a["sentence"], x["sentence"], 1.0
-        yield a["sentence_slow"], x["sentence"], 0.75
+        yield a["word"], x["text"], 1.0, "word"
+        yield a["sentence"], x["sentence"], 1.0, "sentence"
+        yield a["sentence_slow"], x["sentence"], 0.75, "sentence"
         for f, ex in zip(a["examples"], x["content"]["examples"]):
-            yield f, ex["en"], 1.0
+            yield f, ex["en"], 1.0, "example"
 
 
 def audio_status(lesson, audio_dir):
     """ready = every referenced file exists, partial = some, pending = none."""
-    files = {f for f, _, _ in audio_jobs(lesson)}
+    files = {f for f, *_ in audio_jobs(lesson)}
     have = sum(1 for f in files if (pathlib.Path(audio_dir) / f).is_file())
     return "ready" if files and have == len(files) else "partial" if have else "pending"
 
@@ -164,10 +198,10 @@ def build(src_path, content_path=None, out_dir=None, force=False, quiet=False, a
             "id": f"{src['id']}-{i+1:02d}", "lemma": lemma, "level": level, "encounter_no": level,
             "content": c,
             "audio": {
-                "word": audio_key(text, 1.0),
-                "sentence": audio_key(sentence, 1.0),
-                "sentence_slow": audio_key(sentence, 0.75),
-                "examples": [audio_key(e["en"], 1.0) for e in c["examples"]],
+                "word": audio_key(text, 1.0, "word"),
+                "sentence": audio_key(sentence, 1.0, "sentence"),
+                "sentence_slow": audio_key(sentence, 0.75, "sentence"),
+                "examples": [audio_key(e["en"], 1.0, "example") for e in c["examples"]],
             },
         }
         if text != it["text"]: item["text_original"] = it["text"]

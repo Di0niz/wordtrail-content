@@ -234,15 +234,15 @@ def validate(data):
                 jobs = list(build.audio_jobs(L))
             except (KeyError, TypeError):
                 continue  # structure errors are reported above
-            for f, text, rate in jobs:
+            for f, text, rate, role in jobs:
                 referenced.add(f)
-                if build.audio_key(text, rate) != f:
-                    err(f"lessons/{lid}.json: аудио {f} не соответствует тексту/голосу {build.VOICE} — запустите tools/rebuild.py")
+                if build.audio_key(text, rate, role) != f:
+                    err(f"lessons/{lid}.json: аудио {f} не соответствует тексту/голосу {build.VOICE[role]} — запустите tools/rebuild.py")
             status = L.get("build", {}).get("audio_status")
             actual = build.audio_status(L, data / "audio")
             if status != actual:
                 err(f"lessons/{lid}.json: audio_status {status!r}, по файлам {actual!r} — запустите tools/tts.py")
-            missing = [f for f, _, _ in jobs if not (data / "audio" / f).is_file()]
+            missing = [f for f, *_ in jobs if not (data / "audio" / f).is_file()]
             if status == "ready" and missing:
                 err(f"lessons/{lid}.json: audio_status ready, но нет файлов: {missing[:3]}…")
             elif missing:

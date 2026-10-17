@@ -24,7 +24,8 @@ tools/
   weak_forms.json, arpabet_zipa.json  слабые формы служебных слов со штрафами и соответствие ARPAbet ↔ фонемы ZIPA —
                                 копии из tools/pronunciation-model/g2p_eval/ репозитория приложения (там источник и замер)
   build.py                      words.json + content.json → data/lessons/<id>.json, vocab.json, days.json
-  tts.py                        озвучка macOS `say` → data/audio/<hash>.m4a, audio_status
+  tts.py                        озвучка Kokoro-82M (или macOS `say`) → data/audio/<hash>.m4a, audio_status
+  tts/                          venv Kokoro, kokoro_synth.py, lexicon.json, check_pron.py, check_tune.py
   manifest.py                   data/manifest.json (точка входа приложения)
   rebuild.py                    пересобрать всё data/ с нуля в порядке дат (+ tts; --no-tts для CI)
   validate.py                   проверить data/ так, как его ожидает приложение (+ эталон токенизатора)
@@ -36,7 +37,7 @@ data/                           генерируется скриптами, к�
   days.json                     дата → id уроков, число слов
   vocab.json                    память агента: лемма → уровень, значение, все встречи
   lessons/<id>.json             урок: элементы с lemma, level, content, audio-ключами
-  audio/<hash>.m4a              озвучка: AAC, моно, 22 кГц; имя = хэш текста, голоса и скорости
+  audio/<hash>.m4a              озвучка: AAC, моно, 24 кГц, ~64 кбит/с; имя = хэш произносимого текста, голоса роли и скорости
 editor/index.html               редактор: разметка текста и экспорт words.json
 .claude/skills/wordtrail-lesson/SKILL.md   процедура агента для Claude Code
 .github/workflows/validate.yml  CI: validate + rebuild --no-tts не даёт диффа
@@ -53,7 +54,7 @@ editor/index.html               редактор: разметка текста 
    python3 tools/phonemes.py agent/content/<id>.content.json
    tools/sentence_pron/.venv/bin/python tools/sentence_pron.py agent/content/<id>.content.json
    python3 tools/build.py lessons/<id>.json   # проблемы → код выхода 1, ничего не пишется (--force — записать всё равно)
-   python3 tools/tts.py                       # только macOS; без него audio_status: pending
+   python3 tools/tts.py                       # только macOS + venv tools/tts; без него audio_status: pending
    python3 tools/manifest.py
    python3 tools/validate.py
    ```
@@ -100,7 +101,19 @@ editor/index.html               редактор: разметка текста 
 
 ## Озвучка
 
-`tools/tts.py` синтезирует офлайн системным голосом macOS (`say`, голос Samantha — лучший установленный en-US; Premium/Enhanced-голоса можно скачать в настройках macOS и поменять `VOICE` в `build.py` — тогда все файлы получат новые имена). На каждый элемент: слово, предложение 1× и медленно, каждый пример. Компактный Samantha не умеет ровно 0.75×: самое медленное, что он даёт, — длительность ×1.3 (≈0.77×). `audio_status` урока: `ready` — все файлы на месте, `partial` — часть, `pending` — нет ни одного; считается по файлам, а не задаётся руками.
+`tools/tts.py` синтезирует офлайн нейросетевой моделью **Kokoro-82M** (hexgrad, лицензия Apache-2.0, произношение — её G2P Misaki). На каждый элемент: слово, предложение 1× и 0.75×, каждый пример.
+
+| Роль | Голос | Скорость |
+| --- | --- | --- |
+| слово, предложение | `af_heart` (US, женский) | 1.0 |
+| медленное предложение | `af_heart` | 0.75 — настоящий темп Kokoro, без растягивания пауз |
+| примеры | `am_michael` (US, мужской) | 1.0 |
+
+- **Окружение.** Kokoro работает в отдельном venv (Python 3.11, torch с MPS): `uv venv -p python3.11 tools/tts/.venv && uv pip install -p tools/tts/.venv -r tools/tts/requirements.txt`. Модель (~330 МБ) скачивается с Hugging Face в `tools/tts/.cache/` при первом запуске. Сам `tts.py`, `build.py` и CI остаются на stdlib: `tts.py` запускает `tools/tts/kokoro_synth.py` из venv (модель грузится один раз; тишина по краям обрезается до 80 мс, громкость выравнивается до −20 dBFS RMS речи). Около 0,3 с на предложение на M4 Pro.
+- **Словарь произношения** `tools/tts/lexicon.json`: слова, которые Kokoro читает неправильно, и имена/бренды, которых нет в словаре Misaki, → фонемы Misaki; подставляются в текст как `[слово](/фонемы/)`. Имя файла считается от текста *после* подстановки — правка словаря порождает новые файлы. Пополнять: `tools/tts/.venv/bin/python tools/tts/check_pron.py --zipa <app>/tools/pronunciation-model --suggest` — ZIPA распознаёт аудио слова и сравнивает с `content.phonemes`; для слов с PER > 20 % пробует наши фонемы и оставляет их, только если стало лучше; добавляет неизвестные Misaki слова из `sentence_pron`. Ручные записи перечислены в `_manual` и не перезаписываются.
+- **Проверка интонации эталона:** `tools/tts/check_tune.py` — понижение/повышение в конце (только для контроля). Kokoro заканчивает длинные утверждения ровнее, чем `say`, а общие вопросы — иногда понижением; приложение оценивает тон по правилам `sentence_pron.prosody`, синтез служит только образцом для графика.
+- **Запасной движок:** `WORDTRAIL_TTS_ENGINE=say python3 tools/rebuild.py` — системный голос macOS Samantha (файлы получат другие имена). Компактный Samantha не умеет ровно 0.75× (≈0.77×).
+- `audio_status` урока: `ready` — все файлы на месте, `partial` — часть, `pending` — нет ни одного; считается по файлам, а не задаётся руками.
 
 ## Произношение: phonemes
 
