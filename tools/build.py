@@ -27,8 +27,14 @@ MODEL = "claude-opus-5-5"
 
 
 def dump(obj):
-    # Format of all data/ files: 2-space indent, UTF-8, no trailing newline.
+    # vocab.json / days.json: 2-space indent, UTF-8, no trailing newline (small, diff-friendly).
     return json.dumps(obj, ensure_ascii=False, indent=2)
+
+
+def dump_lesson(obj):
+    # data/lessons/*.json: compact (no indentation) — the app downloads them; with sentence_pron
+    # the indented form was ~5× larger. The readable source stays in agent/content/.
+    return json.dumps(obj, ensure_ascii=False, separators=(",", ":"))
 
 
 def audio_key(text, rate):
@@ -63,7 +69,7 @@ def refresh_audio_status(data_dir=None, audio_dir=None):
         st = audio_status(L, audio_dir)
         if L["build"].get("audio_status") != st:
             L["build"]["audio_status"] = st
-            p.write_text(dump(L))
+            p.write_text(dump_lesson(L))
         out[L["id"]] = st
     return out
 
@@ -194,7 +200,7 @@ def build(src_path, content_path=None, out_dir=None, force=False, quiet=False, a
 
     lessons_dir = out_dir / "lessons"
     lessons_dir.mkdir(parents=True, exist_ok=True)
-    (lessons_dir / f"{src['id']}.json").write_text(dump(lesson))
+    (lessons_dir / f"{src['id']}.json").write_text(dump_lesson(lesson))
     # Keep day.index/total of the other lessons of this day in sync
     for idx, lid in enumerate(day["lessons"]):
         p = lessons_dir / f"{lid}.json"
@@ -203,7 +209,7 @@ def build(src_path, content_path=None, out_dir=None, force=False, quiet=False, a
             want = {"index": idx + 1, "total": len(day["lessons"])}
             if other.get("day") != want:
                 other["day"] = want
-                p.write_text(dump(other))
+                p.write_text(dump_lesson(other))
     day["words"] = sum(len(json.loads((lessons_dir / f"{l}.json").read_text())["items"]) for l in day["lessons"] if (lessons_dir / f"{l}.json").exists())
     (out_dir / "vocab.json").write_text(dump(vocab))
     (out_dir / "days.json").write_text(dump(days))
