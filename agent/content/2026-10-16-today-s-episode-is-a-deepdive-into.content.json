@@ -286,16 +286,11 @@
             "pos": "PROPN",
             "fn": false,
             "wt": 1.0,
-            "ph": "Y UW1 B ER0",
-            "alt": [
-              {
-                "ph": "Y UW1 B ER0 R",
-                "p": 0.7
-              }
-            ],
+            "ph": "UW1 B ER0",
+            "alt": [],
             "target": false,
             "stress": [
-              1
+              0
             ],
             "hom": null
           },
@@ -429,11 +424,11 @@
             "pos": "PROPN",
             "fn": false,
             "wt": 1.0,
-            "ph": "Y UW1 B ER0 Z",
+            "ph": "UW1 B ER0 Z",
             "alt": [],
             "target": false,
             "stress": [
-              1
+              0
             ],
             "hom": null
           },
@@ -618,11 +613,11 @@
             "pos": "NOUN",
             "fn": false,
             "wt": 1.0,
-            "ph": "Y UW1 B ER0 Z",
+            "ph": "UW1 B ER0 Z",
             "alt": [],
             "target": false,
             "stress": [
-              1
+              0
             ],
             "hom": null
           },
@@ -1017,11 +1012,11 @@
             "pos": "PROPN",
             "fn": false,
             "wt": 1.0,
-            "ph": "Y UW1 B ER0",
+            "ph": "UW1 B ER0",
             "alt": [],
             "target": false,
             "stress": [
-              1
+              0
             ],
             "hom": null
           },
@@ -1921,16 +1916,11 @@
             "pos": "PROPN",
             "fn": false,
             "wt": 1.0,
-            "ph": "Y UW1 B ER0",
-            "alt": [
-              {
-                "ph": "Y UW1 B ER0 R",
-                "p": 0.7
-              }
-            ],
+            "ph": "UW1 B ER0",
+            "alt": [],
             "target": false,
             "stress": [
-              1
+              0
             ],
             "hom": null
           },
@@ -3943,11 +3933,11 @@
             "pos": "PROPN",
             "fn": false,
             "wt": 1.0,
-            "ph": "Y UW1 B ER0 Z",
+            "ph": "UW1 B ER0 Z",
             "alt": [],
             "target": false,
             "stress": [
-              1
+              0
             ],
             "hom": null
           },
@@ -4661,11 +4651,11 @@
             "pos": "PROPN",
             "fn": false,
             "wt": 1.0,
-            "ph": "Y UW1 B ER0",
+            "ph": "UW1 B ER0",
             "alt": [],
             "target": false,
             "stress": [
-              1
+              0
             ],
             "hom": null
           },

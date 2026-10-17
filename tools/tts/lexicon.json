@@ -1,5 +1,9 @@
 {
  "_comment": "Words Kokoro mispronounces → Misaki (US) phonemes; applied as [word](/phonemes/) wherever the word occurs. Changing an entry changes the audio file names (hash of the spoken text). Proposed by tools/tts/check_pron.py --suggest (kept only if ZIPA PER improves) + OOV names from sentence_pron; entries listed in _manual were set by hand and are kept on re-runs.",
+ "_manual": [
+  "Uber",
+  "evals"
+ ],
  "Axios": "ˈæksiˌOs",
  "Coinbase": "kˈYnbˌAs",
  "DevPods": "dˈɛvpˌɑdz",
@@ -10,10 +14,6 @@
  "Stanier": "stˈænjəɹ",
  "Uber": "ˈubəɹ",
  "Uday": "ˈudA",
- "_manual": [
-  "Uber",
-  "evals"
- ],
  "affiliate": "əfˈɪliət",
  "amateurish": "ˈæmətəɹɪʃ",
  "datastores": "dˈAtəstˌɔɹz",
@@ -24,5 +24,6 @@
  "evals": "ˈivˌælz",
  "multisite": "mˈʌltisˌIt",
  "nondeterminism": "nˌɑndɪtˈɜɹmɪnˌɪzəm",
+ "o’er": "ˈɔɹ",
  "rerouting": "ɹˌiɹˈutɪŋ"
 }

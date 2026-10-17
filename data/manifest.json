@@ -1,7 +1,20 @@
 {
   "version": 1,
-  "generated_at": "2026-10-17T18:14:28Z",
+  "generated_at": "2026-10-17T18:27:56Z",
   "lessons": [
+    {
+      "id": "2026-10-17-she-walks-in-beauty-by-lord",
+      "date": "2026-10-17",
+      "title": "She Walks in Beauty — Lord Byron",
+      "title_ru": "Она идёт во всей красе — Байрон",
+      "day_index": 1,
+      "words": 25,
+      "new": 25,
+      "repeats": 0,
+      "path": "lessons/2026-10-17-she-walks-in-beauty-by-lord.json",
+      "sha": "c307e9b098a89d76",
+      "audio_status": "ready"
+    },
     {
       "id": "2026-10-16-today-s-episode-is-a-deepdive-into",
       "date": "2026-10-16",
@@ -12,7 +25,7 @@
       "new": 12,
       "repeats": 0,
       "path": "lessons/2026-10-16-today-s-episode-is-a-deepdive-into.json",
-      "sha": "ba26b3c524e698ba",
+      "sha": "9be70ad4f68febcc",
       "audio_status": "ready"
     },
     {
@@ -25,13 +38,13 @@
       "new": 50,
       "repeats": 0,
       "path": "lessons/2026-10-16-building-resilient-ai-powered-software.json",
-      "sha": "e25dddc4ae2f97b6",
+      "sha": "d3751c9badc965e6",
       "audio_status": "ready"
     }
   ],
   "vocab": {
     "path": "vocab.json",
-    "sha": "dcdb9e97a5646f72"
+    "sha": "437449530463b946"
   },
   "audio_base": "audio/"
 }

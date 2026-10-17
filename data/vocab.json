@@ -1052,5 +1052,430 @@
         "sentence": "“Having no automated failovers is incredibly amateurish for an operation of Coinbase’s scale."
       }
     ]
+  },
+  "clime": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "края; климат (поэт.)"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-17-she-walks-in-beauty-by-lord",
+        "date": "2026-10-17",
+        "sense": "s1",
+        "sentence": "She walks in beauty, like the night Of cloudless climes and starry skies."
+      }
+    ]
+  },
+  "aspect": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "облик; аспект"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-17-she-walks-in-beauty-by-lord",
+        "date": "2026-10-17",
+        "sense": "s1",
+        "sentence": "And all that’s best of dark and bright Meet in her aspect and her eyes."
+      }
+    ]
+  },
+  "mellow": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "смягчённый"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-17-she-walks-in-beauty-by-lord",
+        "date": "2026-10-17",
+        "sense": "s1",
+        "sentence": "Thus mellowed to that tender light Which heaven to gaudy day denies."
+      }
+    ]
+  },
+  "tender": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "нежный; мягкий"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-17-she-walks-in-beauty-by-lord",
+        "date": "2026-10-17",
+        "sense": "s1",
+        "sentence": "Thus mellowed to that tender light Which heaven to gaudy day denies."
+      }
+    ]
+  },
+  "gaudy": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "кричащий, аляповатый"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-17-she-walks-in-beauty-by-lord",
+        "date": "2026-10-17",
+        "sense": "s1",
+        "sentence": "Thus mellowed to that tender light Which heaven to gaudy day denies."
+      }
+    ]
+  },
+  "shade": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "тень; оттенок"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-17-she-walks-in-beauty-by-lord",
+        "date": "2026-10-17",
+        "sense": "s1",
+        "sentence": "One shade the more, one ray the less, Had half impaired the nameless grace Which waves in every raven tress, Or softly lightens o’er her face."
+      }
+    ]
+  },
+  "ray": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "луч"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-17-she-walks-in-beauty-by-lord",
+        "date": "2026-10-17",
+        "sense": "s1",
+        "sentence": "One shade the more, one ray the less, Had half impaired the nameless grace Which waves in every raven tress, Or softly lightens o’er her face."
+      }
+    ]
+  },
+  "impair": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "ослаблять; повреждать"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-17-she-walks-in-beauty-by-lord",
+        "date": "2026-10-17",
+        "sense": "s1",
+        "sentence": "One shade the more, one ray the less, Had half impaired the nameless grace Which waves in every raven tress, Or softly lightens o’er her face."
+      }
+    ]
+  },
+  "grace": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "грация; изящество"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-17-she-walks-in-beauty-by-lord",
+        "date": "2026-10-17",
+        "sense": "s1",
+        "sentence": "One shade the more, one ray the less, Had half impaired the nameless grace Which waves in every raven tress, Or softly lightens o’er her face."
+      }
+    ]
+  },
+  "raven": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "иссиня-чёрный; ворон"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-17-she-walks-in-beauty-by-lord",
+        "date": "2026-10-17",
+        "sense": "s1",
+        "sentence": "One shade the more, one ray the less, Had half impaired the nameless grace Which waves in every raven tress, Or softly lightens o’er her face."
+      }
+    ]
+  },
+  "tress": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "локон"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-17-she-walks-in-beauty-by-lord",
+        "date": "2026-10-17",
+        "sense": "s1",
+        "sentence": "One shade the more, one ray the less, Had half impaired the nameless grace Which waves in every raven tress, Or softly lightens o’er her face."
+      }
+    ]
+  },
+  "softly": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "мягко, тихо"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-17-she-walks-in-beauty-by-lord",
+        "date": "2026-10-17",
+        "sense": "s1",
+        "sentence": "One shade the more, one ray the less, Had half impaired the nameless grace Which waves in every raven tress, Or softly lightens o’er her face."
+      }
+    ]
+  },
+  "lighten": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "озарять; светлеть"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-17-she-walks-in-beauty-by-lord",
+        "date": "2026-10-17",
+        "sense": "s1",
+        "sentence": "One shade the more, one ray the less, Had half impaired the nameless grace Which waves in every raven tress, Or softly lightens o’er her face."
+      }
+    ]
+  },
+  "serenely": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "безмятежно"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-17-she-walks-in-beauty-by-lord",
+        "date": "2026-10-17",
+        "sense": "s1",
+        "sentence": "Where thoughts serenely sweet express, How pure, how dear their dwelling-place."
+      }
+    ]
+  },
+  "pure": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "чистый"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-17-she-walks-in-beauty-by-lord",
+        "date": "2026-10-17",
+        "sense": "s1",
+        "sentence": "Where thoughts serenely sweet express, How pure, how dear their dwelling-place."
+      }
+    ]
+  },
+  "dwelling-place": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "обитель"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-17-she-walks-in-beauty-by-lord",
+        "date": "2026-10-17",
+        "sense": "s1",
+        "sentence": "Where thoughts serenely sweet express, How pure, how dear their dwelling-place."
+      }
+    ]
+  },
+  "over": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "над (поэт. over)"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-17-she-walks-in-beauty-by-lord",
+        "date": "2026-10-17",
+        "sense": "s1",
+        "sentence": "And on that cheek, and o’er that brow, So soft, so calm, yet eloquent, The smiles that win, the tints that glow, But tell of days in goodness spent."
+      }
+    ]
+  },
+  "brow": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "лоб; бровь"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-17-she-walks-in-beauty-by-lord",
+        "date": "2026-10-17",
+        "sense": "s1",
+        "sentence": "And on that cheek, and o’er that brow, So soft, so calm, yet eloquent, The smiles that win, the tints that glow, But tell of days in goodness spent."
+      }
+    ]
+  },
+  "calm": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "спокойный"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-17-she-walks-in-beauty-by-lord",
+        "date": "2026-10-17",
+        "sense": "s1",
+        "sentence": "And on that cheek, and o’er that brow, So soft, so calm, yet eloquent, The smiles that win, the tints that glow, But tell of days in goodness spent."
+      }
+    ]
+  },
+  "eloquent": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "красноречивый"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-17-she-walks-in-beauty-by-lord",
+        "date": "2026-10-17",
+        "sense": "s1",
+        "sentence": "And on that cheek, and o’er that brow, So soft, so calm, yet eloquent, The smiles that win, the tints that glow, But tell of days in goodness spent."
+      }
+    ]
+  },
+  "tint": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "оттенок; тон"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-17-she-walks-in-beauty-by-lord",
+        "date": "2026-10-17",
+        "sense": "s1",
+        "sentence": "And on that cheek, and o’er that brow, So soft, so calm, yet eloquent, The smiles that win, the tints that glow, But tell of days in goodness spent."
+      }
+    ]
+  },
+  "glow": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "светиться; сияние"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-17-she-walks-in-beauty-by-lord",
+        "date": "2026-10-17",
+        "sense": "s1",
+        "sentence": "And on that cheek, and o’er that brow, So soft, so calm, yet eloquent, The smiles that win, the tints that glow, But tell of days in goodness spent."
+      }
+    ]
+  },
+  "peace": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "мир; покой"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-17-she-walks-in-beauty-by-lord",
+        "date": "2026-10-17",
+        "sense": "s1",
+        "sentence": "A mind at peace with all below, A heart whose love is innocent!"
+      }
+    ]
+  },
+  "below": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "внизу; ниже"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-17-she-walks-in-beauty-by-lord",
+        "date": "2026-10-17",
+        "sense": "s1",
+        "sentence": "A mind at peace with all below, A heart whose love is innocent!"
+      }
+    ]
+  },
+  "innocent": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "невинный"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-17-she-walks-in-beauty-by-lord",
+        "date": "2026-10-17",
+        "sense": "s1",
+        "sentence": "A mind at peace with all below, A heart whose love is innocent!"
+      }
+    ]
   }
 }

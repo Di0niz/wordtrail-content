@@ -2,10 +2,10 @@
   "_comment": "Decisions of the content agent after reviewing sentence_pron.py flags. _words: reviewed pronunciations (normalized token → ph/alt), applied everywhere. '<lesson id>/<item text>': set = dotted paths into sentence_pron (e.g. chunks, words[3].ph, prosody.tune), reviewed = flags already checked (hidden on reruns).",
   "_words": {
     "evals": {
-      "ph": "IH0 V AE1 L Z",
+      "ph": "IY1 V AE2 L Z",
       "alt": [
         {
-          "ph": "IY1 V AE2 L Z",
+          "ph": "IH0 V AE1 L Z",
           "p": 0.5
         }
       ]
@@ -51,6 +51,23 @@
     },
     "terraform": {
       "ph": "T EH1 R AH0 F AO2 R M"
+    },
+    "o'er": {
+      "ph": "AO1 R",
+      "alt": [
+        {
+          "ph": "OW1 ER0",
+          "p": 1.0
+        }
+      ]
+    },
+    "uber": {
+      "ph": "UW1 B ER0",
+      "alt": []
+    },
+    "uber's": {
+      "ph": "UW1 B ER0 Z",
+      "alt": []
     }
   },
   "2026-10-16-building-resilient-ai-powered-software/trade-offs": {
@@ -481,5 +498,509 @@
     "reviewed": [
       "TUNE:end':'"
     ]
+  },
+  "2026-10-17-she-walks-in-beauty-by-lord/climes": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 6
+        },
+        {
+          "from": 7,
+          "to": 12
+        }
+      ]
+    }
+  },
+  "2026-10-17-she-walks-in-beauty-by-lord/aspect": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 7
+        },
+        {
+          "from": 8,
+          "to": 14
+        }
+      ]
+    }
+  },
+  "2026-10-17-she-walks-in-beauty-by-lord/mellowed": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 5
+        },
+        {
+          "from": 6,
+          "to": 11
+        }
+      ]
+    }
+  },
+  "2026-10-17-she-walks-in-beauty-by-lord/tender": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 5
+        },
+        {
+          "from": 6,
+          "to": 11
+        }
+      ]
+    }
+  },
+  "2026-10-17-she-walks-in-beauty-by-lord/gaudy": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 5
+        },
+        {
+          "from": 6,
+          "to": 11
+        }
+      ]
+    }
+  },
+  "2026-10-17-she-walks-in-beauty-by-lord/shade": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 7
+        },
+        {
+          "from": 8,
+          "to": 13
+        },
+        {
+          "from": 14,
+          "to": 19
+        },
+        {
+          "from": 20,
+          "to": 25
+        }
+      ]
+    },
+    "reviewed": [
+      "CAMEL:o'er"
+    ]
+  },
+  "2026-10-17-she-walks-in-beauty-by-lord/ray": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 7
+        },
+        {
+          "from": 8,
+          "to": 13
+        },
+        {
+          "from": 14,
+          "to": 19
+        },
+        {
+          "from": 20,
+          "to": 25
+        }
+      ]
+    },
+    "reviewed": [
+      "CAMEL:o'er"
+    ]
+  },
+  "2026-10-17-she-walks-in-beauty-by-lord/impaired": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 7
+        },
+        {
+          "from": 8,
+          "to": 13
+        },
+        {
+          "from": 14,
+          "to": 19
+        },
+        {
+          "from": 20,
+          "to": 25
+        }
+      ]
+    },
+    "reviewed": [
+      "CAMEL:o'er"
+    ]
+  },
+  "2026-10-17-she-walks-in-beauty-by-lord/grace": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 7
+        },
+        {
+          "from": 8,
+          "to": 13
+        },
+        {
+          "from": 14,
+          "to": 19
+        },
+        {
+          "from": 20,
+          "to": 25
+        }
+      ]
+    },
+    "reviewed": [
+      "CAMEL:o'er"
+    ]
+  },
+  "2026-10-17-she-walks-in-beauty-by-lord/raven": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 7
+        },
+        {
+          "from": 8,
+          "to": 13
+        },
+        {
+          "from": 14,
+          "to": 19
+        },
+        {
+          "from": 20,
+          "to": 25
+        }
+      ]
+    },
+    "reviewed": [
+      "CAMEL:o'er"
+    ]
+  },
+  "2026-10-17-she-walks-in-beauty-by-lord/tress": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 7
+        },
+        {
+          "from": 8,
+          "to": 13
+        },
+        {
+          "from": 14,
+          "to": 19
+        },
+        {
+          "from": 20,
+          "to": 25
+        }
+      ]
+    },
+    "reviewed": [
+      "CAMEL:o'er"
+    ]
+  },
+  "2026-10-17-she-walks-in-beauty-by-lord/softly": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 7
+        },
+        {
+          "from": 8,
+          "to": 13
+        },
+        {
+          "from": 14,
+          "to": 19
+        },
+        {
+          "from": 20,
+          "to": 25
+        }
+      ]
+    },
+    "reviewed": [
+      "CAMEL:o'er"
+    ]
+  },
+  "2026-10-17-she-walks-in-beauty-by-lord/lightens": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 7
+        },
+        {
+          "from": 8,
+          "to": 13
+        },
+        {
+          "from": 14,
+          "to": 19
+        },
+        {
+          "from": 20,
+          "to": 25
+        }
+      ]
+    },
+    "reviewed": [
+      "CAMEL:o'er"
+    ]
+  },
+  "2026-10-17-she-walks-in-beauty-by-lord/serenely": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 4
+        },
+        {
+          "from": 5,
+          "to": 10
+        }
+      ]
+    }
+  },
+  "2026-10-17-she-walks-in-beauty-by-lord/pure": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 4
+        },
+        {
+          "from": 5,
+          "to": 10
+        }
+      ]
+    }
+  },
+  "2026-10-17-she-walks-in-beauty-by-lord/dwelling-place": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 4
+        },
+        {
+          "from": 5,
+          "to": 10
+        }
+      ]
+    }
+  },
+  "2026-10-17-she-walks-in-beauty-by-lord/o’er": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 7
+        },
+        {
+          "from": 8,
+          "to": 13
+        },
+        {
+          "from": 14,
+          "to": 21
+        },
+        {
+          "from": 22,
+          "to": 28
+        }
+      ]
+    },
+    "reviewed": [
+      "CAMEL:o'er"
+    ]
+  },
+  "2026-10-17-she-walks-in-beauty-by-lord/brow": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 7
+        },
+        {
+          "from": 8,
+          "to": 13
+        },
+        {
+          "from": 14,
+          "to": 21
+        },
+        {
+          "from": 22,
+          "to": 28
+        }
+      ]
+    },
+    "reviewed": [
+      "CAMEL:o'er"
+    ]
+  },
+  "2026-10-17-she-walks-in-beauty-by-lord/calm": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 7
+        },
+        {
+          "from": 8,
+          "to": 13
+        },
+        {
+          "from": 14,
+          "to": 21
+        },
+        {
+          "from": 22,
+          "to": 28
+        }
+      ]
+    },
+    "reviewed": [
+      "CAMEL:o'er"
+    ]
+  },
+  "2026-10-17-she-walks-in-beauty-by-lord/eloquent": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 7
+        },
+        {
+          "from": 8,
+          "to": 13
+        },
+        {
+          "from": 14,
+          "to": 21
+        },
+        {
+          "from": 22,
+          "to": 28
+        }
+      ]
+    },
+    "reviewed": [
+      "CAMEL:o'er"
+    ]
+  },
+  "2026-10-17-she-walks-in-beauty-by-lord/tints": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 7
+        },
+        {
+          "from": 8,
+          "to": 13
+        },
+        {
+          "from": 14,
+          "to": 21
+        },
+        {
+          "from": 22,
+          "to": 28
+        }
+      ]
+    },
+    "reviewed": [
+      "CAMEL:o'er"
+    ]
+  },
+  "2026-10-17-she-walks-in-beauty-by-lord/glow": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 7
+        },
+        {
+          "from": 8,
+          "to": 13
+        },
+        {
+          "from": 14,
+          "to": 21
+        },
+        {
+          "from": 22,
+          "to": 28
+        }
+      ]
+    },
+    "reviewed": [
+      "CAMEL:o'er"
+    ]
+  },
+  "2026-10-17-she-walks-in-beauty-by-lord/peace": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 6
+        },
+        {
+          "from": 7,
+          "to": 12
+        }
+      ]
+    }
+  },
+  "2026-10-17-she-walks-in-beauty-by-lord/below": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 6
+        },
+        {
+          "from": 7,
+          "to": 12
+        }
+      ]
+    }
+  },
+  "2026-10-17-she-walks-in-beauty-by-lord/innocent": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 6
+        },
+        {
+          "from": 7,
+          "to": 12
+        }
+      ]
+    }
   }
 }
