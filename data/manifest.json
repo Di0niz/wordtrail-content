@@ -1,7 +1,33 @@
 {
   "version": 1,
-  "generated_at": "2026-10-17T20:24:15Z",
+  "generated_at": "2026-10-26T12:36:37Z",
   "lessons": [
+    {
+      "id": "2026-10-26-what-i-believe-about-the-future",
+      "date": "2026-10-26",
+      "title": "What I believe about the future",
+      "title_ru": "Во что я верю: будущее программирования с AI",
+      "day_index": 1,
+      "words": 12,
+      "new": 12,
+      "repeats": 0,
+      "path": "lessons/2026-10-26-what-i-believe-about-the-future.json",
+      "sha": "dc34e902d7d03251",
+      "audio_status": "ready"
+    },
+    {
+      "id": "2026-10-26-how-to-be-more-ambitious-a",
+      "date": "2026-10-26",
+      "title": "How to be more ambitious A",
+      "title_ru": "Как быть амбициознее в работе с AI-моделями",
+      "day_index": 2,
+      "words": 28,
+      "new": 28,
+      "repeats": 0,
+      "path": "lessons/2026-10-26-how-to-be-more-ambitious-a.json",
+      "sha": "6f0e98c63f5a5a68",
+      "audio_status": "ready"
+    },
     {
       "id": "2026-10-17-she-walks-in-beauty-by-lord",
       "date": "2026-10-17",
@@ -38,13 +64,13 @@
       "new": 50,
       "repeats": 0,
       "path": "lessons/2026-10-16-building-resilient-ai-powered-software.json",
-      "sha": "870dd065aaadc1b6",
+      "sha": "8f31b68397000889",
       "audio_status": "ready"
     }
   ],
   "vocab": {
     "path": "vocab.json",
-    "sha": "437449530463b946"
+    "sha": "df69eb72e6f0b82a"
   },
   "audio_base": "audio/"
 }

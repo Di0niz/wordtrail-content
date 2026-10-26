@@ -1477,5 +1477,685 @@
         "sentence": "A mind at peace with all below, A heart whose love is innocent!"
       }
     ]
+  },
+  "blow up": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "взорваться; стать вирусным"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-26-what-i-believe-about-the-future",
+        "date": "2026-10-26",
+        "sense": "s1",
+        "sentence": "This was originally posted on X and blew up."
+      }
+    ]
+  },
+  "non-ephemeral": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "долговечный, не мимолётный"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-26-what-i-believe-about-the-future",
+        "date": "2026-10-26",
+        "sense": "s1",
+        "sentence": "To plant my flag, to say that these are things I believed in September 2026, here it is on the blog, non-ephemeral."
+      }
+    ]
+  },
+  "eyeball": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "глазное яблоко; зритель"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-26-what-i-believe-about-the-future",
+        "date": "2026-10-26",
+        "sense": "s1",
+        "sentence": "“Given enough eyeballs, all bugs are shallow” is still true but now we have artificial eyeballs."
+      }
+    ]
+  },
+  "arcane": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "тайный, малопонятный"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-26-what-i-believe-about-the-future",
+        "date": "2026-10-26",
+        "sense": "s1",
+        "sentence": "It’ll be seen as arcane as knowing how to write everything as a Perl one-liner."
+      }
+    ]
+  },
+  "paradigm": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "парадигма"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-26-what-i-believe-about-the-future",
+        "date": "2026-10-26",
+        "sense": "s1",
+        "sentence": "Tokens are the new computing paradigm."
+      }
+    ]
+  },
+  "deterministic": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "детерминированный"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-26-what-i-believe-about-the-future",
+        "date": "2026-10-26",
+        "sense": "s1",
+        "sentence": "We’ve had deterministic computers for 80 years, so we confuse “how computers have worked” with “how computers must work.”"
+      }
+    ]
+  },
+  "post-binary": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "постбинарный"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-26-what-i-believe-about-the-future",
+        "date": "2026-10-26",
+        "sense": "s1",
+        "sentence": "We’re entering the post-binary era."
+      }
+    ]
+  },
+  "meat proxy": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "живой посредник"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-26-what-i-believe-about-the-future",
+        "date": "2026-10-26",
+        "sense": "s1",
+        "sentence": "“Engineers” who act as “meat proxies” and shove tickets into agents and report back to humans will no longer be valuable."
+      }
+    ]
+  },
+  "shove": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "пихать, запихивать"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-26-what-i-believe-about-the-future",
+        "date": "2026-10-26",
+        "sense": "s1",
+        "sentence": "“Engineers” who act as “meat proxies” and shove tickets into agents and report back to humans will no longer be valuable."
+      }
+    ]
+  },
+  "assume": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "предполагать, считать"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-26-what-i-believe-about-the-future",
+        "date": "2026-10-26",
+        "sense": "s1",
+        "sentence": "Think of how dumb it is to assume that “only 80 columns wide” or “but newlines here and there” matters for agents – now consider all the other properties you have in mind for “good code”."
+      }
+    ]
+  },
+  "afford": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "позволить себе"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-26-what-i-believe-about-the-future",
+        "date": "2026-10-26",
+        "sense": "s1",
+        "sentence": "Just like only some people could afford a personal computer in the 80s and 90s, for the next few years, if you can’t get enough tokens, you’re playing second league."
+      }
+    ]
+  },
+  "questionable": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "сомнительный"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-26-what-i-believe-about-the-future",
+        "date": "2026-10-26",
+        "sense": "s1",
+        "sentence": "It’s questionable whether cheaper models will be used."
+      }
+    ]
+  },
+  "ambitious": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "амбициозный"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-26-how-to-be-more-ambitious-a",
+        "date": "2026-10-26",
+        "sense": "s1",
+        "sentence": "How to be more ambitious: A tutorial for humans with models"
+      }
+    ]
+  },
+  "accomplish": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "достичь, выполнить"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-26-how-to-be-more-ambitious-a",
+        "date": "2026-10-26",
+        "sense": "s1",
+        "sentence": "It’s an interesting experience: Every day I learn about yet another feat accomplished with or by Claude that I hadn’t considered, didn’t think possible, or simply lacked the curiosity and time to try."
+      }
+    ]
+  },
+  "consider": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "рассматривать, обдумывать"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-26-how-to-be-more-ambitious-a",
+        "date": "2026-10-26",
+        "sense": "s1",
+        "sentence": "It’s an interesting experience: Every day I learn about yet another feat accomplished with or by Claude that I hadn’t considered, didn’t think possible, or simply lacked the curiosity and time to try."
+      }
+    ]
+  },
+  "lack": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "не хватать; нехватка"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-26-how-to-be-more-ambitious-a",
+        "date": "2026-10-26",
+        "sense": "s1",
+        "sentence": "It’s an interesting experience: Every day I learn about yet another feat accomplished with or by Claude that I hadn’t considered, didn’t think possible, or simply lacked the curiosity and time to try."
+      }
+    ]
+  },
+  "curiosity": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "любопытство"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-26-how-to-be-more-ambitious-a",
+        "date": "2026-10-26",
+        "sense": "s1",
+        "sentence": "It’s an interesting experience: Every day I learn about yet another feat accomplished with or by Claude that I hadn’t considered, didn’t think possible, or simply lacked the curiosity and time to try."
+      }
+    ]
+  },
+  "inadequate": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "недостаточный, слабый"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-26-how-to-be-more-ambitious-a",
+        "date": "2026-10-26",
+        "sense": "s1",
+        "sentence": "Models are, as Terence Tao puts it, “astounding in some directions, while inadequate in others”."
+      }
+    ]
+  },
+  "astounding": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "поразительный"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-26-how-to-be-more-ambitious-a",
+        "date": "2026-10-26",
+        "sense": "s1",
+        "sentence": "Some people manage to pilot the astounding capabilities and seem to be flying — it’s addicting to watch people reach incredible heights with the products I’ve built."
+      }
+    ]
+  },
+  "incredible": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "невероятный"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-26-how-to-be-more-ambitious-a",
+        "date": "2026-10-26",
+        "sense": "s1",
+        "sentence": "Some people manage to pilot the astounding capabilities and seem to be flying — it’s addicting to watch people reach incredible heights with the products I’ve built."
+      }
+    ]
+  },
+  "struggle": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "с трудом справляться"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-26-how-to-be-more-ambitious-a",
+        "date": "2026-10-26",
+        "sense": "s1",
+        "sentence": "Many others are still struggling to get their new wings to work, wondering what they’re good for beyond asking “What is the capital of France” or “Can you make this email sound less angry”."
+      }
+    ]
+  },
+  "beyond": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "за пределами; помимо"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-26-how-to-be-more-ambitious-a",
+        "date": "2026-10-26",
+        "sense": "s1",
+        "sentence": "Many others are still struggling to get their new wings to work, wondering what they’re good for beyond asking “What is the capital of France” or “Can you make this email sound less angry”."
+      }
+    ]
+  },
+  "proclaim": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "провозглашать"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-26-how-to-be-more-ambitious-a",
+        "date": "2026-10-26",
+        "sense": "s1",
+        "sentence": "I frequently proclaim (together with other people working on AI) that we ought to be more ambitious when using it."
+      }
+    ]
+  },
+  "well-established": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "устоявшийся, признанный"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-26-how-to-be-more-ambitious-a",
+        "date": "2026-10-26",
+        "sense": "s1",
+        "sentence": "Well established and requires little creativity in how you approach AI, so I’ll skip this one."
+      }
+    ]
+  },
+  "altitude": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "высота (над уровнем моря)"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-26-how-to-be-more-ambitious-a",
+        "date": "2026-10-26",
+        "sense": "s1",
+        "sentence": "Altitude: Going up in abstraction and considering the outcome rather than the individual task."
+      }
+    ]
+  },
+  "underlying": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "лежащий в основе"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-26-how-to-be-more-ambitious-a",
+        "date": "2026-10-26",
+        "sense": "s1",
+        "sentence": "Rather than operating at the task’s layer, we go one level deeper and touch the underlying data, tools, and problems."
+      }
+    ]
+  },
+  "flippantly": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "легкомысленно, небрежно"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-26-how-to-be-more-ambitious-a",
+        "date": "2026-10-26",
+        "sense": "s1",
+        "sentence": "We often flippantly call this “letting the model operate at a higher abstraction”."
+      }
+    ]
+  },
+  "outcome": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "результат, итог"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-26-how-to-be-more-ambitious-a",
+        "date": "2026-10-26",
+        "sense": "s1",
+        "sentence": "When you give the model a task, it’s executing your best guess at how to get the outcome you want."
+      }
+    ]
+  },
+  "quarterly": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "ежеквартальный"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-26-how-to-be-more-ambitious-a",
+        "date": "2026-10-26",
+        "sense": "s1",
+        "sentence": "You’re at Acme Inc, an imagined company, where you need to put together a deck for the quarterly business review (QBR)."
+      }
+    ]
+  },
+  "altitude approach": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "подход «с высоты»"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-26-how-to-be-more-ambitious-a",
+        "date": "2026-10-26",
+        "sense": "s1",
+        "sentence": "The altitude approach works best if you really are after some ultimate outcome; it works less well for creative endeavors."
+      }
+    ]
+  },
+  "ultimate outcome": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "конечный результат"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-26-how-to-be-more-ambitious-a",
+        "date": "2026-10-26",
+        "sense": "s1",
+        "sentence": "The altitude approach works best if you really are after some ultimate outcome; it works less well for creative endeavors."
+      }
+    ]
+  },
+  "prompt": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "побуждать; запрашивать"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-26-how-to-be-more-ambitious-a",
+        "date": "2026-10-26",
+        "sense": "s1",
+        "sentence": "Insist on the same instruments used by the best in the industry: When prompted to act like a professional, models often switch vocabulary without actually switching methods."
+      }
+    ]
+  },
+  "rough": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "приблизительный; шероховатый"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-26-how-to-be-more-ambitious-a",
+        "date": "2026-10-26",
+        "sense": "s1",
+        "sentence": "Challenge what you know: Especially in business, a lot of things we believe to be true are rough approximations of reality."
+      }
+    ]
+  },
+  "insight": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "понимание, ценная мысль"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-26-how-to-be-more-ambitious-a",
+        "date": "2026-10-26",
+        "sense": "s1",
+        "sentence": "This isn’t a particularly unique insight, every single heist movie spends the first 30 minutes assembling a diverse cast of characters and talents."
+      }
+    ]
+  },
+  "forensic": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "криминалистический"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-26-how-to-be-more-ambitious-a",
+        "date": "2026-10-26",
+        "sense": "s1",
+        "sentence": "It might be useful to employ an adversarial “red team”, too, so let’s bring in a short seller and a forensic accountant."
+      }
+    ]
+  },
+  "engage in": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "заниматься, участвовать"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-26-how-to-be-more-ambitious-a",
+        "date": "2026-10-26",
+        "sense": "s1",
+        "sentence": "It is easy to accidentally engage in role play, which will make your transcript weirder without improving the actual outcome."
+      }
+    ]
+  },
+  "plenty of": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "много, полно"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-26-how-to-be-more-ambitious-a",
+        "date": "2026-10-26",
+        "sense": "s1",
+        "sentence": "Plenty of tools make this possible and I recommend that you use one."
+      }
+    ]
+  },
+  "self-efficacy": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "самоэффективность"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-26-how-to-be-more-ambitious-a",
+        "date": "2026-10-26",
+        "sense": "s1",
+        "sentence": "While researching the problem of ambition, I learned that psychology has a name for this: self-efficacy."
+      }
+    ]
+  },
+  "audacious": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "дерзкий, смелый"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-26-how-to-be-more-ambitious-a",
+        "date": "2026-10-26",
+        "sense": "s1",
+        "sentence": "Stripe founder Patrick Collison maintains a “Fast” list, chronicling the many things humans have accomplished when given both audacious goals and tight deadlines."
+      }
+    ]
+  },
+  "tight": {
+    "level": 1,
+    "senses": [
+      {
+        "id": "s1",
+        "ru": "жёсткий (срок); тугой"
+      }
+    ],
+    "encounters": [
+      {
+        "lesson": "2026-10-26-how-to-be-more-ambitious-a",
+        "date": "2026-10-26",
+        "sense": "s1",
+        "sentence": "Stripe founder Patrick Collison maintains a “Fast” list, chronicling the many things humans have accomplished when given both audacious goals and tight deadlines."
+      }
+    ]
   }
 }

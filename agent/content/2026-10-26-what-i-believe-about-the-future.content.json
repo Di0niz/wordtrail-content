@@ -1,0 +1,4889 @@
+{
+  "source_title_ru": "Во что я верю: будущее программирования с AI",
+  "sentences": {
+    "s1": {
+      "ru": "Изначально это было опубликовано в X и разлетелось по сети."
+    },
+    "s2": {
+      "ru": "Чтобы застолбить позицию и зафиксировать, во что я верил в сентябре 2026 года, публикую это в блоге — не мимолётным постом, а надолго."
+    },
+    "s3": {
+      "ru": "«Если глаз достаточно много, любая ошибка лежит на поверхности» — это по-прежнему верно, но теперь у нас есть искусственные глаза."
+    },
+    "s4": {
+      "ru": "Это будет казаться таким же тайным знанием, как умение записать что угодно однострочником на Perl."
+    },
+    "s5": {
+      "ru": "Токены — новая парадигма вычислений."
+    },
+    "s6": {
+      "ru": "У нас 80 лет были детерминированные компьютеры, поэтому мы путаем «как компьютеры работали» с «как компьютеры обязаны работать»."
+    },
+    "s7": {
+      "ru": "Мы вступаем в постбинарную эпоху."
+    },
+    "s8": {
+      "ru": "«Инженеры», которые служат «живыми прокси» — запихивают тикеты в агентов и отчитываются перед людьми, — больше не будут нужны."
+    },
+    "s9": {
+      "ru": "Подумайте, как глупо считать, что для агентов важно «не шире 80 колонок» или «переносы строк тут и там», — а теперь примерьте это ко всем остальным свойствам, которые вы связываете с «хорошим кодом»."
+    },
+    "s10": {
+      "ru": "Так же как в 80-х и 90-х персональный компьютер могли позволить себе лишь немногие, в ближайшие несколько лет, если вам не хватает токенов, вы играете во второй лиге."
+    },
+    "s11": {
+      "ru": "Большой вопрос, будут ли вообще использоваться более дешёвые модели."
+    }
+  },
+  "items": {
+    "blew": {
+      "s": "s1",
+      "lemma": "blow up",
+      "pos": "phrasal verb",
+      "ipa": "/bluː/",
+      "phonemes": "B L UW1",
+      "sentence_pron": {
+        "g2p": {
+          "src": "cmu+mfa+espeak+weak",
+          "ver": 1
+        },
+        "text": "This was originally posted on X and blew up.",
+        "words": [
+          {
+            "w": "This",
+            "ch": [
+              0,
+              4
+            ],
+            "pos": "PRON",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "DH IH1 S",
+            "alt": [
+              {
+                "ph": "DH IH0 S",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "was",
+            "ch": [
+              5,
+              8
+            ],
+            "pos": "AUX",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "W AA1 Z",
+            "alt": [
+              {
+                "ph": "W AH0 Z",
+                "p": 0.5
+              },
+              {
+                "ph": "W AH1 Z",
+                "p": 0.7
+              }
+            ],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "originally",
+            "ch": [
+              9,
+              19
+            ],
+            "pos": "ADV",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "ER0 IH1 JH AH0 N AH0 L IY0",
+            "alt": [
+              {
+                "ph": "ER0 IH1 JH N AH0 L IY0",
+                "p": 0.5
+              },
+              {
+                "ph": "ER0 R IH1 JH IH0 N AH0 L IY0",
+                "p": 0.7
+              }
+            ],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "posted",
+            "ch": [
+              20,
+              26
+            ],
+            "pos": "VERB",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "P OW1 S T IH0 D",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "on",
+            "ch": [
+              27,
+              29
+            ],
+            "pos": "ADP",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "AA1 N",
+            "alt": [
+              {
+                "ph": "AO1 N",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [
+              0
+            ],
+            "hom": null
+          },
+          {
+            "w": "X",
+            "ch": [
+              30,
+              31
+            ],
+            "pos": "NOUN",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "EH1 K S",
+            "alt": [],
+            "target": false,
+            "stress": [
+              0
+            ],
+            "hom": null
+          },
+          {
+            "w": "and",
+            "ch": [
+              32,
+              35
+            ],
+            "pos": "CCONJ",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "AH0 N D",
+            "alt": [
+              {
+                "ph": "AE1 N D",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [],
+            "hom": null
+          },
+          {
+            "w": "blew",
+            "ch": [
+              36,
+              40
+            ],
+            "pos": "VERB",
+            "fn": false,
+            "wt": 1.5,
+            "ph": "B L UW1",
+            "alt": [],
+            "target": true,
+            "stress": [
+              2
+            ],
+            "hom": null
+          },
+          {
+            "w": "up",
+            "ch": [
+              41,
+              43
+            ],
+            "pos": "ADP",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "AH1 P",
+            "alt": [],
+            "target": false,
+            "stress": [
+              0
+            ],
+            "hom": null
+          }
+        ],
+        "joins": [],
+        "chunks": [
+          {
+            "from": 0,
+            "to": 8
+          }
+        ],
+        "skip_cost": 4.0,
+        "prosody": {
+          "type": "statement",
+          "tune": "fall",
+          "tune_ambiguous": false,
+          "nucleus": 8,
+          "nucleus_alt": [],
+          "breaks": [],
+          "syllables": 14
+        }
+      },
+      "cefr": "B2",
+      "ru": "здесь: стать вирусным, резко набрать популярность",
+      "ru_short": "взорваться; стать вирусным",
+      "definition_en": "blow up — to suddenly become very popular, especially online",
+      "note_ru": "blew — прошедшее время от blow (blow — blew — blown), учить стоит фразу blow up. Базовое значение — «взорвать(ся)»; в соцсетях — «завирусилось». Ещё одно значение — «вспылить»: He blew up at me.",
+      "suggest_phrase": "blow up",
+      "examples": [
+        {
+          "en": "Her tweet about the outage blew up overnight.",
+          "ru": "Её твит про сбой за ночь разлетелся по сети."
+        },
+        {
+          "en": "They plan to blow up the old bridge.",
+          "ru": "Старый мост собираются взорвать."
+        }
+      ]
+    },
+    "non-ephemeral": {
+      "s": "s2",
+      "lemma": "non-ephemeral",
+      "pos": "adjective",
+      "ipa": "/ˌnɑːn ɪˈfemərəl/",
+      "phonemes": "N AA2 N | IH0 F EH1 M ER0 AH0 L",
+      "sentence_pron": {
+        "g2p": {
+          "src": "cmu+mfa+espeak+weak",
+          "ver": 1
+        },
+        "text": "To plant my flag, to say that these are things I believed in September 2026, here it is on the blog, non-ephemeral.",
+        "words": [
+          {
+            "w": "To",
+            "ch": [
+              0,
+              2
+            ],
+            "pos": "PART",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "T UW1",
+            "alt": [
+              {
+                "ph": "T AH0",
+                "p": 2.92
+              },
+              {
+                "ph": "T IH0",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "plant",
+            "ch": [
+              3,
+              8
+            ],
+            "pos": "VERB",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "P L AE1 N T",
+            "alt": [],
+            "target": false,
+            "stress": [
+              2
+            ],
+            "hom": null
+          },
+          {
+            "w": "my",
+            "ch": [
+              9,
+              11
+            ],
+            "pos": "PRON",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "M AY1",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "flag",
+            "ch": [
+              12,
+              16
+            ],
+            "pos": "NOUN",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "F L AE1 G",
+            "alt": [],
+            "target": false,
+            "stress": [
+              2
+            ],
+            "hom": null
+          },
+          {
+            "w": "to",
+            "ch": [
+              18,
+              20
+            ],
+            "pos": "PART",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "T UW1",
+            "alt": [
+              {
+                "ph": "T AH0",
+                "p": 2.92
+              },
+              {
+                "ph": "T IH0",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "say",
+            "ch": [
+              21,
+              24
+            ],
+            "pos": "VERB",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "S EY1",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "that",
+            "ch": [
+              25,
+              29
+            ],
+            "pos": "SCONJ",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "DH AE1 T",
+            "alt": [
+              {
+                "ph": "DH AH0 T",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "these",
+            "ch": [
+              30,
+              35
+            ],
+            "pos": "PRON",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "DH IY1 Z",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "are",
+            "ch": [
+              36,
+              39
+            ],
+            "pos": "AUX",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "AA1 R",
+            "alt": [
+              {
+                "ph": "ER0",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [
+              0
+            ],
+            "hom": null
+          },
+          {
+            "w": "things",
+            "ch": [
+              40,
+              46
+            ],
+            "pos": "NOUN",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "TH IH1 NG Z",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "I",
+            "ch": [
+              47,
+              48
+            ],
+            "pos": "PRON",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "AY1",
+            "alt": [],
+            "target": false,
+            "stress": [
+              0
+            ],
+            "hom": null
+          },
+          {
+            "w": "believed",
+            "ch": [
+              49,
+              57
+            ],
+            "pos": "VERB",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "B IH0 L IY1 V D",
+            "alt": [],
+            "target": false,
+            "stress": [
+              3
+            ],
+            "hom": null
+          },
+          {
+            "w": "in",
+            "ch": [
+              58,
+              60
+            ],
+            "pos": "ADP",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "IH0 N",
+            "alt": [
+              {
+                "ph": "IH1 N",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [],
+            "hom": null
+          },
+          {
+            "w": "September",
+            "ch": [
+              61,
+              70
+            ],
+            "pos": "PROPN",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "S EH0 P T EH1 M B ER0",
+            "alt": [],
+            "target": false,
+            "stress": [
+              4
+            ],
+            "hom": null
+          },
+          {
+            "w": "2026",
+            "ch": [
+              71,
+              75
+            ],
+            "pos": "NUM",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "T W EH1 N T IY0 | T W EH1 N T IY0 | S IH1 K S",
+            "alt": [
+              {
+                "ph": "T UW1 | TH AW1 Z AH0 N D | T W EH1 N T IY0 | S IH1 K S",
+                "p": 0.3
+              }
+            ],
+            "target": false,
+            "stress": [
+              2,
+              8,
+              13
+            ],
+            "hom": null
+          },
+          {
+            "w": "here",
+            "ch": [
+              77,
+              81
+            ],
+            "pos": "ADV",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "HH IY1 R",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "it",
+            "ch": [
+              82,
+              84
+            ],
+            "pos": "PRON",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "IH1 T",
+            "alt": [
+              {
+                "ph": "IH0 T",
+                "p": 0.5
+              },
+              {
+                "ph": "IH1",
+                "p": 0.7
+              }
+            ],
+            "target": false,
+            "stress": [
+              0
+            ],
+            "hom": null
+          },
+          {
+            "w": "is",
+            "ch": [
+              85,
+              87
+            ],
+            "pos": "AUX",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "IH1 Z",
+            "alt": [
+              {
+                "ph": "IH0 Z",
+                "p": 0.0
+              }
+            ],
+            "target": false,
+            "stress": [
+              0
+            ],
+            "hom": null
+          },
+          {
+            "w": "on",
+            "ch": [
+              88,
+              90
+            ],
+            "pos": "ADP",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "AA1 N",
+            "alt": [
+              {
+                "ph": "AO1 N",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [
+              0
+            ],
+            "hom": null
+          },
+          {
+            "w": "the",
+            "ch": [
+              91,
+              94
+            ],
+            "pos": "DET",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "DH AH0",
+            "alt": [
+              {
+                "ph": "DH AH1",
+                "p": 0.5
+              },
+              {
+                "ph": "DH IY0",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [],
+            "hom": null
+          },
+          {
+            "w": "blog",
+            "ch": [
+              95,
+              99
+            ],
+            "pos": "NOUN",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "B L AO1 G",
+            "alt": [],
+            "target": false,
+            "stress": [
+              2
+            ],
+            "hom": null
+          },
+          {
+            "w": "non-ephemeral",
+            "ch": [
+              101,
+              114
+            ],
+            "pos": "ADJ",
+            "fn": false,
+            "wt": 1.5,
+            "ph": "N AA2 N | IH0 F EH1 M ER0 AH0 L",
+            "alt": [],
+            "target": true,
+            "stress": [
+              5
+            ],
+            "hom": null
+          }
+        ],
+        "joins": [],
+        "chunks": [
+          {
+            "from": 0,
+            "to": 3
+          },
+          {
+            "from": 4,
+            "to": 14
+          },
+          {
+            "from": 15,
+            "to": 21
+          }
+        ],
+        "skip_cost": 4.0,
+        "prosody": {
+          "type": "statement",
+          "tune": "fall",
+          "tune_ambiguous": false,
+          "nucleus": 21,
+          "nucleus_alt": [],
+          "breaks": [
+            {
+              "after": 3,
+              "kind": "comma"
+            },
+            {
+              "after": 14,
+              "kind": "comma"
+            },
+            {
+              "after": 20,
+              "kind": "comma"
+            }
+          ],
+          "syllables": 33
+        }
+      },
+      "cefr": "C1",
+      "ru": "здесь: не исчезающий, сохраняющийся надолго",
+      "ru_short": "долговечный, не мимолётный",
+      "definition_en": "lasting and staying available, not disappearing after a short time",
+      "note_ru": "ephemeral — «мимолётный, недолговечный» (как посты в ленте или stories). Ударение: e-PHEM-er-al. В IT ephemeral storage / ephemeral container — временные, удаляемые вместе с машиной.",
+      "examples": [
+        {
+          "en": "Logs are stored in non-ephemeral storage.",
+          "ru": "Логи хранятся в постоянном хранилище."
+        },
+        {
+          "en": "Write your decisions down somewhere non-ephemeral.",
+          "ru": "Записывайте решения туда, где они не пропадут."
+        }
+      ]
+    },
+    "eyeballs": {
+      "s": "s3",
+      "lemma": "eyeball",
+      "pos": "noun",
+      "ipa": "/ˈaɪˌbɔːlz/",
+      "phonemes": "AY1 B AO2 L Z",
+      "sentence_pron": {
+        "g2p": {
+          "src": "cmu+mfa+espeak+weak",
+          "ver": 1
+        },
+        "text": "“Given enough eyeballs, all bugs are shallow” is still true but now we have artificial eyeballs.",
+        "words": [
+          {
+            "w": "Given",
+            "ch": [
+              1,
+              6
+            ],
+            "pos": "VERB",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "G IH1 V AH0 N",
+            "alt": [
+              {
+                "ph": "G IH1 V IH0 N",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "enough",
+            "ch": [
+              7,
+              13
+            ],
+            "pos": "ADJ",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "IH0 N AH1 F",
+            "alt": [
+              {
+                "ph": "IY0 N AH1 F",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [
+              2
+            ],
+            "hom": null
+          },
+          {
+            "w": "eyeballs",
+            "ch": [
+              14,
+              22
+            ],
+            "pos": "NOUN",
+            "fn": false,
+            "wt": 1.5,
+            "ph": "AY1 B AO2 L Z",
+            "alt": [
+              {
+                "ph": "AY1 B AA2 L Z",
+                "p": 0.7
+              }
+            ],
+            "target": true,
+            "stress": [
+              0
+            ],
+            "hom": null
+          },
+          {
+            "w": "all",
+            "ch": [
+              24,
+              27
+            ],
+            "pos": "DET",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "AO1 L",
+            "alt": [
+              {
+                "ph": "AA1 L",
+                "p": 0.7
+              }
+            ],
+            "target": false,
+            "stress": [
+              0
+            ],
+            "hom": null
+          },
+          {
+            "w": "bugs",
+            "ch": [
+              28,
+              32
+            ],
+            "pos": "NOUN",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "B AH1 G Z",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "are",
+            "ch": [
+              33,
+              36
+            ],
+            "pos": "AUX",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "AA1 R",
+            "alt": [
+              {
+                "ph": "ER0",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [
+              0
+            ],
+            "hom": null
+          },
+          {
+            "w": "shallow",
+            "ch": [
+              37,
+              44
+            ],
+            "pos": "ADJ",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "SH AE1 L OW0",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "is",
+            "ch": [
+              46,
+              48
+            ],
+            "pos": "AUX",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "IH1 Z",
+            "alt": [
+              {
+                "ph": "IH0 Z",
+                "p": 0.0
+              }
+            ],
+            "target": false,
+            "stress": [
+              0
+            ],
+            "hom": null
+          },
+          {
+            "w": "still",
+            "ch": [
+              49,
+              54
+            ],
+            "pos": "ADV",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "S T IH1 L",
+            "alt": [],
+            "target": false,
+            "stress": [
+              2
+            ],
+            "hom": null
+          },
+          {
+            "w": "true",
+            "ch": [
+              55,
+              59
+            ],
+            "pos": "ADJ",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "T R UW1",
+            "alt": [],
+            "target": false,
+            "stress": [
+              2
+            ],
+            "hom": null
+          },
+          {
+            "w": "but",
+            "ch": [
+              60,
+              63
+            ],
+            "pos": "CCONJ",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "B AH1 T",
+            "alt": [
+              {
+                "ph": "B AH0 T",
+                "p": 0.49
+              }
+            ],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "now",
+            "ch": [
+              64,
+              67
+            ],
+            "pos": "ADV",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "N AW1",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "we",
+            "ch": [
+              68,
+              70
+            ],
+            "pos": "PRON",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "W IY1",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "have",
+            "ch": [
+              71,
+              75
+            ],
+            "pos": "VERB",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "HH AE1 V",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "artificial",
+            "ch": [
+              76,
+              86
+            ],
+            "pos": "ADJ",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "AA2 R T AH0 F IH1 SH AH0 L",
+            "alt": [
+              {
+                "ph": "AA2 R T IH0 F IH1 SH AH0 L",
+                "p": 0.7
+              }
+            ],
+            "target": false,
+            "stress": [
+              5
+            ],
+            "hom": null
+          },
+          {
+            "w": "eyeballs",
+            "ch": [
+              87,
+              95
+            ],
+            "pos": "NOUN",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "AY1 B AO2 L Z",
+            "alt": [
+              {
+                "ph": "AY1 B AA2 L Z",
+                "p": 0.7
+              }
+            ],
+            "target": false,
+            "stress": [
+              0
+            ],
+            "hom": null
+          }
+        ],
+        "joins": [],
+        "chunks": [
+          {
+            "from": 0,
+            "to": 6
+          },
+          {
+            "from": 7,
+            "to": 15
+          }
+        ],
+        "skip_cost": 4.0,
+        "prosody": {
+          "type": "statement",
+          "tune": "fall",
+          "tune_ambiguous": false,
+          "nucleus": 15,
+          "nucleus_alt": [],
+          "breaks": [
+            {
+              "after": 2,
+              "kind": "comma"
+            }
+          ],
+          "syllables": 24
+        }
+      },
+      "cefr": "B2",
+      "ru": "здесь: глаза, т. е. люди, которые смотрят (на код)",
+      "ru_short": "глазное яблоко; зритель",
+      "definition_en": "(informal, plural) people looking at or checking something",
+      "note_ru": "Цитата — «закон Линуса» Эрика Реймонда об open source. В разговорном английском eyeballs — «зрители, просмотры»: get more eyeballs on the site. Глагол to eyeball — «прикинуть на глаз».",
+      "examples": [
+        {
+          "en": "The PR needs more eyeballs before we merge it.",
+          "ru": "Этот PR должны посмотреть ещё люди, прежде чем мы его вольём."
+        },
+        {
+          "en": "The ad brought millions of eyeballs to the site.",
+          "ru": "Реклама привела на сайт миллионы зрителей."
+        }
+      ]
+    },
+    "arcane": {
+      "s": "s4",
+      "lemma": "arcane",
+      "pos": "adjective",
+      "ipa": "/ˌɑːrˈkeɪn/",
+      "phonemes": "AA2 R K EY1 N",
+      "sentence_pron": {
+        "g2p": {
+          "src": "cmu+mfa+espeak+weak",
+          "ver": 1
+        },
+        "text": "It’ll be seen as arcane as knowing how to write everything as a Perl one-liner.",
+        "words": [
+          {
+            "w": "It’ll",
+            "ch": [
+              0,
+              5
+            ],
+            "pos": "PRON",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "IH1 T AH0 L",
+            "alt": [
+              {
+                "ph": "IH1 T L",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [
+              0
+            ],
+            "hom": null
+          },
+          {
+            "w": "be",
+            "ch": [
+              6,
+              8
+            ],
+            "pos": "AUX",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "B IY1",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "seen",
+            "ch": [
+              9,
+              13
+            ],
+            "pos": "VERB",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "S IY1 N",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "as",
+            "ch": [
+              14,
+              16
+            ],
+            "pos": "ADV",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "AE1 Z",
+            "alt": [
+              {
+                "ph": "EH1 Z",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [
+              0
+            ],
+            "hom": null
+          },
+          {
+            "w": "arcane",
+            "ch": [
+              17,
+              23
+            ],
+            "pos": "ADJ",
+            "fn": false,
+            "wt": 1.5,
+            "ph": "AA2 R K EY1 N",
+            "alt": [],
+            "target": true,
+            "stress": [
+              3
+            ],
+            "hom": null
+          },
+          {
+            "w": "as",
+            "ch": [
+              24,
+              26
+            ],
+            "pos": "ADP",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "AE1 Z",
+            "alt": [
+              {
+                "ph": "EH1 Z",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [
+              0
+            ],
+            "hom": null
+          },
+          {
+            "w": "knowing",
+            "ch": [
+              27,
+              34
+            ],
+            "pos": "VERB",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "N OW1 IH0 NG",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "how",
+            "ch": [
+              35,
+              38
+            ],
+            "pos": "SCONJ",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "HH AW1",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "to",
+            "ch": [
+              39,
+              41
+            ],
+            "pos": "PART",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "T UW1",
+            "alt": [
+              {
+                "ph": "T AH0",
+                "p": 2.92
+              },
+              {
+                "ph": "T IH0",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "write",
+            "ch": [
+              42,
+              47
+            ],
+            "pos": "VERB",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "R AY1 T",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "everything",
+            "ch": [
+              48,
+              58
+            ],
+            "pos": "PRON",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "EH1 V R IY0 TH IH2 NG",
+            "alt": [
+              {
+                "ph": "EH1 V R IH0 TH IH2 NG",
+                "p": 0.7
+              }
+            ],
+            "target": false,
+            "stress": [
+              0
+            ],
+            "hom": null
+          },
+          {
+            "w": "as",
+            "ch": [
+              59,
+              61
+            ],
+            "pos": "ADP",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "AE1 Z",
+            "alt": [
+              {
+                "ph": "EH1 Z",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [
+              0
+            ],
+            "hom": null
+          },
+          {
+            "w": "a",
+            "ch": [
+              62,
+              63
+            ],
+            "pos": "DET",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "AH0",
+            "alt": [
+              {
+                "ph": "EY1",
+                "p": 0.55
+              }
+            ],
+            "target": false,
+            "stress": [],
+            "hom": null
+          },
+          {
+            "w": "Perl",
+            "ch": [
+              64,
+              68
+            ],
+            "pos": "PROPN",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "P ER1 L",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "one-liner",
+            "ch": [
+              69,
+              78
+            ],
+            "pos": "NUM",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "W AH1 N | L AY1 N ER0",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1,
+              4
+            ],
+            "hom": null
+          }
+        ],
+        "joins": [],
+        "chunks": [
+          {
+            "from": 0,
+            "to": 6
+          },
+          {
+            "from": 7,
+            "to": 14
+          }
+        ],
+        "skip_cost": 4.0,
+        "prosody": {
+          "type": "statement",
+          "tune": "fall",
+          "tune_ambiguous": false,
+          "nucleus": 14,
+          "nucleus_alt": [],
+          "breaks": [],
+          "syllables": 22
+        }
+      },
+      "cefr": "C1",
+      "ru": "малопонятный, известный немногим",
+      "ru_short": "тайный, малопонятный",
+      "definition_en": "secret or mysterious and known or understood by very few people",
+      "note_ru": "Часто с оттенком «устаревший и запутанный»: arcane rules, arcane syntax. Ударение на второй слог. Конструкция в тексте: be seen as arcane — «считаться чем-то тайным».",
+      "examples": [
+        {
+          "en": "The build system has some arcane configuration flags.",
+          "ru": "У системы сборки есть малопонятные флаги настройки."
+        },
+        {
+          "en": "Tax law is full of arcane rules.",
+          "ru": "Налоговое право полно запутанных правил."
+        }
+      ]
+    },
+    "paradigm": {
+      "s": "s5",
+      "lemma": "paradigm",
+      "pos": "noun",
+      "ipa": "/ˈpærəˌdaɪm/",
+      "phonemes": "P AE1 R AH0 D AY2 M",
+      "sentence_pron": {
+        "g2p": {
+          "src": "cmu+mfa+espeak+weak",
+          "ver": 1
+        },
+        "text": "Tokens are the new computing paradigm.",
+        "words": [
+          {
+            "w": "Tokens",
+            "ch": [
+              0,
+              6
+            ],
+            "pos": "PROPN",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "T OW1 K AH0 N Z",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "are",
+            "ch": [
+              7,
+              10
+            ],
+            "pos": "AUX",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "AA1 R",
+            "alt": [
+              {
+                "ph": "ER0",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [
+              0
+            ],
+            "hom": null
+          },
+          {
+            "w": "the",
+            "ch": [
+              11,
+              14
+            ],
+            "pos": "DET",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "DH AH0",
+            "alt": [
+              {
+                "ph": "DH AH1",
+                "p": 0.5
+              },
+              {
+                "ph": "DH IY0",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [],
+            "hom": null
+          },
+          {
+            "w": "new",
+            "ch": [
+              15,
+              18
+            ],
+            "pos": "ADJ",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "N UW1",
+            "alt": [
+              {
+                "ph": "N Y UW1",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "computing",
+            "ch": [
+              19,
+              28
+            ],
+            "pos": "NOUN",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "K AH0 M P Y UW1 T IH0 NG",
+            "alt": [],
+            "target": false,
+            "stress": [
+              5
+            ],
+            "hom": null
+          },
+          {
+            "w": "paradigm",
+            "ch": [
+              29,
+              37
+            ],
+            "pos": "NOUN",
+            "fn": false,
+            "wt": 1.5,
+            "ph": "P AE1 R AH0 D AY2 M",
+            "alt": [],
+            "target": true,
+            "stress": [
+              1
+            ],
+            "hom": null
+          }
+        ],
+        "joins": [],
+        "chunks": [
+          {
+            "from": 0,
+            "to": 5
+          }
+        ],
+        "skip_cost": 4.0,
+        "prosody": {
+          "type": "statement",
+          "tune": "fall",
+          "tune_ambiguous": false,
+          "nucleus": 5,
+          "nucleus_alt": [],
+          "breaks": [],
+          "syllables": 11
+        }
+      },
+      "cefr": "C1",
+      "ru": "парадигма, модель",
+      "ru_short": "парадигма",
+      "definition_en": "a typical model or way of thinking about or doing something",
+      "note_ru": "Буква g не читается: PA-ra-dime. Частое сочетание: paradigm shift — «смена парадигмы», коренной поворот в подходе.",
+      "examples": [
+        {
+          "en": "Functional programming is a different paradigm.",
+          "ru": "Функциональное программирование — это другая парадигма."
+        },
+        {
+          "en": "The internet caused a paradigm shift in retail.",
+          "ru": "Интернет вызвал смену парадигмы в розничной торговле."
+        }
+      ]
+    },
+    "deterministic": {
+      "s": "s6",
+      "lemma": "deterministic",
+      "pos": "adjective",
+      "ipa": "/dɪˌtɜːrmɪˈnɪstɪk/",
+      "phonemes": "D IH0 T ER2 M IH0 N IH1 S T IH0 K",
+      "sentence_pron": {
+        "g2p": {
+          "src": "cmu+mfa+espeak+weak",
+          "ver": 1
+        },
+        "text": "We’ve had deterministic computers for 80 years, so we confuse “how computers have worked” with “how computers must work.”",
+        "words": [
+          {
+            "w": "We’ve",
+            "ch": [
+              0,
+              5
+            ],
+            "pos": "PRON",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "W IY1 V",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "had",
+            "ch": [
+              6,
+              9
+            ],
+            "pos": "VERB",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "HH AE1 D",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "deterministic",
+            "ch": [
+              10,
+              23
+            ],
+            "pos": "ADJ",
+            "fn": false,
+            "wt": 1.5,
+            "ph": "D IH0 T ER2 M IH0 N IH1 S T IH0 K",
+            "alt": [],
+            "target": true,
+            "stress": [
+              7
+            ],
+            "hom": null
+          },
+          {
+            "w": "computers",
+            "ch": [
+              24,
+              33
+            ],
+            "pos": "NOUN",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "K AH0 M P Y UW1 T ER0 Z",
+            "alt": [],
+            "target": false,
+            "stress": [
+              5
+            ],
+            "hom": null
+          },
+          {
+            "w": "for",
+            "ch": [
+              34,
+              37
+            ],
+            "pos": "ADP",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "F AO1 R",
+            "alt": [
+              {
+                "ph": "F R ER0",
+                "p": 0.34
+              },
+              {
+                "ph": "F ER0",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "80",
+            "ch": [
+              38,
+              40
+            ],
+            "pos": "NUM",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "EY1 T IY0",
+            "alt": [],
+            "target": false,
+            "stress": [
+              0
+            ],
+            "hom": null
+          },
+          {
+            "w": "years",
+            "ch": [
+              41,
+              46
+            ],
+            "pos": "NOUN",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "Y IH1 R Z",
+            "alt": [
+              {
+                "ph": "Y ER0 Z",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "so",
+            "ch": [
+              48,
+              50
+            ],
+            "pos": "ADV",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "S OW1",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "we",
+            "ch": [
+              51,
+              53
+            ],
+            "pos": "PRON",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "W IY1",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "confuse",
+            "ch": [
+              54,
+              61
+            ],
+            "pos": "VERB",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "K AH0 N F Y UW1 Z",
+            "alt": [],
+            "target": false,
+            "stress": [
+              5
+            ],
+            "hom": null
+          },
+          {
+            "w": "how",
+            "ch": [
+              63,
+              66
+            ],
+            "pos": "SCONJ",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "HH AW1",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "computers",
+            "ch": [
+              67,
+              76
+            ],
+            "pos": "NOUN",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "K AH0 M P Y UW1 T ER0 Z",
+            "alt": [],
+            "target": false,
+            "stress": [
+              5
+            ],
+            "hom": null
+          },
+          {
+            "w": "have",
+            "ch": [
+              77,
+              81
+            ],
+            "pos": "AUX",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "HH AE1 V",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "worked",
+            "ch": [
+              82,
+              88
+            ],
+            "pos": "VERB",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "W ER1 K T",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "with",
+            "ch": [
+              90,
+              94
+            ],
+            "pos": "ADP",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "W IH1 DH",
+            "alt": [
+              {
+                "ph": "W IH0 DH",
+                "p": 0.0
+              },
+              {
+                "ph": "W IH1 TH",
+                "p": 1.54
+              },
+              {
+                "ph": "W IH0 TH",
+                "p": 1.54
+              }
+            ],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "how",
+            "ch": [
+              96,
+              99
+            ],
+            "pos": "SCONJ",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "HH AW1",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "computers",
+            "ch": [
+              100,
+              109
+            ],
+            "pos": "NOUN",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "K AH0 M P Y UW1 T ER0 Z",
+            "alt": [],
+            "target": false,
+            "stress": [
+              5
+            ],
+            "hom": null
+          },
+          {
+            "w": "must",
+            "ch": [
+              110,
+              114
+            ],
+            "pos": "AUX",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "M AH1 S T",
+            "alt": [
+              {
+                "ph": "M AH0 S T",
+                "p": 0.0
+              }
+            ],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "work",
+            "ch": [
+              115,
+              119
+            ],
+            "pos": "VERB",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "W ER1 K",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          }
+        ],
+        "joins": [],
+        "chunks": [
+          {
+            "from": 0,
+            "to": 6
+          },
+          {
+            "from": 7,
+            "to": 18
+          }
+        ],
+        "skip_cost": 4.0,
+        "prosody": {
+          "type": "statement",
+          "tune": "fall",
+          "tune_ambiguous": false,
+          "nucleus": 18,
+          "nucleus_alt": [],
+          "breaks": [
+            {
+              "after": 6,
+              "kind": "comma"
+            }
+          ],
+          "syllables": 31
+        }
+      },
+      "cefr": "C1",
+      "ru": "детерминированный (одинаковый вход — одинаковый результат)",
+      "ru_short": "детерминированный",
+      "definition_en": "always producing the same result from the same input",
+      "note_ru": "Противоположность — non-deterministic; существительные — determinism и nondeterminism (уже встречалось). Ударение на «-NIS-». В тексте ещё конструкция confuse X with Y — «путать X с Y».",
+      "examples": [
+        {
+          "en": "Our tests must be deterministic to be useful.",
+          "ru": "Чтобы тесты были полезны, они должны быть детерминированными."
+        },
+        {
+          "en": "Weather is hard to predict because it is not deterministic.",
+          "ru": "Погоду трудно предсказать, потому что она не детерминирована."
+        }
+      ]
+    },
+    "post-binary": {
+      "s": "s7",
+      "lemma": "post-binary",
+      "pos": "adjective",
+      "ipa": "/ˌpoʊst ˈbaɪnəri/",
+      "phonemes": "P OW2 S T | B AY1 N ER0 IY0",
+      "sentence_pron": {
+        "g2p": {
+          "src": "cmu+mfa+espeak+weak",
+          "ver": 1
+        },
+        "text": "We’re entering the post-binary era.",
+        "words": [
+          {
+            "w": "We’re",
+            "ch": [
+              0,
+              5
+            ],
+            "pos": "PRON",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "W IY1 R",
+            "alt": [
+              {
+                "ph": "W IH1 R",
+                "p": 0.5
+              },
+              {
+                "ph": "W ER1",
+                "p": 0.5
+              },
+              {
+                "ph": "W IH0 R",
+                "p": 0.7
+              }
+            ],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "entering",
+            "ch": [
+              6,
+              14
+            ],
+            "pos": "VERB",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "EH1 N T ER0 IH0 NG",
+            "alt": [
+              {
+                "ph": "EH1 N ER0 IH0 NG",
+                "p": 0.5
+              },
+              {
+                "ph": "EH1 N T ER0 R IH0 NG",
+                "p": 0.7
+              }
+            ],
+            "target": false,
+            "stress": [
+              0
+            ],
+            "hom": null
+          },
+          {
+            "w": "the",
+            "ch": [
+              15,
+              18
+            ],
+            "pos": "DET",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "DH AH0",
+            "alt": [
+              {
+                "ph": "DH AH1",
+                "p": 0.5
+              },
+              {
+                "ph": "DH IY0",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [],
+            "hom": null
+          },
+          {
+            "w": "post-binary",
+            "ch": [
+              19,
+              30
+            ],
+            "pos": "ADJ",
+            "fn": false,
+            "wt": 1.5,
+            "ph": "P OW2 S T | B AY1 N ER0 IY0",
+            "alt": [
+              {
+                "ph": "P OW1 S T B AY1 N ER0 R IY0",
+                "p": 0.7
+              }
+            ],
+            "target": true,
+            "stress": [
+              5
+            ],
+            "hom": null
+          },
+          {
+            "w": "era",
+            "ch": [
+              31,
+              34
+            ],
+            "pos": "NOUN",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "EH1 R AH0",
+            "alt": [
+              {
+                "ph": "IH1 R AH0",
+                "p": 0.5
+              },
+              {
+                "ph": "IY1 AH0 R AH0",
+                "p": 0.7
+              }
+            ],
+            "target": false,
+            "stress": [
+              0
+            ],
+            "hom": null
+          }
+        ],
+        "joins": [],
+        "chunks": [
+          {
+            "from": 0,
+            "to": 4
+          }
+        ],
+        "skip_cost": 4.0,
+        "prosody": {
+          "type": "statement",
+          "tune": "fall",
+          "tune_ambiguous": false,
+          "nucleus": 4,
+          "nucleus_alt": [],
+          "breaks": [],
+          "syllables": 11
+        }
+      },
+      "cefr": "C1",
+      "ru": "здесь: постбинарный — после эпохи строгой логики нулей и единиц",
+      "ru_short": "постбинарный",
+      "definition_en": "coming after a time when everything was strictly binary (yes or no, 0 or 1)",
+      "note_ru": "Авторское слово: post- — «после» (post-war, post-pandemic), binary — «двоичный». Автор противопоставляет вероятностные модели детерминированным компьютерам.",
+      "examples": [
+        {
+          "en": "Some say AI is moving us into a post-binary world.",
+          "ru": "Некоторые говорят, что AI ведёт нас в постбинарный мир."
+        },
+        {
+          "en": "The talk described post-binary computing.",
+          "ru": "В докладе описывали постбинарные вычисления."
+        }
+      ]
+    },
+    "meat proxies": {
+      "s": "s8",
+      "lemma": "meat proxy",
+      "pos": "noun",
+      "ipa": "/miːt ˈprɑːksiz/",
+      "phonemes": "M IY1 T | P R AA1 K S IH0 Z",
+      "sentence_pron": {
+        "g2p": {
+          "src": "cmu+mfa+espeak+weak",
+          "ver": 1
+        },
+        "text": "“Engineers” who act as “meat proxies” and shove tickets into agents and report back to humans will no longer be valuable.",
+        "words": [
+          {
+            "w": "Engineers",
+            "ch": [
+              1,
+              10
+            ],
+            "pos": "PROPN",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "EH1 N JH AH0 N IH1 R Z",
+            "alt": [
+              {
+                "ph": "EH2 N JH IH0 N IH1 R Z",
+                "p": 0.7
+              }
+            ],
+            "target": false,
+            "stress": [
+              0,
+              5
+            ],
+            "hom": null
+          },
+          {
+            "w": "who",
+            "ch": [
+              12,
+              15
+            ],
+            "pos": "PRON",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "HH UW1",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "act",
+            "ch": [
+              16,
+              19
+            ],
+            "pos": "VERB",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "AE1 K T",
+            "alt": [],
+            "target": false,
+            "stress": [
+              0
+            ],
+            "hom": null
+          },
+          {
+            "w": "as",
+            "ch": [
+              20,
+              22
+            ],
+            "pos": "ADP",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "AE1 Z",
+            "alt": [
+              {
+                "ph": "EH1 Z",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [
+              0
+            ],
+            "hom": null
+          },
+          {
+            "w": "meat",
+            "ch": [
+              24,
+              28
+            ],
+            "pos": "NOUN",
+            "fn": false,
+            "wt": 1.5,
+            "ph": "M IY1 T",
+            "alt": [],
+            "target": true,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "proxies",
+            "ch": [
+              29,
+              36
+            ],
+            "pos": "NOUN",
+            "fn": false,
+            "wt": 1.5,
+            "ph": "P R AA1 K S IY0 Z",
+            "alt": [],
+            "target": true,
+            "stress": [
+              2
+            ],
+            "hom": null
+          },
+          {
+            "w": "and",
+            "ch": [
+              38,
+              41
+            ],
+            "pos": "CCONJ",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "AH0 N D",
+            "alt": [
+              {
+                "ph": "AE1 N D",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [],
+            "hom": null
+          },
+          {
+            "w": "shove",
+            "ch": [
+              42,
+              47
+            ],
+            "pos": "VERB",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "SH AH1 V",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "tickets",
+            "ch": [
+              48,
+              55
+            ],
+            "pos": "NOUN",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "T IH1 K AH0 T S",
+            "alt": [
+              {
+                "ph": "T IH1 K IH0 T S",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "into",
+            "ch": [
+              56,
+              60
+            ],
+            "pos": "ADP",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "IH1 N T UW0",
+            "alt": [
+              {
+                "ph": "IH0 N T UW1",
+                "p": 0.0
+              },
+              {
+                "ph": "IH0 N T AH0",
+                "p": 2.2
+              },
+              {
+                "ph": "IH1 N T AH0",
+                "p": 2.2
+              }
+            ],
+            "target": false,
+            "stress": [
+              0
+            ],
+            "hom": null
+          },
+          {
+            "w": "agents",
+            "ch": [
+              61,
+              67
+            ],
+            "pos": "NOUN",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "EY1 JH AH0 N T S",
+            "alt": [],
+            "target": false,
+            "stress": [
+              0
+            ],
+            "hom": null
+          },
+          {
+            "w": "and",
+            "ch": [
+              68,
+              71
+            ],
+            "pos": "CCONJ",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "AH0 N D",
+            "alt": [
+              {
+                "ph": "AE1 N D",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [],
+            "hom": null
+          },
+          {
+            "w": "report",
+            "ch": [
+              72,
+              78
+            ],
+            "pos": "VERB",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "R IY0 P AO1 R T",
+            "alt": [
+              {
+                "ph": "R IH0 P AO1 R T",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [
+              3
+            ],
+            "hom": null
+          },
+          {
+            "w": "back",
+            "ch": [
+              79,
+              83
+            ],
+            "pos": "ADV",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "B AE1 K",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "to",
+            "ch": [
+              84,
+              86
+            ],
+            "pos": "ADP",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "T UW1",
+            "alt": [
+              {
+                "ph": "T AH0",
+                "p": 2.92
+              },
+              {
+                "ph": "T IH0",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "humans",
+            "ch": [
+              87,
+              93
+            ],
+            "pos": "NOUN",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "HH Y UW1 M AH0 N Z",
+            "alt": [
+              {
+                "ph": "Y UW1 M AH0 N Z",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [
+              2
+            ],
+            "hom": null
+          },
+          {
+            "w": "will",
+            "ch": [
+              94,
+              98
+            ],
+            "pos": "AUX",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "W IH1 L",
+            "alt": [
+              {
+                "ph": "W AH0 L",
+                "p": 0.5
+              },
+              {
+                "ph": "W IH0 L",
+                "p": 0.7
+              }
+            ],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "no",
+            "ch": [
+              99,
+              101
+            ],
+            "pos": "ADV",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "N OW1",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "longer",
+            "ch": [
+              102,
+              108
+            ],
+            "pos": "ADV",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "L AO1 NG G ER0",
+            "alt": [
+              {
+                "ph": "L AA1 NG G ER0",
+                "p": 0.7
+              }
+            ],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "be",
+            "ch": [
+              109,
+              111
+            ],
+            "pos": "AUX",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "B IY1",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "valuable",
+            "ch": [
+              112,
+              120
+            ],
+            "pos": "ADJ",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "V AE1 L Y AH0 B AH0 L",
+            "alt": [
+              {
+                "ph": "V AE1 L Y UW0 B AH0 L",
+                "p": 0.5
+              },
+              {
+                "ph": "V AE1 L Y UW0 AH0 B AH0 L",
+                "p": 0.7
+              }
+            ],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          }
+        ],
+        "joins": [],
+        "chunks": [
+          {
+            "from": 0,
+            "to": 5
+          },
+          {
+            "from": 6,
+            "to": 15
+          },
+          {
+            "from": 16,
+            "to": 20
+          }
+        ],
+        "skip_cost": 4.0,
+        "prosody": {
+          "type": "statement",
+          "tune": "fall",
+          "tune_ambiguous": false,
+          "nucleus": 20,
+          "nucleus_alt": [],
+          "breaks": [],
+          "syllables": 32
+        }
+      },
+      "cefr": "C2",
+      "ru": "здесь: «живые прокси» — люди, которые лишь передают задачи агентам и ответы людям",
+      "ru_short": "живой посредник",
+      "definition_en": "(slang) a person who only passes information between others and adds no value",
+      "note_ru": "Ироничный сленг: meat — «мясо», т. е. человек в противовес машине (ср. meatspace — «реальный мир»). proxy — посредник, сервер-посредник; мн. ч. proxies.",
+      "examples": [
+        {
+          "en": "Don't be a meat proxy between the user and the model.",
+          "ru": "Не будь живым посредником между пользователем и моделью."
+        },
+        {
+          "en": "Managers who act as meat proxies slow everyone down.",
+          "ru": "Менеджеры, которые просто передают сообщения, тормозят всех."
+        }
+      ]
+    },
+    "shove": {
+      "s": "s8",
+      "lemma": "shove",
+      "pos": "verb",
+      "ipa": "/ʃʌv/",
+      "phonemes": "SH AH1 V",
+      "sentence_pron": {
+        "g2p": {
+          "src": "cmu+mfa+espeak+weak",
+          "ver": 1
+        },
+        "text": "“Engineers” who act as “meat proxies” and shove tickets into agents and report back to humans will no longer be valuable.",
+        "words": [
+          {
+            "w": "Engineers",
+            "ch": [
+              1,
+              10
+            ],
+            "pos": "PROPN",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "EH1 N JH AH0 N IH1 R Z",
+            "alt": [
+              {
+                "ph": "EH2 N JH IH0 N IH1 R Z",
+                "p": 0.7
+              }
+            ],
+            "target": false,
+            "stress": [
+              0,
+              5
+            ],
+            "hom": null
+          },
+          {
+            "w": "who",
+            "ch": [
+              12,
+              15
+            ],
+            "pos": "PRON",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "HH UW1",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "act",
+            "ch": [
+              16,
+              19
+            ],
+            "pos": "VERB",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "AE1 K T",
+            "alt": [],
+            "target": false,
+            "stress": [
+              0
+            ],
+            "hom": null
+          },
+          {
+            "w": "as",
+            "ch": [
+              20,
+              22
+            ],
+            "pos": "ADP",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "AE1 Z",
+            "alt": [
+              {
+                "ph": "EH1 Z",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [
+              0
+            ],
+            "hom": null
+          },
+          {
+            "w": "meat",
+            "ch": [
+              24,
+              28
+            ],
+            "pos": "NOUN",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "M IY1 T",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "proxies",
+            "ch": [
+              29,
+              36
+            ],
+            "pos": "NOUN",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "P R AA1 K S IY0 Z",
+            "alt": [],
+            "target": false,
+            "stress": [
+              2
+            ],
+            "hom": null
+          },
+          {
+            "w": "and",
+            "ch": [
+              38,
+              41
+            ],
+            "pos": "CCONJ",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "AH0 N D",
+            "alt": [
+              {
+                "ph": "AE1 N D",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [],
+            "hom": null
+          },
+          {
+            "w": "shove",
+            "ch": [
+              42,
+              47
+            ],
+            "pos": "VERB",
+            "fn": false,
+            "wt": 1.5,
+            "ph": "SH AH1 V",
+            "alt": [],
+            "target": true,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "tickets",
+            "ch": [
+              48,
+              55
+            ],
+            "pos": "NOUN",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "T IH1 K AH0 T S",
+            "alt": [
+              {
+                "ph": "T IH1 K IH0 T S",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "into",
+            "ch": [
+              56,
+              60
+            ],
+            "pos": "ADP",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "IH1 N T UW0",
+            "alt": [
+              {
+                "ph": "IH0 N T UW1",
+                "p": 0.0
+              },
+              {
+                "ph": "IH0 N T AH0",
+                "p": 2.2
+              },
+              {
+                "ph": "IH1 N T AH0",
+                "p": 2.2
+              }
+            ],
+            "target": false,
+            "stress": [
+              0
+            ],
+            "hom": null
+          },
+          {
+            "w": "agents",
+            "ch": [
+              61,
+              67
+            ],
+            "pos": "NOUN",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "EY1 JH AH0 N T S",
+            "alt": [],
+            "target": false,
+            "stress": [
+              0
+            ],
+            "hom": null
+          },
+          {
+            "w": "and",
+            "ch": [
+              68,
+              71
+            ],
+            "pos": "CCONJ",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "AH0 N D",
+            "alt": [
+              {
+                "ph": "AE1 N D",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [],
+            "hom": null
+          },
+          {
+            "w": "report",
+            "ch": [
+              72,
+              78
+            ],
+            "pos": "VERB",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "R IY0 P AO1 R T",
+            "alt": [
+              {
+                "ph": "R IH0 P AO1 R T",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [
+              3
+            ],
+            "hom": null
+          },
+          {
+            "w": "back",
+            "ch": [
+              79,
+              83
+            ],
+            "pos": "ADV",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "B AE1 K",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "to",
+            "ch": [
+              84,
+              86
+            ],
+            "pos": "ADP",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "T UW1",
+            "alt": [
+              {
+                "ph": "T AH0",
+                "p": 2.92
+              },
+              {
+                "ph": "T IH0",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "humans",
+            "ch": [
+              87,
+              93
+            ],
+            "pos": "NOUN",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "HH Y UW1 M AH0 N Z",
+            "alt": [
+              {
+                "ph": "Y UW1 M AH0 N Z",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [
+              2
+            ],
+            "hom": null
+          },
+          {
+            "w": "will",
+            "ch": [
+              94,
+              98
+            ],
+            "pos": "AUX",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "W IH1 L",
+            "alt": [
+              {
+                "ph": "W AH0 L",
+                "p": 0.5
+              },
+              {
+                "ph": "W IH0 L",
+                "p": 0.7
+              }
+            ],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "no",
+            "ch": [
+              99,
+              101
+            ],
+            "pos": "ADV",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "N OW1",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "longer",
+            "ch": [
+              102,
+              108
+            ],
+            "pos": "ADV",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "L AO1 NG G ER0",
+            "alt": [
+              {
+                "ph": "L AA1 NG G ER0",
+                "p": 0.7
+              }
+            ],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "be",
+            "ch": [
+              109,
+              111
+            ],
+            "pos": "AUX",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "B IY1",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "valuable",
+            "ch": [
+              112,
+              120
+            ],
+            "pos": "ADJ",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "V AE1 L Y AH0 B AH0 L",
+            "alt": [
+              {
+                "ph": "V AE1 L Y UW0 B AH0 L",
+                "p": 0.5
+              },
+              {
+                "ph": "V AE1 L Y UW0 AH0 B AH0 L",
+                "p": 0.7
+              }
+            ],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          }
+        ],
+        "joins": [],
+        "chunks": [
+          {
+            "from": 0,
+            "to": 5
+          },
+          {
+            "from": 6,
+            "to": 15
+          },
+          {
+            "from": 16,
+            "to": 20
+          }
+        ],
+        "skip_cost": 4.0,
+        "prosody": {
+          "type": "statement",
+          "tune": "fall",
+          "tune_ambiguous": false,
+          "nucleus": 20,
+          "nucleus_alt": [],
+          "breaks": [],
+          "syllables": 32
+        }
+      },
+      "cefr": "C1",
+      "ru": "запихивать, совать (небрежно)",
+      "ru_short": "пихать, запихивать",
+      "definition_en": "to push something somewhere quickly and carelessly",
+      "note_ru": "Разговорное, с оттенком небрежности. Конструкция: shove something into/in something. Читается как love: /ʃʌv/, не «шоув».",
+      "examples": [
+        {
+          "en": "He shoved all the logs into one file.",
+          "ru": "Он запихнул все логи в один файл."
+        },
+        {
+          "en": "Someone shoved me in the crowd.",
+          "ru": "Кто-то толкнул меня в толпе."
+        }
+      ]
+    },
+    "assume": {
+      "s": "s9",
+      "lemma": "assume",
+      "pos": "verb",
+      "ipa": "/əˈsuːm/",
+      "phonemes": "AH0 S UW1 M",
+      "sentence_pron": {
+        "g2p": {
+          "src": "cmu+mfa+espeak+weak",
+          "ver": 1
+        },
+        "text": "Think of how dumb it is to assume that “only 80 columns wide” or “but newlines here and there” matters for agents – now consider all the other properties you have in mind for “good code”.",
+        "words": [
+          {
+            "w": "Think",
+            "ch": [
+              0,
+              5
+            ],
+            "pos": "VERB",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "TH IH1 NG K",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "of",
+            "ch": [
+              6,
+              8
+            ],
+            "pos": "ADP",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "AH1 V",
+            "alt": [
+              {
+                "ph": "AH0 V",
+                "p": 0.61
+              }
+            ],
+            "target": false,
+            "stress": [
+              0
+            ],
+            "hom": null
+          },
+          {
+            "w": "how",
+            "ch": [
+              9,
+              12
+            ],
+            "pos": "SCONJ",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "HH AW1",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "dumb",
+            "ch": [
+              13,
+              17
+            ],
+            "pos": "ADJ",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "D AH1 M",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "it",
+            "ch": [
+              18,
+              20
+            ],
+            "pos": "PRON",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "IH1 T",
+            "alt": [
+              {
+                "ph": "IH0 T",
+                "p": 0.5
+              },
+              {
+                "ph": "IH1",
+                "p": 0.7
+              }
+            ],
+            "target": false,
+            "stress": [
+              0
+            ],
+            "hom": null
+          },
+          {
+            "w": "is",
+            "ch": [
+              21,
+              23
+            ],
+            "pos": "AUX",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "IH1 Z",
+            "alt": [
+              {
+                "ph": "IH0 Z",
+                "p": 0.0
+              }
+            ],
+            "target": false,
+            "stress": [
+              0
+            ],
+            "hom": null
+          },
+          {
+            "w": "to",
+            "ch": [
+              24,
+              26
+            ],
+            "pos": "PART",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "T UW1",
+            "alt": [
+              {
+                "ph": "T AH0",
+                "p": 2.92
+              },
+              {
+                "ph": "T IH0",
+                "p": 0.5
+              },
+              {
+                "ph": "T UH0",
+                "p": 0.7
+              }
+            ],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "assume",
+            "ch": [
+              27,
+              33
+            ],
+            "pos": "VERB",
+            "fn": false,
+            "wt": 1.5,
+            "ph": "AH0 S UW1 M",
+            "alt": [],
+            "target": true,
+            "stress": [
+              2
+            ],
+            "hom": null
+          },
+          {
+            "w": "that",
+            "ch": [
+              34,
+              38
+            ],
+            "pos": "SCONJ",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "DH AE1 T",
+            "alt": [
+              {
+                "ph": "DH AH0 T",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "only",
+            "ch": [
+              40,
+              44
+            ],
+            "pos": "ADV",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "OW1 N L IY0",
+            "alt": [],
+            "target": false,
+            "stress": [
+              0
+            ],
+            "hom": null
+          },
+          {
+            "w": "80",
+            "ch": [
+              45,
+              47
+            ],
+            "pos": "NUM",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "EY1 T IY0",
+            "alt": [],
+            "target": false,
+            "stress": [
+              0
+            ],
+            "hom": null
+          },
+          {
+            "w": "columns",
+            "ch": [
+              48,
+              55
+            ],
+            "pos": "NOUN",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "K AA1 L AH0 M Z",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "wide",
+            "ch": [
+              56,
+              60
+            ],
+            "pos": "ADJ",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "W AY1 D",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "or",
+            "ch": [
+              62,
+              64
+            ],
+            "pos": "CCONJ",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "AO1 R",
+            "alt": [
+              {
+                "ph": "ER0",
+                "p": 1.48
+              }
+            ],
+            "target": false,
+            "stress": [
+              0
+            ],
+            "hom": null
+          },
+          {
+            "w": "but",
+            "ch": [
+              66,
+              69
+            ],
+            "pos": "CCONJ",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "B AH1 T",
+            "alt": [
+              {
+                "ph": "B AH0 T",
+                "p": 0.49
+              }
+            ],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "newlines",
+            "ch": [
+              70,
+              78
+            ],
+            "pos": "NOUN",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "N UW1 L AY2 N Z",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "here",
+            "ch": [
+              79,
+              83
+            ],
+            "pos": "ADV",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "HH IY1 R",
+            "alt": [
+              {
+                "ph": "HH IH1 R",
+                "p": 0.7
+              }
+            ],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "and",
+            "ch": [
+              84,
+              87
+            ],
+            "pos": "CCONJ",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "AH0 N D",
+            "alt": [
+              {
+                "ph": "AE1 N D",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [],
+            "hom": null
+          },
+          {
+            "w": "there",
+            "ch": [
+              88,
+              93
+            ],
+            "pos": "PRON",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "DH EH1 R",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "matters",
+            "ch": [
+              95,
+              102
+            ],
+            "pos": "NOUN",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "M AE1 T ER0 Z",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "for",
+            "ch": [
+              103,
+              106
+            ],
+            "pos": "ADP",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "F AO1 R",
+            "alt": [
+              {
+                "ph": "F R ER0",
+                "p": 0.34
+              },
+              {
+                "ph": "F ER0",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "agents",
+            "ch": [
+              107,
+              113
+            ],
+            "pos": "NOUN",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "EY1 JH AH0 N T S",
+            "alt": [],
+            "target": false,
+            "stress": [
+              0
+            ],
+            "hom": null
+          },
+          {
+            "w": "now",
+            "ch": [
+              116,
+              119
+            ],
+            "pos": "ADV",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "N AW1",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "consider",
+            "ch": [
+              120,
+              128
+            ],
+            "pos": "VERB",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "K AH0 N S IH1 D ER0",
+            "alt": [
+              {
+                "ph": "K AH0 N S IH1 D ER0 R",
+                "p": 0.7
+              }
+            ],
+            "target": false,
+            "stress": [
+              4
+            ],
+            "hom": null
+          },
+          {
+            "w": "all",
+            "ch": [
+              129,
+              132
+            ],
+            "pos": "DET",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "AO1 L",
+            "alt": [
+              {
+                "ph": "AA1 L",
+                "p": 0.7
+              }
+            ],
+            "target": false,
+            "stress": [
+              0
+            ],
+            "hom": null
+          },
+          {
+            "w": "the",
+            "ch": [
+              133,
+              136
+            ],
+            "pos": "DET",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "DH AH0",
+            "alt": [
+              {
+                "ph": "DH AH1",
+                "p": 0.5
+              },
+              {
+                "ph": "DH IY0",
+                "p": 0.5
+              },
+              {
+                "ph": "DH IH0",
+                "p": 0.7
+              }
+            ],
+            "target": false,
+            "stress": [],
+            "hom": null
+          },
+          {
+            "w": "other",
+            "ch": [
+              137,
+              142
+            ],
+            "pos": "ADJ",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "AH1 DH ER0",
+            "alt": [],
+            "target": false,
+            "stress": [
+              0
+            ],
+            "hom": null
+          },
+          {
+            "w": "properties",
+            "ch": [
+              143,
+              153
+            ],
+            "pos": "NOUN",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "P R AA1 P ER0 T IY0 Z",
+            "alt": [],
+            "target": false,
+            "stress": [
+              2
+            ],
+            "hom": null
+          },
+          {
+            "w": "you",
+            "ch": [
+              154,
+              157
+            ],
+            "pos": "PRON",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "Y UW1",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "have",
+            "ch": [
+              158,
+              162
+            ],
+            "pos": "VERB",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "HH AE1 V",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "in",
+            "ch": [
+              163,
+              165
+            ],
+            "pos": "ADP",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "IH0 N",
+            "alt": [
+              {
+                "ph": "IH1 N",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [],
+            "hom": null
+          },
+          {
+            "w": "mind",
+            "ch": [
+              166,
+              170
+            ],
+            "pos": "NOUN",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "M AY1 N D",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "for",
+            "ch": [
+              171,
+              174
+            ],
+            "pos": "ADP",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "F AO1 R",
+            "alt": [
+              {
+                "ph": "F R ER0",
+                "p": 0.34
+              },
+              {
+                "ph": "F ER0",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "good",
+            "ch": [
+              176,
+              180
+            ],
+            "pos": "ADJ",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "G UH1 D",
+            "alt": [
+              {
+                "ph": "G IH0 D",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "code",
+            "ch": [
+              181,
+              185
+            ],
+            "pos": "NOUN",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "K OW1 D",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          }
+        ],
+        "joins": [],
+        "chunks": [
+          {
+            "from": 0,
+            "to": 8
+          },
+          {
+            "from": 9,
+            "to": 18
+          },
+          {
+            "from": 19,
+            "to": 27
+          },
+          {
+            "from": 28,
+            "to": 34
+          }
+        ],
+        "skip_cost": 4.0,
+        "prosody": {
+          "type": "request",
+          "tune": "fall",
+          "tune_ambiguous": false,
+          "nucleus": 34,
+          "nucleus_alt": [],
+          "breaks": [
+            {
+              "after": 21,
+              "kind": "dash"
+            }
+          ],
+          "syllables": 47
+        }
+      },
+      "cefr": "B1",
+      "ru": "считать, предполагать (без проверки)",
+      "ru_short": "предполагать, считать",
+      "definition_en": "to think that something is true without checking it",
+      "note_ru": "Конструкция: assume that… Существительное — assumption (уже встречалось). Второе значение — «брать на себя»: assume responsibility.",
+      "examples": [
+        {
+          "en": "Don't assume the API always returns JSON.",
+          "ru": "Не думай, что API всегда возвращает JSON."
+        },
+        {
+          "en": "I assumed you were busy.",
+          "ru": "Я решил, что ты занят."
+        }
+      ]
+    },
+    "afford": {
+      "s": "s10",
+      "lemma": "afford",
+      "pos": "verb",
+      "ipa": "/əˈfɔːrd/",
+      "phonemes": "AH0 F AO1 R D",
+      "sentence_pron": {
+        "g2p": {
+          "src": "cmu+mfa+espeak+weak",
+          "ver": 1
+        },
+        "text": "Just like only some people could afford a personal computer in the 80s and 90s, for the next few years, if you can’t get enough tokens, you’re playing second league.",
+        "words": [
+          {
+            "w": "Just",
+            "ch": [
+              0,
+              4
+            ],
+            "pos": "ADV",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "JH AH1 S T",
+            "alt": [
+              {
+                "ph": "JH IH0 S T",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "like",
+            "ch": [
+              5,
+              9
+            ],
+            "pos": "ADP",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "L AY1 K",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "only",
+            "ch": [
+              10,
+              14
+            ],
+            "pos": "ADV",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "OW1 N L IY0",
+            "alt": [],
+            "target": false,
+            "stress": [
+              0
+            ],
+            "hom": null
+          },
+          {
+            "w": "some",
+            "ch": [
+              15,
+              19
+            ],
+            "pos": "DET",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "S AH1 M",
+            "alt": [
+              {
+                "ph": "S AH0 M",
+                "p": 0.22
+              }
+            ],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "people",
+            "ch": [
+              20,
+              26
+            ],
+            "pos": "NOUN",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "P IY1 P AH0 L",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "could",
+            "ch": [
+              27,
+              32
+            ],
+            "pos": "AUX",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "K UH1 D",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "afford",
+            "ch": [
+              33,
+              39
+            ],
+            "pos": "VERB",
+            "fn": false,
+            "wt": 1.5,
+            "ph": "AH0 F AO1 R D",
+            "alt": [],
+            "target": true,
+            "stress": [
+              2
+            ],
+            "hom": null
+          },
+          {
+            "w": "a",
+            "ch": [
+              40,
+              41
+            ],
+            "pos": "DET",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "AH0",
+            "alt": [
+              {
+                "ph": "EY1",
+                "p": 0.55
+              }
+            ],
+            "target": false,
+            "stress": [],
+            "hom": null
+          },
+          {
+            "w": "personal",
+            "ch": [
+              42,
+              50
+            ],
+            "pos": "ADJ",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "P ER1 S IH0 N AH0 L",
+            "alt": [
+              {
+                "ph": "P ER1 S IH0 N IH0 L",
+                "p": 0.7
+              },
+              {
+                "ph": "P ER1 S AH0 N AH0 L",
+                "p": 0.7
+              }
+            ],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "computer",
+            "ch": [
+              51,
+              59
+            ],
+            "pos": "NOUN",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "K AH0 M P Y UW1 T ER0",
+            "alt": [
+              {
+                "ph": "K AH0 M P Y UW1 T ER0 R",
+                "p": 0.7
+              }
+            ],
+            "target": false,
+            "stress": [
+              5
+            ],
+            "hom": null
+          },
+          {
+            "w": "in",
+            "ch": [
+              60,
+              62
+            ],
+            "pos": "ADP",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "IH0 N",
+            "alt": [
+              {
+                "ph": "IH1 N",
+                "p": 0.5
+              },
+              {
+                "ph": "IH0 N DH IH0",
+                "p": 0.7
+              }
+            ],
+            "target": false,
+            "stress": [],
+            "hom": null
+          },
+          {
+            "w": "the",
+            "ch": [
+              63,
+              66
+            ],
+            "pos": "DET",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "DH AH0",
+            "alt": [
+              {
+                "ph": "DH AH1",
+                "p": 0.5
+              },
+              {
+                "ph": "DH IY0",
+                "p": 0.5
+              },
+              {
+                "ph": "EY1 T IY0",
+                "p": 0.7
+              }
+            ],
+            "target": false,
+            "stress": [],
+            "hom": null
+          },
+          {
+            "w": "80s",
+            "ch": [
+              67,
+              70
+            ],
+            "pos": "NOUN",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "EY1 T IY0 Z",
+            "alt": [],
+            "target": false,
+            "stress": [
+              0
+            ],
+            "hom": null
+          },
+          {
+            "w": "and",
+            "ch": [
+              71,
+              74
+            ],
+            "pos": "CCONJ",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "AH0 N D",
+            "alt": [
+              {
+                "ph": "AE1 N D",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [],
+            "hom": null
+          },
+          {
+            "w": "90s",
+            "ch": [
+              75,
+              78
+            ],
+            "pos": "NOUN",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "N AY1 N T IY0 Z",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "for",
+            "ch": [
+              80,
+              83
+            ],
+            "pos": "ADP",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "F AO1 R",
+            "alt": [
+              {
+                "ph": "F R ER0",
+                "p": 0.34
+              },
+              {
+                "ph": "F ER0",
+                "p": 0.5
+              },
+              {
+                "ph": "Z",
+                "p": 0.7
+              }
+            ],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "the",
+            "ch": [
+              84,
+              87
+            ],
+            "pos": "DET",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "DH AH0",
+            "alt": [
+              {
+                "ph": "DH AH1",
+                "p": 0.5
+              },
+              {
+                "ph": "DH IY0",
+                "p": 0.5
+              },
+              {
+                "ph": "F ER0 DH AH0",
+                "p": 0.7
+              }
+            ],
+            "target": false,
+            "stress": [],
+            "hom": null
+          },
+          {
+            "w": "next",
+            "ch": [
+              88,
+              92
+            ],
+            "pos": "ADJ",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "N EH1 K S T",
+            "alt": [
+              {
+                "ph": "N EH1 K S",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "few",
+            "ch": [
+              93,
+              96
+            ],
+            "pos": "ADJ",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "F Y UW1",
+            "alt": [],
+            "target": false,
+            "stress": [
+              2
+            ],
+            "hom": null
+          },
+          {
+            "w": "years",
+            "ch": [
+              97,
+              102
+            ],
+            "pos": "NOUN",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "Y IH1 R Z",
+            "alt": [
+              {
+                "ph": "Y ER0 Z",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "if",
+            "ch": [
+              104,
+              106
+            ],
+            "pos": "SCONJ",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "IH1 F",
+            "alt": [
+              {
+                "ph": "IH0 F",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [
+              0
+            ],
+            "hom": null
+          },
+          {
+            "w": "you",
+            "ch": [
+              107,
+              110
+            ],
+            "pos": "PRON",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "Y UW1",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "can’t",
+            "ch": [
+              111,
+              116
+            ],
+            "pos": "AUX",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "K AE1 N T",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "get",
+            "ch": [
+              117,
+              120
+            ],
+            "pos": "VERB",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "G EH1 T",
+            "alt": [
+              {
+                "ph": "G IH1 T",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "enough",
+            "ch": [
+              121,
+              127
+            ],
+            "pos": "ADJ",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "IH0 N AH1 F",
+            "alt": [
+              {
+                "ph": "IY0 N AH1 F",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [
+              2
+            ],
+            "hom": null
+          },
+          {
+            "w": "tokens",
+            "ch": [
+              128,
+              134
+            ],
+            "pos": "NOUN",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "T OW1 K AH0 N Z",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "you’re",
+            "ch": [
+              136,
+              142
+            ],
+            "pos": "PRON",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "Y UH1 R",
+            "alt": [
+              {
+                "ph": "Y UW1 R",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "playing",
+            "ch": [
+              143,
+              150
+            ],
+            "pos": "VERB",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "P L EY1 IH0 NG",
+            "alt": [],
+            "target": false,
+            "stress": [
+              2
+            ],
+            "hom": null
+          },
+          {
+            "w": "second",
+            "ch": [
+              151,
+              157
+            ],
+            "pos": "ADJ",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "S EH1 K AH0 N D",
+            "alt": [
+              {
+                "ph": "S EH1 K AH0 N",
+                "p": 0.7
+              }
+            ],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "league",
+            "ch": [
+              158,
+              164
+            ],
+            "pos": "NOUN",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "L IY1 G",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          }
+        ],
+        "joins": [],
+        "chunks": [
+          {
+            "from": 0,
+            "to": 9
+          },
+          {
+            "from": 10,
+            "to": 14
+          },
+          {
+            "from": 15,
+            "to": 25
+          },
+          {
+            "from": 26,
+            "to": 29
+          }
+        ],
+        "skip_cost": 4.0,
+        "prosody": {
+          "type": "statement",
+          "tune": "fall",
+          "tune_ambiguous": false,
+          "nucleus": 29,
+          "nucleus_alt": [],
+          "breaks": [
+            {
+              "after": 14,
+              "kind": "comma"
+            },
+            {
+              "after": 19,
+              "kind": "comma"
+            },
+            {
+              "after": 25,
+              "kind": "comma"
+            }
+          ],
+          "syllables": 43
+        }
+      },
+      "cefr": "B1",
+      "ru": "позволить себе (по деньгам)",
+      "ru_short": "позволить себе",
+      "definition_en": "to have enough money or time to pay for or do something",
+      "note_ru": "Почти всегда с can/could/be able to: can't afford a car, can't afford to wait. Прилагательное — affordable («доступный по цене»).",
+      "examples": [
+        {
+          "en": "Small startups can't afford large GPU clusters.",
+          "ru": "Маленькие стартапы не могут позволить себе большие GPU-кластеры."
+        },
+        {
+          "en": "We can't afford to miss the deadline.",
+          "ru": "Мы не можем позволить себе сорвать срок."
+        }
+      ]
+    },
+    "questionable": {
+      "s": "s11",
+      "lemma": "questionable",
+      "pos": "adjective",
+      "ipa": "/ˈkwestʃənəbl/",
+      "phonemes": "K W EH1 S CH AH0 N AH0 B AH0 L",
+      "sentence_pron": {
+        "g2p": {
+          "src": "cmu+mfa+espeak+weak",
+          "ver": 1
+        },
+        "text": "It’s questionable whether cheaper models will be used.",
+        "words": [
+          {
+            "w": "It’s",
+            "ch": [
+              0,
+              4
+            ],
+            "pos": "PRON",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "IH1 T S",
+            "alt": [
+              {
+                "ph": "IH0 T S",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [
+              0
+            ],
+            "hom": null
+          },
+          {
+            "w": "questionable",
+            "ch": [
+              5,
+              17
+            ],
+            "pos": "ADJ",
+            "fn": false,
+            "wt": 1.5,
+            "ph": "K W EH1 S CH AH0 N AH0 B AH0 L",
+            "alt": [],
+            "target": true,
+            "stress": [
+              2
+            ],
+            "hom": null
+          },
+          {
+            "w": "whether",
+            "ch": [
+              18,
+              25
+            ],
+            "pos": "SCONJ",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "W EH1 DH ER0",
+            "alt": [
+              {
+                "ph": "HH W EH1 DH ER0",
+                "p": 0.5
+              }
+            ],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "cheaper",
+            "ch": [
+              26,
+              33
+            ],
+            "pos": "ADJ",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "CH IY1 P ER0",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "models",
+            "ch": [
+              34,
+              40
+            ],
+            "pos": "NOUN",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "M AA1 D AH0 L Z",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "will",
+            "ch": [
+              41,
+              45
+            ],
+            "pos": "AUX",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "W IH1 L",
+            "alt": [
+              {
+                "ph": "W AH0 L",
+                "p": 0.5
+              },
+              {
+                "ph": "W IH0 L",
+                "p": 0.7
+              }
+            ],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "be",
+            "ch": [
+              46,
+              48
+            ],
+            "pos": "AUX",
+            "fn": true,
+            "wt": 0.3,
+            "ph": "B IY1",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          },
+          {
+            "w": "used",
+            "ch": [
+              49,
+              53
+            ],
+            "pos": "VERB",
+            "fn": false,
+            "wt": 1.0,
+            "ph": "Y UW1 Z D",
+            "alt": [],
+            "target": false,
+            "stress": [
+              1
+            ],
+            "hom": null
+          }
+        ],
+        "joins": [],
+        "chunks": [
+          {
+            "from": 0,
+            "to": 7
+          }
+        ],
+        "skip_cost": 4.0,
+        "prosody": {
+          "type": "statement",
+          "tune": "fall",
+          "tune_ambiguous": false,
+          "nucleus": 7,
+          "nucleus_alt": [],
+          "breaks": [],
+          "syllables": 14
+        }
+      },
+      "cefr": "B2",
+      "ru": "сомнительный, под вопросом",
+      "ru_short": "сомнительный",
+      "definition_en": "not certain; possibly not true or not likely",
+      "note_ru": "Конструкция: it's questionable whether… — «ещё вопрос, …». Также «сомнительный» в моральном смысле: questionable practices.",
+      "examples": [
+        {
+          "en": "It's questionable whether this feature is worth the cost.",
+          "ru": "Ещё вопрос, стоит ли эта функция своих затрат."
+        },
+        {
+          "en": "The company used some questionable methods.",
+          "ru": "Компания использовала сомнительные методы."
+        }
+      ]
+    }
+  }
+}

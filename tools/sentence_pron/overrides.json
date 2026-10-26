@@ -68,6 +68,14 @@
     "uber's": {
       "ph": "UW1 B ER0 Z",
       "alt": []
+    },
+    "80s": {
+      "ph": "EY1 T IY0 Z",
+      "alt": []
+    },
+    "90s": {
+      "ph": "N AY1 N T IY0 Z",
+      "alt": []
     }
   },
   "2026-10-16-building-resilient-ai-powered-software/trade-offs": {
@@ -1002,5 +1010,512 @@
         }
       ]
     }
+  },
+  "2026-10-26-what-i-believe-about-the-future/non-ephemeral": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 3
+        },
+        {
+          "from": 4,
+          "to": 14
+        },
+        {
+          "from": 15,
+          "to": 21
+        }
+      ]
+    },
+    "reviewed": [
+      "NUM:2026"
+    ]
+  },
+  "2026-10-26-what-i-believe-about-the-future/eyeballs": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 6
+        },
+        {
+          "from": 7,
+          "to": 15
+        }
+      ]
+    }
+  },
+  "2026-10-26-what-i-believe-about-the-future/deterministic": {
+    "reviewed": [
+      "NUM:80"
+    ]
+  },
+  "2026-10-26-what-i-believe-about-the-future/meat proxies": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 5
+        },
+        {
+          "from": 6,
+          "to": 15
+        },
+        {
+          "from": 16,
+          "to": 20
+        }
+      ]
+    }
+  },
+  "2026-10-26-what-i-believe-about-the-future/shove": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 5
+        },
+        {
+          "from": 6,
+          "to": 15
+        },
+        {
+          "from": 16,
+          "to": 20
+        }
+      ]
+    }
+  },
+  "2026-10-26-what-i-believe-about-the-future/assume": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 8
+        },
+        {
+          "from": 9,
+          "to": 18
+        },
+        {
+          "from": 19,
+          "to": 27
+        },
+        {
+          "from": 28,
+          "to": 34
+        }
+      ]
+    },
+    "reviewed": [
+      "NUM:80",
+      "COMPOUND:newlines"
+    ]
+  },
+  "2026-10-26-what-i-believe-about-the-future/afford": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 9
+        },
+        {
+          "from": 10,
+          "to": 14
+        },
+        {
+          "from": 15,
+          "to": 25
+        },
+        {
+          "from": 26,
+          "to": 29
+        }
+      ]
+    },
+    "reviewed": [
+      "NUM:80s",
+      "NUM:90s"
+    ]
+  },
+  "2026-10-26-how-to-be-more-ambitious-a/accomplished": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 3
+        },
+        {
+          "from": 4,
+          "to": 12
+        },
+        {
+          "from": 13,
+          "to": 20
+        },
+        {
+          "from": 21,
+          "to": 32
+        }
+      ]
+    }
+  },
+  "2026-10-26-how-to-be-more-ambitious-a/considered": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 3
+        },
+        {
+          "from": 4,
+          "to": 12
+        },
+        {
+          "from": 13,
+          "to": 20
+        },
+        {
+          "from": 21,
+          "to": 32
+        }
+      ]
+    }
+  },
+  "2026-10-26-how-to-be-more-ambitious-a/lacked": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 3
+        },
+        {
+          "from": 4,
+          "to": 12
+        },
+        {
+          "from": 13,
+          "to": 20
+        },
+        {
+          "from": 21,
+          "to": 32
+        }
+      ]
+    }
+  },
+  "2026-10-26-how-to-be-more-ambitious-a/curiosity": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 3
+        },
+        {
+          "from": 4,
+          "to": 12
+        },
+        {
+          "from": 13,
+          "to": 20
+        },
+        {
+          "from": 21,
+          "to": 32
+        }
+      ]
+    }
+  },
+  "2026-10-26-how-to-be-more-ambitious-a/inadequate": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 6
+        },
+        {
+          "from": 7,
+          "to": 14
+        }
+      ]
+    }
+  },
+  "2026-10-26-how-to-be-more-ambitious-a/astounding": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 7
+        },
+        {
+          "from": 8,
+          "to": 12
+        },
+        {
+          "from": 13,
+          "to": 20
+        },
+        {
+          "from": 21,
+          "to": 25
+        }
+      ]
+    }
+  },
+  "2026-10-26-how-to-be-more-ambitious-a/incredible": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 7
+        },
+        {
+          "from": 8,
+          "to": 12
+        },
+        {
+          "from": 13,
+          "to": 20
+        },
+        {
+          "from": 21,
+          "to": 25
+        }
+      ]
+    }
+  },
+  "2026-10-26-how-to-be-more-ambitious-a/struggling": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 11
+        },
+        {
+          "from": 12,
+          "to": 18
+        },
+        {
+          "from": 19,
+          "to": 24
+        },
+        {
+          "from": 25,
+          "to": 33
+        }
+      ]
+    }
+  },
+  "2026-10-26-how-to-be-more-ambitious-a/beyond": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 11
+        },
+        {
+          "from": 12,
+          "to": 18
+        },
+        {
+          "from": 19,
+          "to": 24
+        },
+        {
+          "from": 25,
+          "to": 33
+        }
+      ]
+    }
+  },
+  "2026-10-26-how-to-be-more-ambitious-a/Altitude": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 4
+        },
+        {
+          "from": 5,
+          "to": 13
+        }
+      ]
+    }
+  },
+  "2026-10-26-how-to-be-more-ambitious-a/underlying": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 6
+        },
+        {
+          "from": 7,
+          "to": 11
+        },
+        {
+          "from": 12,
+          "to": 19
+        }
+      ]
+    }
+  },
+  "2026-10-26-how-to-be-more-ambitious-a/flippantly": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 4
+        },
+        {
+          "from": 5,
+          "to": 12
+        }
+      ]
+    }
+  },
+  "2026-10-26-how-to-be-more-ambitious-a/outcome": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 6
+        },
+        {
+          "from": 7,
+          "to": 11
+        },
+        {
+          "from": 12,
+          "to": 19
+        }
+      ]
+    }
+  },
+  "2026-10-26-how-to-be-more-ambitious-a/quarterly": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 6
+        },
+        {
+          "from": 7,
+          "to": 14
+        },
+        {
+          "from": 15,
+          "to": 20
+        }
+      ]
+    },
+    "reviewed": [
+      "ACR:QBR"
+    ]
+  },
+  "2026-10-26-how-to-be-more-ambitious-a/prompted": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 11
+        },
+        {
+          "from": 12,
+          "to": 18
+        },
+        {
+          "from": 19,
+          "to": 26
+        }
+      ]
+    }
+  },
+  "2026-10-26-how-to-be-more-ambitious-a/rough": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 3
+        },
+        {
+          "from": 4,
+          "to": 15
+        },
+        {
+          "from": 16,
+          "to": 20
+        }
+      ]
+    }
+  },
+  "2026-10-26-how-to-be-more-ambitious-a/insight": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 5
+        },
+        {
+          "from": 6,
+          "to": 14
+        },
+        {
+          "from": 15,
+          "to": 22
+        }
+      ]
+    },
+    "reviewed": [
+      "NUM:30"
+    ]
+  },
+  "2026-10-26-how-to-be-more-ambitious-a/engage": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 8
+        },
+        {
+          "from": 9,
+          "to": 14
+        },
+        {
+          "from": 15,
+          "to": 19
+        }
+      ]
+    }
+  },
+  "2026-10-26-how-to-be-more-ambitious-a/Plenty": {
+    "set": {
+      "chunks": [
+        {
+          "from": 0,
+          "to": 5
+        },
+        {
+          "from": 6,
+          "to": 12
+        }
+      ]
+    }
+  },
+  "2026-10-26-how-to-be-more-ambitious-a/ambitious": {
+    "reviewed": [
+      "TUNE:end's'"
+    ]
+  },
+  "2026-10-26-how-to-be-more-ambitious-a/proclaim": {
+    "reviewed": [
+      "ACR:AI"
+    ]
+  },
+  "2026-10-26-how-to-be-more-ambitious-a/established": {
+    "reviewed": [
+      "ACR:AI"
+    ]
   }
 }

@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "id": "2026-10-26-what-i-believe-about-the-future",
+  "date": "2026-10-26",
+  "source": {
+    "title": "What I believe about the future"
+  },
+  "items": [
+    {
+      "text": "blew",
+      "kind": "word",
+      "sentence": "This was originally posted on X and blew up.",
+      "note": ""
+    },
+    {
+      "text": "non-ephemeral",
+      "kind": "word",
+      "sentence": "To plant my flag, to say that these are things I believed in September 2026, here it is on the blog, non-ephemeral.",
+      "note": ""
+    },
+    {
+      "text": "eyeballs",
+      "kind": "word",
+      "sentence": "“Given enough eyeballs, all bugs are shallow” is still true but now we have artificial eyeballs.",
+      "note": ""
+    },
+    {
+      "text": "arcane",
+      "kind": "word",
+      "sentence": "It’ll be seen as arcane as knowing how to write everything as a Perl one-liner.",
+      "note": ""
+    },
+    {
+      "text": "paradigm",
+      "kind": "word",
+      "sentence": "Tokens are the new computing paradigm.",
+      "note": ""
+    },
+    {
+      "text": "deterministic",
+      "kind": "word",
+      "sentence": "We’ve had deterministic computers for 80 years, so we confuse “how computers have worked” with “how computers must work.”",
+      "note": ""
+    },
+    {
+      "text": "post-binary",
+      "kind": "word",
+      "sentence": "We’re entering the post-binary era.",
+      "note": ""
+    },
+    {
+      "text": "meat proxies",
+      "kind": "phrase",
+      "sentence": "“Engineers” who act as “meat proxies” and shove tickets into agents and report back to humans will no longer be valuable.",
+      "note": ""
+    },
+    {
+      "text": "shove",
+      "kind": "word",
+      "sentence": "“Engineers” who act as “meat proxies” and shove tickets into agents and report back to humans will no longer be valuable.",
+      "note": ""
+    },
+    {
+      "text": "assume",
+      "kind": "word",
+      "sentence": "Think of how dumb it is to assume that “only 80 columns wide” or “but newlines here and there” matters for agents – now consider all the other properties you have in mind for “good code”.",
+      "note": ""
+    },
+    {
+      "text": "afford",
+      "kind": "word",
+      "sentence": "Just like only some people could afford a personal computer in the 80s and 90s, for the next few years, if you can’t get enough tokens, you’re playing second league.",
+      "note": ""
+    },
+    {
+      "text": "questionable",
+      "kind": "word",
+      "sentence": "It’s questionable whether cheaper models will be used.",
+      "note": ""
+    }
+  ]
+}
