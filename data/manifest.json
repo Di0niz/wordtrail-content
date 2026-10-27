@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-10-26T12:36:37Z",
+  "generated_at": "2026-10-26T21:42:30Z",
   "lessons": [
     {
       "id": "2026-10-26-what-i-believe-about-the-future",
@@ -12,7 +12,7 @@
       "new": 12,
       "repeats": 0,
       "path": "lessons/2026-10-26-what-i-believe-about-the-future.json",
-      "sha": "dc34e902d7d03251",
+      "sha": "7b388eae3418e91a",
       "audio_status": "ready"
     },
     {
@@ -25,7 +25,7 @@
       "new": 28,
       "repeats": 0,
       "path": "lessons/2026-10-26-how-to-be-more-ambitious-a.json",
-      "sha": "6f0e98c63f5a5a68",
+      "sha": "3b71c2ed99e6a387",
       "audio_status": "ready"
     },
     {
@@ -38,7 +38,7 @@
       "new": 25,
       "repeats": 0,
       "path": "lessons/2026-10-17-she-walks-in-beauty-by-lord.json",
-      "sha": "85088f1c1a0fec80",
+      "sha": "61b9054dc27ab75e",
       "audio_status": "ready"
     },
     {
@@ -51,7 +51,7 @@
       "new": 12,
       "repeats": 0,
       "path": "lessons/2026-10-16-today-s-episode-is-a-deepdive-into.json",
-      "sha": "be087ba6e878c08e",
+      "sha": "374fb9e4517619b7",
       "audio_status": "ready"
     },
     {
@@ -64,7 +64,7 @@
       "new": 50,
       "repeats": 0,
       "path": "lessons/2026-10-16-building-resilient-ai-powered-software.json",
-      "sha": "8f31b68397000889",
+      "sha": "c68182e7238c1a67",
       "audio_status": "ready"
     }
   ],

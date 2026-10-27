@@ -88,26 +88,20 @@
         },
         "proper_noun": {"type": "boolean", "description": "true: in the text the word is a name (Minion = Uber's tool); content explains the ordinary meaning."},
         "short_context": {"type": "boolean", "description": "true: the context is a heading/fragment, not a full sentence (exercises built on the sentence are less useful)."},
-        "phonemes": {
-          "type": "string",
-          "pattern": "^((AA|AE|AH|AO|AW|AY|EH|ER|EY|IH|IY|OW|OY|UH|UW)[012]|B|CH|D|DH|F|G|HH|JH|K|L|M|N|NG|P|R|S|SH|T|TH|V|W|Y|Z|ZH|\\|)( ((AA|AE|AH|AO|AW|AY|EH|ER|EY|IH|IY|OW|OY|UH|UW)[012]|B|CH|D|DH|F|G|HH|JH|K|L|M|N|NG|P|R|S|SH|T|TH|V|W|Y|Z|ZH|\\|))*$",
-          "description": "For the on-device pronunciation trainer. ARPAbet (CMUdict style, US), stress digit on every vowel (1 primary, 2 secondary, 0 none), space-separated, for the item text as shown (after text_fixed). Multi-word items: words separated by ' | '. Example: resilient -> 'R IH0 Z IH1 L Y AH0 N T'; spin up -> 'S P IH1 N | AH1 P'."
-        },
-        "sentence_pron": {"$ref": "#/$defs/sentence_pron"},
         "collocations": {
           "type": "array",
           "items": {"type": "string", "minLength": 1},
-          "description": "Level 2+: typical collocations ('emit metrics', 'emit events'). Not shown by the app yet."
+          "description": "Level 2+: typical collocations ('emit metrics', 'emit events')."
         },
         "family": {
           "type": "array",
           "items": {"type": "string", "minLength": 1},
-          "description": "Level 2+: word family ('resilience (n)', 'resiliently (adv)'). Not shown by the app yet."
+          "description": "Level 2+: word family ('resilience (n)', 'resiliently (adv)')."
         },
         "compare_ru": {
           "type": "string",
           "minLength": 1,
-          "description": "Level 2+: Russian comment comparing this context with the previous encounters (same sense or a shade). Not shown by the app yet."
+          "description": "Level 2+: Russian comment comparing this context with the previous encounters (same sense or a shade)."
         },
         "synonyms": {
           "type": "array",
@@ -120,13 +114,13 @@
               "note_ru": {"type": "string", "minLength": 1, "description": "How it differs (nuance, register)."}
             }
           },
-          "description": "Level 3+: synonyms with nuance. Not shown by the app yet."
+          "description": "Level 3+: synonyms with nuance."
         },
-        "register_ru": {"type": "string", "minLength": 1, "description": "Level 3+: register (formal/neutral/informal/technical) in Russian. Not shown by the app yet."},
+        "register_ru": {"type": "string", "minLength": 1, "description": "Level 3+: register (formal/neutral/informal/technical) in Russian."},
         "mistakes_ru": {
           "type": "array",
           "items": {"type": "string", "minLength": 1},
-          "description": "Level 3+: typical mistakes of Russian speakers. Not shown by the app yet."
+          "description": "Level 3+: typical mistakes of Russian speakers."
         },
         "story": {
           "type": "object",
@@ -136,272 +130,7 @@
             "en": {"type": "string", "minLength": 1},
             "ru": {"type": "string", "minLength": 1}
           },
-          "description": "Level 4+: mini-story (3-5 sentences) using this word and other words from vocab. Not shown by the app yet."
-        }
-      }
-    },
-    "sentence_pron": {
-      "type": "object",
-      "required": [
-        "text",
-        "words",
-        "chunks",
-        "skip_cost",
-        "prosody"
-      ],
-      "additionalProperties": false,
-      "description": "Expected pronunciation and prosody of the item's sentence for the on-device trainer (docs/stage3-contracts.md §3, §6). Written by tools/sentence_pron.py; grammar, offsets and chunk rules are checked by tools/sentence_pron_check.py.",
-      "properties": {
-        "g2p": {
-          "type": "object",
-          "required": [
-            "src",
-            "ver"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "src": {
-              "type": "string",
-              "minLength": 1
-            },
-            "ver": {
-              "type": "integer",
-              "minimum": 1
-            }
-          }
-        },
-        "text": {
-          "type": "string",
-          "minLength": 1,
-          "description": "The sentence the ch offsets refer to = item.sentence in data/lessons."
-        },
-        "words": {
-          "type": "array",
-          "minItems": 1,
-          "items": {
-            "$ref": "#/$defs/sp_word"
-          },
-          "description": "One per tokenizer.py token, in order."
-        },
-        "joins": {
-          "type": "array",
-          "items": {
-            "type": "object"
-          },
-          "description": "Cross-word variants — not used (empty), see G2P-EVAL."
-        },
-        "chunks": {
-          "type": "array",
-          "minItems": 1,
-          "items": {
-            "type": "object",
-            "required": [
-              "from",
-              "to"
-            ],
-            "additionalProperties": false,
-            "properties": {
-              "from": {
-                "type": "integer",
-                "minimum": 0
-              },
-              "to": {
-                "type": "integer",
-                "minimum": 0
-              }
-            }
-          },
-          "description": "Inclusive word ranges read as one attempt: 1–4, 4–12 words (longer for sentences over 48 words), target word inside one chunk."
-        },
-        "skip_cost": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Penalty (nats) for skipping a word in the alignment lattice."
-        },
-        "prosody": {
-          "$ref": "#/$defs/sp_prosody"
-        }
-      }
-    },
-    "sp_word": {
-      "type": "object",
-      "required": [
-        "w",
-        "ch",
-        "fn",
-        "wt",
-        "ph",
-        "alt",
-        "target",
-        "stress"
-      ],
-      "additionalProperties": false,
-      "properties": {
-        "w": {
-          "type": "string",
-          "minLength": 1
-        },
-        "ch": {
-          "type": "array",
-          "minItems": 2,
-          "items": {
-            "type": "integer",
-            "minimum": 0
-          },
-          "description": "[start, end) in Unicode code points of text."
-        },
-        "pos": {
-          "type": "string",
-          "description": "spaCy universal POS."
-        },
-        "fn": {
-          "type": "boolean",
-          "description": "Function word: weak forms accepted, weight ~0.3, no phone-level tips."
-        },
-        "wt": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Weight in accuracy: function 0.3, target 1.5, others 1.0."
-        },
-        "ph": {
-          "type": "string",
-          "minLength": 1,
-          "description": "Extended ARPAbet (X? optional, (A|B) alternatives, ' | ' between parts of a compound); first CMUdict variant."
-        },
-        "alt": {
-          "type": "array",
-          "items": {
-            "anyOf": [
-              {
-                "type": "string",
-                "minLength": 1,
-                "description": "variant without penalty"
-              },
-              {
-                "type": "object",
-                "required": [
-                  "ph",
-                  "p"
-                ],
-                "additionalProperties": false,
-                "properties": {
-                  "ph": {
-                    "type": "string",
-                    "minLength": 1
-                  },
-                  "p": {
-                    "type": "number",
-                    "minimum": 0
-                  }
-                },
-                "description": "variant with penalty (nats)"
-              }
-            ]
-          },
-          "description": "≤ 3 acceptable variants: weak forms, other CMUdict/MFA/espeak-ng pronunciations."
-        },
-        "target": {
-          "type": "boolean"
-        },
-        "stress": {
-          "type": "array",
-          "items": {
-            "type": "integer",
-            "minimum": 0
-          },
-          "description": "Slot indices of ph (separators excluded) with primary stress."
-        },
-        "hom": {
-          "anyOf": [
-            {
-              "type": "null",
-              "description": "not a homograph"
-            },
-            {
-              "enum": [
-                "checked",
-                "ambiguous"
-              ],
-              "description": "homograph"
-            }
-          ]
-        }
-      }
-    },
-    "sp_prosody": {
-      "type": "object",
-      "required": [
-        "type",
-        "tune",
-        "tune_ambiguous",
-        "breaks"
-      ],
-      "additionalProperties": false,
-      "properties": {
-        "type": {
-          "enum": [
-            "statement",
-            "wh",
-            "yesno",
-            "tag",
-            "alternative",
-            "request"
-          ]
-        },
-        "tune": {
-          "enum": [
-            "fall",
-            "rise",
-            "fall-rise",
-            "either"
-          ]
-        },
-        "tune_ambiguous": {
-          "type": "boolean",
-          "description": "true: several tunes are fine (tag questions, sentences ending in ':' or without final punctuation) — no tune tips."
-        },
-        "nucleus": {
-          "type": "integer",
-          "minimum": 0,
-          "description": "Index of the nuclear word (last content word by default)."
-        },
-        "nucleus_alt": {
-          "type": "array",
-          "items": {
-            "type": "integer",
-            "minimum": 0
-          }
-        },
-        "breaks": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "required": [
-              "after",
-              "kind"
-            ],
-            "additionalProperties": false,
-            "properties": {
-              "after": {
-                "type": "integer",
-                "minimum": 0
-              },
-              "kind": {
-                "enum": [
-                  "comma",
-                  "period",
-                  "dash",
-                  "colon",
-                  "semicolon",
-                  "other"
-                ]
-              }
-            }
-          }
-        },
-        "syllables": {
-          "type": "integer",
-          "minimum": 0
+          "description": "Level 4+: mini-story (3-5 sentences) using this word and other words from vocab."
         }
       }
     }

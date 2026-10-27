@@ -10,28 +10,18 @@
 README.md
 .nojekyll                       GitHub Pages отдаёт файлы как есть
 lessons/<id>.json               words.json из редактора — вход агента
-agent/content/<id>.content.json контент агента: переводы, IPA, CEFR, примеры, заметки, phonemes, sentence_pron
+agent/content/<id>.content.json контент агента: переводы, IPA, CEFR, примеры, заметки, углубление для повторов
 schemas/
   words.schema.json             формат words.json (JSON Schema 2020-12)
   content.schema.json           формат content.json, включая необязательные поля и поля уровней 2–4+
-  tokenizer-golden.json         эталон токенизатора слов: те же случаи проходит Swift-двойник в приложении
 tools/
-  phonemes.py                   phonemes (ARPAbet) в content.json из CMUdict + phonemes_manual.json
-  phonemes_manual.json          произношения, написанные агентом (нет в CMUdict или сверены с IPA)
-  sentence_pron.py              sentence_pron предложения: фонемы с вариантами, отрезки, интонация (свой venv, не в CI)
-  sentence_pron/                requirements.txt (закреплённые версии), overrides.json (решения агента), .venv/ (не коммитится)
-  sentence_pron_check.py        проверка sentence_pron без зависимостей (её зовёт validate.py)
-  weak_forms.json, arpabet_zipa.json  слабые формы служебных слов со штрафами и соответствие ARPAbet ↔ фонемы ZIPA —
-                                копии из tools/pronunciation-model/g2p_eval/ репозитория приложения (там источник и замер)
   build.py                      words.json + content.json → data/lessons/<id>.json, vocab.json, days.json
   tts.py                        озвучка Kokoro-82M (или macOS `say`) → data/audio/<hash>.m4a, audio_status
-  tts/                          venv Kokoro, kokoro_synth.py, lexicon.json, check_pron.py, check_tune.py
+  tts/                          venv Kokoro, kokoro_synth.py, lexicon.json
   manifest.py                   data/manifest.json (точка входа приложения)
   rebuild.py                    пересобрать всё data/ с нуля в порядке дат (+ tts; --no-tts для CI)
-  validate.py                   проверить data/ так, как его ожидает приложение (+ эталон токенизатора)
-  tokenizer.py                  общий токенизатор слов (смещения в кодовых точках); --check — прогнать эталон
+  validate.py                   проверить data/ так, как его ожидает приложение
   schema_check.py, content_io.py  мини-валидатор JSON Schema; чтение/запись content.json без переформатирования
-  cache/                        CMUdict, словарь MFA (скачиваются, не коммитятся)
 data/                           генерируется скриптами, коммитится
   manifest.json                 список уроков с sha, ссылка на vocab
   days.json                     дата → id уроков, число слов
@@ -43,7 +33,7 @@ editor/index.html               редактор: разметка текста 
 .github/workflows/validate.yml  CI: validate + rebuild --no-tts не даёт диффа
 ```
 
-Всё на Python 3 без зависимостей, кроме `tools/sentence_pron.py` (свой venv, см. ниже); запускать из корня репозитория.
+Всё на Python 3 без зависимостей, кроме озвучки (свой venv, см. «Озвучка»); запускать из корня репозитория.
 
 ## Как добавить урок
 
@@ -51,8 +41,6 @@ editor/index.html               редактор: разметка текста 
 2. Положите файл в `lessons/`.
 3. В Claude Code в этом репозитории: «новый урок» / «собери урок» (скилл `wordtrail-lesson`). Claude напишет `agent/content/<id>.content.json` и запустит:
    ```bash
-   python3 tools/phonemes.py agent/content/<id>.content.json
-   tools/sentence_pron/.venv/bin/python tools/sentence_pron.py agent/content/<id>.content.json
    python3 tools/build.py lessons/<id>.json   # проблемы → код выхода 1, ничего не пишется (--force — записать всё равно)
    python3 tools/tts.py                       # только macOS + venv tools/tts; без него audio_status: pending
    python3 tools/manifest.py
@@ -84,9 +72,8 @@ editor/index.html               редактор: разметка текста 
 - **Прогресс** — `localStorage` этого браузера. Экспорт/импорт JSON в формате приложения (`wordtrail-progress-YYYY-MM-DD.json`, даты ISO-8601 без миллисекунд) — переносится между браузером и iPhone в обе стороны; при импорте остаётся более свежая запись.
 - **Офлайн (PWA):** `web/sw.js` кэширует оболочку, уроки (по `sha` из манифеста) и аудио по мере прослушивания; на iPhone — «Поделиться» → «На экран „Домой“». При изменении файлов `web/` поднимите `VERSION` в `sw.js` — страница предложит «Обновить».
 - **Клавиатура:** ← → карточки, Пробел — прослушать, 1–4 — вариант, Enter — дальше.
-- **Тесты:** `node --test web/tests/*.test.mjs` (Node 20+, без зависимостей; есть в CI) — токенизатор по `schemas/tokenizer-golden.json`, паритет Лейтнера/сессии/диктанта/слияния с тестами Swift, формат файла прогресса iOS, список файлов service worker, все реальные уроки.
+- **Тесты:** `node --test web/tests/*.test.mjs` (Node 20+, без зависимостей; есть в CI) — паритет Лейтнера/сессии/диктанта/слияния с тестами Swift, формат файла прогресса iOS, список файлов service worker, все реальные уроки.
 - Локально: `python3 -m http.server` в корне репозитория → http://localhost:8000/web/.
-- Тренировки произношения в браузере нет — она в приложении для iPhone (модель ZIPA на устройстве).
 
 ## manifest.json
 
@@ -111,7 +98,7 @@ editor/index.html               редактор: разметка текста 
 ## Форматы
 
 - **words.json** — `version, id, date, source{title, url?}, items[]{text, kind: word|phrase, sentence, note}`; см. `schemas/words.schema.json`.
-- **content.json** — `source_title_ru`, `sentences{key: {display?, ru}}`, `items{<text>: {s, lemma, pos, ipa, cefr, ru, ru_short, definition_en, note_ru, examples[{en, ru}], …}}`. Необязательные поля: `suggest_phrase, text_fixed, flags[], proper_noun, short_context, phonemes` (ARPAbet для тренажёра произношения) и поля углубления для повторов `collocations, family, compare_ru, synonyms, register_ru, mistakes_ru, story` (приложение пока их не показывает). См. `schemas/content.schema.json`.
+- **content.json** — `source_title_ru`, `sentences{key: {display?, ru}}`, `items{<text>: {s, lemma, pos, ipa, cefr, ru, ru_short, definition_en, note_ru, examples[{en, ru}], …}}`. Необязательные поля: `suggest_phrase, text_fixed, flags[], proper_noun, short_context` и поля углубления для повторов `collocations, family, compare_ru, synonyms, register_ru, mistakes_ru, story` (приложение показывает их на странице слова). См. `schemas/content.schema.json`.
 - **data/lessons/<id>.json** — `id, date, source{title, title_ru}, day{index, total}, build{prompt_version, model, audio_status}, items[]`; элемент: `text, kind, sentence, note, id, lemma, level, encounter_no, content{…}, audio{word, sentence, sentence_slow, examples[]}`, при правках агента — `text_original`, `sentence_original`, у повторов — `history`. Файл пишется компактно, без отступов (его скачивает приложение; читаемый исходник — `agent/content/<id>.content.json`); `vocab.json` и `days.json` — с отступом 2 пробела.
 
 ## Озвучка
@@ -125,35 +112,9 @@ editor/index.html               редактор: разметка текста 
 | примеры | `am_michael` (US, мужской) | 1.0 |
 
 - **Окружение.** Kokoro работает в отдельном venv (Python 3.11, torch с MPS): `uv venv -p python3.11 tools/tts/.venv && uv pip install -p tools/tts/.venv -r tools/tts/requirements.txt`. Модель (~330 МБ) скачивается с Hugging Face в `tools/tts/.cache/` при первом запуске. Сам `tts.py`, `build.py` и CI остаются на stdlib: `tts.py` запускает `tools/tts/kokoro_synth.py` из venv (модель грузится один раз; тишина по краям обрезается до 80 мс, громкость выравнивается до −20 dBFS RMS речи). Около 0,3 с на предложение на M4 Pro.
-- **Словарь произношения** `tools/tts/lexicon.json`: слова, которые Kokoro читает неправильно, и имена/бренды, которых нет в словаре Misaki, → фонемы Misaki; подставляются в текст как `[слово](/фонемы/)`. Имя файла считается от текста *после* подстановки — правка словаря порождает новые файлы. Пополнять: `tools/tts/.venv/bin/python tools/tts/check_pron.py --zipa <app>/tools/pronunciation-model --suggest` — ZIPA распознаёт аудио слова и сравнивает с `content.phonemes`; для слов с PER > 20 % пробует наши фонемы и оставляет их, только если стало лучше; добавляет неизвестные Misaki слова из `sentence_pron`. Ручные записи перечислены в `_manual` и не перезаписываются.
-- **Проверка интонации эталона:** `tools/tts/check_tune.py` — понижение/повышение в конце (только для контроля). Kokoro заканчивает длинные утверждения ровнее, чем `say`, а общие вопросы — иногда понижением; приложение оценивает тон по правилам `sentence_pron.prosody`, синтез служит только образцом для графика.
+- **Словарь произношения** `tools/tts/lexicon.json`: слова, которые Kokoro читает неправильно, и имена/бренды, которых нет в словаре Misaki, → фонемы Misaki; подставляются в текст как `[слово](/фонемы/)`. Имя файла считается от текста *после* подстановки — правка словаря порождает новые файлы. Пополняется вручную после прослушивания; ручные записи перечислены в `_manual` и не перезаписываются.
 - **Запасной движок:** `WORDTRAIL_TTS_ENGINE=say python3 tools/rebuild.py` — системный голос macOS Samantha (файлы получат другие имена). Компактный Samantha не умеет ровно 0.75× (≈0.77×).
 - `audio_status` урока: `ready` — все файлы на месте, `partial` — часть, `pending` — нет ни одного; считается по файлам, а не задаётся руками.
-
-## Произношение: phonemes
-
-Для тренажёра произношения у каждого элемента есть `content.phonemes` — ARPAbet в стиле CMUdict (американский, цифры ударения, слова фразы через ` | `). Источник — [CMUdict](https://github.com/cmusphinx/cmudict) (© Carnegie Mellon University, лицензия BSD-2-Clause) и `tools/phonemes_manual.json` (написано агентом: слова вне словаря и значения, сверенные с IPA урока).
-
-## Произношение предложения: sentence_pron
-
-`content.sentence_pron` — ожидаемое произношение и интонация предложения элемента для тренажёра (формат — `docs/stage3-contracts.md` §3, §6 в репозитории приложения; решения — `tools/pronunciation-model/G2P-EVAL.md` там же). Пишет `tools/sentence_pron.py`, проверяет `tools/sentence_pron_check.py` (в составе `validate.py` и CI).
-
-- Слова — `tools/tokenizer.py`; `ph` — первый вариант CMUdict; вне словаря — составное из словарных частей или g2p_en; аббревиатуры — по буквам; числа — как `NumberFormatter.spellOut` (en_US) в приложении («21» → twenty-one), годы 1100–2099 — естественно («2025» → twenty twenty-five, кардинальное чтение — вариант со штрафом 0.3).
-- `alt` — до трёх `{ph, p}`: слабые формы (`tools/weak_forms.json`), другие варианты CMUdict (p 0.5), словарь MFA с вероятностью ≥ 0.1 (p 0.7), espeak-ng en-us (p 0.7). `joins` пустой, DX/Q не используются.
-- Служебные слова по части речи spaCy (`en_core_web_sm`) — вес 0.3; целевое — 1.5. Омографы (read, live, use, close, record, appropriate…) — по части речи; spaCy и NLTK не согласны → `hom: "ambiguous"` и флаг агенту.
-- Отрезки: 1–4 по 4–12 слов (для предложений длиннее 48 слов — до ⌈n/4⌉+3), граница по пунктуации и синтаксису (меньше пересечённых зависимостей), не внутри целевого слова.
-- Интонация: тип по пунктуации и первому слову (wh / общий / tag / альтернативный вопрос, побуждение, утверждение), финальный тон (утверждение, wh, побуждение — понижение; общий вопрос — повышение; tag, двоеточие, нет точки — `tune_ambiguous`), ядро — последнее знаменательное слово, паузы по пунктуации.
-- Ручные решения — `tools/sentence_pron/overrides.json`.
-
-Окружение (один раз, на Mac):
-```bash
-uv venv --python 3.11 tools/sentence_pron/.venv
-uv pip install --python tools/sentence_pron/.venv/bin/python -r tools/sentence_pron/requirements.txt
-brew install espeak-ng                          # GPL, используется только офлайн; в контент попадают данные
-curl -fsSL -o tools/cache/english_us_arpa.dict \
-  https://github.com/MontrealCorpusTools/mfa-models/releases/download/dictionary-english_us_arpa-v3.0.0/english_us_arpa.dict
-```
-Источники: CMUdict (BSD-2-Clause), словарь MFA english_us_arpa v3.0.0 (CC BY 4.0, Montreal Forced Aligner), g2p_en (Apache-2.0), spaCy + en_core_web_sm (MIT), espeak-ng (GPL-3, только офлайн).
 
 ## Ещё не сделано
 

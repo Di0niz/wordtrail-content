@@ -1,9 +1,0 @@
-# tools/sentence_pron.py — offline content tool (Mac), not run in CI; nothing here ships in the app.
-#   uv venv --python 3.11 tools/sentence_pron/.venv
-#   uv pip install --python tools/sentence_pron/.venv/bin/python -r tools/sentence_pron/requirements.txt
-#   brew install espeak-ng   (1.52, GPL — used offline only, its output is data)
-spacy==3.8.16
-en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
-g2p-en==2.1.0
-nltk==3.10.3
-phonemizer==3.4.0

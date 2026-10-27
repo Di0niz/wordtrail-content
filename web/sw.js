@@ -1,6 +1,6 @@
 // WordTrail web service worker: offline shell, lesson data by sha, audio on demand.
 // Bump VERSION whenever a shell file changes — the page then offers «Обновить».
-const VERSION = "web-1.1.1";
+const VERSION = "web-1.1.2";
 const SHELL_CACHE = `wt-shell-${VERSION}`;
 const DATA_CACHE = "wt-data";
 const AUDIO_CACHE = "wt-audio";
@@ -12,7 +12,7 @@ const SHELL = [
   "./icons/icon-192.png", "./icons/icon-512.png", "./icons/apple-touch-icon.png",
   "./js/app.js", "./js/audio.js", "./js/data.js", "./js/store.js", "./js/ui.js",
   "./js/domain/dictation.js", "./js/domain/leitner.js", "./js/domain/outcome.js", "./js/domain/review.js",
-  "./js/domain/ru.js", "./js/domain/session.js", "./js/domain/tokenizer.js", "./js/domain/transfer.js", "./js/domain/verse.js", "./js/domain/wordmatch.js",
+  "./js/domain/ru.js", "./js/domain/session.js", "./js/domain/transfer.js", "./js/domain/verse.js", "./js/domain/wordmatch.js",
   "./js/views/card.js", "./js/views/dictionary.js", "./js/views/feed.js", "./js/views/lesson.js",
   "./js/views/review.js", "./js/views/settings.js", "./js/views/training.js", "./js/views/word.js",
 ];

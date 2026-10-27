@@ -12,27 +12,14 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      # validate.py also checks content.sentence_pron (tools/sentence_pron_check.py, stdlib).
-      # The generator tools/sentence_pron.py needs its own venv and runs only on the agent's Mac.
       - name: Validate data/
         run: python3 tools/validate.py
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
-      # Web app (web/): domain parity with the iOS app, shared tokenizer golden file, SW shell list, real lessons.
+      # Web app (web/): domain parity with the iOS app, SW shell list, real lessons.
       - name: Web tests
         run: node --test web/tests/*.test.mjs
-      - name: Every item has phonemes
-        run: python3 tools/phonemes.py --check
-      - name: Every item has sentence_pron
-        run: |
-          python3 - <<'PY'
-          import glob, json, sys
-          missing = [f"{f} {k}" for f in glob.glob("agent/content/*.content.json")
-                     for k, c in json.load(open(f))["items"].items() if "sentence_pron" not in c]
-          print("\n".join(missing) or "all items have sentence_pron")
-          sys.exit(1 if missing else 0)
-          PY
       - name: data/ is reproducible from lessons/ + agent/content/
         run: |
           python3 tools/rebuild.py --no-tts

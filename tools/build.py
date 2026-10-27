@@ -42,8 +42,8 @@ def dump(obj):
 
 
 def dump_lesson(obj):
-    # data/lessons/*.json: compact (no indentation) — the app downloads them; with sentence_pron
-    # the indented form was ~5× larger. The readable source stays in agent/content/.
+    # data/lessons/*.json: compact (no indentation) — the app downloads them.
+    # The readable source stays in agent/content/.
     return json.dumps(obj, ensure_ascii=False, separators=(",", ":"))
 
 

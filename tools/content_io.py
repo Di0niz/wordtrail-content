@@ -2,7 +2,7 @@
 
 Two styles exist: fully indented (json.dumps indent=2) and compact — one line per
 sentence / item inside the indented top level. `save` writes the file back in the
-style it was read in, so tools that edit content (phonemes.py) leave small diffs.
+style it was read in, so tools that edit content leave small diffs.
 """
 import json, pathlib
 

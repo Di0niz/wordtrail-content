@@ -12,8 +12,7 @@ files on disk (run tools/manifest.py next).
 Kokoro (build.VOICES["kokoro"]): word + sentence in af_heart (US female), examples in am_michael
 (US male); the slow sentence is Kokoro speed 0.75 (a true 0.75×). Runs in the tools/tts venv:
     uv venv -p python3.11 tools/tts/.venv && uv pip install -p tools/tts/.venv -r tools/tts/requirements.txt
-Words Kokoro mispronounces are pinned in tools/tts/lexicon.json (Misaki phonemes); check with
-tools/tts/check_pron.py. The worker trims silence to 80 ms and normalizes loudness.
+Words Kokoro mispronounces are pinned in tools/tts/lexicon.json (Misaki phonemes). The worker trims silence to 80 ms and normalizes loudness.
 
 say (build.VOICES["say"]): compact Samantha; `say -r` is quantized — ≤ 70 wpm gives ~0.77×.
 Requires macOS (`afconvert`; `say` for the fallback); in CI use tools/rebuild.py --no-tts.

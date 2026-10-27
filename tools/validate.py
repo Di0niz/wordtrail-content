@@ -4,8 +4,7 @@ usage: python3 tools/validate.py [data_dir]
 
 Checks manifest.json (format, order, sha of every file, counts), every lesson file
 (required fields and types), vocab.json and days.json, and their mutual consistency.
-Also checks content.sentence_pron (tools/sentence_pron_check.py: tokenizer offsets, extended ARPAbet,
-chunks, prosody indices), reports lessons/*.json that are not built yet (warning only) and runs the tokenizer golden file.
+Also reports lessons/*.json that are not built yet (warning only).
 Exit code 0 = ok, 1 = errors.
 """
 import hashlib, json, pathlib, re, sys
@@ -14,8 +13,6 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
 from schema_check import check  # noqa: E402
 import build  # noqa: E402
-import tokenizer  # noqa: E402
-import sentence_pron_check  # noqa: E402
 
 DATE = "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
 STR = {"type": "string"}
@@ -159,10 +156,6 @@ def validate(data):
             for text in [c.get("note_ru") or ""] + list(c.get("flags") or []):
                 if AGENT_NOTE.search(str(text)):
                     err(f"{where}: служебная пометка об агенте в note_ru/flags: «{text}»")
-            sp = c.get("sentence_pron")
-            if isinstance(sp, dict) and isinstance(x.get("sentence"), str):
-                for e in sentence_pron_check.check(sp, x["sentence"], tokenizer.words(x["sentence"])):
-                    err(f"{where}: sentence_pron: {e}")
             e = vocab.get(x.get("lemma"))
             if not e:
                 err(f"{where}: лемма '{x.get('lemma')}' отсутствует в vocab.json")
@@ -276,9 +269,7 @@ def main(argv):
         print("error:", e)
     items = sum(len(L.get("items", [])) for L in lessons.values())
     print(f"validate: {len(lessons)} lessons, {items} items, vocab {len(vocab)} — " + ("OK" if not errors else f"{len(errors)} errors"))
-    # The shared tokenizer must keep matching its golden file (the Swift twin runs the same cases).
-    tokenizer_ok = tokenizer.check()
-    return 1 if errors or not tokenizer_ok else 0
+    return 1 if errors else 0
 
 
 if __name__ == "__main__":
